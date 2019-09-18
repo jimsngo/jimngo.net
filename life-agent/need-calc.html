@@ -1,0 +1,145 @@
+<!-- Life Need Widget - How much Life Insurance do I need? -->
+<section class="col-4 col-s-6" id="life-need-widget">
+    <!-- Begin Life Need Wiget -->
+    <div class="widget-slide" id="life-need-slide-1">
+      <h3 class="widget-header">How Much Life Insurance Do I Need?</h3>
+      <div class="widget-body">
+        <p>Start by adding your immediate, short-term, and long-term financial obligations, then
+          subtract your assets. What's left is the gap that life insurance will have to fill.</p>
+        <div class="flex-center">
+          <button class="btn-blue-brdr-180" onclick="show_life_need_q1()">Get Started</button>
+        </div>
+      </div>
+    </div>
+    <!-- Tab 1 - Debt & Obligation Information -->
+    <div class="widget-slide" id="life-need-q1" style="display: none">
+      <div class="widget-header">Your Family's Expenses In Case Of Your Death</div>
+      <div class="widget-body">
+        <ul>
+          <li>How much would final expenses cost your family?</li>
+          <li>Do you have credit card balances, car payments, lines of credit or any other
+            personal debts?</li>
+          <li>How much would your family need to pay off your mortgage if you were gone?</li>
+        </ul>
+        <!-- Final Expenses -->
+        <div class="inputTitleContainer">
+          <h3 class="inputTitle">Final expenses:</h3>
+          <div class="input-value-2">$<span id="FE">15000</span></div>
+        </div>
+        <div class="sliderContainer"><input id="fe" class="slider2" max="20000" min="0" step="1000" type="range"
+            value="15000" oninput="calc()" /></div>
+        <!-- Outstanding Debt -->
+        <div class="inputTitleContainer">
+          <h3 class="inputTitle">Outstanding debts:</h3>
+          <div class="input-value-2">$<span id="OD">0</span></div>
+        </div>
+        <div class="sliderContainer"><input id="od" class="slider2" max="100000" min="0" step="1000" type="range"
+            value="0" oninput="calc()" /></div>
+        <!-- Outstanding Mortgage -->
+        <div class="inputTitleContainer">
+          <h3 class="inputTitle">Outstanding Mortgage:</h3>
+          <div class="input-value-2">$<span id="OM">0</span></div>
+        </div>
+        <div class="sliderContainer"><input id="om" class="slider2" max="1000000" min="0" step="1000" type="range"
+            value="0" oninput="calc()" /></div>
+        <!-- Back/Next buttons -->
+        <div class="flex-center">
+          <button class="btn-blue-brdr-120" onclick="show_life_need_slide_1()" />Back</button>
+          <button class="btn-blue-brdr-120" onclick="show_life_need_q2()" />Next</button>
+        </div>
+      </div>
+    </div>
+    <!-- Tab 2 - Income Need Information -->
+    <div class="widget-slide" id="life-need-q2" style="display: none">
+      <div class="widget-header">Your Family's Income Need</div>
+      <div class="widget-body">
+        <ul>
+          <li>What are your family’s living expenses?</li>
+          <li>How much would they need to continue without you - and for how long?</li>
+          <li>Do you plan to help pay for your children's college expenses?</li>
+          <li>Will your children be attending public or private school?</li>
+        </ul>
+        <!-- Your Current Income -->
+        <div class="inputTitleContainer">
+          <h3 class="inputTitle">Your current annual income:</h3>
+          <div class="input-value-2">$<span id="AI">0</span></div>
+        </div>
+        <div class="sliderContainer"><input id="ai" class="slider2" max="300000" min="0" step="1000" type="range"
+            value="50000" oninput="calc()" /></div>
+        <!-- Years to provide income -->
+        <div class="inputTitleContainer">
+          <h3 class="inputTitle">Years to provide income:</h3>
+          <div class="input-value-2"><span id="YRS">0</span></div>
+        </div>
+        <div class="sliderContainer"><input id="yrs" class="slider2" max="5" min="0" step="1" type="range" value="0"
+            oninput="calc()" /></div>
+        <!-- College funding per child -->
+        <div class="inputTitleContainer">
+          <h3 class="inputTitle tooltip">College funding (per child):<span class="tooltiptext">Current cost to
+              put a child in a CA University is around $30K per year</span></h3>
+          <div class="input-value-2">$<span id="CF">0</span></div>
+        </div>
+        <div class="sliderContainer"><input id="cf" class="slider2" max="300000" min="0" step="5000" type="range"
+            value="0" oninput="calc()" /></div>
+        <!-- Number of child -->
+        <div class="inputTitleContainer">
+          <h3 class="inputTitle">Number of child:</h3>
+          <div class="input-value-2"><span id="CHILD">0</span></div>
+        </div>
+        <div class="sliderContainer"><input id="child" class="slider2" max="5" min="0" step="1" type="range"
+            value="0" oninput="calc()" /></div>
+        <!-- Back/Next buttons -->
+        <div class="flex-center">
+          <button class="btn-blue-brdr-120" onclick="show_life_need_q1()" />Back</button>
+          <button class="btn-blue-brdr-120" onclick="show_life_need_q3()" />Next</button>
+        </div>
+      </div>
+    </div>
+    <!-- Tab 3 - Savings & Retirement Accounts -->
+    <div class="widget-slide" id="life-need-q3" style="display: none">
+      <div class="widget-header">Your Savings & Retirement Accounts</div>
+      <div class="widget-body">
+        <!-- Current Savings & Investments -->
+        <div class="inputTitleContainer">
+          <h3 class="inputTitle">Current Savings & Investment:</h3>
+          <div class="input-value-2">$<span id="SI">0</span></div>
+        </div>
+        <div class="sliderContainer"><input id="si" class="slider2" max="500000" min="0" step="5000" type="range"
+            value="0" oninput="calc()" /></div>
+        <!-- IRA -->
+        <div class="inputTitleContainer">
+          <h3 class="inputTitle">IRA:</h3>
+          <div class="input-value-2">$<span id="IRA">0</span></div>
+        </div>
+        <div class="sliderContainer"><input id="ira" class="slider2" max="500000" min="0" step="5000" type="range"
+            value="0" oninput="calc()" /></div>
+        <!-- Life Insurance in force -->
+        <div class="inputTitleContainer">
+          <h3 class="inputTitle">Life insurance in force:</h3>
+          <div class="input-value-2">$<span id="LI">0</span></div>
+        </div>
+        <div class="sliderContainer"><input id="li" class="slider2" max="1000000" min="0" step="5000" type="range"
+            value="0" oninput="calc()" /></div>
+        <!-- Back/Next buttons -->
+        <div class="flex-center">
+          <button class="btn-blue-brdr-120" onclick="show_life_need_q2()" />Back</button>
+          <button class="btn-blue-brdr-120" onclick="show_life_need_results()" />Next</button>
+        </div>
+      </div>
+    </div>
+    <!-- Results -->
+    <div class="widget-slide" id="life-need-results" style="display: none">
+      <div class="widget-header" id="insuranceNeed"></div>
+      <div class="widget-body">
+        <ul>
+          <li>Final Expenses & Obligations: $<span id="totalDebt"></span></li>
+          <li>Income Need: $<span id="incomeNeed"></span></li>
+          <li>Current Savings & Retirement: $<span id="totalSavings"></span></li>
+        </ul>
+        <div class="flex-center">
+          <button class="btn-blue-brdr-120" onclick="show_life_need_q3()" />Back</button>
+          <button class="btn-blue-brdr-120" onclick="show_life_need_slide_1()" />Start Over</button>
+        </div>
+      </div>
+    </div>
+  </section>

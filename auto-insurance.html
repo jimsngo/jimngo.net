@@ -1,0 +1,289 @@
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+  <!-- Auto Insurance -->
+  <section class="widget">
+    <div class="main" id="auto-insurance-widget">
+      <!-- Begin Auto Insurance Wiget -->
+      <div class="widget-slide" id="slide-1">
+        <h3 class="widget-header">Auto Insurance Coverage Calculator</h3>
+        <div class="widget-body">
+          <p>Not all auto insurance coverage is the same. Many people overpay for coverages they don’t need, while
+            others don’t have enough coverage but don’t know until it’s too late. This tool will help you decide what
+            coverage options you need. It will make shopping around for the best insurance rates a lot easier, and it
+            takes less than one minute!</p>
+          <div class="flex-center">
+            <div class="col-3 col-s-3"><button class="selectable" onclick="show_q1()">Get Started</button></div>
+          </div>
+        </div>
+      </div>
+      <!-- Question 1 - Do you own your auto? -->
+      <div class="widget-slide" id="q1" style="display: none">
+        <div class="widget-header">Do you own your vehicle?</div>
+        <div class="widget-body">
+          <div class="flex-center">
+            <div class="col-3 col-s-3"><button class="selectable" onclick="q1_1()">Yes</button></div>
+            <div class="col-3 col-s-3"><button class="selectable" onclick="q1_2()">No, it's financed</button></div>
+            <div class="col-3 col-s-3"><button class="selectable" onclick="q1_3()">No, it's leased</button></div>
+          </div>
+          <ul>
+            <li>Leased vehicles automatically need high liability coverage, collision coverage and comprehensive
+              coverage.
+            </li>
+            <li>Financed vehicles may need gap insurance.</li>
+          </ul>
+          <div class="center"><button class="btnSm" onclick="show_first_slide()">Back</button></div>
+        </div>
+      </div>
+      <!-- Question 2 - If financed, is your auto brand new? -->
+      <div class="widget-slide" id="q2" style="display: none">
+        <div class="widget-header">Is your vehicle less than 1 year old?</div>
+        <div class="widget-body">
+          <div class="flex-center">
+            <div class="col-3 col-s-3"><button class="selectable" onclick="q2_1()">Yes, it's brand new</button>
+            </div>
+            <div class="col-3 col-s-3"><button class="selectable" onclick="q2_2()">No</button></div>
+          </div>
+          <div class="center"><button class="btnSm" onclick="show_q1()">Back</button></div>
+        </div>
+      </div>
+      <!-- Question 3 - If financed and brand new, have you paid more than 20% of the auto’s price? -->
+      <div class="widget-slide" id="q3" style="display: none">
+        <div class="widget-header">Have you paid more than 20% of the vehicle’s price?</div>
+        <div class="widget-body">
+          <div class="flex-center">
+            <div class="col-3 col-s-3"><button class="selectable" onclick="q3_1()">Yes, I've paid more than 20%</button>
+            </div>
+            <div class="col-3 col-s-3"><button class="selectable" onclick="q3_2()">No, I haven't paid more than
+                20%</button></div>
+          </div>
+          <p>If you have paid only a small portion down on your vehicle, it is wise to buy gap insurance to protect you
+            if it is totaled.</p>
+          <div class="center"><button class="btnSm" onclick="show_q2()">Back</button></div>
+        </div>
+      </div>
+      <!-- Question 4 (Medical Payment) - Do you and your frequent passengers have health insurance? -->
+      <div class="widget-slide" id="q4" style="display: none">
+        <div class="widget-header">Do you and your frequent passengers have health insurance?</div>
+        <div class="widget-body">
+          <div class="flex-perfect-center">
+            <div class="col-3 col-s-3"><button class="selectable" onclick="q4_1()">Yes</button></div>
+            <div class="col-3 col-s-3"><button class="selectable" onclick="q4_2()">No</button></div>
+          </div>
+          <p>If you’re injured by an uninsured driver, your medical bills would not be covered unless you have
+            health insurance or have purchased uninsured motorist bodily injury, PIP or medical payments coverage.
+          </p>
+          <div class="center"><button class="btnSm" onclick="show_q1()">Back</button></div>
+        </div>
+      </div>
+      <!-- Question 6 (Comprehensive and Collision) - Could you afford to replace your auto without the help of insurance? -->
+      <div class="widget-slide" id="q6" style="display: none">
+        <div class="widget-header">Could you afford to replace your vehicle without the help of insurance?</div>
+        <div class="widget-body">
+          <div class="flex-perfect-center">
+            <div class="col-3 col-s-3"><button class="selectable" onclick="q6_1()">Yes</button></div>
+            <div class="col-3 col-s-3"><button class="selectable" onclick="q6_2()">No</button></div>
+          </div>
+          <p>If you can afford to replace your vehicle, and you want the lowest rates possible, you should not buy
+            collision or comprehensive coverage.</p>
+          <div class="center"><button class="btnSm" onclick="show_q4()">Back</button></div>
+        </div>
+      </div>
+      <!-- Question 7 (Deductible) - How much money do you have easy access to if your auto is damaged? -->
+      <div class="widget-slide" id="q7" style="display: none">
+        <div class="widget-header">How much money do you have easy access to if your vehicle is damaged?</div>
+        <div class="widget-body">
+          <div class="flex-perfect-center">
+            <div class="col-3 col-s-3"><button class="selectable" onclick="q7_1()">$250</button></div>
+            <div class="col-3 col-s-3"><button class="selectable" onclick="q7_2()">$500</button></div>
+            <div class="col-3 col-s-3"><button class="selectable" onclick="q7_3()">$1000</button></div>
+          </div>
+          <p>If there is damage to your vehicle that you can afford to fix yourself, you may want to pay out of pocket
+            instead of filing a claim, because claims increase your rates in the long run. This will help determine
+            your deductible.</p>
+          <div class="center"><button class="btnSm" onclick="show_q6()">Back</button></div>
+        </div>
+      </div>
+      <!-- Question 8 - Do you want the lowest possible rates or the best protection? -->
+      <div class="widget-slide" id="q8" style="display: none">
+        <div class="widget-header">Do you want the lowest possible rates or the best protection?</div>
+        <div class="widget-body">
+          <div class="flex-center">
+            <div class="col-3 col-s-3"><button class="selectable" onclick="q8_1()">Lowest rates</button>
+            </div>
+            <div class="col-3 col-s-3"><button class="selectable" onclick="q8_2()">Best protection</button>
+            </div>
+          </div>
+          <p>Some consumers don't mind paying more for auto insurance to feel more secure that they'll be covered
+            for certain incidents. Others want the lowest rates possible, even if it means less coverage. If you choose
+            "best protection," we will only suggest you buy insurance coverage that makes sense given your other
+            answers. We will not suggest you buy more coverage than you need. Likewise, if you choose "lowest
+            rates," we will consider your other answers and suggest what makes sense. We will not suggest you buy less
+            coverage than you absolutely need.</p>
+          <div class="center"><button class="btnSm" onclick="show_q7()">Back</button></div>
+        </div>
+      </div>
+      <!-- Question 9 - What is your net worth? -->
+      <div class="widget-slide" id="q9" style="display: none">
+        <div class="widget-header">What is your net worth?</div>
+        <div class="widget-body">
+          <div class="flex-perfect-center">
+            <div class="col-3 col-s-3"><button class="selectable" onclick="q9_1()">Less than $25,000</button></div>
+            <div class="col-3 col-s-3"><button class="selectable" onclick="q9_2()">$25,000 - $50,000</button></div>
+            <div class="col-3 col-s-3"><button class="selectable" onclick="q9_3()">$50,000 - $100,000</button></div>
+            <div class="col-3 col-s-3"><button class="selectable" onclick="q9_4()">More than $100,000</button></div>
+          </div>
+          <p>This will help us determine the amount of your liability limits. If you’re at fault in an accident that
+            costs more than your limits, you can be sued. The more assets you have, the bigger target you are for a
+            lawsuit.</p>
+          <div class="center"><button class="btnSm" onclick="show_q8()">Back</button></div>
+        </div>
+      </div>
+      <!-- Results -->
+      <div class="widget-slide" id="auto-calc-results" style="display: none">
+        <div class="widget-header">Based on your answers, we recommend these coverage options and limits:</div>
+        <div id="lowest-rates">
+          <div id="BI-lowest-rates">
+            <p><strong>Bodily injury liability</strong><br />
+              <span id="bodily-injury-liability-lowest-rates" style="padding-left:8px;"></span></p>
+          </div>
+          <div id="PD-lowest-rates">
+            <p><strong>Property damage liability</strong><br />
+              <span id="property-damage-liability-lowest-rates" style="padding-left:8px;"></span></p>
+          </div>
+          <div id="UMBI-lowest-rates" style="display: none">
+            <p><strong>Uninsured/Underinsured Motorist bodily injury</strong><br />
+              <span id="uninsured-motorist-lowest-rates" style="padding-left:8px;"></span></p>
+          </div>
+          <div id="U-lowest-rates" style="display: none">
+            <p><strong>Umbrella liability policy</strong><br />
+              <span id="umbrella-liability-lowest-rates" style="padding-left:8px;"></span></p>
+          </div>
+          <div id="Med-Pay-lowest-rates" style="display: none">
+            <p><strong>Medical payments (MedPay)</strong><br />
+              <span id="medical-payments-lowest-rates" style="padding-left:8px;"></span></p>
+          </div>
+          <div id="Comp-and-Collision-lowest-rates" style="display: none">
+            <p><strong>Comprehensive and collision</strong><br />
+              <span id="deductible-lowest-rates" style="padding-left:8px;"></span></p>
+          </div>
+          <div id="Gap-lowest-rate" style="display: none">
+            <p id="gap-insurance-coverage" style="font-weight: bold"></p>
+          </div>
+          <ul>
+            <li>You selected “cheapest rates,” so these results show the lightest insurance coverage you should
+              reasonably buy, given your other answers</li>
+            <li>If you caused an accident and were sued, liability insurance would pay first, protecting your
+              assets from being seized or sold. But it only pays out up to the limits stated in your policy - you’re
+              on the hook for the rest.
+            </li>
+            <li>You should carry bodily-injury coverage of at least $100,000 per person, and $300,000 per
+              accident, and property-damage coverage of $50,000, or a minimum of $300,000 on a single-limit policy.
+            </li>
+          </ul>
+          <div class="flex-perfect-center">
+            <div class="col-6 col-s-6"><button class="selectable" onclick="show_best_protection()">See results for
+                best protection</button></div>
+            <div class="col-3 col-s-3"><button class="selectable" onclick="show_q1()">Start Over</button></div>
+          </div>
+        </div>
+        <div id="best-protection">
+          <div id="BI-best-protection">
+            <p><strong>Bodily injury liability</strong><br />
+              <span id="bodily-injury-liability-best-protection" style="padding-left:8px;">"$100,000 per person /
+                $300,000 per accident"</span></p>
+          </div>
+          <div id="PD-best-protection">
+            <p><strong>Property damage liability</strong><br />
+              <span id="property-damage-liability-best-protection" style="padding-left:8px;">"$100,000 per
+                accident"</span></p>
+          </div>
+          <div id="UMBI-best-protection">
+            <p><strong>Uninsured/Underinsured Motorist bodily injury</strong><br />
+              <span id="uninsured-motorist-best-protection" style="padding-left:8px;"></span></p>
+          </div>
+          <div id="U-best-protection" style="display: none">
+            <p><strong>Umbrella liability policy</strong><br />
+              <span id="umbrella-liability-best-protection" style="padding-left:8px;"></span></p>
+          </div>
+          <div id="Med-Pay-best-protection" style="display: none">
+            <p><strong>Medical payments (MedPay)</strong><br />
+              <span id="medical-payments-best-protection" style="padding-left:8px;"></span></p>
+          </div>
+          <div id="Comp-and-Collision-best-protection" style="display: none">
+            <p><strong>Comprehensive and collision</strong><br />
+              <span id="deductible-best-protection" style="padding-left:8px;"></span></p>
+          </div>
+          <div id="Gap-best-protection" style="display: none">
+            <p id="gap-insurance-coverage" style="font-weight: bold"></p>
+          </div>
+          <ul>
+            <li>You selected “cheapest rates,” so these results show the lightest insurance coverage you should
+              reasonably buy, given your other answers</li>
+            <li>If you caused an accident and were sued, liability insurance would pay first, protecting your
+              assets
+              from being seized or sold. But it only pays out up to the limits stated in your policy - you’re on
+              the
+              hook for the rest.
+            </li>
+            <li>You should carry bodily-injury coverage of at least $100,000 per person, and $300,000 per
+              accident,
+              and property-damage coverage of $50,000, or a minimum of $300,000 on a single-limit policy.</li>
+          </ul>
+          <p style="padding-left:8px;">You selected “best coverage,” so these results show the most coverage you
+            should reasonably buy, given your other answers</p>
+          <div class="flex-perfect-center">
+            <div class="col-6 col-s-6"><button class="selectable" onclick="show_lowest_rates()">See results for
+                lowest rates</button></div>
+            <div class="col-3 col-s-3"><button class="selectable" onclick="show_q1()">Start Over</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- User's Inputs -->
+  <div class="widget-slide main" style="display: block">
+    <div class="widget-body">
+      <p>Do you own your vehicle? <span id="ownership-select"></span></p>
+      <p>Do you and your frequent passengers have health insurance? <span id="health-insurance-select"></span></p>
+      <p>Could you afford to replace your vehicle without the help of insurance? <span
+          id="comprehensive-collision-select"></span>
+      </p>
+      <p>If you need help of insurance, how much money do you have easy access to if your vehicle is damaged? <span
+          id="deductible-select"></span></p>
+      <p>Do you want the lowest possible rates or the best protection? <span
+          id="lowest-rate-best-protection-select"></span>
+      </p>
+      <p>What is your net worth? <span id="net-worth-select"></span></p>
+    </div>
+  </div>
+  <section id="auto-insurance-explained">
+    <div class="main">
+      <h3>Choosing the right coverage</h3>
+      <p>Getting the right level of auto insurance is not one size fits all. What is most important to one consumer
+        isn’t necessary for another.</p>
+      <p>That’s why it’s critical to get the auto insurance that fits your needs.</p>
+      <p>This Auto Insurance Coverage Calculator is a quick way to find the right auto insurance levels and options for
+        you. While getting the cheapest auto insurance is most important for some consumers, another person may want the
+        broadest possible protection. Our calculator understands that personalization is vital when deciding on the best
+        auto insurance coverage for your situation.</p>
+      <h3>How much auto insurance do I need?</h3>
+      <p>The calculator recommends the right level of auto insurance coverage for you based on your answers. This
+        coverage can include:</p>
+      <ul>
+        <li>Bodily injury liability</li>
+        <li>Property damage liability</li>
+        <li>Uninsured/Underinsured motorist bodily injury</li>
+        <li>Umbrella liability policy</li>
+        <li>Comprehensive and collision</li>
+        <li>Personal injury protection</li>
+        <li>Gap insurance</li>
+      </ul>
+    </div>
+  </section>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="javascript\auto-insurance.js"></script>

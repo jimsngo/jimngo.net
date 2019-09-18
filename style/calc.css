@@ -1,0 +1,243 @@
+.inputContainer {
+  clear: both;
+  background-color: #EEE;
+  padding: 4px;
+  border: 1px solid #CCC;
+  margin: 4px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  box-shadow: inset 0px 1px 0px #fff;
+}
+.inputTitleContainer {
+  clear: both;
+  height: auto;
+  margin: 10px;
+}
+.inputTitleContainer::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.inputTitle {
+  float: left;
+  margin: 0px;
+}
+.inputValue {
+  float: right;
+  padding: 3px 3px 3px 6px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  font-size: 100%;
+}
+.inputValue2 {
+  padding: 3px 3px 3px 6px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  font-size: 100%;
+}
+.inputValue3 {
+  padding: 3px 3px 3px 6px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  font-size: 100%;
+}
+.input_value_right {
+  float: right;
+  padding: 3px 3px 3px 6px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  font-size: 100%;
+}
+.sliderContainer {
+  content: "";
+  clear: both;
+  display: table;
+  width: 100%;
+  margin: 10px;
+}
+/* Turn off spinners */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* End Spinners */
+/* Sliders */
+.slider {
+  -webkit-appearance: none;
+  width: 90%;
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+.slider:hover {opacity: 1;}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+.slider1 {
+  -webkit-appearance: none;
+  width: 90%;
+  height: 15px;
+  border-radius: 5px;
+  background: linear-gradient(to right, green, yellow, red);
+  outline: none;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+.slider1::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+.slider1::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+/* End Slider */
+
+/* Tooltip */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 100%;
+  font-weight: normal;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 5px;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 110%;
+  left: 30%;
+  margin-left: -40px;
+}
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  width: 300px;
+}
+/* End Tooltip */
+/* Toggle Switch Slider - Added 04/26/19 - Source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_switch
+  class name "slider" renamed to "slider_small"
+  class name "switch" renamed to "switch_toggle"  */
+.switch_toggle {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+.switch_toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider_small {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+}
+.slider_small:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+input:checked+.slider_small {background-color: #2196F3;}
+input:focus+.slider_small {box-shadow: 0 0 1px #2196F3;}
+input:checked+.slider_small:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+/* End Toggle Switch Slider */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  text-align: left;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #4CAF50;
+  border-radius: 5px;
+}
+.loanPrograms {
+  margin: 10px 10px;
+  padding: 6px 12px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #4CAF50;
+  border-radius: 5px;
+}
+.loanProgramNote {
+  padding: 6px 12px;
+  text-align: left;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #4CAF50;
+  border-radius: 5px;
+}
+.note {
+  padding: 6px 12px;
+  text-align: left;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #4CAF50;
+  border-radius: 5px;
+}

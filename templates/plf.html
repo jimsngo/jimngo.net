@@ -1,0 +1,195 @@
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+<style>
+    table { font-family: arial, sans-serif; border-collapse: collapse; width: 100%; }        
+    td, th { border: 1px solid #dddddd; text-align: left; padding: 8px; }        
+    tr:nth-child(even) { background-color: #dddddd; }
+</style>
+</head>
+    <body>       
+        <h2>Filterable Table</h2>
+        <p>Type something in the input field to search the table for first names, last names or emails:</p>  
+        <input id="myInput" type="text" placeholder="Search..">
+        <br><br>
+        <table>
+            <thead>
+            <tr>
+                <th>Age</th>
+                <th>Int</th>
+                <th>Plf</th>
+            </tr>
+            </thead>
+            <tbody id="myTable">
+            <tr>
+                <td>62</td>
+                <td>3.000</td>
+                <td>0.524</td>
+            </tr>
+            <tr>
+                <td>62</td>
+                <td>3.125</td>
+                <td>0.524</td>
+            </tr>
+            <tr>
+                <td>62</td>
+                <td>3.250</td>
+                <td>0.522</td>
+            </tr>
+            <tr>
+                <td>62</td>
+                <td>3.375</td>
+                <td>0.513</td>
+            </tr>
+            <tr>
+                <td>62</td>
+                <td>3.500</td>
+                <td>0.504</td>
+            </tr>
+            <tr>
+                <td>62</td>
+                <td>3.625</td>
+                <td>0.496</td>
+            </tr>
+            <tr>
+                <td>62</td>
+                <td>3.750</td>
+                <td>0.487</td>
+            </tr>
+            <tr>
+                <td>62</td>
+                <td>3.875</td>
+                <td>0.479</td>
+            </tr>
+            <tr>
+                <td>62</td>
+                <td>4.000</td>
+                <td>0.470</td>
+            </tr>
+            <tr>
+                <td>62</td>
+                <td>4.125</td>
+                <td>0.462</td>
+            </tr>
+            <tr>
+                <td>62</td>
+                <td>4.250</td>
+                <td>0.454</td>
+            </tr>
+            <tr>
+                <td>62</td>
+                <td>4.375</td>
+                <td>0.447</td>
+            </tr>
+            <tr>
+                <td>62</td>
+                <td>4.500</td>
+                <td>0.439</td>
+            </tr>
+            <tr>
+                <td>62</td>
+                <td>4.625</td>
+                <td>0.431</td>
+            </tr>
+            <tr>
+                <td>62</td>
+                <td>4.750</td>
+                <td>0.424</td>
+            </tr>
+            <tr>
+                <td>62</td>
+                <td>4.875</td>
+                <td>0.417</td>
+            </tr>
+            <tr>
+                <td>62</td>
+                <td>5.000</td>
+                <td>0.410</td>
+            </tr>
+            <tr>
+                <td>62</td>
+                <td>5.125</td>
+                <td>0.403</td>
+            </tr>
+            <tr>
+                <td>62</td>
+                <td>5.250</td>
+                <td>0.396</td>
+            </tr>
+            <tr>
+                <td>62</td>
+                <td>5.375</td>
+                <td>0.389</td>
+            </tr>
+            <tr>
+                <td>62</td>
+                <td>5.500</td>
+                <td>0.382</td>
+            </tr>
+            <tr>
+                <td>62</td>
+                <td>5.625</td>
+                <td>0.376</td>
+            </tr>
+            <tr>
+                <td>62</td>
+                <td>5.750</td>
+                <td>0.370</td>
+            </tr>
+            <tr>
+                <td>62</td>
+                <td>5.875</td>
+                <td>0.363</td>
+            </tr>
+            <tr>
+                <td>62</td>
+                <td>6.000</td>
+                <td>0.364</td>
+            </tr>
+            <tr>
+                <td>62</td>
+                <td>6.125</td>
+                <td>0.358</td>
+            </tr>
+            <tr>
+                <td>62</td>
+                <td>6.250</td>
+                <td>0.352</td>
+            </tr>
+            <tr>
+                <td>62</td>
+                <td>6.375</td>
+                <td>0.346</td>
+            </tr>
+            <tr>
+                <td>62</td>
+                <td>6.500</td>
+                <td>0.341</td>
+            </tr>
+            <tr>
+                <td>62</td>
+                <td>6.625</td>
+                <td>0.335</td>
+            </tr>
+            <tr>
+                <td>62</td>
+                <td>6.750</td>
+                <td>0.329</td>
+            </tr>
+            <tr>
+                <td>62</td>
+                <td>6.875</td>
+                <td>0.324</td>
+            </tr>
+            </tbody>
+        </table>
+    </body>

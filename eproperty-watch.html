@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Homeowners - ePropertyWatch</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,900" rel="stylesheet">
+  <link href="https://www.epropertywatch.com/css/fonts?v=SB8R80xt1lGIkAsZEQ87K12DVYEynDhIFz1zKiT59R81"
+    rel="stylesheet" />
+  <link href="https://www.epropertywatch.com/css/default?v=K1uLRPLOYnqX8uWm2PvA3zUx91xDO9kCJYA2cSHRRV41"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,900" rel="stylesheet">
+  <link href="https://www.epropertywatch.com/content/videojs-resolution-switcher.css" rel="stylesheet">
+  <link href="https://www.epropertywatch.com/css/home?v=EYh-zjD6nRk7CwoxN3gzzmLwLNlehKtdrFvgvp_dqlI1"
+    rel="stylesheet" />
+  <base href="https://www.epropertywatch.com/">
+</head>
+
+<body>
+  <header class="header-homeowners header-with-overlay">
+    <div id="pinsOverlay" class="header-overlay"></div>
+    <div class="container">
+      <div class="intro-text">
+        <div class="intro-lead-in">Why do homeowners love ePropertyWatch?</div>
+        <div class="intro-description">
+          Ever go to an online real estate site to check out what your home is worth? Curious about nearby homes that
+          are for sale or recently sold? How about how much your home might be worth in the next two years? With
+          ePropertyWatch, that information (and much more) comes directly to you.
+        </div>
+      </div>
+    </div>
+  </header>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      var pins = [
+        "url('/content/images/home/infographic/01-3-Year-Snapshot.png')",
+        "url('/content/images/home/infographic/02-Just-Listed.png')",
+        "url('/content/images/home/infographic/03-Largest-Home.png')",
+        "url('/content/images/home/infographic/04-Foreclosure.png')",
+        "url('/content/images/home/infographic/05-Highest-Value.png')",
+        "url('/content/images/home/infographic/06-Sold.png')",
+        "url('/content/images/home/infographic/07-For-Rent.png')",
+        "url('/content/images/home/infographic/08-Building-Permit.png')",
+        "url('/content/images/home/infographic/09-Current-Value.png')"
+      ];
+      var maxIndex = (pins.length - 1);
+      var nextPinIndex = 0;
+      setInterval(function () {
+        $('#pinsOverlay').css('backgroundImage', pins[nextPinIndex]);
+        nextPinIndex = (nextPinIndex < maxIndex) ? nextPinIndex + 1 : 0;
+      }, 2000);
+    }); </script>
+</body>
+
+</html>

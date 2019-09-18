@@ -1,0 +1,6 @@
+[2019-08-25T01:02:54+02:00] Setting RESO API client id to 'JIMNGO'.
+[2019-08-25T01:02:54+02:00] Setting RESO API client secret.
+[2019-08-25T01:02:54+02:00] Setting RESO API auth URL to 'https://op.api.crmls.org/identity/connect/authorize'.
+[2019-08-25T01:02:54+02:00] Setting RESO API token URL to 'https://op.api.crmls.org/identity/connect/token'.
+[2019-08-25T01:02:54+02:00] Setting RESO API request URL to 'https://h.api.crmls.org/RESO/OData/'.
+[2019-08-25T01:02:54+02:00] Initiating RESO API authorization.

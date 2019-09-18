@@ -1,0 +1,252 @@
+* { box-sizing: border-box;}
+/* Responsive Equal Height Columns */
+.table-row { display: table; width: 100%; }
+.table-column { display: table-cell; width: 33%; padding: 16px; }
+@media only screen and (max-width: 1024px) { .table-column { display: block; width: 100%; } }
+.section1 { background-color:#ccf5ff; color: #002933; }
+.section2 { background-color: #e6ccff; color: #1a0033; }
+.section3 { background-color: #ffcccc; color: #330000; }
+/* Create two equal columns that floats next to each other */
+.column { float: left; width: 50%; padding: 10px; text-align: center; }
+.column1 { float: left; width: 65%; padding: 10px; }
+.column2 { float: left; width: 35%; padding: 10px; }
+/* Clear floats after the columns */
+.row:after { content:""; display: table; clear: both; }
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) { .column { width: 100% } .column1 {width:100%} .column2 {width: 100%} }
+.linkmenu { text-align: center; align-items: center; flex-wrap: wrap; color: black; margin: auto; }
+.button2 { width: 210px; margin: 10px; padding: 10px; border-style: solid; border-radius: 5px; cursor: pointer; font-size: 100%; background-color:inherit; border-color: #1a0033; }
+.button2:hover { color: white; background: #1a0033; }
+.button5 { width: 250px; margin: 10px; padding: 10px; border-style: solid; border-radius: 5px; cursor: pointer; font-size: 100%; background: #d3f8d3; border-color: #072c07; }
+.button5:hover { color: white; background: #072c07; }
+.center { text-align: center; margin: auto; }
+/* Style the Loan Program note content */
+.tabcontent {display: none; text-align: left;}
+.loanProgramNote { text-align: left; border-style: solid; border-width: 1px; border-color: #4CAF50; border-radius: 5px; padding: 6px 12px; }
+table { border-collapse: collapse; margin: 10px; float:inherit; }
+th, td { padding: 8px; text-align: left; border-bottom: 1px solid #ddd; }
+tr:hover { background-color: #f5f5f5; }
+/*End tab content */
+.slider { -webkit-appearance: none; width: 90%; height: 15px; border-radius: 5px; background: #d3d3d3; outline: none; -webkit-transition: .2s; transition: opacity .2s; }
+.slider:hover { opacity: 1; }
+.slider::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 25px; height: 25px; border-radius: 50%; background: #4CAF50; cursor: pointer; }
+.slider::-moz-range-thumb { width: 25px; height: 25px; border-radius: 50%; background: #4CAF50; cursor: pointer; }
+.slider1 { -webkit-appearance: none; width: 90%; height: 15px; border-radius: 5px; background: linear-gradient(to right, green, yellow, red); outline: none; -webkit-transition: .2s; transition: opacity .2s; }
+.slider1::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 25px; height: 25px; border-radius: 50%; background: #4CAF50; cursor: pointer; }
+.slider1::-moz-range-thumb { width: 25px; height: 25px; border-radius: 50%; background: #4CAF50; cursor: pointer; }
+/* Bottom Arrow */
+.tooltip { position: relative; display: inline-block; border-bottom: 1px dotted black; }
+.tooltip .tooltiptext { visibility: hidden; width: 100%; background-color: black; color: #fff; text-align: center; border-radius: 6px; padding: 5px 5px; /* Position the tooltip */ position: absolute; z-index: 1; bottom: 110%; left: 50%; margin-left: -150px; }
+.tooltip .tooltiptext::after { content: ""; position: absolute; top: 100%; left: 50%; margin-left: -5px; border-width: 5px; border-style: solid; border-color: black transparent transparent transparent; }
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext { visibility: visible; width: 300px; }
+.heading { background-color: green; color: white; padding: 15px; width: 100%; margin: auto; text-align: center; font-size: 18px; border-radius: 5px; border-style: none; }
+.note { width: 90%; margin: 10px 5px 5px 20px; border: 1px solid powderblue; padding: 10px; border-radius: 4; }
+/* Style the button that is used to open and close the collapsible content */
+.collapsible { background-color: lightgreen; color: black; cursor: pointer; padding: 18px; width: 100%; margin: auto; border: none; border-radius: 5px; text-align: center; outline: none; font-size: 100%; }
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover { background-color: green; color: white }
+/* Style the collapsible content - Animated Collapsible (Slide Down) */
+.content { padding: 0 18px; max-height: 0; overflow: hidden; transition: max-height 0.2s ease-out; }
+video { width: 100%; height: auto; }
+/* Blinker */
+.blink { animation: blinker 1s step-start infinite; }
+@keyframes blinker { 50% { opacity: 0; } }
+/* End Blinker */
+/* Widget */
+.widget-slide {width: 100%; margin: auto; padding: 0px}
+.widget-header {width: 100%; margin: auto; padding: 12px; background-color: #004A7C; color: white; font-size: 125%; border-radius: 5px 5px 0px 0px}
+.widget-body {width: 100%; margin: auto; padding: 12px; background-color: dodgerblue; color: white; text-align: left; font-size: 100%; border-radius: 0px 0px 5px 5px}
+.widget-body a {color: lightgreen;}
+.widget-body a:hover {color:#002933;}
+.widget-submit-container {display: flex; margin: 12px; background: #fed24d; color: #313140; text-align: center; font-size: 18px;}
+.widget-submit-btn {width: 140px; margin: 8px; padding: 8px; border-style: solid; border-radius: 5px; background-color: #fed24d; border-color: #002933; text-align: center; font-size: 125%; cursor: pointer;}
+.widget-submit-btn:hover {background: #002933; color: white;}
+.widget-submit-btn:focus {outline: 0;}
+/* Banners - Sliders */
+.banner-content {width: 100%; margin: 0px; padding: 18px; text-align: left; font-size: 125%; border-style: none; outline: none;}
+@media only screen and (min-width: 1024px) {
+.banner1, .banner2, .banner3 {width: 100%; margin: 0px; padding: 18px; background-color: dodgerblue; color: white; text-transform: uppercase; text-align: left; font-size: 200%; border-style: none; outline: none;}
+.banner4, .banner5, .banner6 {width: 100%; margin: 0px; padding: 18px; background-color: #004A7C; color: white; text-transform: uppercase; text-align: center; font-size: 200%; border-style: none; outline: none;}}
+@media only screen and (max-width: 1023px) {
+.banner1, .banner2, .banner3 {width: 100%; margin: 0px; padding: 18px; background-color: dodgerblue; color: white; text-transform: uppercase; text-align: left; font-size: 125%; border-style: none; outline: none;}
+.banner4, .banner5, .banner6 {width: 100%; margin: 0px; padding: 18px; background-color: #004A7C; color: white; text-transform: uppercase; text-align: center; font-size: 125%; border-style: none; outline: none;}}
+/* Simple border - fixed width - background color fill only on hover */
+.btn-blue-brdr-90 {width: 90px; margin: 8px; padding: 8px; border-style: solid; border-radius: 5px; background-color: white; border-color: #004A7C; color: #004A7C; font-size: 100%;}
+.btn-blue-brdr-90:hover {background: #004A7C; color: white;}
+.btn-blue-brdr-90:focus {outline: 0;}
+.btn-blue-brdr-120 {width: 120px; margin: 8px; padding: 8px; border-style: solid; border-radius: 5px; background-color: white; border-color: #004A7C; color: #004A7C; font-size: 100%;}
+.btn-blue-brdr-120:hover {background: #004A7C; color: white;}
+.btn-blue-brdr-120:focus {outline: 0;}
+.btn-blue-brdr-150 {width: 150px; margin: 8px; padding: 8px; border-style: solid; border-radius: 5px; background-color: white; border-color: #004A7C; color: #004A7C; font-size: 100%;}
+.btn-blue-brdr-150:hover {background: #004A7C; color: white;}
+.btn-blue-brdr-150:focus {outline: 0;}
+.btn-blue-brdr-180 {width: 180px; margin: 10px; padding: 10px; border-style: solid; border-radius: 5px; background-color: white; border-color: #004A7C; color: #004A7C; font-size: 100%;}
+.btn-blue-brdr-180:hover {background: #004A7C; color: white;}
+.btn-blue-brdr-180:focus {outline: 0;}
+.btn-grn-brdr {width: 100%; height: 50px; margin: 4px; padding: 8px; border-style: solid; border-radius: 5px; background-color: white; border-color: green ;color: green;  font-size: 100%;}
+.btn-grn-brdr:hover {background-color: green; color: white;}
+.btnSm-dti-1 {margin: 10px auto; padding: 10px; border-style: none; outline: none; border-radius: 5px; background-color: lightgreen; font-size: 100%; text-decoration: none; cursor: pointer;}
+.btnSm-dti-1:hover, .btnSm-dti-1:focus {background: #238823; color: white;}
+.btnSm-dti-2 {margin: 10px auto; padding: 10px; border-style: none; outline: none; border-radius: 5px; background-color: #fbe49d; color: #947005; font-size: 100%; text-decoration: none; cursor: pointer;}
+.btnSm-dti-2:hover, .btnSm-dti-2:focus {background: #fad052; color: black;}
+.btnSm-dti-3 {margin: 10px auto; padding: 10px; border-style: none; outline: none; border-radius: 5px; background-color: #e25059; font-size: 100%; text-decoration: none; cursor: pointer;}
+.btnSm-dti-3:hover, .btnSm-dti-3:focus {background: #D2222D; color: white;}
+/* End Button */
+.flex-center {display: flex; flex-wrap: wrap; justify-content: center;}
+.flex-perfect-center {display: flex; flex-wrap: wrap; justify-content: center; align-items: center;}
+/* User's Input Containers */
+/* inputContainer */
+.inputContainer {
+    clear: both;
+    background-color: #EEE;
+    padding: 4px;
+    border: 1px solid #CCC;
+    margin: 4px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    box-shadow: inset 0px 1px 0px #fff;
+}
+.inputTitleContainer {
+    clear: both;
+    height: auto;
+    margin: 10px;
+}
+.inputTitleContainer::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.inputTitle {
+    float: left;
+    margin: 0px;
+}
+.inputValue {
+    float: right;
+    padding: 3px 3px 3px 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    font-size: 100%;
+}
+.inputValue2 {
+    padding: 3px 3px 3px 6px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    font-size: 100%;
+}
+.inputValue3 {
+    padding: 3px 3px 3px 6px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    font-size: 100%;
+}
+.input-value-2 {
+    float: right;
+    padding: 3px 3px 3px 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    font-size: 100%;
+}
+/* Sliders */
+.sliderContainer {
+    content: "";
+    clear: both;
+    display: table;
+    width: 100%;
+    margin: 10px;
+}
+.slider {
+    -webkit-appearance: none;
+    width: 90%;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+.slider:hover {
+    opacity: 1;
+}
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+/* slider with linear-gradient background */
+.slider1 {
+    -webkit-appearance: none;
+    width: 90%;
+    height: 15px;
+    border-radius: 5px;
+    background: linear-gradient(to right, green, yellow, red);
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+.slider1::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+.slider1::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+/* slider with linear-gradient background */
+.slider2 {
+    -webkit-appearance: none;
+    width: 95%;
+    height: 15px;
+    border-radius: 5px;
+    background: white;
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+.slider2::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: lightgreen;
+    cursor: pointer;
+}
+.slider2::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: lightgreen;
+    cursor: pointer;
+}
+/* End Slider */

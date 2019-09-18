@@ -1,0 +1,267 @@
+<section id="flyers">
+  <div class="main flex-center">
+    <div class="col-4 col-s-4">
+      <button class="collapsible">
+        <h3>Looking To Purchase A Home?</h3>
+      </button>
+      <div class="content">
+        <p>1. Make sure your credit is in good shape</p>
+        <ul>
+          <li>Excellent Credit: 750+</li>
+          <li>Good Credit: 700-749</li>
+          <li>Fair Credit: 650-699</li>
+          <li>Poor Credit: 600-649</li>
+        </ul>
+        <p>Try to get your credit card balances below 40% of the limit. It's best to have at least 3 open
+          and active accounts listed on your credit report</p>
+        <p>2. If you're renting, pay by check</p>
+        <p>Having documented proof of your last 12 months of payments is often required by the lender</p>
+        <p>3. Obtain proof of employment for the past 2-years</p>
+        <ul>
+          <li>W2s and tax returns</li>
+          <li>Paystubs covering 30 days</li>
+          <li>Be prepared to explain any gaps in employment</li>
+        </ul>
+      </div>
+      <button class="collapsible">
+        <h3>The Benefits Of A 20% Down Payment</h3>
+      </button>
+      <div class="content">
+        <ol>
+          <li><strong>Your interest rate will be lower.</strong><br /> Putting down a 20% down payment vs.
+            a 3-5% down payment shows your lender/bank that you are more financially stable, thus a good
+            credit risk. The more confident your bank
+            is in your credit score and your ability to pay your loan, the lower the rate they will be
+            willing to give you.</li>
+          <li><strong>You’ll end up paying less for your home.</strong><br /> The bigger your down
+            payment, the lower your loan amount will be for your mortgage. If you are able to pay 20% of
+            the cost of your new home at the start of the transaction,
+            you will only pay interest on the remaining 80%. If you put down a 5% down payment, the
+            extra 15% on your loan will accrue interest and end up costing you more in the long run!
+          </li>
+          <li><strong>Your offer will stand out in a competitive market!</strong><br /> In a market where
+            many buyers are competing for the same home, sellers like to see offers come in with 20% or
+            larger down payments. The seller gains the
+            same confidence that the bank did above. You are seen as a stronger buyer whose financing is
+            more likely to be approved. Therefore, the deal will be more likely to go through!</li>
+          <li><strong>You won’t have to pay Private Mortgage Insurance (PMI)</strong><br /> Simply put,
+            PMI is “an insurance policy that protects the lender if you are unable to pay your mortgage.
+            It’s a monthly fee, rolled into your mortgage
+            payment, that is required for all conforming, conventional loans that have down payments
+            less than 20%.”</li>
+        </ol>
+      </div>
+      <button class="collapsible">
+        <h3>How Much House Can You Afford?</h3>
+      </button>
+      <div class="content">
+        <p>Before you start shopping for a new home, determine how much you can afford to spend.</p>
+        <p>Here are a few things to consider:</p>
+        <ul>
+          <li>Your monthly income</li>
+          <li>Your available funds for down payment</li>
+          <li>Your monthly expenses</li>
+          <li>Your credit score</li>
+        </ul>
+        <p>It's important to consider getting pre-approved from a licensed mortgage professional. An
+          Independent Mortgage Professional will be able to offer you several loan options and find the
+          best available loan program for your needs.</p>
+      </div>
+      <button class="collapsible">
+        <h3>6 Things Not To Do When Applying For A Mortgage</h3>
+      </button>
+      <div class="content">
+        <p>When lenders review your application, they like to see consistency in your finances.</p>
+        <ol>
+          <li>Do not make major purchases like furniture, appliances, jewelry, vehicles or vacations</li>
+          <li>Don't change or quit your job</li>
+          <li>Consult with your mortgage professional before withdrawing, depositing, or moving large
+            amounts of money in or out of your bank account</li>
+          <li>Do not pay off debts or collections (unless instructed to do so by a mortgage professional)
+          </li>
+          <li>Avoid using cash for a good-faith deposit - cash is difficult to verify and could result in
+            a closing delay
+          </li>
+          <li>Don't have your credit report pulled too many times - this can hurt your credit score</li>
+        </ol>
+      </div>
+      <button class="collapsible">
+        <h3>Acceptable Sources of Cash to Close Funds</h3>
+      </button>
+      <div class="content">
+        <p>Providing proper asset documentation and the actual source of the funds is a critical element of
+          the loan closing process.</p>
+        <p>There’s nothing worse in a real estate purchase than making it all the way through the hoops and
+          hurdles just to have a loan denied after the final documents have been signed due to the
+          borrower using the wrong checking account for
+          the down payment.</p>
+        <p>Seasoning of the down payment money is just as important as the source, which is why underwriters
+          typically require at least two months bank / asset statements in the initial mortgage approval
+          process.</p>
+        <ul>
+          <h4>A Few Acceptable Sources Of Down Payment Include:</h4>
+          <li>Bank Accounts – checking / savings</li>
+          <li>Investment Accounts – money market, mutual funds</li>
+          <li>Retirement Funds – keep in mind that borrowing against a 401K plan will require a repayment,
+            which will be calculated in the Debt-to-Income Ratio</li>
+          <li>Life Insurance – Cash value and face amount</li>
+          <li>Gifts – Family members can gift down payment funds with certain restrictions</li>
+          <li>Inheritance / Trust Funds</li>
+          <li>Government Grants – Many state, county and city agencies offer special down payment
+            assistance programs
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- QM Products -->
+    <div class="col-4 col-s-4">
+      <h3 class="heading">Qualified Mortgages</h3>
+      <button class="collapsible">
+        <h3>Conventional</h3>
+      </button>
+      <div class="content">
+        <p>If you’ve heard of Fannie Mae or Freddie Mac, you know the family of conventional loans. These loans are
+          written by a wide range of banks, from your hometown locally owned to the fanciest mortgage broker.
+          “Conforming” loans meet Fannie and Freddie’s high requirements, including maximum sales price.</p>
+        <p><strong>Pros:</strong> Generally, you’ll get a better deal on mortgage insurance that automatically drops
+          off (meaning you no longer have to pay it) once your home reaches a 78 percent loan to value ratio. Also,
+          you’ll pay less in closing costs and your debt to income ratio can be somewhat flexible as long as look
+          really good on paper.</p>
+        <p><strong>Cons:</strong> These are generally the hardest loans to qualify for. Even though there are now
+          three to five percent down payment options, your credit score will need to be around 700 (better is better)
+          and your other ducks should be lined up nice and straight. Consistent employment, savings that can be
+          designated as “reserve funds” and few to no scabs on your credit report are helpful.</p>
+      </div>
+      <button class="collapsible">
+        <h3>FHA</h3>
+      </button>
+      <div class="content">
+        <p>The FHA started insuring loans after the Great Depression as a way of helping people get back
+          into owned property. It basically created the 30 year fixed interest mortgage and continues to
+          carefully oversee which homes can and cannot
+          be purchased in its name.</p>
+        <p><strong>Pros:</strong> Good option for first time buyers because of low down payment and credit
+          requirements. FHA will accept “soft” credit lines for people who haven’t established credit yet
+          or have very little, so keep that utility
+          bill paid on time. The program allows up to six percent of your closing costs to be financed
+          into your loan, as “seller paid items,” which can help reduce the actual cash you need to close.
+        </p>
+        <p><strong>Cons:</strong> FHA requires a lot more in closing costs because of the additional upfront
+          mortgage insurance deposit. In addition, if you have less than a 10 percent down payment, under
+          the current programs you’ll be forced
+          to keep paying mortgage insurance for the life of the loan, giving you no options but to
+          refinance or sell down the line if you want rid of it (it’s costly, you want rid of it). Not
+          every banker wants to deal with FHA loans because
+          they can be time consuming to write, so you may have to shop a bit to find a good bank.</p>
+      </div>
+      <button class="collapsible">
+        <h3>VA</h3>
+      </button>
+      <div class="content">
+        <p>As part of the benefits that active military members and veterans receive from the government, VA
+          loans are built on a merit-based system. Career military and those honorably discharged early
+          are generally eligible, but short-term
+          members or Reserves may have to meet additional requirements. Anyone who can get this loan will
+          need to bring a Certificate of Eligibility in order to get the ball rolling with an approved
+          lender.</p>
+        <p><strong>Pros:</strong> Favorable interest rates, extremely flexible guidelines and absolutely
+          nothing required as a downpayment (often little to nothing required at closing!) There’s no
+          mortgage insurance, just a one time “funding
+          fee” that varies with your service type, downpayment and times you’ve used your Eligibility.</p>
+        <p><strong>Cons:</strong> Really, there aren’t any. You can’t get this if you’re not military,
+          though, so that could be a con if you really wanted this most excellent loan type.</p>
+      </div>
+      <button class="collapsible">
+        <h3>USDA</h3>
+      </button>
+      <div class="content">
+        <p>In rural areas, the US Department of Agriculture will offer mortgage lending as a way of helping
+          to keep the local economy flowing. Homes don’t have to be on an acreage, but they do need to be
+          located in communities with under 35,000
+          inhabitants.
+        </p>
+        <p><strong>Pros:</strong> Like VA, USDA are fairly easy to qualify for as the buyer. They can also
+          be zero down loans, though the more you can bring to closing the better. Payment assistance and
+          other types of help are sometimes available
+          for very low income borrowers.</p>
+        <p><strong>Cons:</strong> The house you’re buying will undergo significant scrutiny in order to be
+          approved for the program. In all loan programs, your house has to qualify, but the hurdles USDA
+          puts in front of the building are much
+          larger than most other programs. This is good for you, because it means you’re getting a great
+          house, but it makes the process take a lot longer and can be scary for sellers. In addition,
+          there’s a cap on income for potential borrowers.</p>
+      </div>
+    </div>
+    <!-- Non-QM Loan -->
+    <div class="col-4 col-s-4">
+      <h3 class="heading">Non-Qualified Mortgages</h3>
+      <button class="collapsible">
+        <h3>Bank Statement Premier</h3>
+      </button>
+      <div class="content">
+        <p>For Highly Qualified Self-Employed Borrowers</p>
+        <P>Qualify with 12-months of bank statements and get a floor rate as low as 4.99%</P>
+        <ul>
+          <li>Loans up to $3M | Cash out refi to $2.5M</li>
+          <li>Debt to income ratio up to 43% allowed with minimum FICO score of 680</li>
+          <li>Minimum reserves of 6 months and no mortgage lates for 24 months is required</li>
+          <li>One Borrower must be self-employed and may have multiple streams of income</li>
+        </ul>
+      </div>
+      <button class="collapsible">
+        <h3>Bank Statement</h3>
+      </button>
+      <div class="content">
+        <p>For Self-Employed Borrowers</p>
+        <p>Qualify with 12-months bank statements</p>
+        <ul>
+          <li>Loans up to $3M | Cash out refi to $2.5M | DTI up to 55%</li>
+          <li>Min FICO score 600 | Min reserves - 3 months</li>
+          <li>No more than 1 mortgage late in past 12 months</li>
+          <li>One borrower must be self-employed and may have multiple streams of income</li>
+        </ul>
+      </div>
+      <button class="collapsible">
+        <h3>Investor</h3>
+      </button>
+      <div class="content">
+        <p>For Professional Real Estate Investors</p>
+        <p>Qualify with subject property cash flow</p>
+        <ul>
+          <li>Loans up to $2.5M | Cash out refi to $2.0M | DCR = 1.0</li>
+          <li>Unlimited financed properties allowed</li>
+          <li>Borrower does not need to own a primary residence or investment property</li>
+          <li>No tax returns, no employment, no income and no pre-payment penalty</li>
+        </ul>
+      </div>
+      <button class="collapsible">
+        <h3>Asset Qualification</h3>
+      </button>
+      <div class="content">
+        <p>For Borrowers with High Cash Liquidity</p>
+        <p>Qualify based on verified liquid assets</p>
+        <ul>
+          <li>Loan amounts up to $3M | Cash out refi up to $2.5M</li>
+          <li>Usable Assets: 100% Checking & Savings, 90% Stocks, Bonds & Mutual Funds, 80% Retirement
+            Funds
+          </li>
+          <li>No DTI ratio calculated | Min FICO score 600 | No employment or income on 1003</li>
+        </ul>
+      </div>
+      <button class="collapsible">
+        <h3>Agency Plus</h3>
+      </button>
+      <div class="content">
+        <p>For Conforming & Jumbo Loans, and Owners of Multiple Properties Falling Just Outside Qualified
+          Mortgage Parameters</p>
+        <p>Qualify with full documentation</p>
+        <ul>
+          <li>Loan amounts up to $3M | Cash out refi up to $2.5M | DTI up to 55%</li>
+          <li>Cash out up to 85% LTV (max. $1.0M)</li>
+          <li>Min FICO score 600 | Min reserves - 3 months</li>
+          <li>Up to 8 financed properties allowed</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

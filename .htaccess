@@ -1,0 +1,10 @@
+//Rewrite to www
+Options +FollowSymLinks
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^jimngo.net[nc]
+RewriteRule ^(.*)$ http://www.jimngo.net/$1 [r=301,nc]
+
+//Caching schema
+<FilesMatch "\.(js|png|gif|css|js|webp)$">
+Header set Cache-Control "max-age=7200"
+</FilesMatch>
