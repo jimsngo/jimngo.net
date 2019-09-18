@@ -264,9 +264,6 @@ input:checked+.slider_small:before{-webkit-transform:translateX(26px);-ms-transf
 .loanProgramNote{margin:4px;padding:4px 8px;text-align:left;background-color:#EEE;border:1px solid #CCC;-webkit-border-radius:12px;-moz-border-radius:12px;border-radius:12px;box-shadow:inset 0px 1px 0px #fff;}
 .loanPrograms{margin:10px 10px;padding:6px 12px;border-style:solid;border-width:1px;border-color:#4CAF50;border-radius:5px;}
 .main{width:100%;max-width:1320px;margin:auto;padding:8px;}
-.mls-search a:hover{color:lightgreen;}
-.mls-search a{font-style:normal;text-decoration:none;color:white;}
-.mls-search{max-width:300px;margin:16px;padding:24px;background-color:#004A7C;color:white;border-style:solid;border-width:1px;border-radius:5px;}
 .more-calc{max-width:768px;margin:auto;}
 .note{padding:6px 12px;text-align:left;border-style:solid;border-width:1px;border-color:#4CAF50;border-radius:5px;}
 .pad{margin:10px;}
@@ -316,10 +313,8 @@ input:checked+.slider_small:before{-webkit-transform:translateX(26px);-ms-transf
     .mobile-contact-bar i{font-size:24px;color:white;}
     .mobile-contact-bar a{font-size:16px;color:white}
 }
-@media only screen and (max-width:768px){
 
-}
-/* iPad Tablet or bigger *****************************************************/
+/* iPad Portrait *************************************************************/
 @media only screen and (min-width:768px){
     [class*="col-"]{float:left;padding:8px;}
     .col-s-1{width:8.33%;}
@@ -339,16 +334,14 @@ input:checked+.slider_small:before{-webkit-transform:translateX(26px);-ms-transf
     .content-desktop{display:block;}
     /* Mobile Contact Bar ****************************************************/
     .mobile-contact-bar{display:none}
-    /* New Home Widget *******************************************************/
-    .new-home-mobile{display:block;}
-    .new-home-desktop{display:none;}
     /* Banner Slides *********************************************************/
     /* .banner{font-size:200%;} */
     .dpa,.home-value,.refis,.sfr{font-size:100%;}
     /* Services **************************************************************/
     .card-header{font-size:150%;}
 }
-/* Desktop *******************************************************************/
+
+/* iPad Landscape & Desktop **************************************************/
 @media only screen and (min-width:1024px){
     [class*="col-"]{float:left;padding:8px;}
     .col-1{width:8.33%;}
@@ -366,7 +359,4 @@ input:checked+.slider_small:before{-webkit-transform:translateX(26px);-ms-transf
     .content-mobile{display:none;}
     .content-ipad{display:none;}
     .content-desktop{display:block;}
-    /* New Home Widget *******************************************************/
-    .new-home-mobile{display:none;}
-    .new-home-desktop{display:block;}
 }
