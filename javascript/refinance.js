@@ -6,14 +6,14 @@ for (var i = 0; i < flyers.length; i++) {
         var contents = document.getElementById("flyers").getElementsByClassName("content");
         for (var j = 0; j < contents.length; j++) {
             contents[j].style.maxHeight = null;
-        };
+        }
         if (this.classList.contains("active")) {
             this.classList.remove("active");
         } else {
             // Remove current active class
             for (var k = 0; k < flyers.length; k++) {
                 flyers[k].classList.remove("active");
-            };
+            }
             // Add active class to clicked element
             this.classList.toggle("active");
             // Display content for only active element            
@@ -147,12 +147,12 @@ function get_refi_option() {
             // Set max interest 0.5% less than current interest
             max_interest = current_interest - 0.5;
             set_value('new-interest', max_interest);
-            document.getElementById('new-interest').max = max_interest;            
-            new_interest = max_interest;            
+            document.getElementById('new-interest').max = max_interest;
+            new_interest = max_interest;
         } else {
             set_value('new-interest', current_interest);
             document.getElementById('new-interest').max = current_interest;
-            new_interest = current_interest;            
+            new_interest = current_interest;
         }
         hide('cash-out');
     } else if (refi_option === "Term Refinance") {

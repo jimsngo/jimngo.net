@@ -45,14 +45,14 @@ for (var i = 0; i < flyers.length; i++) {
         var contents = document.getElementById("flyers").getElementsByClassName("content");
         for (var j = 0; j < contents.length; j++) {
             contents[j].style.maxHeight = null;
-        };
+        }
         if (this.classList.contains("active")) {
             this.classList.remove("active");
         } else {
             // Remove current active class
             for (var k = 0; k < flyers.length; k++) {
                 flyers[k].classList.remove("active");
-            };
+            }
             // Add active class to clicked element
             this.classList.toggle("active");
             // Display content for only active element            

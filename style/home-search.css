@@ -219,8 +219,8 @@ input[type=radio],
     box-sizing: border-box;
 }
 
-/* Mobile ********************************************************************/
-@media only screen and (max-width:420px) {
+/* Small New Home Widget & HomeSpotter ***************************************/
+@media only screen and (max-width:1023px) {
     .new-home-desktop {
         display: none;
     }
@@ -238,26 +238,7 @@ input[type=radio],
     }
 }
 
-/* iPad Portrait *************************************************************/
-@media screen and (max-width:768px) {
-    .new-home-desktop {
-        display: none;
-    }
-
-    .new-home-mobile {
-        display: block;
-    }
-
-    .homespotter {
-        display: block;
-    }
-
-    .mls-search {
-        display: none;
-    }
-}
-
-/* iPad Landscape & Desktop **************************************************/
+/* Large New Home Search Widget & MLS Search Box *****************************/
 @media only screen and (min-width:1024px) {
     .new-home-desktop {
         display: block;

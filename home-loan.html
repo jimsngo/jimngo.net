@@ -22,6 +22,7 @@
     <link rel="canonical" href="https://www.jimngo.net/home-loan">
     <link rel="icon" href="image/favicon-16x16.png" type="image/gif" sizes="16x16">
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/home-search.css">
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css'
         integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -725,8 +726,8 @@
                             </ul>
                         </ul>
                         <div class="center"><a href="https://www.jimngo.net/down-payment-assistance"
-                                target="_blank"><button class="btn-blue-brdr">DOWN PAYMENT
-                                    ASSISTANCE</button></a></div>
+                                target="_blank"><button class="btn-blue-brdr">Down Payment Assistance <i
+                                        class="fas fa-external-link-alt"></i></button></a></div>
                     </div>
                 </div>
                 <div id="VA" class="tabcontent" style="display:none">
@@ -844,144 +845,86 @@
             </div>
         </div>
     </section>
-    <!-- Disclaimer -->
+    <!-- Disclaimer ---------------------------------------------------------->
     <section class="disclaimer">
-        <div class="main">
-            <div class="flex-perfect-center">
-                <div class="col-8 col-s-7">
-                    <p>DISCLAIMER: The figures displayed above are based upon your input and may not reflect your actual
-                        mortgage
-                        payment or total monthly costs. Calculations by this tool are believed to be accurate, yet are
-                        not
-                        guaranteed.</p>
-                    <ul>
-                        <li><a href="https://www.jimngo.net/mortgage_insurance" target="_blank">Mortgage Insurance</a>
-                            is required
-                            for down payment less than 20% and it's typically between 0.5% to 1.0% of the loan amount.
-                        </li>
-                        <li><a href="https://realtor.jimngo.info/2018/11/getting-to-know-fha-mortgage-financing.html"
-                                target="_blank">FHA</a> requires a 3.5% down payment as well as an upfront and monthly
-                            mortgage
-                            insurance in many cases.
-                        <li><a href="https://realtor.jimngo.info/2018/11/comparing-va-loans-and-fha-loans.html"
-                                target="_blank">VA
-                                Loan</a> does not require any down payment or monthly mortgage insurance, but has an
-                            upfront Funding
-                            Fee.</li>
-                        <li><i>Conservative</i> <a href="https://www.jimngo.net/debt_to_income_ratio"
-                                target="_blank">Debt
-                                To Income (DTI) Ratios</a> are <span style="color: green"><i>31/43</i></span>,
-                            <i>Aggressive</i> Ratios are <span style="color:red"><i>37/47</i></span>. Some loan
-                            program will allow ratios to go up to 50%, but anything above that will likely be denied.
-                        </li>
-                        <li><a href="https://www.jimngo.net/closing_costs" target="_blank">Closing Costs</a>
-                            account for about 2%-5% of the purchase price.</li>
-                        <li>Property Tax is normally 1.20% of the purchased price annually. Please confirm rate with
-                            your county.
-                        </li>
-                        <li>Every loan program has its loan limit which varies by county. Please visit <a
-                                href="https://entp.hud.gov/idapp/html/hicostlook.cfm" target="_blank">HUD</a> for limits
-                            on FHA loans,
-                            <a href="https://www.benefits.va.gov/HOMELOANS/purchaseco_loan_limits.asp"
-                                target="_blank">VA</a> for
-                            limits on VA loans, and <a
-                                href="https://www.fhfa.gov/DataTools/Downloads/Pages/Conforming-Loan-Limits.aspx"
-                                target="_blank">FHFA</a> for limits on Conventional loans. Loans exceeding conforming
-                            loan limits are
-                            considered Jumbo Loans, which typically require a FICO score of 700+ and a down payments of
-                            20 percent or
-                            more.</li>
-                    </ul>
-                </div>
-                <div class="col-4 col-s-5" id="mortgage-rates">
-                    <div class="mnd-rates-widget" style="width: 250px; font-size: 12px; margin: auto">
-                        <div class="w-header"
-                            style="text-align: center; padding:4px 0;background-color: #336699; color: #FFFFFF;">
-                            <a href="http://www.mortgagenewsdaily.com/mortgage_rates/" target="_blank"
-                                style="color: #FFFFFF;text-decoration:none;">Home
-                                Mortgage Rates</a></div>
-                        <div
-                            style="background-color: #FFFFFF; border: solid 1px #336699; border-width: 0 1px; padding: 8px  8px 1px;">
-                            <div class="mnd-rates" data-widgettype="smallrates" data-width="250" data-showchart="true"
-                                data-cobrand="jim9" data-user="151801" data-chartcolor="#336699"> </div>
-                        </div>
-                        <div class="w-footer"
-                            style="text-align: center; padding:4px 0;background-color: #336699; color: #FFFFFF;">
-                            View
-                            More <a href="http://www.mortgagenewsdaily.com/mortgage_rates/" target="_blank"
-                                style="color: #FFFFFF;text-decoration:none;">Interest
-                                Rates</a></div>
+        <div class="main flex-perfect-center">
+            <div class="col-8 col-s-7">
+                <p>DISCLAIMER: The figures displayed above are based upon your input and may not reflect your actual
+                    mortgage payment or total monthly costs. Calculations by this tool are believed to be accurate,
+                    yet are not guaranteed.</p>
+                <ul>
+                    <li><a href="https://www.jimngo.net/mortgage_insurance" target="_blank">Mortgage Insurance <i
+                                class="fas fa-external-link-alt"></i></a> is required for down payment less than 20% and
+                        it's typically between 0.5% to 1.0% of the
+                        loan amount.</li>
+                    <li>FHA requires a 3.5% down payment as well as an upfront and monthly mortgage insurance in
+                        many cases.</li>
+                    <li>VA Loan does not require any down payment or monthly mortgage insurance, but has an upfront
+                        Funding Fee.</li>
+                    <li><a href="https://www.jimngo.net/closing_costs" target="_blank">Closing Costs <i
+                                class="fas fa-external-link-alt"></i></a> account for
+                        about 2%-5% of the purchase price.</li>
+                    <li>Property Tax is normally 1.20% of the purchased price annually. Please confirm rate with
+                        your county.</li>
+                    <li>Every loan program has its loan limit which varies by county. Please visit <a
+                            href="https://entp.hud.gov/idapp/html/hicostlook.cfm" target="_blank">HUD</a> for limits
+                        on FHA loans, <a href="https://www.benefits.va.gov/HOMELOANS/purchaseco_loan_limits.asp"
+                            target="_blank">VA</a> for limits on VA loans, and <a
+                            href="https://www.fhfa.gov/DataTools/Downloads/Pages/Conforming-Loan-Limits.aspx"
+                            target="_blank">FHFA</a> for limits on Conventional loans. Loans exceeding conforming
+                        loan limits are considered Jumbo Loans, which typically require a FICO score of 700+ and a
+                        down payments of 20 percent or more.</li>
+                </ul>
+            </div>
+            <!-- Mortgage Rate Widget -->
+            <div class="col-4 col-s-5">
+                <div class="mnd-rates-widget" style="width: 250px; font-size: 12px; margin: auto">
+                    <div class="w-header"
+                        style="text-align: center; padding:4px 0;background-color: #336699; color: #FFFFFF;">
+                        <a href="http://www.mortgagenewsdaily.com/mortgage_rates/" target="_blank"
+                            style="color: #FFFFFF;text-decoration:none;">Home Mortgage Rates</a></div>
+                    <div
+                        style="background-color: #FFFFFF; border: solid 1px #336699; border-width: 0 1px; padding: 8px  8px 1px;">
+                        <div class="mnd-rates" data-widgettype="smallrates" data-width="250" data-showchart="true"
+                            data-cobrand="jim9" data-user="151801" data-chartcolor="#336699"> </div>
                     </div>
-                    <script>
-                        (function (d, s, id) {
-                            var js, fjs = d.getElementsByTagName(s)[0];
-                            if (d.getElementById(id)) return;
-                            js = d.createElement(s);
-                            js.id = id;
-                            js.src = "//widgets.mortgagenewsdaily.com/public/javascript/rates.min.js";
-                            fjs.parentNode.insertBefore(js, fjs);
-                        }(document, 'script', 'mnd-rates'));
-                    </script>
+                    <div class="w-footer"
+                        style="text-align: center; padding:4px 0;background-color: #336699; color: #FFFFFF;">
+                        View More <a href="http://www.mortgagenewsdaily.com/mortgage_rates/" target="_blank"
+                            style="color: #FFFFFF;text-decoration:none;">Interest Rates</a></div>
                 </div>
+                <script>
+                    (function (d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (d.getElementById(id)) return;
+                        js = d.createElement(s);
+                        js.id = id;
+                        js.src = "//widgets.mortgagenewsdaily.com/public/javascript/rates.min.js";
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }(document, 'script', 'mnd-rates'));
+                </script>
             </div>
         </div>
     </section>
     <!-- Services ------------------------------------------------------------>
     <section id="services">
         <div class="banner dark-cerulean">
-            <p class="banner5">Pre-Approval</p>
-            <p class="banner5">Down Payment Assistance</p>
-            <p class="banner5">Mortgage Calculator</p>
-            <p class="banner5">Home Valuation</p>
-            <p class="banner5">Comparative Market Analysis</p>
-            <p class="banner5">Reverse Mortgage</p>
-            <p class="banner5">Refinance</p>
-            <p class="banner5">Short Sale Foreclosure</p>
+            <h3 class="banner5">Mortgage Pre-Approval</h3>
+            <h3 class="banner5">Down Payment Assistance</h3>
+            <h3 class="banner5">Mortgage Calculator</h3>
+            <h3 class="banner5">Home Valuation</h3>
+            <h3 class="banner5">Comparative Market Analysis</h3>
+            <h3 class="banner5">Reverse Mortgage</h3>
+            <h3 class="banner5">Refinance</h3>
+            <h3 class="banner5">Short Sale Foreclosure</h3>
         </div>
         <div class="main flex-center">
-            <!-- Down Payment Resource -->
-            <div class="col-4 col-s-4">
-                <a href="https://www.jimngo.net/down-payment-assistance" target="_blank">
-                    <div class="card-header">
-                        <p class="dpa">First Time Homebuyer</p>
-                        <p class="dpa">Down Payment Assistance</p>
-                        <p class="dpa">Closing Costs</p>
-                    </div>
-                    <div class="card-body">
-                        <ul>
-                            <li>Are you a first-time home-buyer needing a little help with your down payment and/or
-                                closing costs?</li>
-                            <li>Down payment money is out there, and I’ll help you find it.</li>
-                        </ul>
-                    </div>
-                </a>
-            </div>
-            <!-- Mortgage Calculator -->
-            <div class="col-4 col-s-4">
-                <a href="https://www.jimngo.net/mortgage-prequalification-calculator" target="_blank">
-                    <div class="card-header">Mortgage Calculator</div>
-                </a>
-                <div class="card-body">
-                    <p style="display:none">Mortgage Prequalification Calculator with Down Payment, PMI, and Taxes. Use
-                        my quick and simple calculators to estimate how much you can afford, how much income you will
-                        need, or how much you will save by making extra payment.</p>
-                    <div style="padding-left: 16px;">
-                        <p><a href="https://www.jimngo.net/mortgage-affordability-calculator" target="_blank">&#9989;
-                                How Much House Can I Afford?</a></P>
-                        <P><a href="https://www.jimngo.net/mortgage-income-calculator" target="_blank">&#9989; How Much
-                                Income Do I Need?</a></P>
-                        <P><a href="https://www.jimngo.net/extra-payment-calculator" target="_blank">&#9989; What if I
-                                Make Extra Payment?</a></P>
-                    </div>
-                </div>
-            </div>
             <!-- Home Valuation -->
             <div class="col-4 col-s-4">
                 <a href="https://www.jimngo.net/home_valuation" target="_blank">
                     <div class="card-header">
-                        <p class="home-value">Home Estimate</p>
-                        <p class="home-value">Market Value</p>
-                        <p class="home-value">Comparable</p>
+                        <p class="home-value">Home Estimate <i class="fas fa-external-link-alt"></i></p>
+                        <p class="home-value">Market Comparable <i class="fas fa-external-link-alt"></i></p>
                     </div>
                     <div class="card-body">
                         <ul>
@@ -992,30 +935,52 @@
                     </div>
                 </a>
             </div>
-        </div>
-        <div class="main flex-center">
-            <!-- Reverse Mortgage -->
+            <!-- Mortgage Calculator -->
             <div class="col-4 col-s-4">
-                <a href="https://www.jimngo.net/reverse-mortgage-calculator" target="_blank">
-                    <div class="card-header">Reverse Mortgage</div>
+                <a href="https://www.jimngo.net/mortgage-prequalification-calculator" target="_blank">
+                    <div class="card-header">Mortgage Calculator <i class="fas fa-external-link-alt"></i></div>
+                </a>
+                <div class="card-body">
+                    <p style="display:none">Mortgage Prequalification Calculator with Down Payment, PMI, and Taxes. Use
+                        my quick and simple calculators to estimate how much you can afford, how much income you will
+                        need, or how much you will save by making extra payment.</p>
+                    <div style="padding-left: 16px;">
+                        <a href="https://www.jimngo.net/mortgage-affordability-calculator" target="_blank">
+                            <p>How Much House Can I Afford? <i class="fas fa-external-link-alt"></i></p>
+                        </a>
+                        <a href="https://www.jimngo.net/mortgage-income-calculator" target="_blank">
+                            <p>How Much Income Do I Need? <i class="fas fa-external-link-alt"></i></p>
+                        </a>
+                        <a href="https://www.jimngo.net/extra-payment-calculator" target="_blank">
+                            <p>What if I Make Extra Payment? <i class="fas fa-external-link-alt"></i></p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Down Payment Resource -->
+            <div class="col-4 col-s-4">
+                <a href="https://www.jimngo.net/down-payment-assistance" target="_blank">
+                    <div class="card-header">
+                        <p class="dpa">First Time Homebuyer <i class="fas fa-external-link-alt"></i></p>
+                        <p class="dpa">Down Payment Assistance <i class="fas fa-external-link-alt"></i></p>
+                    </div>
                     <div class="card-body">
                         <ul>
-                            <li>You’ve worked hard to build the equity in your home.</li>
-                            <li>Now it’s time to put that equity to work for you.</li>
-                            <li>See what Reverse Mortgage can do for you.</li>
+                            <li>Are you a first-time home-buyer needing a little help with your down payment and/or
+                                closing costs?</li>
+                            <li>Down payment money is out there, and I’ll help you find it.</li>
                         </ul>
                     </div>
                 </a>
             </div>
+        </div>
+        <div class="main flex-center">
             <!-- Refinance -->
             <div class="col-4 col-s-4">
                 <a href="https://www.jimngo.net/mortgage-refinance" target="_blank">
                     <div class="card-header">
-                        <p class="refis">Mortgage Refinance</p>
-                        <p class="refis">Lower Term</p>
-                        <p class="refis">Lower Rate</p>
-                        <p class="refis">ARM Conversion</p>
-                        <p class="refis">Home Equity</p>
+                        <p class="refis">Mortgage Refinance <i class="fas fa-external-link-alt"></i></p>
+                        <p class="refis">Home Equity Loan <i class="fas fa-external-link-alt"></i></p>
                     </div>
                     <div class="card-body">
                         <ul>
@@ -1031,8 +996,8 @@
             <div class="col-4 col-s-4">
                 <a href="https://www.jimngo.net/short_sales_foreclosure" target="_blank">
                     <div class="card-header">
-                        <p class="sfr">Short Sale</p>
-                        <p class="sfr">Pre-Foreclosure</p>
+                        <p class="sfr">Short Sale <i class="fas fa-external-link-alt"></i></p>
+                        <p class="sfr">Pre-Foreclosure <i class="fas fa-external-link-alt"></i></p>
                     </div>
                     <div class="card-body">
                         <ul>
@@ -1042,26 +1007,396 @@
                     </div>
                 </a>
             </div>
+            <!-- Reverse Mortgage -->
+            <div class="col-4 col-s-4">
+                <a href="https://www.jimngo.net/reverse-mortgage-calculator" target="_blank">
+                    <div class="card-header">Reverse Mortgage <i class="fas fa-external-link-alt"></i></div>
+                    <div class="card-body">
+                        <ul>
+                            <li>You’ve worked hard to build the equity in your home.</li>
+                            <li>Now it’s time to put that equity to work for you.</li>
+                            <li>See what Reverse Mortgage can do for you.</li>
+                        </ul>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Home Search Widgets ------------------------------------------------->
+    <section id="home-search-widgets">
+        <div class="main center" style="padding: 20px;">
+            <!-- Mobile and iPad Portrait ----------------------------------->
+            <div class="flex-perfect-center">
+                <!-- New Home Search Mobile ---------------------------------->
+                <div class="new-home-mobile col-s-7">
+                    <div id="widget-box" style="width: 300px; margin: 0px auto;">
+                        <form action="https://www.showingnew.com/jimngo/home/redirecttoresultspage"
+                            class="pro-search-box" enctype="multipart/form-data" id="pro-search-box" method="post"
+                            name="pro-search-box" style="width: 300px;" target="_blank">
+                            <div id="home-search-form" class="clearfix home-search-form "
+                                style="width: 300px; padding: 8px 24px; height: 300px;">
+                                <h2 id="titleText"
+                                    style="font-size: 20px; font-weight: 500; margin-bottom: 5px; margin-top: 0px;">
+                                    Search New Construction Home Listings</h2>
+                                <fieldset id="home-search-location">
+                                    <p><label for="SearchText" class="visuallyhidden">Location:</label>
+                                        <input autocomplete="off" id="SearchTextWidget" class="" maxlength="100"
+                                            name="SearchText"
+                                            placeholder="Enter City, Zip Code, School District or Community Name"
+                                            type="text" value="Riverside-San Bernardino, CA Area"
+                                            style="font-size: 16px">
+                                        <input type="submit" class="HomeSearchBtn" id="HomeSearchBtnWidget"
+                                            value="Find Homes"></p>
+                                </fieldset>
+                                <p id="SearchValidationError" class="field-validation-error SearchValidationError"
+                                    style="display: none;">
+                                    <strong>Oops!</strong> Please enter a valid location (city, zip code or school
+                                    district) or community name.</p>
+                                <fieldset id="home-search-options">
+                                    <legend class="visuallyhidden">Filters</legend>
+                                    <p style="margin: 15px 15px 0px 0px;"><label for="PriceLow"
+                                            class="visuallyhidden">Minimum</label>
+                                        <select id="PriceLow" name="PriceLow">
+                                            <option value="">Min Price</option>
+                                            <option value="100000">$100,000</option>
+                                            <option value="125000">$125,000</option>
+                                            <option value="150000">$150,000</option>
+                                            <option value="175000">$175,000</option>
+                                            <option value="200000">$200,000</option>
+                                            <option value="225000">$225,000</option>
+                                            <option value="250000">$250,000</option>
+                                            <option value="275000">$275,000</option>
+                                            <option value="300000">$300,000</option>
+                                            <option value="325000">$325,000</option>
+                                            <option value="350000">$350,000</option>
+                                            <option value="375000">$375,000</option>
+                                            <option value="400000">$400,000</option>
+                                            <option value="425000">$425,000</option>
+                                            <option value="450000">$450,000</option>
+                                            <option value="475000">$475,000</option>
+                                            <option value="500000">$500,000</option>
+                                            <option value="550000">$550,000</option>
+                                            <option value="600000">$600,000</option>
+                                            <option value="650000">$650,000</option>
+                                            <option value="700000">$700,000</option>
+                                            <option value="750000">$750,000</option>
+                                            <option value="800000">$800,000</option>
+                                            <option value="850000">$850,000</option>
+                                            <option value="900000">$900,000</option>
+                                            <option value="950000">$950,000</option>
+                                            <option value="1000000">$1,000,000</option>
+                                            <option value="1100000">$1,100,000</option>
+                                            <option value="1200000">$1,200,000</option>
+                                            <option value="1300000">$1,300,000</option>
+                                            <option value="1400000">$1,400,000</option>
+                                            <option value="1500000">$1,500,000</option>
+                                            <option value="1600000">$1,600,000</option>
+                                            <option value="1700000">$1,700,000</option>
+                                            <option value="1800000">$1,800,000</option>
+                                            <option value="1900000">$1,900,000</option>
+                                            <option value="2000000">$2,000,000</option>
+                                        </select> to <label for="PriceHigh" class="visuallyhidden">Maximum</label>
+                                        <select id="PriceHigh" name="PriceHigh">
+                                            <option value="">Max Price</option>
+                                            <option value="100000">$100,000</option>
+                                            <option value="125000">$125,000</option>
+                                            <option value="150000">$150,000</option>
+                                            <option value="175000">$175,000</option>
+                                            <option value="200000">$200,000</option>
+                                            <option value="225000">$225,000</option>
+                                            <option value="250000">$250,000</option>
+                                            <option value="275000">$275,000</option>
+                                            <option value="300000">$300,000</option>
+                                            <option value="325000">$325,000</option>
+                                            <option value="350000">$350,000</option>
+                                            <option value="375000">$375,000</option>
+                                            <option value="400000">$400,000</option>
+                                            <option value="425000">$425,000</option>
+                                            <option value="450000">$450,000</option>
+                                            <option value="475000">$475,000</option>
+                                            <option value="500000">$500,000</option>
+                                            <option value="550000">$550,000</option>
+                                            <option value="600000">$600,000</option>
+                                            <option value="650000">$650,000</option>
+                                            <option value="700000">$700,000</option>
+                                            <option value="750000">$750,000</option>
+                                            <option value="800000">$800,000</option>
+                                            <option value="850000">$850,000</option>
+                                            <option value="900000">$900,000</option>
+                                            <option value="950000">$950,000</option>
+                                            <option value="1000000">$1,000,000</option>
+                                            <option value="1100000">$1,100,000</option>
+                                            <option value="1200000">$1,200,000</option>
+                                            <option value="1300000">$1,300,000</option>
+                                            <option value="1400000">$1,400,000</option>
+                                            <option value="1500000">$1,500,000</option>
+                                            <option value="1600000">$1,600,000</option>
+                                            <option value="1700000">$1,700,000</option>
+                                            <option value="1800000">$1,800,000</option>
+                                            <option value="1900000">$1,900,000</option>
+                                            <option value="2000000">$2,000,000</option>
+                                        </select></p>
+                                    <div>
+                                        <p style="margin: 15px 5px 15px 0px;"><select class="home-search-bedbath"
+                                                id="BedRooms" name="BedRooms">
+                                                <option value="-1">Beds</option>
+                                                <option value="1">studio/1</option>
+                                                <option value="2">2+</option>
+                                                <option value="3">3+</option>
+                                                <option value="4">4+</option>
+                                                <option value="5">5+</option>
+                                            </select></p>
+                                        <p style="margin: 15px 5px 15px 0px;"><select class="home-search-bedbath"
+                                                id="Bathrooms" name="Bathrooms">
+                                                <option value="-1">Baths</option>
+                                                <option value="1">1+</option>
+                                                <option value="2">2+</option>
+                                                <option value="3">3+</option>
+                                                <option value="4">4+</option>
+                                                <option value="5">5+</option>
+                                            </select></p>
+                                        <p style="margin: 15px 5px 15px 0px;"><label for="SqFtLow"
+                                                class="visuallyhidden">Square
+                                                Feet</label><select id="SqFtLow" name="SqFtLow">
+                                                <option value="0">Square Feet</option>
+                                                <option value="500">500+</option>
+                                                <option value="1000">1000+</option>
+                                                <option value="1500">1500+</option>
+                                                <option value="2000">2000+</option>
+                                                <option value="2500">2500+</option>
+                                                <option value="3000">3000+</option>
+                                                <option value="3500">3500+</option>
+                                                <option value="4000">4000+</option>
+                                                <option value="4500">4500+</option>
+                                                <option value="5000">5000+</option>
+                                                <option value="5500">5500+</option>
+                                                <option value="6000">6000+</option>
+                                                <option value="6500">6500+</option>
+                                                <option value="7000">7000+</option>
+                                                <option value="7500">7500+</option>
+                                                <option value="8000">8000+</option>
+                                                <option value="8500">8500+</option>
+                                                <option value="9000">9000+</option>
+                                                <option value="9500">9500+</option>
+                                                <option value="10000">10000+</option>
+                                            </select></p>
+                                    </div>
+                                </fieldset>
+                                <p style="font-size: 12px;">Powered by&nbsp;&nbsp;<a style="color: #fff"
+                                        href="https://www.showingnew.com/jimngo">www.showingnew.com/jimngo</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- CRMLS Home Search App ----------------------------------->
+                <div class="homespotter border col-s-5">
+                    <a href="https://app.homespotter.com/?asr=1&sui=38166790" target="_blank">
+                        <p><img src="image\HomeSpotter.png"></p>
+                        <p><img src="image\mobile_devices.png"></p>
+                        <ul style=" text-align: left">
+                            <li>Mobile-First Home Search</li>
+                            <li>Beautiful, Fast and Easy</li>
+                            <li>Built-in Chat</li>
+                        </ul>
+                        <i class="fas fa-cloud-download-alt" style="font-size: 2em"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- iPad Landscape & Desktop ------------------------------------>
+            <div class="flex-perfect-center">
+                <!-- New Home Search Desktop --------------------------------->
+                <div class="new-home-desktop">
+                    <div id="widget-box" style="width: 600px; margin: 0px auto;">
+                        <form action="https://www.showingnew.com/jimngo/home/redirecttoresultspage"
+                            class="pro-search-box" enctype="multipart/form-data" id="pro-search-box" method="post"
+                            name="pro-search-box" style="width:600px" target="_blank">
+                            <div id="home-search-form" class="home-search-form "
+                                style="width: 600px; padding:21px 30px; height: 300px;">
+                                <h2 id="titleText"
+                                    style="font-size: 27px; font-weight: 500; margin-bottom: 5px; margin-top: 0;">
+                                    Search New Construction Home Listings</h2>
+                                <fieldset id="home-search-location">
+                                    <p id="HomesTypeField"><input id="AllNew" name="QuickMoveIn" type="radio" value="0"
+                                            checked="checked"><label for="AllNew">All New Homes</label><input
+                                            id="QMIOnly" name="QuickMoveIn" type="radio" value="1"><label
+                                            for="QMIOnly">Inventory Homes</label></p>
+                                    <p><label for="SearchText" class="visuallyhidden">Location:</label>
+                                        <input autocomplete="off" id="SearchTextWidget" class="" maxlength="100"
+                                            name="SearchText"
+                                            placeholder="Enter City, Zip Code, School District or Community Name"
+                                            type="text" value="Riverside-San Bernardino, CA Area"
+                                            style="font-size: 16px">
+                                        <input type="submit" class="HomeSearchBtn" id="HomeSearchBtnWidget"
+                                            value="Find Homes"></p>
+                                </fieldset>
+                                <p id="SearchValidationError" class="field-validation-error SearchValidationError"
+                                    style="display: none;">
+                                    <strong>Oops!</strong> Please enter a valid location (city, zip code or school
+                                    district) or community name.</p>
+                                <fieldset id="home-search-options">
+                                    <legend class="visuallyhidden">Filters</legend>
+                                    <p style="margin: 18px 18px 0px 0px;"><label for="PriceLow"
+                                            class="visuallyhidden">Minimum</label>
+                                        <select id="PriceLow" name="PriceLow">
+                                            <option value="">Min Price</option>
+                                            <option value="100000">$100,000</option>
+                                            <option value="125000">$125,000</option>
+                                            <option value="150000">$150,000</option>
+                                            <option value="175000">$175,000</option>
+                                            <option value="200000">$200,000</option>
+                                            <option value="225000">$225,000</option>
+                                            <option value="250000">$250,000</option>
+                                            <option value="275000">$275,000</option>
+                                            <option value="300000">$300,000</option>
+                                            <option value="325000">$325,000</option>
+                                            <option value="350000">$350,000</option>
+                                            <option value="375000">$375,000</option>
+                                            <option value="400000">$400,000</option>
+                                            <option value="425000">$425,000</option>
+                                            <option value="450000">$450,000</option>
+                                            <option value="475000">$475,000</option>
+                                            <option value="500000">$500,000</option>
+                                            <option value="550000">$550,000</option>
+                                            <option value="600000">$600,000</option>
+                                            <option value="650000">$650,000</option>
+                                            <option value="700000">$700,000</option>
+                                            <option value="750000">$750,000</option>
+                                            <option value="800000">$800,000</option>
+                                            <option value="850000">$850,000</option>
+                                            <option value="900000">$900,000</option>
+                                            <option value="950000">$950,000</option>
+                                            <option value="1000000">$1,000,000</option>
+                                            <option value="1100000">$1,100,000</option>
+                                            <option value="1200000">$1,200,000</option>
+                                            <option value="1300000">$1,300,000</option>
+                                            <option value="1400000">$1,400,000</option>
+                                            <option value="1500000">$1,500,000</option>
+                                            <option value="1600000">$1,600,000</option>
+                                            <option value="1700000">$1,700,000</option>
+                                            <option value="1800000">$1,800,000</option>
+                                            <option value="1900000">$1,900,000</option>
+                                            <option value="2000000">$2,000,000</option>
+                                        </select> to <label for="PriceHigh" class="visuallyhidden">Maximum</label>
+                                        <select id="PriceHigh" name="PriceHigh">
+                                            <option value="">Max Price</option>
+                                            <option value="100000">$100,000</option>
+                                            <option value="125000">$125,000</option>
+                                            <option value="150000">$150,000</option>
+                                            <option value="175000">$175,000</option>
+                                            <option value="200000">$200,000</option>
+                                            <option value="225000">$225,000</option>
+                                            <option value="250000">$250,000</option>
+                                            <option value="275000">$275,000</option>
+                                            <option value="300000">$300,000</option>
+                                            <option value="325000">$325,000</option>
+                                            <option value="350000">$350,000</option>
+                                            <option value="375000">$375,000</option>
+                                            <option value="400000">$400,000</option>
+                                            <option value="425000">$425,000</option>
+                                            <option value="450000">$450,000</option>
+                                            <option value="475000">$475,000</option>
+                                            <option value="500000">$500,000</option>
+                                            <option value="550000">$550,000</option>
+                                            <option value="600000">$600,000</option>
+                                            <option value="650000">$650,000</option>
+                                            <option value="700000">$700,000</option>
+                                            <option value="750000">$750,000</option>
+                                            <option value="800000">$800,000</option>
+                                            <option value="850000">$850,000</option>
+                                            <option value="900000">$900,000</option>
+                                            <option value="950000">$950,000</option>
+                                            <option value="1000000">$1,000,000</option>
+                                            <option value="1100000">$1,100,000</option>
+                                            <option value="1200000">$1,200,000</option>
+                                            <option value="1300000">$1,300,000</option>
+                                            <option value="1400000">$1,400,000</option>
+                                            <option value="1500000">$1,500,000</option>
+                                            <option value="1600000">$1,600,000</option>
+                                            <option value="1700000">$1,700,000</option>
+                                            <option value="1800000">$1,800,000</option>
+                                            <option value="1900000">$1,900,000</option>
+                                            <option value="2000000">$2,000,000</option>
+                                        </select></p>
+                                    <div>
+                                        <p style="margin: 18px 15px 18px 0px;"><select class="home-search-bedbath"
+                                                id="BedRooms" name="BedRooms">
+                                                <option value="-1">Beds</option>
+                                                <option value="1">studio/1</option>
+                                                <option value="2">2+</option>
+                                                <option value="3">3+</option>
+                                                <option value="4">4+</option>
+                                                <option value="5">5+</option>
+                                            </select></p>
+                                        <p style="margin: 18px 15px 18px 0px;"><select class="home-search-bedbath"
+                                                id="Bathrooms" name="Bathrooms">
+                                                <option value="-1">Baths</option>
+                                                <option value="1">1+</option>
+                                                <option value="2">2+</option>
+                                                <option value="3">3+</option>
+                                                <option value="4">4+</option>
+                                                <option value="5">5+</option>
+                                            </select></p>
+                                        <p style="margin: 18px 15px 18px 0px;"><label for="SqFtLow"
+                                                class="visuallyhidden">Square
+                                                Feet</label><select id="SqFtLow" name="SqFtLow">
+                                                <option value="0">Square Feet</option>
+                                                <option value="500">500+</option>
+                                                <option value="1000">1000+</option>
+                                                <option value="1500">1500+</option>
+                                                <option value="2000">2000+</option>
+                                                <option value="2500">2500+</option>
+                                                <option value="3000">3000+</option>
+                                                <option value="3500">3500+</option>
+                                                <option value="4000">4000+</option>
+                                                <option value="4500">4500+</option>
+                                                <option value="5000">5000+</option>
+                                                <option value="5500">5500+</option>
+                                                <option value="6000">6000+</option>
+                                                <option value="6500">6500+</option>
+                                                <option value="7000">7000+</option>
+                                                <option value="7500">7500+</option>
+                                                <option value="8000">8000+</option>
+                                                <option value="8500">8500+</option>
+                                                <option value="9000">9000+</option>
+                                                <option value="9500">9500+</option>
+                                                <option value="10000">10000+</option>
+                                            </select></p>
+                                    </div>
+                                </fieldset>
+                                <p style="font-size: 12px;">Powered by&nbsp;&nbsp;<a style="color: #fff"
+                                        href="https://www.showingnew.com/jimngo">www.showingnew.com/jimngo</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- MLS Search ---------------------------------------------->
+                <div class="mls-search">
+                    <div class="card-header"><i class="fas fa-home"></i> Homes For Sale</div>
+                    <div class="card-body center">
+                        <p><a href="https://www.jimngorealtor.com/ontario" target="_blank">Ontario</a></p>
+                        <p><a href="https://www.jimngorealtor.com/chino" target="_blank">Chino</a></p>
+                        <p><a href="https://www.jimngorealtor.com/chino-hills" target="_blank">Chino Hills</a></p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <!-- Marketing ----------------------------------------------------------->
     <section id="flyers">
         <div class="banner dark-cerulean">
-            <p class="banner6">Purchase</p>
-            <p class="banner6">Refinance</p>
-            <p class="banner6">FHA</p>
-            <p class="banner6">Down Payment Assistance</p>
-            <p class="banner6">Conventional</p>
-            <p class="banner6">VA</p>
-            <p class="banner6">USDA</p>
-            <p class="banner6">Jumbo</p>
-            <p class="banner6">Reverse Mortgage</p>
+            <h3 class="banner6">Purchase</h3>
+            <h3 class="banner6">Refinance</h3>
+            <h3 class="banner6">FHA</h3>
+            <h3 class="banner6">Down Payment Assistance</h3>
+            <h3 class="banner6">Conventional</h3>
+            <h3 class="banner6">VA</h3>
+            <h3 class="banner6">USDA</h3>
+            <h3 class="banner6">Jumbo</h3>
+            <h3 class="banner6">Reverse Mortgage</h3>
         </div>
         <div class="main flex-center">
             <div class="col-4 col-s-4">
-                <button class="collapsible">
-                    <h3>Looking To Purchase A Home?</h3>
-                </button>
+                <button class="collapsible">Looking To Purchase A Home?</button>
                 <div class="content" id="flyer-1">
                     <p>1. Make sure your credit is in good shape</p>
                     <ul>
@@ -1081,9 +1416,7 @@
                         <li>Be prepared to explain any gaps in employment</li>
                     </ul>
                 </div>
-                <button class="collapsible">
-                    <h3>The Benefits Of A 20% Down Payment</h3>
-                </button>
+                <button class="collapsible">The Benefits Of A 20% Down Payment</button>
                 <div class="content" id="flyer-3">
                     <p>1. Your interest rate will be lower.</p>
                     <p>Putting down a 20% down payment vs. a 3-5% down payment shows your lender/bank that you are more
@@ -1105,9 +1438,7 @@
                         mortgage. It’s a monthly fee, rolled into your mortgage payment, that is required for all
                         conforming, conventional loans that have down payments less than 20%.”</p>
                 </div>
-                <button class="collapsible">
-                    <h3>How Much House Can You Afford?</h3>
-                </button>
+                <button class="collapsible">How Much House Can You Afford?</button>
                 <div class="content" id="flyer-3">
                     <p>Before you start shopping for a new home, determine how much you can afford to spend.</p>
                     <p>Here are a few things to consider:</p>
@@ -1121,9 +1452,7 @@
                         Independent Mortgage Professional will be able to offer you several loan options and find the
                         best available loan program for your needs.</p>
                 </div>
-                <button class="collapsible">
-                    <h3>6 Things Not To Do When Applying For A Mortgage</h3>
-                </button>
+                <button class="collapsible">6 Things Not To Do When Applying For A Mortgage</button>
                 <div class="content">
                     <p>When lenders review your application, they like to see consistency in your finances.</p>
                     <ol>
@@ -1138,9 +1467,7 @@
                         <li>Don't have your credit report pulled too many times - this can hurt your credit score</li>
                     </ol>
                 </div>
-                <button class="collapsible">
-                    <h3>Acceptable Sources of Cash to Close Funds</h3>
-                </button>
+                <button class="collapsible">Acceptable Sources of Cash to Close Funds</button>
                 <div class="content">
                     <p>Providing proper asset documentation and the actual source of the funds is a critical element of
                         the loan closing process.</p>
@@ -1167,9 +1494,7 @@
             <!-- QM Products -->
             <div class="col-4 col-s-4">
                 <h3 class="heading">Qualified Mortgages</h3>
-                <button class="collapsible">
-                    <h3>Conventional</h3>
-                </button>
+                <button class="collapsible">Conventional</button>
                 <div class="content">
                     <p>If you’ve heard of Fannie Mae or Freddie Mac, you know the family of conventional loans. These
                         loans are written by a wide range of banks, from your hometown locally owned to the fanciest
@@ -1185,9 +1510,7 @@
                         employment, savings that can be designated as “reserve funds” and few to no scabs on your credit
                         report are helpful.</p>
                 </div>
-                <button class="collapsible">
-                    <h3>FHA</h3>
-                </button>
+                <button class="collapsible">FHA</button>
                 <div class="content">
                     <p>The FHA started insuring loans after the Great Depression as a way of helping people get back
                         into owned property. It basically created the 30 year fixed interest mortgage and continues to
@@ -1204,9 +1527,7 @@
                         costly, you want rid of it). Not every banker wants to deal with FHA loans because they can be
                         time consuming to write, so you may have to shop a bit to find a good bank.</p>
                 </div>
-                <button class="collapsible">
-                    <h3>VA</h3>
-                </button>
+                <button class="collapsible">VA</button>
                 <div class="content">
                     <p>As part of the benefits that active military members and veterans receive from the government, VA
                         loans are built on a merit-based system. Career military and those honorably discharged early
@@ -1220,9 +1541,7 @@
                     <p><strong>Cons:</strong> Really, there aren’t any. You can’t get this if you’re not military,
                         though, so that could be a con if you really wanted this most excellent loan type.</p>
                 </div>
-                <button class="collapsible">
-                    <h3>USDA</h3>
-                </button>
+                <button class="collapsible">USDA</button>
                 <div class="content">
                     <p>In rural areas, the US Department of Agriculture will offer mortgage lending as a way of helping
                         to keep the local economy flowing. Homes don’t have to be on an acreage, but they do need to be
@@ -1240,9 +1559,7 @@
             <!-- Non-QM Loan -->
             <div class="col-4 col-s-4">
                 <h3 class="heading">Non-Qualified Mortgages</h3>
-                <button class="collapsible">
-                    <h3>Bank Statement Premier</h3>
-                </button>
+                <button class="collapsible">Bank Statement Premier</button>
                 <div class="content">
                     <p>For Highly Qualified Self-Employed Borrowers</p>
                     <P>Qualify with 12-months of bank statements and get a floor rate as low as 4.99%</P>
@@ -1253,9 +1570,7 @@
                         <li>One Borrower must be self-employed and may have multiple streams of income</li>
                     </ul>
                 </div>
-                <button class="collapsible">
-                    <h3>Bank Statement</h3>
-                </button>
+                <button class="collapsible">Bank Statement</button>
                 <div class="content">
                     <p>For Self-Employed Borrowers</p>
                     <p>Qualify with 12-months bank statements</p>
@@ -1266,9 +1581,7 @@
                         <li>One borrower must be self-employed and may have multiple streams of income</li>
                     </ul>
                 </div>
-                <button class="collapsible">
-                    <h3>Investor</h3>
-                </button>
+                <button class="collapsible">Investor</button>
                 <div class="content">
                     <p>For Professional Real Estate Investors</p>
                     <p>Qualify with subject property cash flow</p>
@@ -1279,9 +1592,7 @@
                         <li>No tax returns, no employment, no income and no pre-payment penalty</li>
                     </ul>
                 </div>
-                <button class="collapsible">
-                    <h3>Asset Qualification</h3>
-                </button>
+                <button class="collapsible">Asset Qualification</button>
                 <div class="content">
                     <p>For Borrowers with High Cash Liquidity</p>
                     <p>Qualify based on verified liquid assets</p>
@@ -1292,9 +1603,7 @@
                         <li>No DTI ratio calculated | Min FICO score 600 | No employment or income on 1003</li>
                     </ul>
                 </div>
-                <button class="collapsible">
-                    <h3>Agency Plus</h3>
-                </button>
+                <button class="collapsible">Agency Plus</button>
                 <div class="content">
                     <p>For Conforming & Jumbo Loans, and Owners of Multiple Properties Falling Just Outside Qualified
                         Mortgage Parameters</p>
@@ -1334,6 +1643,7 @@
 <script src="https://www.w3schools.com/lib/w3.js"></script>
 <script src="javascript/home-loan-Ob.js"></script>
 <script src="javascript/business-hours.js"></script>
+<script src="javascript/new-home-search.js"></script>
 <script>
     w3.slideshow(".banner2", 1500);
     w3.slideshow(".banner5", 1500);

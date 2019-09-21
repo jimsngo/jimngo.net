@@ -14,7 +14,7 @@ for (var i = 0; i < btns.length; i++) {
     btns[i].addEventListener("click", function () {
         this.classList.toggle("active");
     });
-};
+}
 // Add active class - id("mortgage-prequalification-widget")
 users_inputs = document.getElementById("mortgage-prequalification-widget").getElementsByClassName("selectable");
 for (var i = 0; i < users_inputs.length; i++) {
@@ -23,7 +23,7 @@ for (var i = 0; i < users_inputs.length; i++) {
         current[0].className = current[0].className.replace(" active", "");
         this.className += " active";
     });
-};
+}
 // Animated Collapsible - Flyers ---------------------------------------------/
 var flyers = document.getElementById("flyers").getElementsByClassName("collapsible");
 for (var i = 0; i < flyers.length; i++) {
@@ -32,14 +32,14 @@ for (var i = 0; i < flyers.length; i++) {
         var contents = document.getElementById("flyers").getElementsByClassName("content");
         for (var j = 0; j < contents.length; j++) {
             contents[j].style.maxHeight = null;
-        };
+        }
         if (this.classList.contains("active")) {
             this.classList.remove("active");
         } else {
             // Remove current active class
             for (var k = 0; k < flyers.length; k++) {
                 flyers[k].classList.remove("active");
-            };
+            }
             // Add active class to clicked element
             this.classList.toggle("active");
             // Display content for only active element            
@@ -51,6 +51,8 @@ for (var i = 0; i < flyers.length; i++) {
 
 // Calculator Section
 income1 = 0, income2 = 0, income3 = 0, income4 = 0, income5 = 0, income_total = 0, monthly_liability = 0;
+hide_calc_slides();
+$('#slide-1').slideDown('slow');
 calc();
 
 function calc() {
@@ -211,21 +213,21 @@ function calc() {
         return;
     }
     calc_dti();
-};
+}
 
 function hide_calc_slides() {
     var widget_slides = document.getElementById("mortgage-prequalification-widget").getElementsByClassName("widget-slide");
     for (var i = 0; i < widget_slides.length; i++) {
         $(widget_slides[i]).hide();
     }
-};
+}
 
 function show_slide(id) {
     hide_calc_slides();
     var element = "#" + id;
     $(element).slideDown("slow");
     document.getElementById("mortgage-prequalification-widget").scrollIntoView();
-};
+}
 
 function show_income_source() {
     if (income_total === 0) {
@@ -234,7 +236,7 @@ function show_income_source() {
     } else {
         show_income_summary();
     }
-};
+}
 
 function show_income(id) {
     income_source = "Income " + id;
@@ -245,7 +247,7 @@ function show_income(id) {
         document.getElementById("remove").style.display = "block";
     }
     show_slide('income-info');
-};
+}
 
 function show_income_summary() {
     hide_calc_slides();
@@ -270,7 +272,7 @@ function show_income_summary() {
     } else {
         document.getElementById("income-5-details").style.display = "block";
     };
-};
+}
 
 function show_calc_results() {
     update_income();
@@ -278,13 +280,13 @@ function show_calc_results() {
     calc_dti();
     hide_calc_slides();
     show_slide('calc_results');
-};
+}
 
 function remove_income() {
     clear_inc_source();
     update_income();
     calc_dti();
-};
+}
 
 function calc_inc_source() {
     get_employment_type();
@@ -452,7 +454,7 @@ function calc_inc_source() {
         income5 = inc; // update income5
     };
     show_income_summary();
-};
+}
 
 function update_income() {
     income_total = income1 + income2 + income3 + income4 + income5; // update income_total
@@ -460,7 +462,7 @@ function update_income() {
         minimumFractionDigits: 2,
         maximumFractionDigits: 2
     });
-};
+}
 
 function add_liability() {
     auto_loan = Number(document.getElementById("auto_loan").value);
@@ -473,7 +475,7 @@ function add_liability() {
         minimumFractionDigits: 0,
         maximumFractionDigits: 0
     });
-};
+}
 
 function clear_liability() {
     auto_loan = 0, student_loan = 0, installment_loan = 0, revolving_account = 0, other_debt = 0;
@@ -482,7 +484,7 @@ function clear_liability() {
     document.getElementById("installment_loan").value = "";
     document.getElementById("revolving_account").value = "";
     document.getElementById("other_debt").value = "";
-};
+}
 
 function calc_dti() {
     monthly_payment = housing_expense + monthly_liability;
@@ -525,7 +527,7 @@ function calc_dti() {
         document.getElementById("dti2").style.display = "none";
         document.getElementById("dti3").style.display = "block";
     }
-};
+}
 
 function clear_inc_source() {
     // This will clear all input values with Class Name = "inputValue3"
@@ -533,7 +535,7 @@ function clear_inc_source() {
     tabcontent = document.getElementsByClassName("inputValue3");
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].value = "";
-    };
+    }
     if (income_source === "Income 1") {
         document.getElementById("inc_1").value = 0;
         document.getElementById("i1_w2").value = 0;
@@ -563,9 +565,9 @@ function clear_inc_source() {
         document.getElementById("i5_vp").value = 0;
         income5 = 0;
         document.getElementById("inc_5").innerHTML = 0;
-    };
+    }
     show_income_summary();
-};
+}
 
 function start_over() {
     income1 = 0, income2 = 0, income3 = 0, income4 = 0, income5 = 0, income_total = 0, monthly_liability = 0;
@@ -601,7 +603,7 @@ function start_over() {
     document.getElementById("a9b").value = "";
     clear_liability();
     show_slide('slide-1');
-};
+}
 
 function get_employment_type() {
     employmentType = document.getElementById("a2").value; // Get Employment Type
@@ -620,7 +622,7 @@ function get_employment_type() {
     } else if (employmentType === "Self-Employed") {
         show_variable_pay();
     }
-};
+}
 
 function hide_income_input() {
     // This will hide all elements with Class Name = "incomeField"
@@ -629,40 +631,40 @@ function hide_income_input() {
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
     }
-};
+}
 
 function show_hourly_pay() {
     hide_income_input();
     document.getElementById("q2").style.display = "block"; // Show Type of Employment
     document.getElementById("q3").style.display = "block"; // Show Hourly Rate
     document.getElementById("q8").style.display = "block"; // Show OT & Bonuses
-};
+}
 
 function show_weekly_pay() {
     hide_income_input();
     document.getElementById("q4").style.display = "block"; // Show Weekly Rate
     document.getElementById("q8").style.display = "block"; // Show OT & Bonuses
-};
+}
 
 function show_semi_weekly_pay() {
     hide_income_input();
     document.getElementById("q5").style.display = "block"; // Show Weekly Rate
     document.getElementById("q8").style.display = "block"; // Show OT & Bonuses
-};
+}
 
 function show_monthly_pay() {
     hide_income_input();
     document.getElementById("q6").style.display = "block"; // Show Monthly Salary
     document.getElementById("q8").style.display = "block"; // Show OT & Bonuses
-};
+}
 
 function show_annual_pay() {
     hide_income_input();
     document.getElementById("q7").style.display = "block"; // Show Annual Salary
     document.getElementById("q8").style.display = "block"; // Show OT & Bonuses
-};
+}
 
 function show_variable_pay() {
     hide_income_input();
     document.getElementById("q9").style.display = "block"; // Show Variable Pay
-};
+}

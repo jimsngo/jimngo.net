@@ -51,24 +51,24 @@ $("#HECM_line_of_credit").click(function () {
 var qa = document.getElementById("QA").getElementsByClassName("collapsible");
 for (var i = 0; i < qa.length; i++) {
     qa[i].addEventListener("click", function () {
-         // Hide all elements with class content
-         var contents = document.getElementById("QA").getElementsByClassName("content");
-         for (var j = 0; j < contents.length; j++) {
-             contents[j].style.maxHeight = null;
-         };
-         if (this.classList.contains("active")) {
-             this.classList.remove("active");
-         } else {
-             // Remove current active class
-             for (var k = 0; k < qa.length; k++) {
-                 qa[k].classList.remove("active");
-             };
-             // Add active class to clicked element
-             this.classList.toggle("active");
-             // Display content for only active element            
-             var content = this.nextElementSibling;
-             content.style.maxHeight = content.scrollHeight + "px";
-         }
+        // Hide all elements with class content
+        var contents = document.getElementById("QA").getElementsByClassName("content");
+        for (var j = 0; j < contents.length; j++) {
+            contents[j].style.maxHeight = null;
+        }
+        if (this.classList.contains("active")) {
+            this.classList.remove("active");
+        } else {
+            // Remove current active class
+            for (var k = 0; k < qa.length; k++) {
+                qa[k].classList.remove("active");
+            }
+            // Add active class to clicked element
+            this.classList.toggle("active");
+            // Display content for only active element            
+            var content = this.nextElementSibling;
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
     });
 }
 // Animated Collapsible - Flyers ---------------------------------------------/
@@ -79,14 +79,14 @@ for (var i = 0; i < flyers.length; i++) {
         var contents = document.getElementById("flyers").getElementsByClassName("content");
         for (var j = 0; j < contents.length; j++) {
             contents[j].style.maxHeight = null;
-        };
+        }
         if (this.classList.contains("active")) {
             this.classList.remove("active");
         } else {
             // Remove current active class
             for (var k = 0; k < flyers.length; k++) {
                 flyers[k].classList.remove("active");
-            };
+            }
             // Add active class to clicked element
             this.classList.toggle("active");
             // Display content for only active element            
@@ -101,14 +101,23 @@ function hide_calc_slides() {
     for (var i = 0; i < widget_slides.length; i++) {
         $(widget_slides[i]).hide();
     }
-};
+}
 
 function show_slide(id) {
     hide_calc_slides();
     var element = "#" + id;
     $(element).slideDown("slow");
     document.getElementById("reverse-calculator-widget").scrollIntoView();
-};
+}
+
+function show(id) {
+    return document.getElementById(id).style.display = "block";
+}
+
+function hide(id) {
+    return document.getElementById(id).style.display = "none";
+}
+
 calc();
 
 function calc() {
@@ -124,9 +133,11 @@ function calc() {
         var max = (cash_available - loan_origination_fee - other_closing_costs) / (1.02 - plf); // Max Claim Amount($)
         if (max >= 726525) {
             var max = 726525;
-            document.getElementById("warningPurchase").style.display = "block";
+            show('warningPurchase');
+            // document.getElementById("warningPurchase").style.display = "block";
         } else {
-            document.getElementById("warningPurchase").style.display = "none";
+            hide('warningPurchase');
+            // document.getElementById("warningPurchase").style.display = "none";
         }
         document.getElementById("maxClaim").innerHTML = max.toLocaleString(undefined, {
             minimumFractionDigits: 0,
@@ -228,17 +239,19 @@ function calc() {
 function get_loan_purpose() {
     loan_purpose = document.getElementById("mySelect1").value; // Purchase/Refinance Select x
     if (loan_purpose === "Purchase") {
-        document.getElementById("Purchase").style.display = "block";
-        document.getElementById("Refinance").style.display = "none";
-        document.getElementById("warning").style.display = "none"; // Hide Refi Warning
-        document.getElementById("purchaseResults").style.display = "block";
-        document.getElementById("refiResults").style.display = "none";
+        show('Purchase');
+        hide('Refinance');
+        hide('warning');
+        show('purchaseResults');
+        hide('refiResults');
         document.getElementById("mySelect2").value = "Fixed";
-        document.getElementById("Fixed").style.display = "none";
+        hide('Fixed');
         document.getElementById("Variable").style.display = "none";
         document.getElementById("cash_available").style.display = "block"; // Show cash available element
         document.getElementById("Variable_Option").style.display = "none"; // Hide variable rate option element
         document.getElementById("home_appraised_value").style.display = "none"; // Hide Home Appraised Value element
+        show('Purchase-Video');
+        hide('Refinance-Video');
     } else {
         document.getElementById("Purchase").style.display = "none";
         document.getElementById("Refinance").style.display = "block";
@@ -248,6 +261,8 @@ function get_loan_purpose() {
         document.getElementById("cash_available").style.display = "none"; // Show cash available element
         document.getElementById("Variable_Option").style.display = "block"; // Hide variable rate option element
         document.getElementById("home_appraised_value").style.display = "block"; // Hide Home Appraised Value element
+        hide('Purchase-Video');
+        show('Refinance-Video');
     }
 }
 
