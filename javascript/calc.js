@@ -256,22 +256,22 @@ function show_income_summary() {
         document.getElementById("income-2-details").style.display = "none";
     } else {
         document.getElementById("income-2-details").style.display = "block";
-    };
+    }
     if (income3 === 0) {
         document.getElementById("income-3-details").style.display = "none";
     } else {
         document.getElementById("income-3-details").style.display = "block";
-    };
+    }
     if (income4 === 0) {
         document.getElementById("income-4-details").style.display = "none";
     } else {
         document.getElementById("income-4-details").style.display = "block";
-    };
+    }
     if (income5 === 0) {
         document.getElementById("income-5-details").style.display = "none";
     } else {
         document.getElementById("income-5-details").style.display = "block";
-    };
+    }
 }
 
 function show_calc_results() {
