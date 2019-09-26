@@ -54,13 +54,13 @@ a[href*="app.homespotter.com"]::after { content: ''; }
 /* .home-search a:hover{font-style:normal;text-decoration:none;color:white;} */
 
 /* Banner Slides *********************************************************/
-.banner{width:100%;height:80px;padding:18px;font-size: 150%;text-transform:uppercase;text-align:center;border-style:none;outline:none;}
+.banner{width:100%;height:80px;padding:8px;font-size: 150%;text-transform:uppercase;text-align:center;border-style:none;outline:none;}
 .banner1,.banner2,.banner3,.banner4,.banner5,.banner6,.home-search{position:relative;margin:auto;top:50%;transform:translateY(-50%);}
 .dpa,.home-value,.refis,.sfr{width:100%;margin:0px;padding:0px;font-size:100%;border-style:none;outline:none;}
 .dpa:hover,.home-value:hover,.refis:hover,.sfr:hover{color:lightgreen}
 
 /* Cards *********************************************************************/
-.card-title{width:100%; background-color:lightskyblue;font-size:125%;text-transform:uppercase;color:black;border:none;outline:none;cursor:pointer;}
+.card-title{width:100%;height:62px;background-color:lightskyblue;font-size:120%;text-transform:uppercase;color:black;border:none;outline:none;cursor:pointer;}
 .card-title:hover,.card-active{background-color:dodgerblue;color:white;}
 .card-content{margin:0px;padding:16px;}
 .card-title-2{background-color:lightskyblue;font-size:100%;text-transform:uppercase;color:black;border:none;outline:none;cursor:pointer;}
