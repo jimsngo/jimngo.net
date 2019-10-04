@@ -48,6 +48,7 @@ a:hover{color:lightgreen;}
 a[href^="http"]::after { font-family: 'Font Awesome 5 Free'; font-weight: 900; content: ' \f35d'; }
 a[href*="www.jimngo.net"]::after,
 a[href*="www.realtor.com"]::after,
+a[href*="www.mortgagenewsdaily.com"]::after,
 a[href*="app.homespotter.com"]::after { content: ''; }
 .banner a{text-decoration:none;color:white;}
 .banner a:hover{color:lightgreen;}
@@ -67,7 +68,7 @@ a[href*="app.homespotter.com"]::after { content: ''; }
 .card-content{margin:0px;padding:16px; overflow:hidden;transition:max-height 1s ease-out; -webkit-transition:max-height 1s ease-out; -moz-transition:max-height 1s ease-out; -ms-transition:max-height 1s ease-out; -o-transition:max-height 1s ease-out;}
 /* .card-title-2{background-color:lightskyblue;font-size:100%;text-transform:uppercase;color:black;border:none;outline:none;cursor:pointer;}
 .card-title-2:hover,.card-active{background-color:dodgerblue;color:white;} */
-.card-header{width:100%;margin:auto;padding:12px;background-color:#004A7C;color:white;font-size:115%;text-transform:capitalize;text-align:center;border-radius:5px 5px 0px 0px;-webkit-border-radius:5px 5px 0px 0px;-moz-border-radius:5px 5px 0px 0px;-ms-border-radius:5px 5px 0px 0px;-o-border-radius:5px 5px 0px 0px;}
+.card-header{width:100%;margin:auto;padding:12px;background-color:#004A7C;color:white;font-size:115%;text-transform:uppercase;text-align:center;border-radius:5px 5px 0px 0px;-webkit-border-radius:5px 5px 0px 0px;-moz-border-radius:5px 5px 0px 0px;-ms-border-radius:5px 5px 0px 0px;-o-border-radius:5px 5px 0px 0px;}
 .card-header:hover{color:lightgreen;}
 .card-header a{color:white;}
 .card-header a:hover{color:lightgreen;}
@@ -120,7 +121,7 @@ a[href*="app.homespotter.com"]::after { content: ''; }
 .active::after{ font-family: 'Font Awesome 5 Free'; font-weight: 900; content:"\f146";}
 .heading-blu:hover,.heading-blu:active{background-color:#004A7C;color:white;}
 .heading-blu{width:100%;margin:0px 4px;padding:18px;background-color:dodgerblue;color:white;text-transform:uppercase;text-align:center;font-size:125%;border-radius:5px;border-style:none;outline:none;cursor:pointer;}
-.heading{width:100%;margin:0px 4px 4px 4px;padding:18px;background-color:dodgerblue;color:white;text-align:center;font-size:125%;border-radius:5px;border-style:none;outline:none;}
+.heading{width:100%;margin:0px 4px 4px 4px;padding:18px;background-color:dodgerblue;color:white;text-transform:uppercase;text-align:center;font-size:125%;border-radius:5px;border-style:none;outline:none;}
 .selectable{width:100%;margin:4px;padding:18px;background-color:lightgreen;color:black;text-align:center;font-size:18px;border-radius:5px;border-style:none;outline:none;}
 .selectable:hover{background-color:green;color:white;}
 
