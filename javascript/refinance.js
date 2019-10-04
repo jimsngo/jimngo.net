@@ -1,44 +1,97 @@
-// Animated Collapsible - Flyers ---------------------------------------------/
-var flyers = document.getElementById("flyers").getElementsByClassName("collapsible");
-for (var i = 0; i < flyers.length; i++) {
+///////////////////////////////////////////////////////////////////////////////
+// Slide Show                                                                 /
+///////////////////////////////////////////////////////////////////////////////
+
+onload = slideshow;
+
+function slideshow() {
+    setInterval(function () {
+        nextSlide('refi-ss');
+        nextSlide('service-ss');
+        nextSlide('home-valuation-ss');
+        nextSlide('dpa-ss');
+        nextSlide('refinance-ss');
+        nextSlide('sfr-ss');
+        nextSlide('flyer-ss');
+    }, 2000);
+}
+
+function nextSlide(id) {
+    var elems = document.getElementById(id).getElementsByClassName('slide');
+    elems.index = elems.index || 0;
+    elems[elems.index].className = 'slide';
+    elems.index = (elems.index + 1) % elems.length;
+    elems[elems.index].className = 'slide showing';
+}
+
+///////////////////////////////////////////////////////////////////////////////
+
+const calculator = 'refi-calc';
+const widget_slides = document.getElementById(calculator).getElementsByClassName("widget-slide");
+const tabcontents = document.getElementById(calculator).getElementsByClassName("tabcontent");
+
+// For DTI messages ----------------------------------------------------------/
+function show_dti_message(id) {
+    slide_up(messages);
+    slide_down(id);
+}
+
+// For Loan Program Descriptions ---------------------------------------------/
+function show_tab_content(id) {
+    slide_up(tabcontents);
+    slide_down(id);
+}
+
+function slide_up(array) {
+    for (var i = 0; i < array.length; i++) {
+        array[i].style.display = 'none';
+        array[i].style.height = '0px';
+    }
+}
+
+function slide_down(id) {
+    var content = document.getElementById(id);
+    content.style.display = 'block';
+    content.style.height = content.scrollHeight + 'px';
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// Flyers Section - Animated Collapsible - Event Listener ---------------------/
+////////////////////////////////////////////////////////////////////////////////
+
+const flyers = document.getElementById("flyers").getElementsByClassName("collapsible");
+const contents = document.getElementById("flyers").getElementsByClassName("content");
+for (let i = 0; i < flyers.length; i++) {
     flyers[i].addEventListener("click", function () {
         // Hide all elements with class content
-        var contents = document.getElementById("flyers").getElementsByClassName("content");
-        for (var j = 0; j < contents.length; j++) {
-            contents[j].style.maxHeight = null;
+        for (let j = 0; j < contents.length; j++) {
+            contents[j].style.height = '0px';
         }
         if (this.classList.contains("active")) {
             this.classList.remove("active");
         } else {
             // Remove current active class
-            for (var k = 0; k < flyers.length; k++) {
+            for (let k = 0; k < flyers.length; k++) {
                 flyers[k].classList.remove("active");
             }
             // Add active class to clicked element
             this.classList.toggle("active");
             // Display content for only active element            
             var content = this.nextElementSibling;
-            content.style.maxHeight = content.scrollHeight + "px";
+            content.style.height = content.scrollHeight + "px";
         }
     });
 }
 
-function hide_calc_slides() {
-    var widget_slides = document.getElementById("refi-calc").getElementsByClassName("widget-slide");
-    for (var i = 0; i < widget_slides.length; i++) {
-        $(widget_slides[i]).hide();
-    }
+///////////////////////////////////////////////////////////////////////////////
+// Misc ----------------------------------------------------------------------/
+///////////////////////////////////////////////////////////////////////////////
+
+function get_id_value(id) {
+    return document.getElementById(id).value;
 }
 
-function show_slide(id) {
-    hide_calc_slides();
-    var element = "#" + id;
-    $(element).slideDown("slow");
-    document.getElementById("refi-calc").scrollIntoView();
-    calc();
-}
-
-function set_value(id, value) {
+function set_id_value(id, value) {
     document.getElementById(id).value = value;
 }
 
@@ -49,25 +102,47 @@ function toString(id, value, digit) {
     });
 }
 
-function get_inputValue(id) {
-    return document.getElementById(id).value;
-}
-
 function show(id) {
-    return document.getElementById(id).style.display = "block";
+    document.getElementById(id).style.display = "block";
 }
 
 function hide(id) {
-    return document.getElementById(id).style.display = "none";
+    document.getElementById(id).style.display = "none";
 }
 
-loan_program = 'FHA', current_loan_term = '30', refi_option = 'Streamline Refinance'
+// New Home Search
+document.getElementById("HomeSearchBtnWidget").onclick = function (event) {
+    var searchText = document.getElementById("SearchTextWidget").value;
+    if (searchText === "" || typeof (searchText) == "undefined") {
+        document.querySelector("#home-search-form #SearchValidationError").style.display = 'block';
+        window.event.preventDefault();
+    } else {
+        document.querySelector("#home-search-form #SearchValidationError").style.display = 'none';
+    }
+};
+
+///////////////////////////////////////////////////////////////////////////////
+// Calculator                                                                 /
+///////////////////////////////////////////////////////////////////////////////
+
+function show_slide(id) {
+    slide_up(widget_slides);
+    slide_down(id);
+    document.getElementById(calculator).scrollIntoView();
+    calc();
+}
+
+loan_program = 'FHA';
+current_loan_term = '30';
+refi_option = 'Streamline Refinance';
 get_current_loan_program();
 get_current_loan_balance();
 get_current_loan_term();
 get_current_interest();
 get_current_payment();
 calc();
+slide_up(widget_slides);
+slide_down('slide-1');
 
 function calc() {
     get_refi_option();
@@ -80,12 +155,8 @@ function calc() {
 }
 
 function get_current_loan_program() {
-    loan_program = get_inputValue("current-loan-program");
-    var tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    show(loan_program); // Show associated loan program note
+    loan_program = get_id_value("current-loan-program");
+    show_tab_content(loan_program);
     if (loan_program === "Conventional") {
         hide('streamline');
         document.getElementById("refi-option").value = "Term Refinance";
@@ -101,7 +172,7 @@ function get_current_loan_balance() {
     toString("Current-Loan-Balance", current_loan_balance, 0);
     toString("Current-Loan-Balance-2", current_loan_balance, 0);
     // Reset closing costs to 2.0%
-    set_value('closing-costs', .02);
+    set_id_value('closing-costs', 0.02);
 }
 
 function get_current_loan_term() {
@@ -116,48 +187,48 @@ function get_current_interest() {
 }
 
 function get_min_payment() {
-    current_loan_balance = Number(get_inputValue("current-loan-balance"));
-    current_loan_term = Number(get_inputValue("current-loan-term"));
-    current_interest = Number(get_inputValue("current-interest"));
+    current_loan_balance = Number(get_id_value("current-loan-balance"));
+    current_loan_term = Number(get_id_value("current-loan-term"));
+    current_interest = Number(get_id_value("current-interest"));
     minimum_payment = calc_monthly_payment(current_loan_balance, current_loan_term, current_interest);
     document.getElementById("current-payment").min = minimum_payment;
     document.getElementById("current-payment").max = minimum_payment + 1000;
-    set_value('current-payment', minimum_payment);
+    set_id_value('current-payment', minimum_payment);
     toString("Current-Payment", minimum_payment, 0);
     toString("Current-Payment-2", minimum_payment, 0);
 }
 
 function get_current_payment() {
-    current_payment = Number(get_inputValue("current-payment"));
+    current_payment = Number(get_id_value("current-payment"));
     toString("Current-Payment", current_payment, 0);
     toString("Current-Payment-2", current_payment, 0);
 }
 
 function get_refi_option() {
-    refi_option = get_inputValue("refi-option");
+    refi_option = get_id_value("refi-option");
     document.getElementById('refi-option-2').innerHTML = refi_option;
     if (refi_option === "Streamline Refinance") {
         hide('new-loan-amount-select');
-        set_value('new-loan-amount', current_loan_balance);
+        set_id_value('new-loan-amount', current_loan_balance);
         new_loan_amount = current_loan_balance;
         hide('new-loan-term-select');
-        set_value('new-loan-term', current_loan_term);
+        set_id_value('new-loan-term', current_loan_term);
         new_loan_term = current_loan_term;
         if (loan_program === "FHA") {
             // Set max interest 0.5% less than current interest
             max_interest = current_interest - 0.5;
-            set_value('new-interest', max_interest);
+            set_id_value('new-interest', max_interest);
             document.getElementById('new-interest').max = max_interest;
             new_interest = max_interest;
         } else {
-            set_value('new-interest', current_interest);
+            set_id_value('new-interest', current_interest);
             document.getElementById('new-interest').max = current_interest;
             new_interest = current_interest;
         }
         hide('cash-out');
     } else if (refi_option === "Term Refinance") {
         hide('new-loan-amount-select');
-        set_value('new-loan-amount', current_loan_balance);
+        set_id_value('new-loan-amount', current_loan_balance);
         new_loan_amount = current_loan_balance;
         show('new-loan-term-select');
         document.getElementById('new-interest').max = current_interest;
@@ -175,30 +246,30 @@ function get_refi_option() {
     document.getElementById('new-loan-term-2').innerHTML = new_loan_term + " Yrs";
     toString('New-Interest', new_interest, 3);
     toString('New-Interest-2', new_interest, 3);
-    closing_costs = new_loan_amount * .02 / 100;
+    closing_costs = new_loan_amount * 0.02 / 100;
     toString("Closing-Costs", closing_costs, 0);
     toString("Closing-Costs-2", closing_costs, 0);
 }
 
 function get_new_loan_amount() {
-    new_loan_amount = Number(get_inputValue("new-loan-amount"));
+    new_loan_amount = Number(get_id_value("new-loan-amount"));
     toString("New-Loan-Amount", new_loan_amount, 0);
     toString("New-Loan-Amount-2", new_loan_amount, 0);
 }
 
 function get_new_loan_term() {
-    new_loan_term = Number(get_inputValue("new-loan-term"));
+    new_loan_term = Number(get_id_value("new-loan-term"));
     document.getElementById('new-loan-term-2').innerHTML = new_loan_term + " Yrs";
-};
+}
 
 function get_new_interest() {
-    new_interest = Number(get_inputValue("new-interest"));
+    new_interest = Number(get_id_value("new-interest"));
     toString('New-Interest', new_interest, 3);
     toString('New-Interest-2', new_interest, 3);
 }
 
 function get_closing_costs() {
-    closing_cost_percent = Number(get_inputValue("closing-costs"));
+    closing_cost_percent = Number(get_id_value("closing-costs"));
     closing_costs = closing_cost_percent * new_loan_amount / 100;
     toString("Closing-Costs", closing_costs, 0);
     toString("Closing-Costs-2", closing_costs, 0);

@@ -191,110 +191,107 @@
                 </div>
             </div>
             <!-- Page Description -------------------------------------------->
-            <div class="col-9 col-s-8">
-                <div class="flex-center" id="cards">
+            <div class="col-9 col-s-8" id="cards">
+                <div class="flex-center">
                     <div class="col-4 col-s-4">
-                        <button class="card-title card-active" id="flip1">Real Estate Agent</button></div>
+                        <button class="card-title card-active" onclick="show_content('real-estate-agent')">Real
+                            Estate Agent</button></div>
                     <div class="col-4 col-s-4">
-                        <button class="card-title" id="flip2">Home Loan</button></div>
+                        <button class="card-title" onclick="show_content('home-loan')">Home Loan</button></div>
                     <div class="col-4 col-s-4">
-                        <button class="card-title" id="flip3">Life Agent</button></div>
+                        <button class="card-title" onclick="show_content('life-agent')">Life Agent</button>
+                    </div>
                 </div>
                 <!-- Real Estate Agent -->
-                <div id="real_estate_agent">
-                    <div class="card-content">
-                        <p>Whether you are buying or selling a home, it can be quite an adventure especially in today’s
-                            Real Estate market. There is so much information out there on the news and on the internet
-                            about home sales, prices, and mortgage rates.</p>
-                        <ul>
-                            <li>How do you know what’s going on specifically in your area?</li>
-                            <li>Who do you turn to in order to competitively and correctly price your home
-                                at the beginning of the selling process?</li>
-                            <li>How do you know what to offer on your dream home without paying too much, or
-                                offending the seller with a lowball offer?</li>
-                            <li>Who can you go to if you’re facing a foreclosure or unable to make mortgage
-                                payments?</li>
-                        </ul>
-                        <p>Hiring an agent who has his or her finger on the pulse of the market will make your buying or
-                            selling experience an educated one. You need someone who is going to tell you the truth, not
-                            just what they think you want to hear. Dave Ramsey, the financial guru, advises:</p>
-                        <blockquote style="font-size: 120%; color: dodgerblue">“When getting help with money, whether
-                            it’s insurance, real estate or investments, you should always look for someone with the
-                            heart of a teacher, not the heart of a salesman.”</blockquote>
-                        <p>I serve the Inland Empire geographic areas. My services include standard sales, short sales,
-                            and NEW homes. I am involved from the beginning to the end of every transaction. I take
-                            pride in my customer service and in making sure each purchase or selling process will go as
-                            smoothly as possible.</p>
-                    </div>
-                    <div class="banner dodger-blue radius-5" style="height: 40px;">
-                        <p class="banner1">Integrity</p>
-                        <p class="banner1">Experience</p>
-                        <p class="banner1">Service</p>
-                        <p class="banner1">New Home Co-Broker</p>
-                        <p class="banner1">Down Payment Assistance</p>
+                <div class="card-content slow" id="real-estate-agent">
+                    <p>Whether you are buying or selling a home, it can be quite an adventure especially in today’s
+                        Real Estate market. There is so much information out there on the news and on the internet
+                        about home sales, prices, and mortgage rates.</p>
+                    <ul>
+                        <li>How do you know what’s going on specifically in your area?</li>
+                        <li>Who do you turn to in order to competitively and correctly price your home
+                            at the beginning of the selling process?</li>
+                        <li>How do you know what to offer on your dream home without paying too much, or
+                            offending the seller with a lowball offer?</li>
+                        <li>Who can you go to if you’re facing a foreclosure or unable to make mortgage
+                            payments?</li>
+                    </ul>
+                    <p>Hiring an agent who has his or her finger on the pulse of the market will make your buying or
+                        selling experience an educated one. You need someone who is going to tell you the truth, not
+                        just what they think you want to hear. Dave Ramsey, the financial guru, advises:</p>
+                    <blockquote style="font-size: 120%; color: dodgerblue">“When getting help with money, whether
+                        it’s insurance, real estate or investments, you should always look for someone with the
+                        heart of a teacher, not the heart of a salesman.”</blockquote>
+                    <p>I serve the Inland Empire geographic areas. My services include standard sales, short sales,
+                        and NEW homes. I am involved from the beginning to the end of every transaction. I take
+                        pride in my customer service and in making sure each purchase or selling process will go as
+                        smoothly as possible.</p>
+                    <div class="banner dodger-blue radius-5" id="real-estate-ss">
+                        <p class="slide showing">Integrity</p>
+                        <p class="slide">Experience</p>
+                        <p class="slide">Service</p>
+                        <p class="slide">New Home Co-Broker</p>
+                        <p class="slide">Down Payment Assistance</p>
                     </div>
                 </div>
                 <!-- Home Loan -->
-                <div id="home-loan" style="display: none">
-                    <div class="card-content">
-                        <p style="font-size: 150%; color: dodgerblue">“Big Banks Put High Interest Above Your Interest”
-                        </p>
-                        <ul>
-                            <li>My mission is to serve my clients with honesty, integrity and competence.</li>
-                            <li>My goal is to provide home loans to my clients while providing them with the lowest
-                                interest rates and closing costs possible.</li>
-                            <li>I pledge to help borrowers overcome roadblocks that can arise while securing a loan.
-                            </li>
-                            <li>I will be with you all along the process, from the initial application to final funding.
-                            </li>
-                            <li>There’s no need to look any further for your next Home Loan - FHA, VA, Conventional,
-                                USDA, Reverse Mortgage</li>
-                        </ul>
-                        <p style="font-size: 120%; color: dodgerblue">“We're Licensed Mortgage Professional, and home to
-                            so much more than what big banks offer”</p>
-                    </div>
-                    <a href="https://www.jimngo.net/home-loan">
-                        <div class="banner dodger-blue radius-5" style="height: 40px;">
-                            <p class="banner2">Down Payment Assistance <i class="fas fa-external-link-alt"></i></p>
-                            <p class="banner2">Pre-Qualification <i class="fas fa-external-link-alt"></i></p>
-                            <p class="banner2">FHA <i class="fas fa-external-link-alt"></i></p>
-                            <p class="banner2">VA <i class="fas fa-external-link-alt"></i></p>
-                            <p class="banner2">Conventional <i class="fas fa-external-link-alt"></i></p>
-                            <p class="banner2">USDA <i class="fas fa-external-link-alt"></i></p>
-                            <p class="banner2">Mortgage Refinance <i class="fas fa-external-link-alt"></i></p>
-                            <p class="banner2">Streamline Refinance <i class="fas fa-external-link-alt"></i></p>
-                            <p class="banner2">Home Equity Loan <i class="fas fa-external-link-alt"></i></p>
-                            <p class="banner2">HELOCs <i class="fas fa-external-link-alt"></i></p>
-                            <p class="banner2">Reverse Mortgage <i class="fas fa-external-link-alt"></i></p>
+                <div class="card-content slow" id="home-loan" style="display: none">
+                    <p style="font-size: 150%; color: dodgerblue">“Big Banks Put High Interest Above Your Interest”
+                    </p>
+                    <ul>
+                        <li>My mission is to serve my clients with honesty, integrity and competence.</li>
+                        <li>My goal is to provide home loans to my clients while providing them with the lowest
+                            interest rates and closing costs possible.</li>
+                        <li>I pledge to help borrowers overcome roadblocks that can arise while securing a loan.
+                        </li>
+                        <li>I will be with you all along the process, from the initial application to final funding.
+                        </li>
+                        <li>There’s no need to look any further for your next Home Loan - FHA, VA, Conventional,
+                            USDA, Reverse Mortgage</li>
+                    </ul>
+                    <p style="font-size: 120%; color: dodgerblue">“We're Licensed Mortgage Professional, and home to
+                        so much more than what big banks offer”</p>
+                    <a href="https://www.jimngo.net/home-loan" target="_blank">
+                        <div class="banner dodger-blue radius-5" id="home-loan-ss">
+                            <p class="slide showing">Down Payment Assistance <i class="fas fa-external-link-alt"></i>
+                            </p>
+                            <p class="slide">Pre-Qualification <i class="fas fa-external-link-alt"></i></p>
+                            <p class="slide">FHA <i class="fas fa-external-link-alt"></i></p>
+                            <p class="slide">VA <i class="fas fa-external-link-alt"></i></p>
+                            <p class="slide">Conventional <i class="fas fa-external-link-alt"></i></p>
+                            <p class="slide">USDA <i class="fas fa-external-link-alt"></i></p>
+                            <p class="slide">Mortgage Refinance <i class="fas fa-external-link-alt"></i></p>
+                            <p class="slide">Streamline Refinance <i class="fas fa-external-link-alt"></i></p>
+                            <p class="slide">Home Equity Loan <i class="fas fa-external-link-alt"></i></p>
+                            <p class="slide">HELOCs <i class="fas fa-external-link-alt"></i></p>
+                            <p class="slide">Reverse Mortgage <i class="fas fa-external-link-alt"></i></p>
                         </div>
                     </a>
                 </div>
                 <!-- Insurance Agent -->
-                <div id="life-agent" style="display:none">
-                    <div class="card-content">
-                        <h3 style="font-size: 150%; color: dodgerblue"><i>Life Can Change In An Instant.</i>
-                        </h3>
-                        <p>Loosing a loved one can mean more than an emotional burden. It can also create a
-                            financial burden. Protect your loved ones today.</p>
-                        <h3 style="font-size: 120%; color: dodgerblue"><i>Life Insurance may cost a lot less
-                                than you think:</i></h3>
-                        <ul>
-                            <li>Helps your family take care of medical and funeral costs, rent or mortgage
-                                payments, unpaid bills and more.</li>
-                            <li>Affordable coverage.</li>
-                            <li>Easy online application that takes just minutes.</li>
-                            <li>No medical exams available on certain life product.</li>
-                            <li>Most who apply are accepted for coverage.</li>
-                        </ul>
-                    </div>
-                    <a href="https://www.jimngo.net/life-agent">
-                        <div class="banner dodger-blue radius-5" style="height: 40px;">
-                            <p class="banner3">Term Life <i class="fas fa-external-link-alt"></i></p>
-                            <p class="banner3">Whole Life <i class="fas fa-external-link-alt"></i></p>
-                            <p class="banner3">Final Expense <i class="fas fa-external-link-alt"></i></p>
-                            <p class="banner3">Mortgage Protection <i class="fas fa-external-link-alt"></i></p>
-                            <p class="banner3">Indexed Universal Life <i class="fas fa-external-link-alt"></i></p>
-                            <p class="banner3">Return of Premium <i class="fas fa-external-link-alt"></i></p>
+                <div class="card-content slow" id="life-agent" style="display:none">
+                    <h3 style="font-size: 150%; color: dodgerblue"><i>Life Can Change In An Instant.</i>
+                    </h3>
+                    <p>Loosing a loved one can mean more than an emotional burden. It can also create a
+                        financial burden. Protect your loved ones today.</p>
+                    <h3 style="font-size: 120%; color: dodgerblue"><i>Life Insurance may cost a lot less
+                            than you think:</i></h3>
+                    <ul>
+                        <li>Helps your family take care of medical and funeral costs, rent or mortgage
+                            payments, unpaid bills and more.</li>
+                        <li>Affordable coverage.</li>
+                        <li>Easy online application that takes just minutes.</li>
+                        <li>No medical exams available on certain life product.</li>
+                        <li>Most who apply are accepted for coverage.</li>
+                    </ul>
+                    <a href="https://www.jimngo.net/life-agent" target="_blank">
+                        <div class="banner dodger-blue radius-5" id='life-agent-ss'>
+                            <p class="slide showing">Term Life <i class="fas fa-external-link-alt"></i></p>
+                            <p class="slide">Whole Life <i class="fas fa-external-link-alt"></i></p>
+                            <p class="slide">Final Expense <i class="fas fa-external-link-alt"></i></p>
+                            <p class="slide">Mortgage Protection <i class="fas fa-external-link-alt"></i></p>
+                            <p class="slide">Indexed Universal Life <i class="fas fa-external-link-alt"></i></p>
+                            <p class="slide">Return of Premium <i class="fas fa-external-link-alt"></i></p>
                         </div>
                     </a>
                 </div>
@@ -303,23 +300,23 @@
     </main>
     <!-- Services ------------------------------------------------------------>
     <section id="services">
-        <div class="banner dark-cerulean">
-            <h2 class="banner5">Mortgage Pre-Approval</h2>
-            <h2 class="banner5">Down Payment Assistance</h2>
-            <h2 class="banner5">Mortgage Calculator</h2>
-            <h2 class="banner5">Home Valuation</h2>
-            <h2 class="banner5">Comparative Market Analysis</h2>
-            <h2 class="banner5">Reverse Mortgage</h2>
-            <h2 class="banner5">Refinance</h2>
-            <h2 class="banner5">Short Sale Foreclosure</h2>
+        <div class="banner dark-cerulean" id="service-ss">
+            <h2 class="slide showing">Mortgage Pre-Approval</h2>
+            <h2 class="slide">Down Payment Assistance</h2>
+            <h2 class="slide">Mortgage Calculator</h2>
+            <h2 class="slide">Home Valuation</h2>
+            <h2 class="slide">Comparative Market Analysis</h2>
+            <h2 class="slide">Reverse Mortgage</h2>
+            <h2 class="slide">Refinance</h2>
+            <h2 class="slide">Short Sale Foreclosure</h2>
         </div>
         <div class="main flex-center">
             <!-- Home Valuation -->
             <div class="col-4 col-s-6">
                 <a href="https://www.jimngo.net/home-valuation" target="_blank">
-                    <div class="card-header">
-                        <p class="home-value">Home Estimate <i class="fas fa-external-link-alt"></i></p>
-                        <p class="home-value">Market Comparable <i class="fas fa-external-link-alt"></i></p>
+                    <div class="card-header banner" id="home-valuation-ss">
+                        <p class="slide showing">Home Estimate <i class="fas fa-external-link-alt"></i></p>
+                        <p class="slide">Market Comparable <i class="fas fa-external-link-alt"></i></p>
                     </div>
                     <div class="card-body">
                         <ul>
@@ -333,7 +330,9 @@
             <!-- Mortgage Calculator -->
             <div class="col-4 col-s-6">
                 <a href="https://www.jimngo.net/mortgage-prequalification-calculator" target="_blank">
-                    <div class="card-header">Mortgage Calculator <i class="fas fa-external-link-alt"></i></div>
+                    <div class="card-header banner">
+                        <p class='slide showing'>Mortgage Calculator <i class="fas fa-external-link-alt"></i></p>
+                    </div>
                 </a>
                 <div class="card-body">
                     <p style="display:none">Mortgage Prequalification Calculator with Down Payment, PMI, and Taxes. Use
@@ -355,9 +354,9 @@
             <!-- Down Payment Resource -->
             <div class="col-4 col-s-6">
                 <a href="https://www.jimngo.net/down-payment-assistance" target="_blank">
-                    <div class="card-header">
-                        <p class="dpa">First Time Homebuyer <i class="fas fa-external-link-alt"></i></p>
-                        <p class="dpa">Down Payment Assistance <i class="fas fa-external-link-alt"></i></p>
+                    <div class="card-header banner" id='dpa-ss'>
+                        <p class="slide showing">First Time Homebuyer <i class="fas fa-external-link-alt"></i></p>
+                        <p class="slide">Down Payment Assistance <i class="fas fa-external-link-alt"></i></p>
                     </div>
                     <div class="card-body">
                         <ul>
@@ -371,9 +370,9 @@
             <!-- Refinance -->
             <div class="col-4 col-s-6">
                 <a href="https://www.jimngo.net/mortgage-refinance" target="_blank">
-                    <div class="card-header">
-                        <p class="refis">Mortgage Refinance <i class="fas fa-external-link-alt"></i></p>
-                        <p class="refis">Home Equity Loan <i class="fas fa-external-link-alt"></i></p>
+                    <div class="card-header banner" id="refinance-ss">
+                        <p class="slide showing">Mortgage Refinance <i class="fas fa-external-link-alt"></i></p>
+                        <p class="slide">Home Equity Loan <i class="fas fa-external-link-alt"></i></p>
                     </div>
                     <div class="card-body">
                         <ul>
@@ -388,9 +387,9 @@
             <!-- Short Sale Foreclosure -->
             <div class="col-4 col-s-6">
                 <a href="https://www.jimngo.net/short-sales-foreclosure" target="_blank">
-                    <div class="card-header">
-                        <p class="sfr">Short Sale <i class="fas fa-external-link-alt"></i></p>
-                        <p class="sfr">Pre-Foreclosure <i class="fas fa-external-link-alt"></i></p>
+                    <div class="card-header banner" id="sfr-ss">
+                        <p class="slide showing">Short Sale <i class="fas fa-external-link-alt"></i></p>
+                        <p class="slide">Pre-Foreclosure <i class="fas fa-external-link-alt"></i></p>
                     </div>
                     <div class="card-body">
                         <ul>
@@ -403,7 +402,9 @@
             <!-- Reverse Mortgage -->
             <div class="col-4 col-s-6">
                 <a href="https://www.jimngo.net/reverse-mortgage-calculator" target="_blank">
-                    <div class="card-header">Reverse Mortgage <i class="fas fa-external-link-alt"></i></div>
+                    <div class="card-header banner">
+                        <p class="slide showing">Reverse Mortgage <i class="fas fa-external-link-alt"></i></p>
+                    </div>
                     <div class="card-body">
                         <ul>
                             <li>You’ve worked hard to build the equity in your home.</li>
@@ -601,23 +602,23 @@
     </section>
     <!-- Marketing ----------------------------------------------------------->
     <section id="flyers">
-        <div class="banner dark-cerulean">
-            <h3 class="banner6">Purchase</h3>
-            <h3 class="banner6">Refinance</h3>
-            <h3 class="banner6">FHA</h3>
-            <h3 class="banner6">Down Payment Assistance</h3>
-            <h3 class="banner6">Conventional</h3>
-            <h3 class="banner6">VA</h3>
-            <h3 class="banner6">USDA</h3>
-            <h3 class="banner6">Jumbo</h3>
-            <h3 class="banner6">Reverse Mortgage</h3>
+        <div class="banner dark-cerulean" id="flyer-ss">
+            <h3 class="slide showing">Purchase</h3>
+            <h3 class="slide">Refinance</h3>
+            <h3 class="slide">FHA</h3>
+            <h3 class="slide">Down Payment Assistance</h3>
+            <h3 class="slide">Conventional</h3>
+            <h3 class="slide">VA</h3>
+            <h3 class="slide">USDA</h3>
+            <h3 class="slide">Jumbo</h3>
+            <h3 class="slide">Reverse Mortgage</h3>
         </div>
         <div class="main flex-center">
             <!-- QM Products ------------------------------------------------->
             <div class="col-4 col-s-6">
                 <h3 class="heading">Qualified Mortgages</h3>
                 <button class="collapsible">Conventional</button>
-                <div class="content">
+                <div class="content slow">
                     <p>If you’ve heard of Fannie Mae or Freddie Mac, you know the family of conventional loans. These
                         loans are written by a wide range of banks, from your hometown locally owned to the fanciest
                         mortgage broker. “Conforming” loans meet Fannie and Freddie’s high requirements, including
@@ -633,7 +634,7 @@
                         report are helpful.</p>
                 </div>
                 <button class="collapsible">FHA</button>
-                <div class="content">
+                <div class="content slow">
                     <p>The FHA started insuring loans after the Great Depression as a way of helping people get back
                         into owned property. It basically created the 30 year fixed interest mortgage and continues to
                         carefully oversee which homes can and cannot be purchased in its name.</p>
@@ -650,7 +651,7 @@
                         time consuming to write, so you may have to shop a bit to find a good bank.</p>
                 </div>
                 <button class="collapsible">VA</button>
-                <div class="content">
+                <div class="content slow">
                     <p>As part of the benefits that active military members and veterans receive from the government, VA
                         loans are built on a merit-based system. Career military and those honorably discharged early
                         are generally eligible, but short-term members or Reserves may have to meet additional
@@ -664,7 +665,7 @@
                         though, so that could be a con if you really wanted this most excellent loan type.</p>
                 </div>
                 <button class="collapsible">USDA</button>
-                <div class="content">
+                <div class="content slow">
                     <p>In rural areas, the US Department of Agriculture will offer mortgage lending as a way of helping
                         to keep the local economy flowing. Homes don’t have to be on an acreage, but they do need to be
                         located in communities with under 35,000 inhabitants.</p>
@@ -682,7 +683,7 @@
             <div class="col-4 col-s-6">
                 <h3 class="heading">Non-Qualified Mortgages</h3>
                 <button class="collapsible">Bank Statement Premier</button>
-                <div class="content">
+                <div class="content fast">
                     <p>For Highly Qualified Self-Employed Borrowers</p>
                     <P>Qualify with 12-months of bank statements and get a floor rate as low as 4.99%</P>
                     <ul>
@@ -693,7 +694,7 @@
                     </ul>
                 </div>
                 <button class="collapsible">Bank Statement</button>
-                <div class="content">
+                <div class="content fast">
                     <p>For Self-Employed Borrowers</p>
                     <p>Qualify with 12-months bank statements</p>
                     <ul>
@@ -704,7 +705,7 @@
                     </ul>
                 </div>
                 <button class="collapsible">Investor</button>
-                <div class="content">
+                <div class="content fast">
                     <p>For Professional Real Estate Investors</p>
                     <p>Qualify with subject property cash flow</p>
                     <ul>
@@ -715,7 +716,7 @@
                     </ul>
                 </div>
                 <button class="collapsible">Asset Qualification</button>
-                <div class="content">
+                <div class="content fast">
                     <p>For Borrowers with High Cash Liquidity</p>
                     <p>Qualify based on verified liquid assets</p>
                     <ul>
@@ -726,7 +727,7 @@
                     </ul>
                 </div>
                 <button class="collapsible">Agency Plus</button>
-                <div class="content">
+                <div class="content fast">
                     <p>For Conforming & Jumbo Loans, and Owners of Multiple Properties Falling Just Outside Qualified
                         Mortgage Parameters</p>
                     <p>Qualify with full documentation</p>
@@ -741,7 +742,7 @@
             <!-- Misc -------------------------------------------------------->
             <div class="col-4 col-s-12">
                 <button class="collapsible">Looking To Purchase A Home?</button>
-                <div class="content">
+                <div class="content medium">
                     <p>1. Make sure your credit is in good shape</p>
                     <ul>
                         <li>Excellent Credit: 750+</li>
@@ -761,7 +762,7 @@
                     </ul>
                 </div>
                 <button class="collapsible">The Benefits Of A 20% Down Payment</button>
-                <div class="content">
+                <div class="content slow">
                     <p>1. Your interest rate will be lower.</p>
                     <p>Putting down a 20% down payment vs. a 3-5% down payment shows your lender/bank that you are more
                         financially stable, thus a good credit risk. The more confident your bank is in your credit
@@ -783,7 +784,7 @@
                         conforming, conventional loans that have down payments less than 20%.”</p>
                 </div>
                 <button class="collapsible">How Much House Can You Afford?</button>
-                <div class="content">
+                <div class="content medium">
                     <p>Before you start shopping for a new home, determine how much you can afford to spend.</p>
                     <p>Here are a few things to consider:</p>
                     <ul>
@@ -797,7 +798,7 @@
                         best available loan program for your needs.</p>
                 </div>
                 <button class="collapsible">6 Things Not To Do When Applying For A Mortgage</button>
-                <div class="content">
+                <div class="content medium">
                     <p>When lenders review your application, they like to see consistency in your finances.</p>
                     <ol>
                         <li>Do not make major purchases like furniture, appliances, jewelry, vehicles or vacations</li>
@@ -812,7 +813,7 @@
                     </ol>
                 </div>
                 <button class="collapsible">Acceptable Sources of Cash to Close Funds</button>
-                <div class="content">
+                <div class="content slow">
                     <p>Providing proper asset documentation and the actual source of the funds is a critical element of
                         the loan closing process.</p>
                     <p>There’s nothing worse in a real estate purchase than making it all the way through the hoops and
@@ -909,23 +910,8 @@
         </div>
     </section>
     <!-- Scripts ------------------------------------------------------------->
-    <script src="javascript/jquery-3.4.1.min.js"></script>
-    <script src="javascript/w3.min.js"></script>
-    <script src="javascript/business-hours.min.js"></script>
-    <script src="javascript/index.min.js"></script>
-    <script src="javascript/new-home-search.min.js"></script>
-    <!-- Slide Show -------------------------------------------------------------->
-    <script>
-        w3.slideshow(".banner1", 1500);
-        w3.slideshow(".banner2", 1500);
-        w3.slideshow(".banner3", 1500);
-        w3.slideshow(".banner5", 1500);
-        w3.slideshow(".dpa", 2000);
-        w3.slideshow(".home-value", 2000);
-        w3.slideshow(".refis", 2000);
-        w3.slideshow(".sfr", 2000);
-        w3.slideshow(".banner6", 2000);
-    </script>
+    <script src="javascript/business-hours.min.js" async></script>
+    <script src="javascript/index.min.js" async></script>
 </body>
 <footer>
     <div class="main flex-perfect-center center">

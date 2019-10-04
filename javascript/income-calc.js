@@ -1,76 +1,139 @@
-// Toggle active class - id("main-dti-select")
-btns = document.getElementById("main-dti-select").getElementsByClassName("selectable");
-for (var i = 0; i < btns.length; i++) {
-	btns[i].addEventListener("click", function () {
-		this.classList.toggle("active");
-	});
+///////////////////////////////////////////////////////////////////////////////
+// Slide Show                                                                 /
+///////////////////////////////////////////////////////////////////////////////
+
+onload = slideshow;
+
+function slideshow() {
+	setInterval(function () {
+		nextSlide('calc-ss');
+		nextSlide('home-valuation-ss');
+		nextSlide('service-ss');
+		nextSlide('dpa-ss');
+		nextSlide('refinance-ss');
+		nextSlide('sfr-ss');
+		nextSlide('flyer-ss');
+	}, 2000);
 }
-// Add active class to Calculator's Inputs
-var btns = document.getElementById("mortgage-income-widget").getElementsByClassName("selectable");
-for (var i = 0; i < btns.length; i++) {
-	btns[i].addEventListener("click", function () {
-		var current = document.getElementsByClassName("active");
-		current[0].className = current[0].className.replace(" active", "");
-		this.className += " active";
-	});
+
+function nextSlide(id) {
+	var elems = document.getElementById(id).getElementsByClassName('slide');
+	elems.index = elems.index || 0;
+	elems[elems.index].className = 'slide';
+	elems.index = (elems.index + 1) % elems.length;
+	elems[elems.index].className = 'slide showing';
 }
-// Animated Collapsible - Flyers ---------------------------------------------/
-var flyers = document.getElementById("flyers").getElementsByClassName("collapsible");
-for (var i = 0; i < flyers.length; i++) {
+
+const calculator = 'mortgage-income-widget';
+const widget_slides = document.getElementById(calculator).getElementsByClassName("widget-slide");
+const tabcontents = document.getElementById(calculator).getElementsByClassName("tabcontent");
+const messages = document.getElementById("dti_messages").getElementsByClassName("message");
+
+// For DTI messages ----------------------------------------------------------/
+function show_dti_message(id) {
+	slide_up(messages);
+	slide_down(id);
+}
+
+// For Loan Program Descriptions ---------------------------------------------/
+function show_tab_content(id) {
+	slide_up(tabcontents);
+	slide_down(id);
+}
+
+function slide_up(array) {
+	for (var i = 0; i < array.length; i++) {
+		array[i].style.display = 'none';
+		array[i].style.height = '0px';
+	}
+}
+
+function slide_down(id) {
+	var content = document.getElementById(id);
+	content.style.display = 'block';
+	content.style.height = content.scrollHeight + 'px';
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// Flyers Section - Animated Collapsible - Event Listener ---------------------/
+////////////////////////////////////////////////////////////////////////////////
+
+const flyers = document.getElementById("flyers").getElementsByClassName("collapsible");
+const contents = document.getElementById("flyers").getElementsByClassName("content");
+for (let i = 0; i < flyers.length; i++) {
 	flyers[i].addEventListener("click", function () {
 		// Hide all elements with class content
-		var contents = document.getElementById("flyers").getElementsByClassName("content");
-		for (var j = 0; j < contents.length; j++) {
-			contents[j].style.maxHeight = null;
+		for (let j = 0; j < contents.length; j++) {
+			contents[j].style.height = '0px';
 		}
 		if (this.classList.contains("active")) {
 			this.classList.remove("active");
 		} else {
 			// Remove current active class
-			for (var k = 0; k < flyers.length; k++) {
+			for (let k = 0; k < flyers.length; k++) {
 				flyers[k].classList.remove("active");
 			}
 			// Add active class to clicked element
 			this.classList.toggle("active");
 			// Display content for only active element            
 			var content = this.nextElementSibling;
-			content.style.maxHeight = content.scrollHeight + "px";
+			content.style.height = content.scrollHeight + "px";
 		}
 	});
 }
-// Front DTI
-$("#dti_1").click(function () {
-	if (screen && screen.width < 768) {
-		document.getElementById("dti_1").scrollIntoView(true);
-	} else {
-		document.getElementById("page_description").scrollIntoView();
-	}
-	$("#front_dti").slideToggle("slow");
-});
-// Back DTI
-$("#dti_2").click(function () {
-	if (screen && screen.width < 768) {
-		document.getElementById("dti_2").scrollIntoView();
-	} else {
-		document.getElementById("page_description").scrollIntoView();
-	}
-	$("#back_dti").slideToggle("slow");
-});
 
-function hide_income_calc_slides() {
-	var widget_slides = document.getElementById("mortgage-income-widget").getElementsByClassName("widget-slide");
-	for (var i = 0; i < widget_slides.length; i++) {
-		$(widget_slides[i]).hide();
-	}
+///////////////////////////////////////////////////////////////////////////////
+// Others --------------------------------------------------------------------/
+///////////////////////////////////////////////////////////////////////////////
+
+function get_id_value(id) {
+	return document.getElementById(id).value;
 }
+
+function set_id_value(id, value) {
+	document.getElementById(id).value = value;
+}
+
+function toString(id, value, digit) {
+	document.getElementById(id).innerHTML = value.toLocaleString(undefined, {
+		minimumFractionDigits: digit,
+		maximumFractionDigits: digit
+	});
+}
+
+function show(id) {
+	document.getElementById(id).style.display = "block";
+}
+
+function hide(id) {
+	document.getElementById(id).style.display = "none";
+}
+
+// New Home Search
+document.getElementById("HomeSearchBtnWidget").onclick = function (event) {
+	var searchText = document.getElementById("SearchTextWidget").value;
+	if (searchText === "" || typeof (searchText) == "undefined") {
+		document.querySelector("#home-search-form #SearchValidationError").style.display = 'block';
+		window.event.preventDefault();
+	} else {
+		document.querySelector("#home-search-form #SearchValidationError").style.display = 'none';
+	}
+};
+
+///////////////////////////////////////////////////////////////////////////////
+// Calculator                                                                 /
+///////////////////////////////////////////////////////////////////////////////
 
 function show_slide(id) {
-	hide_income_calc_slides();
-	var element = "#" + id;
-	$(element).slideDown("slow");
-	document.getElementById("mortgage-income-widget").scrollIntoView();
+	slide_up(widget_slides);
+	slide_down(id);
+	document.getElementById(calculator).scrollIntoView();
 	initialize();
 }
+
+initialize();
+slide_up(widget_slides);
+slide_down('slide-1');
 
 function initialize() {
 	get_loan_program();
@@ -82,16 +145,10 @@ function initialize() {
 	get_property_tax_rate();
 	get_lenders_required_dti();
 }
-initialize();
 
 function get_loan_program() {
 	loan_program = document.getElementById("mySelect").value;
-	var i, tabcontent;
-	tabcontent = document.getElementsByClassName("tabcontent");
-	for (i = 0; i < tabcontent.length; i++) {
-		tabcontent[i].style.display = "none";
-	}
-	document.getElementById(loan_program).style.display = "block"; // Show associated loan program note
+	show_tab_content(loan_program);
 	// Set Min Down for Loan Program
 	if (loan_program === "FHA") {
 		document.getElementById("dp").min = 3.5; // Min Down for FHA
@@ -117,34 +174,31 @@ function get_loan_program() {
 }
 
 function get_loan_term() {
-	loan_term = document.getElementById("mySelect2").value;
+	loan_term = get_id_value("mySelect2");
 }
 
 function get_sales_price() {
-	purchase_price = Number(document.getElementById("pp").value);
-	document.getElementById("PP").innerHTML = purchase_price.toLocaleString(undefined, {
-		minimumFractionDigits: 0,
-		maximumFractionDigits: 0
-	});
+	purchase_price = Number(get_id_value("pp"));
+	toString('PP', purchase_price, 0);
 	// High Loan Amount Warning for Conforming Loans
-	if (!(loan_program === "Jumbo") && purchase_price > 417000) {
-		document.getElementById("loanMaxNote").style.display = "block";
+	if ((loan_program !== "Jumbo") && purchase_price > 417000) {
+		show("loanMaxNote");
 	} else {
-		document.getElementById("loanMaxNote").style.display = "none";
+		hide("loanMaxNote");
 	}
 	//Low Loan Amount warning for Jumbo Loan
 	if (loan_program === "Jumbo" && purchase_price < 484350) {
-		document.getElementById("jumboLoan").style.display = "block";
+		show("jumboLoan");
 	} else {
-		document.getElementById("jumboLoan").style.display = "none";
+		hide("jumboLoan");
 	}
 }
 
 function get_down_payment_percent() {
-	down_payment_percent = Number(document.getElementById("dp").value);
+	down_payment_percent = Number(get_id_value("dp"));
 	loan_to_value = 100 - down_payment_percent;
-	document.getElementById("DP%").innerHTML = down_payment_percent.toFixed(1);
-	document.getElementById("LTV").innerHTML = loan_to_value.toFixed(1);
+	toString('DP%', down_payment_percent, 1);
+	toString('LTV', loan_to_value, 1);
 }
 
 function get_mi_rate() {
@@ -161,88 +215,70 @@ function get_mi_rate() {
 	} else if (loan_program === "Jumbo" && down_payment_percent >= 20) {
 		mi_rate = 0;
 	} else {
-		mi_rate = Number(document.getElementById("mi").value);
+		mi_rate = Number(get_id_value("mi"));
 	}
-	document.getElementById("MI%").innerHTML = mi_rate.toLocaleString(undefined, {
-		minimumFractionDigits: 2,
-		maximumFractionDigits: 2
-	});
+	toString('MI%', mi_rate, 2);
 }
 
 function get_interest_rate() {
-	interest_rate = Number(document.getElementById("apr").value);
-	document.getElementById("APR%").innerHTML = interest_rate.toLocaleString(undefined, {
-		minimumFractionDigits: 3,
-		maximumFractionDigits: 3
-	});
+	interest_rate = Number(get_id_value("apr"));
+	toString('APR%', interest_rate, 3);
 }
 
 function get_property_tax_rate() {
-	property_tax_rate = Number(document.getElementById("pt").value);
-	document.getElementById("PT%").innerHTML = property_tax_rate.toLocaleString(undefined, {
-		minimumFractionDigits: 2,
-		maximumFractionDigits: 2
-	});
+	property_tax_rate = Number(get_id_value("pt"));
+	toString('PT%', property_tax_rate, 2);
 }
 
 function get_lenders_required_dti() {
-	qualifying_front_ratio = Number(document.getElementById("efr").value);
-	qualifying_back_ratio = Number(document.getElementById("ebr").value);
-	document.getElementById("EFR%").innerHTML = qualifying_front_ratio.toLocaleString(undefined, {
-		minimumFractionDigits: 0,
-		maximumFractionDigits: 0
-	});
+	qualifying_front_ratio = Number(get_id_value("efr"));
+	qualifying_back_ratio = Number(get_id_value("ebr"));
+	toString('EFR%', qualifying_front_ratio, 0);
 	if (qualifying_front_ratio > qualifying_back_ratio) {
 		document.getElementById("ebr").value = qualifying_front_ratio;
-		qualifying_back_ratio = Number(document.getElementById("ebr").value);
+		qualifying_back_ratio = Number(get_id_value("ebr"));
 	}
-	document.getElementById("EBR%").innerHTML = qualifying_back_ratio.toLocaleString(undefined, {
-		minimumFractionDigits: 0,
-		maximumFractionDigits: 0
-	});
+	toString('EBR%', qualifying_back_ratio, 0);
 }
 
 function get_liability() {
-	auto_loan = Number(document.getElementById("auto_loan").value);
+	auto_loan = Number(get_id_value("auto_loan"));
 	if (auto_loan < 0) {
 		alert("Please enter only positive number");
 		auto_loan = 0;
-		document.getElementById("auto_loan").value = "";
+		set_id_value("auto_loan", '');
 		return;
 	}
-	student_loan = Number(document.getElementById("student_loan").value);
+	student_loan = Number(get_id_value("student_loan"));
 	if (student_loan < 0) {
 		alert("Please enter only positive number");
 		student_loan = 0;
-		document.getElementById("student_loan").value = "";
+		set_id_value("student_loan", '');
 		return;
 	}
-	installment_loan = Number(document.getElementById("installment_loan").value);
+	installment_loan = Number(get_id_value("installment_loan"));
 	if (installment_loan < 0) {
 		alert("Please enter only positive number");
 		installment_loan = 0;
-		document.getElementById("installment_loan").value = "";
+		set_id_value("installment_loan", '');
 		return;
 	}
-	revolving_account = Number(document.getElementById("revolving_account").value);
+	revolving_account = Number(get_id_value("revolving_account"));
 	if (revolving_account < 0) {
 		alert("Please enter only positive number");
 		revolving_account = 0;
-		document.getElementById("revolving_account").value = "";
+		set_id_value("revolving_account", '');
 		return;
 	}
-	other_debt = Number(document.getElementById("other_debt").value);
+	other_debt = Number(get_id_value("other_debt"));
 	if (other_debt < 0) {
 		alert("Please enter only positive number");
 		other_debt = 0;
-		document.getElementById("other_debt").value = "";
+		set_id_value("other_debt", '');
 		return;
 	}
 	total_monthly_liability = auto_loan + student_loan + installment_loan + revolving_account + other_debt;
-	document.getElementById("ML").innerHTML = total_monthly_liability.toLocaleString(undefined, {
-		minimumFractionDigits: 0,
-		maximumFractionDigits: 0
-	});
+	toString('ML', total_monthly_liability, 0);
 	calc();
 	show_slide('calc-results');
 }
@@ -251,52 +287,31 @@ function calc() {
 	var n = loan_term * 12; // Number of Months
 	var r = interest_rate / 1200; // Monthly Interest Rate (%)
 	var down_payment_dollar = purchase_price * (down_payment_percent / 100); // Down Payment ($)
-	document.getElementById("DP").innerHTML = down_payment_dollar.toLocaleString(undefined, {
-		minimumFractionDigits: 0,
-		maximumFractionDigits: 0
-	});
+	toString('DP', down_payment_dollar, 0);
 	loan_amount = purchase_price - down_payment_dollar;
-	document.getElementById("LA").innerHTML = loan_amount.toLocaleString(undefined, {
-		minimumFractionDigits: 0,
-		maximumFractionDigits: 0
-	});
+	toString('LA', loan_amount, 0);
 	//FHA Loan Limit Warning
-	if (!(loan_program === "Jumbo") && loan_amount > 417000) {
-		document.getElementById("loanMaxNote").style.display = "block";
+	if ((loan_program !== "Jumbo") && loan_amount > 417000) {
+		show("loanMaxNote");
 	} else {
-		document.getElementById("loanMaxNote").style.display = "none";
+		hide("loanMaxNote");
 	}
 	//Jumbo loan requirement
 	if (loan_program === "Jumbo" && loan_amount < 484350) {
-		document.getElementById("jumboLoan").style.display = "block";
+		show("jumboLoan");
 	} else {
-		document.getElementById("jumboLoan").style.display = "none";
+		hide("jumboLoan");
 	}
 	var PI = loan_amount * r / (1 - (Math.pow(1 / (1 + r), n)));
-	document.getElementById("PI").innerHTML = PI.toLocaleString(undefined, {
-		minimumFractionDigits: 2,
-		maximumFractionDigits: 2
-	});
+	toString('PI', PI, 2);
 	var T = (property_tax_rate * purchase_price) / 1200;
-	document.getElementById("T").innerHTML = T.toLocaleString(undefined, {
-		minimumFractionDigits: 2,
-		maximumFractionDigits: 2
-	});
+	toString('T', T, 2);
 	var I = (mi_rate * loan_amount) / 1200;
-	document.getElementById("I").innerHTML = I.toLocaleString(undefined, {
-		minimumFractionDigits: 2,
-		maximumFractionDigits: 2
-	});
-	var HOI = loan_amount * (.25 / 1200);
-	document.getElementById("HOI").innerHTML = HOI.toLocaleString(undefined, {
-		minimumFractionDigits: 2,
-		maximumFractionDigits: 2
-	});
+	toString('I', I, 2);
+	var HOI = loan_amount * (0.25 / 1200);
+	toString('HOI', HOI, 2);
 	housing_expense = PI + T + I + HOI; // Housing Payment
-	document.getElementById("MP").innerHTML = housing_expense.toLocaleString(undefined, {
-		minimumFractionDigits: 2,
-		maximumFractionDigits: 2
-	});
+	toString('MP', housing_expense, 2);
 	var a1 = qualifying_front_ratio / 100;
 	var a2 = qualifying_back_ratio / 100;
 	var a3 = a2 - a1; // decimal
@@ -305,54 +320,5 @@ function calc() {
 	} else {
 		required_monthly_income = (housing_expense / a1);
 	}
-	document.getElementById("TMI").innerHTML = required_monthly_income.toLocaleString(undefined, {
-		minimumFractionDigits: 2,
-		maximumFractionDigits: 2
-	});
-	var AFR = (housing_expense / required_monthly_income) * 100;
-	if (AFR > 37) {
-		document.getElementById("AFR").style.color = "red";
-	} else {
-		document.getElementById("AFR").style.color = "green";
-	}
-	document.getElementById("AFR").innerHTML = AFR.toLocaleString(undefined, {
-		minimumFractionDigits: 2,
-		maximumFractionDigits: 2
-	});
-	document.getElementById("FR%").value = AFR.toLocaleString(undefined, {
-		minimumFractionDigits: 2,
-		maximumFractionDigits: 2
-	});
-	var ABR = ((housing_expense + total_monthly_liability) / required_monthly_income) * 100;
-	if (ABR > 47) {
-		document.getElementById("ABR").style.color = "red";
-	} else {
-		document.getElementById("ABR").style.color = "green";
-	}
-	document.getElementById("ABR").innerHTML = ABR.toLocaleString(undefined, {
-		minimumFractionDigits: 2,
-		maximumFractionDigits: 2
-	});
-	document.getElementById("BR%").value = ABR.toLocaleString(undefined, {
-		minimumFractionDigits: 2,
-		maximumFractionDigits: 2
-	});
-}
-
-function show_dti_message_1() {
-	$("#dti_message_1").slideDown("slow");
-	$("#dti_message_2").hide();
-	$("#dti_message_3").hide();
-}
-
-function show_dti_message_2() {
-	$("#dti_message_1").hide();
-	$("#dti_message_2").slideDown("slow");
-	$("#dti_message_3").hide();
-}
-
-function show_dti_message_3() {
-	$("#dti_message_1").hide();
-	$("#dti_message_2").hide();
-	$("#dti_message_3").slideDown("slow");
+	toString('TMI', required_monthly_income, 2);
 }

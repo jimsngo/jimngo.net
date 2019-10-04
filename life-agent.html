@@ -185,13 +185,13 @@
 			</div>
 		</div>
 	</main>
-	<div class="banner dark-cerulean">
-		<p class="banner5">Term Life</p>
-		<p class="banner5">Whole Life</p>
-		<p class="banner5">Universal Life</p>
-		<p class="banner5">Mortgage Protection</p>
-		<p class="banner5">Return of Premium</p>
-		<p class="banner5">Final Expense</p>
+	<div class="banner dark-cerulean" id="life-insurance-ss">
+		<p class="slide showing">Term Life</p>
+		<p class="slide">Whole Life</p>
+		<p class="slide">Universal Life</p>
+		<p class="slide">Mortgage Protection</p>
+		<p class="slide">Return of Premium</p>
+		<p class="slide">Final Expense</p>
 	</div>
 	<div class="main flex-center">
 		<!-- Do I Need Life Insurance -->
@@ -247,10 +247,10 @@
 		</div>
 	</div>
 	<div id="life-widgets">
-		<div class="banner dark-cerulean">
-			<p class="banner6">How Much Life Insurance Do I Need?</p>
-			<p class="banner6">What Type of Life Insurance is Right For Me?</p>
-			<p class="banner6">How Much Auto Insurance Do I Need?</p>
+		<div class="banner dark-cerulean" id="life-headings-ss">
+			<p class="slide showing">How Much Life Insurance Do I Need?</p>
+			<p class="slide">What Type of Life Insurance is Right For Me?</p>
+			<p class="slide">How Much Auto Insurance Do I Need?</p>
 		</div>
 	</div>
 	<!-- Insurance Widgets --------------------------------------------------->
@@ -259,7 +259,7 @@
 		<section class="col-4 col-s-6" id="life-need-widget">
 			<div class="widget-header">LIFE INSURANCE NEEDS</div>
 			<!-- Begin Life Need Widget -->
-			<section class="widget-slide" id="life-need-slide-1">
+			<section class="widget-slide fast" id="life-need-slide-1">
 				<div class="widget-body">
 					<p style="font-size: 125%;">How Much Life Insurance Do I Need?</p>
 					<p>Start by adding your immediate, short-term, and long-term financial obligations, then
@@ -271,7 +271,7 @@
 				</div>
 			</section>
 			<!-- Tab 1 - Debt & Obligation Information -->
-			<div class="widget-slide" id="life-need-q1" style="display: none">
+			<div class="widget-slide fast" id="life-need-q1" style="display: none">
 				<div class="widget-body">
 					<p style="font-size: 125%;">Your Family's Expenses In Case Of Your Death</p>
 					<ul>
@@ -310,7 +310,7 @@
 				</div>
 			</div>
 			<!-- Tab 2 - Income Need Information -->
-			<div class="widget-slide" id="life-need-q2" style="display: none">
+			<div class="widget-slide slow" id="life-need-q2" style="display: none">
 				<div class="widget-body">
 					<p style="font-size: 125%;">Your Family's Income Needs</p>
 					<ul>
@@ -336,8 +336,7 @@
 					<!-- College funding per child -->
 					<div class="inputTitleContainer">
 						<div class="inputTitle tooltip">College funding (per child)<span class="tooltiptext">Current
-								cost to
-								put a child in a CA University is around $30K per year</span></div>
+								cost to put a child in a CA University is around $30K per year</span></div>
 						<div class="input-value-2">$<span id="CF"></span></div>
 					</div>
 					<div class="sliderContainer"><input id="cf" class="slider2" max="300000" min="0" step="5000"
@@ -357,7 +356,7 @@
 				</div>
 			</div>
 			<!-- Tab 3 - Savings & Retirement Accounts -->
-			<div class="widget-slide" id="life-need-q3" style="display: none">
+			<div class="widget-slide slow" id="life-need-q3" style="display: none">
 				<div class="widget-body">
 					<p style="font-size: 125%;">Your Savings & Retirement Accounts</p>
 					<!-- Current Savings & Investments -->
@@ -410,7 +409,7 @@
 		<section class="col-4 col-s-6" id="life-product-widget">
 			<div class="widget-header">LIFE INSURANCE PRODUCTS</div>
 			<!-- Begin Life Product Wiget -->
-			<div class="widget-slide" id="life-product-slide-1">
+			<div class="widget-slide fast" id="life-product-slide-1">
 				<div class="widget-body">
 					<p style="font-size: 125%;">What Type of Life Insurance is Right For Me?</p>
 					<p>To help you better understand which type of insurance might be right for you, take the short
@@ -425,7 +424,7 @@
 				</div>
 			</div>
 			<!-- Tab 1 - How long will you need coverage? -->
-			<div class="widget-slide" id="life-product-q1" style="display: none">
+			<div class="widget-slide fast" id="life-product-q1" style="display: none">
 				<div class="widget-body">
 					<p style="font-size: 125%;">How long will you need coverage?</p>
 					<p><label><input type="radio" onclick="show_life_product_slide('resp_1')">Less than 10 years</label>
@@ -436,7 +435,7 @@
 				</div>
 			</div>
 			<!-- Tab 2 -->
-			<div class="widget-slide" id="life-product-q2" style="display: none">
+			<div class="widget-slide medium" id="life-product-q2" style="display: none">
 				<div class="widget-body">
 					<p style="font-size: 125%;">In addition to wanting coverage for more than 10 years, do any of these
 						features appeal to you?</p>
@@ -457,7 +456,7 @@
 				</div>
 			</div>
 			<!-- Tab 3 -->
-			<div class="widget-slide" id="life-product-q3" style="display: none">
+			<div class="widget-slide medium" id="life-product-q3" style="display: none">
 				<div class="widget-body">
 					<p style="font-size: 125%;">Is the amount of money you can allocate to life insurance limited, or do
 						you have some budget flexibility?</p>
@@ -473,7 +472,7 @@
 				</div>
 			</div>
 			<!-- Tab 4 -->
-			<div class="widget-slide" id="life-product-q4" style="display: none">
+			<div class="widget-slide medium" id="life-product-q4" style="display: none">
 				<div class="widget-body">
 					<p style="font-size: 125%;">Remember, the first and foremost reason to buy life insurance is for the
 						death benefit. Keeping this in mind, which of these two options strikes the right balance
@@ -492,7 +491,7 @@
 				</div>
 			</div>
 			<!-- Tab 5 -->
-			<div class="widget-slide" id="life-product-q5" style="display: none">
+			<div class="widget-slide fast" id="life-product-q5" style="display: none">
 				<div class="widget-body">
 					<p style="font-size: 125%;">Which type of premium would you prefer?</p>
 					<p><label><input type="radio" onclick="show_life_product_slide('life-product-q6')">I want fixed
@@ -506,7 +505,7 @@
 				</div>
 			</div>
 			<!-- Tab 6 -->
-			<div class="widget-slide" id="life-product-q6" style="display: none">
+			<div class="widget-slide medium" id="life-product-q6" style="display: none">
 				<div class="widget-body">
 					<p style="font-size: 125%;">Do you want a guaranteed amount of death benefit and a guaranteed cash
 						value or are you willing to assume the investment risk yourself to try to achieve greater
@@ -527,7 +526,7 @@
 				</div>
 			</div>
 			<!-- Tab 7 -->
-			<div class="widget-slide" id="life-product-q7" style="display: none">
+			<div class="widget-slide slow" id="life-product-q7" style="display: none">
 				<div class="widget-body">
 					<p style="font-size: 125%;">Do you want a guaranteed amount of death benefit and a guaranteed
 						interest rate on your cash values* or are you willing to assume the investment risk yourself**
@@ -553,7 +552,7 @@
 				</div>
 			</div>
 			<!-- Response 1 - Term Life -->
-			<div class="widget-slide" id="resp_1" style="display: none">
+			<div class="widget-slide fast" id="resp_1" style="display: none">
 				<div class="widget-body">
 					<p>Based on your responses</p>
 					<h3>Term Life Insurance</h3>
@@ -564,7 +563,7 @@
 				</div>
 			</div>
 			<!-- Response 2 - Term & Permanent Life Combination -->
-			<div class="widget-slide" id="resp_2" style="display: none">
+			<div class="widget-slide fast" id="resp_2" style="display: none">
 				<div class="widget-body">
 					<p>Based on your responses</p>
 					<h3>Term & Permanent Life Insurance Combination</h3>
@@ -575,7 +574,7 @@
 				</div>
 			</div>
 			<!-- Response 3 - Whole Life -->
-			<div class="widget-slide" id="resp_3" style="display: none">
+			<div class="widget-slide fast" id="resp_3" style="display: none">
 				<div class="widget-body">
 					<p>Based on your responses</p>
 					<h3>Whole Life Insurance</h3>
@@ -586,7 +585,7 @@
 				</div>
 			</div>
 			<!-- Response 4 - Variable Life -->
-			<div class="widget-slide" id="resp_4" style="display: none">
+			<div class="widget-slide fast" id="resp_4" style="display: none">
 				<div class="widget-body">
 					<p>Based on your responses</p>
 					<h3>Variable Life Insurance</h3>
@@ -597,7 +596,7 @@
 				</div>
 			</div>
 			<!-- Response 5 - Universal Life -->
-			<div class="widget-slide" id="resp_5" style="display: none">
+			<div class="widget-slide fast" id="resp_5" style="display: none">
 				<div class="widget-body">
 					<p>Based on your responses</p>
 					<h3>Universal Life Insurance</h3>
@@ -608,7 +607,7 @@
 				</div>
 			</div>
 			<!-- Response 6 - Variable Universal Life -->
-			<div class="widget-slide" id="resp_6" style="display: none">
+			<div class="widget-slide fast" id="resp_6" style="display: none">
 				<div class="widget-body">
 					<p>Based on your responses</p>
 					<h3>Variable Universal Life Insurance</h3>
@@ -623,7 +622,7 @@
 		<div class="col-4 col-s-12" id="auto-insurance-widget">
 			<div class="widget-header">AUTO INSURANCE COVERAGES</div>
 			<!-- Begin Auto Insurance Wiget -->
-			<div class="widget-slide" id="slide-1">
+			<div class="widget-slide" id="auto-slide-1">
 				<div class="widget-body">
 					<p style="font-size: 125%;">How Much Auto Insurance Do I Need?</p>
 					<p>Not all auto insurance coverage is the same. Many people overpay for coverages they don’t need,
@@ -639,16 +638,16 @@
 			<div class="widget-slide" id="q1" style="display: none">
 				<div class="widget-body">
 					<p style="font-size: 125%;">Do you own your vehicle?</p>
-					<p><label><input type="radio" onclick="q1_1()"> Yes</label></p>
-					<p><label><input type="radio" onclick="q1_2()"> No, it's financed.</label></p>
-					<p><label><input type="radio" onclick="q1_3()"> No, it's leased.</label></p>
+					<p><label><input type="radio" name='ownership' onclick="q1_1()"> Yes</label></p>
+					<p><label><input type="radio" name='ownership' onclick="q1_2()"> No, it's financed.</label></p>
+					<p><label><input type="radio" name='ownership' onclick="q1_3()"> No, it's leased.</label></p>
 					<ul>
 						<li>Leased vehicles automatically need high liability coverage, collision coverage and
 							comprehensive coverage.</li>
 						<li>Financed vehicles may need gap insurance.</li>
 					</ul>
 					<div class="flex-center">
-						<button class="widget-submit-btn" onclick="show_auto_slide('slide-1')">Back</button>
+						<button class="widget-submit-btn" onclick="show_auto_slide('auto-slide-1')">Back</button>
 					</div>
 				</div>
 			</div>
@@ -656,8 +655,9 @@
 			<div class="widget-slide" id="q2" style="display: none">
 				<div class="widget-body">
 					<p style="font-size: 125%;">Is your vehicle less than 1 year old?</p>
-					<p><label><input type="radio" onclick="show_auto_slide('q3')"> Yes, it's brand new.</label></p>
-					<p><label><input type="radio" onclick="show_auto_slide('q4')"> No.</label></p>
+					<p><label><input type="radio" name='age-of-vehicle' onclick="show_auto_slide('q3')"> Yes, it's brand
+							new.</label></p>
+					<p><label><input type="radio" name='age-of-vehicle' onclick="show_auto_slide('q4')"> No.</label></p>
 					<div class="flex-center">
 						<button class="widget-submit-btn" onclick="show_auto_slide('q1')">Back</button>
 					</div>
@@ -667,8 +667,10 @@
 			<div class="widget-slide" id="q3" style="display: none">
 				<div class="widget-body">
 					<p style="font-size: 125%;">Have you paid more than 20% of the vehicle’s price?</p>
-					<p><label><input type="radio" onclick="q3_1()"> Yes, I've paid more than 20%.</label></p>
-					<p><label><input type="radio" onclick="q3_2()"> No, I haven't paid more than 20%.</label></p>
+					<p><label><input type="radio" name='20percent' onclick="q3_1()"> Yes, I've paid more than
+							20%.</label></p>
+					<p><label><input type="radio" name='20percent' onclick="q3_2()"> No, I haven't paid more than
+							20%.</label></p>
 					<p>If you have paid only a small portion down on your vehicle, it is wise to buy gap insurance to
 						protect you if it is totaled.</p>
 					<div class="center">
@@ -680,8 +682,8 @@
 			<div class="widget-slide" id="q4" style="display: none">
 				<div class="widget-body">
 					<p style="font-size: 125%;">Do you and your frequent passengers have health insurance?</p>
-					<p><label><input type="radio" onclick="q4_1()"> Yes.</label></p>
-					<p><label><input type="radio" onclick="q4_2()"> No.</label></p>
+					<p><label><input type="radio" name="health-insurance" onclick="q4_1()"> Yes.</label></p>
+					<p><label><input type="radio" name="health-insurance" onclick="q4_2()"> No.</label></p>
 					<p>If you’re injured by an uninsured driver, your medical bills would not be covered unless you have
 						health insurance or have purchased uninsured motorist bodily injury, PIP or medical payments
 						coverage.</p>
@@ -695,12 +697,12 @@
 				<div class="widget-body">
 					<p style="font-size: 125%;">Could you afford to replace your vehicle without the help of insurance?
 					</p>
-					<p><label><input type="radio" onclick="q6_1()"> Yes.</label></p>
-					<p><label><input type="radio" onclick="q6_2()"> No.</label></p>
+					<p><label><input type="radio" name="need-insurance" onclick="q6_1()"> Yes.</label></p>
+					<p><label><input type="radio" name="need-insurance" onclick="q6_2()"> No.</label></p>
 					<p>If you can afford to replace your vehicle, and you want the lowest rates possible, you should not
 						buy collision or comprehensive coverage.</p>
 					<div class="center">
-						<button class="widget-submit-btn" onclick="show_q4()">Back</button>
+						<button class="widget-submit-btn" onclick="show_auto_slide('q4')">Back</button>
 					</div>
 				</div>
 			</div>
@@ -709,14 +711,14 @@
 				<div class="widget-body">
 					<p style="font-size: 125%;">How much money do you have easy access to if your vehicle is damaged?
 					</p>
-					<p><label><input type="radio" onclick="q7_1()"> $250.</label></p>
-					<p><label><input type="radio" onclick="q7_2()"> $500.</label></p>
-					<p><label><input type="radio" onclick="q7_3()"> $1000.</label></p>
+					<p><label><input type="radio" name="deductible" onclick="q7_1()"> $250.</label></p>
+					<p><label><input type="radio" name="deductible" onclick="q7_2()"> $500.</label></p>
+					<p><label><input type="radio" name="deductible" onclick="q7_3()"> $1000.</label></p>
 					<p>If there is damage to your vehicle that you can afford to fix yourself, you may want to pay out
 						of pocket instead of filing a claim, because claims increase your rates in the long run. This
 						will help determine your deductible.</p>
 					<div class="center">
-						<button class="widget-submit-btn" onclick="show_q6()">Back</button>
+						<button class="widget-submit-btn" onclick="show_auto_slide('q6')">Back</button>
 					</div>
 				</div>
 			</div>
@@ -724,8 +726,8 @@
 			<div class="widget-slide" id="q8" style="display: none">
 				<div class="widget-body">
 					<p style="font-size: 125%;">Do you want the lowest possible rates or the best protection?</p>
-					<p><label><input type="radio" onclick="q8_1()"> Lowest rates.</label></p>
-					<p><label><input type="radio" onclick="q8_2()"> Best protection.</label></p>
+					<p><label><input type="radio" name="option" onclick="q8_1()"> Lowest rates.</label></p>
+					<p><label><input type="radio" name="option" onclick="q8_2()"> Best protection.</label></p>
 					<p>Some consumers don't mind paying more for auto insurance to feel more secure that they'll be
 						covered for certain incidents. Others want the lowest rates possible, even if it means less
 						coverage. If you choose "best protection," we will only suggest you buy insurance coverage that
@@ -733,7 +735,7 @@
 						Likewise, if you choose "lowest rates," we will consider your other answers and suggest what
 						makes sense. We will not suggest you buy less coverage than you absolutely need.</p>
 					<div class="center">
-						<button class="widget-submit-btn" onclick="show_q7()">Back</button>
+						<button class="widget-submit-btn" onclick="show_auto_slide('q7')">Back</button>
 					</div>
 				</div>
 			</div>
@@ -741,15 +743,15 @@
 			<div class="widget-slide" id="q9" style="display: none">
 				<div class="widget-body">
 					<p style="font-size: 125%;">What is your net worth?</p>
-					<p><label><input type="radio" onclick="q9_1()"> Less than $25,000.</label></p>
-					<p><label><input type="radio" onclick="q9_2()"> $25,000 - $50,000.</label></p>
-					<p><label><input type="radio" onclick="q9_3()"> $50,000 - $100,000.</label></p>
-					<p><label><input type="radio" onclick="q9_4()"> More than $100,000.</label></p>
+					<p><label><input type="radio" name="net-worth" onclick="q9_1()"> Less than $25,000.</label></p>
+					<p><label><input type="radio" name="net-worth" onclick="q9_2()"> $25,000 - $50,000.</label></p>
+					<p><label><input type="radio" name="net-worth" onclick="q9_3()"> $50,000 - $100,000.</label></p>
+					<p><label><input type="radio" name="net-worth" onclick="q9_4()"> More than $100,000.</label></p>
 					<p>This will help us determine the amount of your liability limits. If you’re at fault in an
 						accident that costs more than your limits, you can be sued. The more assets you have, the bigger
 						target you are for a lawsuit.</p>
 					<div class="center">
-						<button class="widget-submit-btn" onclick="show_q8()">Back</button>
+						<button class="widget-submit-btn" onclick="show_auto_slide('q8')">Back</button>
 					</div>
 				</div>
 			</div>
@@ -760,28 +762,28 @@
 					<p style="font-size: 125%;">Based on your answers, we recommend these coverage options and limits
 						for LOWEST RATES:</p>
 					<div id="BI-lowest-rates">
-						<p><strong>Bodily injury liability</strong><br />
+						<p><strong>Bodily Injury Liability</strong><br />
 							<span id="bodily-injury-liability-lowest-rates" style="padding-left:8px;"></span></p>
 					</div>
 					<div id="PD-lowest-rates">
-						<p><strong>Property damage liability</strong><br />
+						<p><strong>Property Damage Liability</strong><br />
 							<span id="property-damage-liability-lowest-rates" style="padding-left:8px;"></span></p>
 					</div>
 					<div id="UMBI-lowest-rates" style="display: none">
-						<p><strong>Uninsured/Underinsured Motorist bodily injury</strong><br />
+						<p><strong>Uninsured/Underinsured Motorist Bodily Injury</strong><br />
 							<span id="uninsured-motorist-lowest-rates" style="padding-left:8px;"></span></p>
 					</div>
 					<div id="U-lowest-rates" style="display: none">
-						<p><strong>Umbrella liability policy</strong><br />
+						<p><strong>Umbrella Liability Policy</strong><br />
 							<span id="umbrella-liability-lowest-rates" style="padding-left:8px;"></span></p>
 					</div>
 					<div id="Med-Pay-lowest-rates" style="display: none">
-						<p><strong>Medical payments (MedPay)</strong><br />
+						<p><strong>Medical Payments (MedPay)</strong><br />
 							<span id="medical-payments-lowest-rates" style="padding-left:8px;"></span></p>
 					</div>
 					<div id="Comp-and-Collision-lowest-rates" style="display: none">
-						<p><strong>Comprehensive and collision</strong><br />
-							<span id="deductible-lowest-rates" style="padding-left:8px;"></span></p>
+						<p><strong>Comprehensive And Collision</strong><br />
+							<span id="deductible-lowest-rates" style="padding-left:8px;"></span> Deductible</p>
 					</div>
 					<div id="Gap-lowest-rate" style="display: none">
 						<p><strong>GAP Insurance</strong></p>
@@ -798,8 +800,8 @@
 							single-limit policy.</li>
 					</ul>
 					<div class="flex-perfect-center">
-						<button class="widget-submit-btn" onclick="show_best_protection()">See results for best
-							protection</button>
+						<button class="widget-submit-btn" onclick="show_best_protection()">See Results For Best
+							Protection</button>
 						<button class="widget-submit-btn" onclick="start_over()">Start Over</button>
 					</div>
 				</div>
@@ -808,30 +810,28 @@
 					<p style="font-size: 125%;">Based on your answers, we recommend these coverage options and limits
 						for BEST PROTECTION:</p>
 					<div id="BI-best-protection">
-						<p><strong>Bodily injury liability</strong><br />
-							<span id="bodily-injury-liability-best-protection" style="padding-left:8px;">"$100,000 per
-								person / $300,000 per accident"</span></p>
+						<p><strong>Bodily Injury Liability</strong><br />
+							<span id="bodily-injury-liability-best-protection" style="padding-left:8px;"></span></p>
 					</div>
 					<div id="PD-best-protection">
-						<p><strong>Property damage liability</strong><br />
-							<span id="property-damage-liability-best-protection" style="padding-left:8px;">"$100,000 per
-								accident"</span></p>
+						<p><strong>Property Damage Liability</strong><br />
+							<span id="property-damage-liability-best-protection" style="padding-left:8px;"></span></p>
 					</div>
 					<div id="UMBI-best-protection">
-						<p><strong>Uninsured/Underinsured Motorist bodily injury</strong><br />
+						<p><strong>Uninsured/Underinsured Motorist Bodily Injury</strong><br />
 							<span id="uninsured-motorist-best-protection" style="padding-left:8px;"></span></p>
 					</div>
 					<div id="U-best-protection" style="display: none">
-						<p><strong>Umbrella liability policy</strong><br />
+						<p><strong>Umbrella Liability Policy</strong><br />
 							<span id="umbrella-liability-best-protection" style="padding-left:8px;"></span></p>
 					</div>
 					<div id="Med-Pay-best-protection" style="display: none">
-						<p><strong>Medical payments (MedPay)</strong><br />
+						<p><strong>Medical Payments (MedPay)</strong><br />
 							<span id="medical-payments-best-protection" style="padding-left:8px;"></span></p>
 					</div>
 					<div id="Comp-and-Collision-best-protection" style="display: none">
-						<p><strong>Comprehensive and collision</strong><br />
-							<span id="deductible-best-protection" style="padding-left:8px;"></span></p>
+						<p><strong>Comprehensive And Collision</strong><br />
+							<span id="deductible-best-protection" style="padding-left:8px;"></span> Deductible</p>
 					</div>
 					<div id="Gap-best-protection" style="display: none">
 						<p><strong>GAP Insurance</strong></p>
@@ -847,9 +847,31 @@
 	<!-- Protect Your Financial Future --------------------------------------->
 	<section id="QA">
 		<div class="main flex-center">
-			<div class="col-6 col-s-6">
+			<div class="col-4 col-s-4">
+				<button class="collapsible">Mortgage Protection</button>
+				<div class="content slow">
+					<p style="font-size: 125%"><i>“Could your family make your mortgage payments?”</i></p>
+					<p>Mortgage protection insurance is a term life insurance policy designed to pay off your mortgage
+						if you or your partner die during the term of the mortgage. It runs for the same length of time
+						as your mortgage. So, if you take out a mortgage for 30 years, your term life insurance should
+						be in place for 30 years. If you die during the term, your insurance company pays the death
+						benefit directly to your beneficiary, which can be use to pay off your mortgage.</p>
+				</div>
+				<button class="collapsible">Final Expense</button>
+				<div class="content slow">
+					<p style="font-size: 125%"><i>“Could your family self-insure your final expenses?”</i></p>
+					<p>Final expense insurance is for those who are looking for smaller policies to cover final expenses
+						or can’t get coverage through traditional life insurance products. It's designed to cover the
+						bills that your loved ones will face after your death, including medical bills and funeral
+						expenses. Unfortunately, even bare-bones funerals can cost thousands of dollars. </p>
+					<p>Final expense insurance is also known as burial insurance. It’s a good idea to assume around
+						$20,000 for funeral expenses. Final expense insurance can take all the worry out of passing on
+						debts or burial expenses to your loved ones.</p>
+				</div>
+			</div>
+			<div class="col-4 col-s-4">
 				<button class="collapsible">Term vs. Permanent</button>
-				<div class="content">
+				<div class="content slow">
 					<p>One of the most common questions people have about life insurance is “term or permanent?” Well,
 						it depends on a number of factors, including how long you need the coverage, how much you can
 						afford, how much risk you can tolerate and how much flexibility you need.</p>
@@ -865,7 +887,7 @@
 					</ul>
 				</div>
 				<button class="collapsible">Types of Permanent Life Insurance</button>
-				<div class="content">
+				<div class="content slow">
 					<ul>
 						<li><strong><i>Whole Life</i></strong> features guaranteed premiums, death benefits and cash
 							value.* The cash value may accumulate tax-deferred over time. Whole life insurance policies
@@ -888,9 +910,9 @@
 					</ul>
 				</div>
 			</div>
-			<div class="col-6 col-s-6">
+			<div class="col-4 col-s-4">
 				<button class="collapsible">Competition = Lower Costs</button>
-				<div class="content">
+				<div class="content slow">
 					<ul>
 						<li>The insurance industry includes hundreds of different companies hoping to earn your
 							business. It is a very competitive market and it pays to shop around for the very best
@@ -907,8 +929,8 @@
 							service, bills and other associated costs, in the event of your death.</li>
 					</ul>
 				</div>
-				<button class="collapsible">Why Should I Call This Agency For Insurance?</button>
-				<div class="content">
+				<button class="collapsible">Why Should I Call This Agency?</button>
+				<div class="content slow">
 					<ul>
 						<li>Good question. There are a lot of insurance agents out there and it may seem like any agent
 							or broker is as good as another. But I am decidedly different.</li>
@@ -928,7 +950,7 @@
 	<section>
 		<div class="main flex-center">
 			<div class="col-6 col-s-6" id="mortgage-protection">
-				<div class="widget-header">Mortgage Protection</div>
+				<!-- <div class="widget-header">Mortgage Protection</div>
 				<div class="widget-body">
 					<p style="font-size: 125%"><i>“Could your family make your mortgage payments?”</i></p>
 					<p>Mortgage protection insurance is a term life insurance policy designed to pay off your mortgage
@@ -936,9 +958,9 @@
 						as your mortgage. So, if you take out a mortgage for 30 years, your term life insurance should
 						be in place for 30 years. If you die during the term, your insurance company pays the death
 						benefit directly to your beneficiary, which can be use to pay off your mortgage.</p>
-				</div>
+				</div> -->
 			</div>
-			<div class="col-6 col-s-6" id="final-expense">
+			<!-- <div class="col-6 col-s-6" id="final-expense">
 				<div class="widget-header">Final Expense</div>
 				<div class="widget-body">
 					<p style="font-size: 125%"><i>“Could your family self-insure your final expenses?”</i></p>
@@ -950,7 +972,7 @@
 						$20,000 for funeral expenses. Final expense insurance can take all the worry out of passing on
 						debts or burial expenses to your loved ones.</p>
 				</div>
-			</div>
+			</div> -->
 		</div>
 	</section>
 	<!-- Mobile Contact Bar -->
@@ -970,16 +992,9 @@
 			</div>
 		</div>
 	</section>
+	<script src="javascript/business-hours.min.js" async></script>
+	<script src="javascript/life-agent.min.js" async></script>
 </body>
-<script src="javascript/jquery-3.4.1.min.js"></script>
-<script src="javascript/w3.min.js"></script>
-<script src="javascript/business-hours.min.js"></script>
-<script src="javascript/life-agent-Ob.js"></script>
-<script src="javascript/auto-insurance-Ob.js"></script>
-<script>
-	w3.slideshow(".banner5", 1500);
-	w3.slideshow(".banner6", 1500);
-</script>
 <footer>
 	<div style="text-align:center;">
 		<p>&copy; 2019 Jim Ngo - Ontario CA</p>

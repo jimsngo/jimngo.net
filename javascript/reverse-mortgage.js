@@ -1,341 +1,303 @@
-// Add active class - id("users_inputs")
-var btns = document.getElementById("users-inputs").getElementsByClassName("selectable");
-for (var i = 0; i < btns.length; i++) {
-    btns[i].addEventListener("click", function () {
-        var current = document.getElementsByClassName("active");
-        current[0].className = current[0].className.replace(" active", "");
-        this.className += " active";
-    });
-}
-// Users Inputs
-$("#owners_select").click(function () {
-    document.getElementById("calculator").scrollIntoView();
-    $("#owner_info").slideDown("slow");
-    $("#lenders_fees").slideUp("slow");
-    $("#fixed_rate_explained").slideUp("slow");
-    $("#variable_rate_explained").slideUp("slow");
-});
-$("#lenders_select").click(function () {
-    document.getElementById("calculator").scrollIntoView();
-    $("#owner_info").slideUp("slow");
-    $("#lenders_fees").slideDown("slow");
-    $("#fixed_rate_explained").slideUp("slow");
-    $("#variable_rate_explained").slideUp("slow");
-});
-$("#fixed_selected").click(function () {
-    document.getElementById("calculator").scrollIntoView();
-    $("#owner_info").slideUp("slow");
-    $("#lenders_fees").slideUp("slow");
-    $("#fixed_rate_explained").slideDown("slow");
-    $("#variable_rate_explained").slideUp("slow");
-});
-$("#variable_selected").click(function () {
-    document.getElementById("calculator").scrollIntoView();
-    $("#owner_info").slideUp("slow");
-    $("#lenders_fees").slideUp("slow");
-    $("#fixed_rate_explained").slideUp("slow");
-    $("#variable_rate_explained").slideDown("slow");
-});
-$("#H4P").click(function () {
-    document.getElementById("H4P").scrollIntoView();
-    $("#h4p_explained").slideToggle("slow");
-    $("#H4P").toggleClass("active");
+///////////////////////////////////////////////////////////////////////////////
+// Slide Show                                                                 /
+///////////////////////////////////////////////////////////////////////////////
 
-});
-$("#HECM_line_of_credit").click(function () {
-    document.getElementById("HECM_line_of_credit").scrollIntoView();
-    $("#hecm_explained").slideToggle("slow");
-    $("#HECM_line_of_credit").toggleClass("active");
-});
-// Animated Collapsible - Q&A Section
-var qa = document.getElementById("QA").getElementsByClassName("collapsible");
-for (var i = 0; i < qa.length; i++) {
-    qa[i].addEventListener("click", function () {
+onload = slideshow;
+
+function slideshow() {
+    setInterval(function () {
+        nextSlide('hecm-ss');
+        nextSlide('reverse-cal-ss');
+        nextSlide('service-ss');
+        nextSlide('home-valuation-ss');
+        nextSlide('dpa-ss');
+        nextSlide('refinance-ss');
+        nextSlide('sfr-ss');
+        nextSlide('flyer-ss');
+    }, 2000);
+}
+
+function nextSlide(id) {
+    var elems = document.getElementById(id).getElementsByClassName('slide');
+    elems.index = elems.index || 0;
+    elems[elems.index].className = 'slide';
+    elems.index = (elems.index + 1) % elems.length;
+    elems[elems.index].className = 'slide showing';
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// Animated Collapsible - Q&A Section - Event Listener                        /
+///////////////////////////////////////////////////////////////////////////////
+
+const qas = document.getElementById("QA").getElementsByClassName("collapsible");
+const qa_contents = document.getElementById("QA").getElementsByClassName("content");
+for (let i = 0; i < qas.length; i++) {
+    qas[i].addEventListener("click", function () {
         // Hide all elements with class content
-        var contents = document.getElementById("QA").getElementsByClassName("content");
-        for (var j = 0; j < contents.length; j++) {
-            contents[j].style.maxHeight = null;
+        for (var j = 0; j < qa_contents.length; j++) {
+            qa_contents[j].style.height = null;
         }
         if (this.classList.contains("active")) {
             this.classList.remove("active");
         } else {
             // Remove current active class
-            for (var k = 0; k < qa.length; k++) {
-                qa[k].classList.remove("active");
+            for (var k = 0; k < qas.length; k++) {
+                qas[k].classList.remove("active");
             }
             // Add active class to clicked element
             this.classList.toggle("active");
             // Display content for only active element            
             var content = this.nextElementSibling;
-            content.style.maxHeight = content.scrollHeight + "px";
+            content.style.height = content.scrollHeight + "px";
         }
     });
 }
-// Animated Collapsible - Flyers ---------------------------------------------/
-var flyers = document.getElementById("flyers").getElementsByClassName("collapsible");
-for (var i = 0; i < flyers.length; i++) {
+
+///////////////////////////////////////////////////////////////////////////////
+// Animated Collapsible - Flyers Section - Event Listener --------------------/
+///////////////////////////////////////////////////////////////////////////////
+
+const flyers = document.getElementById("flyers").getElementsByClassName("collapsible");
+const contents = document.getElementById("flyers").getElementsByClassName("content");
+for (let i = 0; i < flyers.length; i++) {
     flyers[i].addEventListener("click", function () {
         // Hide all elements with class content
-        var contents = document.getElementById("flyers").getElementsByClassName("content");
-        for (var j = 0; j < contents.length; j++) {
-            contents[j].style.maxHeight = null;
+        for (let j = 0; j < contents.length; j++) {
+            contents[j].style.height = '0px';
         }
         if (this.classList.contains("active")) {
             this.classList.remove("active");
         } else {
             // Remove current active class
-            for (var k = 0; k < flyers.length; k++) {
+            for (let k = 0; k < flyers.length; k++) {
                 flyers[k].classList.remove("active");
             }
             // Add active class to clicked element
             this.classList.toggle("active");
             // Display content for only active element            
             var content = this.nextElementSibling;
-            content.style.maxHeight = content.scrollHeight + "px";
+            content.style.height = content.scrollHeight + "px";
         }
     });
 }
 
-function hide_calc_slides() {
-    var widget_slides = document.getElementById("reverse-calculator-widget").getElementsByClassName("widget-slide");
-    for (var i = 0; i < widget_slides.length; i++) {
-        $(widget_slides[i]).hide();
+///////////////////////////////////////////////////////////////////////////////
+// Sliding Container Up and Down ---------------------------------------------/
+///////////////////////////////////////////////////////////////////////////////
+
+const calculator = 'reverse-calculator-widget';
+const widget_slides = document.getElementById(calculator).getElementsByClassName("widget-slide");
+const tabcontents = document.getElementById(calculator).getElementsByClassName("tabcontent");
+const messages = document.getElementById('slide-2').getElementsByClassName("message");
+
+function slide_up(array) {
+    for (var i = 0; i < array.length; i++) {
+        array[i].style.display = 'none';
+        array[i].style.height = '0px';
     }
 }
 
-function show_slide(id) {
-    hide_calc_slides();
-    var element = "#" + id;
-    $(element).slideDown("slow");
-    document.getElementById("reverse-calculator-widget").scrollIntoView();
+function slide_down(id) {
+    var content = document.getElementById(id);
+    content.style.display = 'block';
+    content.style.height = content.scrollHeight + 'px';
+    // content.style.height = 'max-content';
 }
 
+function set_scrollHeight(id) {
+    var content = document.getElementById(id);
+    content.style.height = content.scrollHeight + 'px';
+}
+
+function show_tab_content(id) {
+    slide_up(tabcontents);
+    slide_down(id);
+}
+
+function show_slide(id) {
+    calc();
+    slide_up(widget_slides);
+    slide_down(id);
+    document.getElementById(calculator).scrollIntoView();
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// Misc ----------------------------------------------------------------------/
+///////////////////////////////////////////////////////////////////////////////
+
 function show(id) {
-    return document.getElementById(id).style.display = "block";
+    document.getElementById(id).style.display = "block";
 }
 
 function hide(id) {
-    return document.getElementById(id).style.display = "none";
+    document.getElementById(id).style.display = "none";
 }
 
-calc();
+function toString(id, value, digit) {
+    document.getElementById(id).innerHTML = value.toLocaleString(undefined, {
+        minimumFractionDigits: digit,
+        maximumFractionDigits: digit
+    });
+}
 
-function calc() {
+function get_value(id) {
+    return document.getElementById(id).value;
+}
+
+var max;
+var ufmip;
+var costs;
+
+calc();
+slide_up(widget_slides);
+slide_down('slide-1');
+
+function get_inputs() {
+    get_age();
     get_loan_purpose();
     get_interest_rate_option();
-    get_age();
     get_interest_rate();
     get_principal_limit_factor();
     get_loan_origination_fee();
     get_other_closing_costs();
     get_cash_available();
+    get_home_appraised_value();
+    get_current_mortgage_balance();
+}
+
+function calc() {
+    get_inputs();
     if (loan_purpose === "Purchase") {
-        var max = (cash_available - loan_origination_fee - other_closing_costs) / (1.02 - plf); // Max Claim Amount($)
+        show('max-hecm-warning');
+        hide('no-equity-warning');
+        max = (cash_available - loan_origination_fee - other_closing_costs) / (1.02 - plf); // Max Claim Amount($)
         if (max >= 726525) {
-            var max = 726525;
-            show('warningPurchase');
-            // document.getElementById("warningPurchase").style.display = "block";
+            max = 726525;
+            document.getElementById('max-hecm-warning').innerHTML = "You've reached HECM Maximum Principal Limit";
         } else {
-            hide('warningPurchase');
-            // document.getElementById("warningPurchase").style.display = "none";
+            document.getElementById('max-hecm-warning').innerHTML = '';
         }
-        document.getElementById("maxClaim").innerHTML = max.toLocaleString(undefined, {
-            minimumFractionDigits: 0,
-            maximumFractionDigits: 0
-        });
+        toString('maxClaim', max, 0);
         var pl$Purchase = max * plf; // Principal Limit $
-        document.getElementById("pl$Purchase").innerHTML = pl$Purchase.toLocaleString(undefined, {
-            minimumFractionDigits: 0,
-            maximumFractionDigits: 0
-        });
-        var ufmip = max * .02; // UFMIP for purchase
-        var costs = loan_origination_fee + other_closing_costs + ufmip; // Sum of Loan Origination Fee + Closing Costs + UFMIP
+        toString('pl$Purchase', pl$Purchase, 0);
+        ufmip = max * 0.02; // UFMIP for purchase
+        costs = loan_origination_fee + other_closing_costs + ufmip; // Sum of Loan Origination Fee + Closing Costs + UFMIP
         var erPurchase = cash_available - costs; // Equity Contribution $
-        document.getElementById("erPurchase").innerHTML = erPurchase.toLocaleString(undefined, {
-            minimumFractionDigits: 0,
-            maximumFractionDigits: 0
-        });
+        toString('erPurchase', erPurchase, 0);
         var purchasePrice = pl$Purchase + erPurchase;
-        document.getElementById("purchasePrice").innerHTML = purchasePrice.toLocaleString(undefined, {
-            minimumFractionDigits: 0,
-            maximumFractionDigits: 0
-        });
-    }
-    if (loan_purpose === "Refinance") {
-        var hav = Number(document.getElementById("hav").value); // Home Appraised Value
-        document.getElementById("HAV").innerHTML = hav.toLocaleString(undefined, {
-            minimumFractionDigits: 0,
-            maximumFractionDigits: 0
-        });
+        toString('purchasePrice', purchasePrice, 0);
+    } else {
+        hide('max-hecm-warning');
+        show('no-equity-warning');
+        get_home_appraised_value();
         document.getElementById("cmb").max = hav; // Set Max Current Mortgage Balance Value
-        var cmb = Number(document.getElementById("cmb").value); // Current Mortgage Balance
-        document.getElementById("CMB").innerHTML = cmb.toLocaleString(undefined, {
-            minimumFractionDigits: 0,
-            maximumFractionDigits: 0
-        });
+        get_current_mortgage_balance();
         if (hav > 726525) {
-            var max = 726525
+            max = 726525;
         } else {
-            var max = hav
-        }; // Set max claim amount
-        document.getElementById("MAX").innerHTML = max.toLocaleString(undefined, {
-            minimumFractionDigits: 0,
-            maximumFractionDigits: 0
-        });
-        var ufmip = max * .02; // UFMIP for Refi
-        var costs = loan_origination_fee + other_closing_costs + ufmip; // Sum of Loan Origination Fee + Closing Costs + UFMIP
+            max = hav;
+        } // Set max claim amount
+        toString('MAX', max, 0);
+        ufmip = max * 0.02; // UFMIP for Refi
+        costs = loan_origination_fee + other_closing_costs + ufmip; // Sum of Loan Origination Fee + Closing Costs + UFMIP
         var pl$ = max * plf; // Principal Limit $ for refi box
-        document.getElementById("PL$").innerHTML = pl$.toLocaleString(undefined, {
-            minimumFractionDigits: 0,
-            maximumFractionDigits: 0
-        });
+        toString('PL$', pl$, 0);
         var inilimit$ = pl$ * 0.6; // Initial Disbursement Limit $ @ Closing
-        document.getElementById("IniLimit$").innerHTML = inilimit$.toLocaleString(undefined, {
-            minimumFractionDigits: 0,
-            maximumFractionDigits: 0
-        });
+        toString('IniLimit$', inilimit$, 0);
         var hecm = (pl$ - (costs + cmb)); // For Refi
-        document.getElementById("HECM").innerHTML = hecm.toLocaleString(undefined, {
-            minimumFractionDigits: 0,
-            maximumFractionDigits: 0
-        });
+        toString('HECM', hecm, 0);
         if (hecm <= 0) {
-            document.getElementById("warning").style.display = "block";
+            document.getElementById('no-equity-warning').innerHTML = "You Don't Have Enough Equity";
         } else {
-            document.getElementById("warning").style.display = "none";
+            document.getElementById('no-equity-warning').innerHTML = "";
         }
         var er = max * (1 - plf); // Equity Reserve
-        document.getElementById("ER").innerHTML = er.toLocaleString(undefined, {
-            minimumFractionDigits: 0,
-            maximumFractionDigits: 0
-        });
+        toString('ER', er, 0);
     }
-    document.getElementById("LOF").innerHTML = loan_origination_fee.toLocaleString(undefined, {
-        minimumFractionDigits: 0,
-        maximumFractionDigits: 0
-    });
-    document.getElementById("LOF_2").innerHTML = loan_origination_fee.toLocaleString(undefined, {
-        minimumFractionDigits: 0,
-        maximumFractionDigits: 0
-    });
-    document.getElementById("UFMIP").innerHTML = ufmip.toLocaleString(undefined, {
-        minimumFractionDigits: 0,
-        maximumFractionDigits: 0
-    });
-    document.getElementById("CC").innerHTML = other_closing_costs.toLocaleString(undefined, {
-        minimumFractionDigits: 0,
-        maximumFractionDigits: 0
-    });
-    document.getElementById("CC_2").innerHTML = other_closing_costs.toLocaleString(undefined, {
-        minimumFractionDigits: 0,
-        maximumFractionDigits: 0
-    });
-    document.getElementById("COST$").innerHTML = costs.toLocaleString(undefined, {
-        minimumFractionDigits: 0,
-        maximumFractionDigits: 0
-    });
-}
-
-function get_loan_purpose() {
-    loan_purpose = document.getElementById("mySelect1").value; // Purchase/Refinance Select x
-    if (loan_purpose === "Purchase") {
-        show('Purchase');
-        hide('Refinance');
-        hide('warning');
-        show('purchaseResults');
-        hide('refiResults');
-        document.getElementById("mySelect2").value = "Fixed";
-        hide('Fixed');
-        document.getElementById("Variable").style.display = "none";
-        document.getElementById("cash_available").style.display = "block"; // Show cash available element
-        document.getElementById("Variable_Option").style.display = "none"; // Hide variable rate option element
-        document.getElementById("home_appraised_value").style.display = "none"; // Hide Home Appraised Value element
-        show('Purchase-Video');
-        hide('Refinance-Video');
-    } else {
-        document.getElementById("Purchase").style.display = "none";
-        document.getElementById("Refinance").style.display = "block";
-        document.getElementById("warningPurchase").style.display = "none"; // Hide Purchase Warning
-        document.getElementById("purchaseResults").style.display = "none";
-        document.getElementById("refiResults").style.display = "block";
-        document.getElementById("cash_available").style.display = "none"; // Show cash available element
-        document.getElementById("Variable_Option").style.display = "block"; // Hide variable rate option element
-        document.getElementById("home_appraised_value").style.display = "block"; // Hide Home Appraised Value element
-        hide('Purchase-Video');
-        show('Refinance-Video');
-    }
-}
-
-function get_interest_rate_option() {
-    interest_rate_option = document.getElementById("mySelect2").value; // Fixed/Variable Interest Select y
-    if (interest_rate_option === "Fixed") {
-        document.getElementById("Fixed").style.display = "block";
-        document.getElementById("Variable").style.display = "none";
-    } else {
-        document.getElementById("Fixed").style.display = "none";
-        document.getElementById("Variable").style.display = "block";
-    }
+    set_scrollHeight('slide-2');
+    set_scrollHeight('slide-3');
+    toString('UFMIP', ufmip, 0);
+    toString('COST$', costs, 0);
 }
 
 function get_age() {
-    age = Number(document.getElementById("age").value); // Borrower's age
-    document.getElementById("AGE").innerHTML = age.toLocaleString(undefined, {
-        minimumFractionDigits: 0,
-        maximumFractionDigits: 0
-    });
+    age = Number(get_value("age")); // Borrower's age
+    toString('AGE', age, 0);
 }
 
-function get_interest_rate() {
-    int = Number(document.getElementById("int").value); // Interest Rate
-    document.getElementById("INT").innerHTML = int.toLocaleString(undefined, {
-        minimumFractionDigits: 3,
-        maximumFractionDigits: 3
-    });
-}
+function get_loan_purpose() {
+    loan_purpose = get_value("loan-purpose");
+    if (loan_purpose === "Purchase") {
+        show_tab_content('purchase');
+        show('h4p-video');
+        hide('hecm-video');
+        show('purchaseResults');
+        hide('refiResults');
+        document.getElementById("rate-option").value = "Fixed";
+        show('fixed-rate');
+        hide("variable-rate");
+        show("cash-available");
+        hide("variable-option");
+        hide("home-appraised-value");
 
-function get_principal_limit_factor() {
-    const result = plfs.find(plf => plf.age === age && plf.int === int); // Look up Principal Limit Factor
-    plf = result.factor;
-    document.getElementById("PLF1").innerHTML = plf.toLocaleString(undefined, {
-        minimumFractionDigits: 3,
-        maximumFractionDigits: 3
-    });
-    document.getElementById("PLF2").innerHTML = plf.toLocaleString(undefined, {
-        minimumFractionDigits: 3,
-        maximumFractionDigits: 3
-    });
-}
-
-function get_loan_origination_fee() {
-    loan_origination_fee = Number(document.getElementById("lof").value); // Loan Origination Fee lof
-}
-
-function get_other_closing_costs() {
-    other_closing_costs = Number(document.getElementById("cc").value); // Other Closing Costs cc
+    } else {
+        show_tab_content('hecm');
+        hide('h4p-video');
+        show('hecm-video');
+        hide("purchaseResults");
+        show("refiResults");
+        hide("cash-available");
+        show("variable-option");
+        show("home-appraised-value");
+    }
 }
 
 function get_cash_available() {
-    cash_available = Number(document.getElementById("ca").value); // Cash available ca
-    document.getElementById("CA").innerHTML = cash_available.toLocaleString(undefined, {
-        minimumFractionDigits: 0,
-        maximumFractionDigits: 0
-    });
+    cash_available = Number(get_value("ca")); // Cash available ca
+    toString('CA', cash_available, 0);
 }
 
-function show_owner_info() {
-    document.getElementById("owner_info").style.display = "block";
-    document.getElementById("lenders_fees").style.display = "none";
-    if (screen && screen.width < 768) {
-        window.open("#top_owner_info", "_top");
+function get_interest_rate_option() {
+    interest_rate_option = get_value("rate-option");
+    if (interest_rate_option === "Fixed") {
+        show("fixed-rate");
+        hide("variable-rate");
     } else {
-        window.open("#calculator", "_top");
+        hide("fixed-rate");
+        show("variable-rate");
     }
 }
 
-function show_calc_results() {
-    if (screen && screen.width < 768) {
-        window.open("#top_calc_results", "_top");
-    } else {
-        window.open("#calculator", "_top");
-    }
+function get_interest_rate() {
+    int = Number(get_value("int")); // Interest Rate
+    toString('INT', int, 3);
+}
+
+function get_principal_limit_factor() {
+    result = plfs.find(plf => plf.age === age && plf.int === int); // Look up Principal Limit Factor
+    plf = result.factor;
+    toString('PLF1', plf, 3);
+    toString('PLF2', plf, 3);
+}
+
+function get_loan_origination_fee() {
+    loan_origination_fee = Number(get_value("lof"));
+    toString('LOF', loan_origination_fee, 0);
+    toString('LOF_2', loan_origination_fee, 0);
+}
+
+function get_other_closing_costs() {
+    other_closing_costs = Number(get_value("cc"));
+    toString('CC', other_closing_costs, 0);
+    toString('CC_2', other_closing_costs, 0);
+}
+
+function get_home_appraised_value() {
+    hav = Number(get_value("hav"));
+    toString('HAV', hav, 0);
+}
+
+function get_current_mortgage_balance() {
+    cmb = Number(get_value("cmb"));
+    toString('CMB', cmb, 0);
 }

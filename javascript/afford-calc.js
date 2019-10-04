@@ -1,4 +1,115 @@
-// Search New Homes
+///////////////////////////////////////////////////////////////////////////////
+// Slide Show                                                                 /
+///////////////////////////////////////////////////////////////////////////////
+
+onload = slideshow;
+
+function slideshow() {
+    setInterval(function () {
+        nextSlide('calc-ss');
+        nextSlide('home-valuation-ss');
+        nextSlide('service-ss');
+        nextSlide('dpa-ss');
+        nextSlide('refinance-ss');
+        nextSlide('sfr-ss');
+        nextSlide('flyer-ss');
+    }, 2000);
+}
+
+function nextSlide(id) {
+    var elems = document.getElementById(id).getElementsByClassName('slide');
+    elems.index = elems.index || 0;
+    elems[elems.index].className = 'slide';
+    elems.index = (elems.index + 1) % elems.length;
+    elems[elems.index].className = 'slide showing';
+}
+
+const calculator = 'afford-calc-widget';
+const widget_slides = document.getElementById(calculator).getElementsByClassName("widget-slide");
+const tabcontents = document.getElementById(calculator).getElementsByClassName("tabcontent");
+const messages = document.getElementById("dti_messages").getElementsByClassName("message");
+
+// For DTI messages ----------------------------------------------------------/
+function show_dti_message(id) {
+    slide_up(messages);
+    slide_down(id);
+}
+
+// For Loan Program Descriptions ---------------------------------------------/
+function show_tab_content(id) {
+    slide_up(tabcontents);
+    slide_down(id);
+}
+
+function slide_up(array) {
+    for (var i = 0; i < array.length; i++) {
+        array[i].style.display = 'none';
+        array[i].style.height = '0px';
+    }
+}
+
+function slide_down(id) {
+    var content = document.getElementById(id);
+    content.style.display = 'block';
+    content.style.height = content.scrollHeight + 'px';
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// Flyers Section - Animated Collapsible - Event Listener ---------------------/
+////////////////////////////////////////////////////////////////////////////////
+
+const flyers = document.getElementById("flyers").getElementsByClassName("collapsible");
+const contents = document.getElementById("flyers").getElementsByClassName("content");
+for (let i = 0; i < flyers.length; i++) {
+    flyers[i].addEventListener("click", function () {
+        // Hide all elements with class content
+        for (let j = 0; j < contents.length; j++) {
+            contents[j].style.height = '0px';
+        }
+        if (this.classList.contains("active")) {
+            this.classList.remove("active");
+        } else {
+            // Remove current active class
+            for (let k = 0; k < flyers.length; k++) {
+                flyers[k].classList.remove("active");
+            }
+            // Add active class to clicked element
+            this.classList.toggle("active");
+            // Display content for only active element            
+            var content = this.nextElementSibling;
+            content.style.height = content.scrollHeight + "px";
+        }
+    });
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// Miscs ---------------------------------------------------------------------/
+///////////////////////////////////////////////////////////////////////////////
+
+function get_id_value(id) {
+    return document.getElementById(id).value;
+}
+
+function set_id_value(id, value) {
+    document.getElementById(id).value = value;
+}
+
+function toString(id, value, digit) {
+    document.getElementById(id).innerHTML = value.toLocaleString(undefined, {
+        minimumFractionDigits: digit,
+        maximumFractionDigits: digit
+    });
+}
+
+function show(id) {
+    document.getElementById(id).style.display = "block";
+}
+
+function hide(id) {
+    document.getElementById(id).style.display = "none";
+}
+
+// New Home Search
 document.getElementById("HomeSearchBtnWidget").onclick = function (event) {
     var searchText = document.getElementById("SearchTextWidget").value;
     if (searchText === "" || typeof (searchText) == "undefined") {
@@ -8,54 +119,34 @@ document.getElementById("HomeSearchBtnWidget").onclick = function (event) {
         document.querySelector("#home-search-form #SearchValidationError").style.display = 'none';
     }
 };
-// Toggle active class - id("main-dti-select")
-btns = document.getElementById("main-dti-select").getElementsByClassName("selectable");
-for (var i = 0; i < btns.length; i++) {
-    btns[i].addEventListener("click", function () {
-        this.classList.toggle("active");
-    });
+
+///////////////////////////////////////////////////////////////////////////////
+// Calculator                                                                 /
+///////////////////////////////////////////////////////////////////////////////
+
+function show_slide(id) {
+    slide_up(widget_slides);
+    slide_down(id);
+    document.getElementById(calculator).scrollIntoView();
 }
-// Add active class to Calculator's Inputs
-var btns = document.getElementById("afford-calc-widget").getElementsByClassName("selectable");
-for (var i = 0; i < btns.length; i++) {
-    btns[i].addEventListener("click", function () {
-        var current = document.getElementsByClassName("active");
-        current[0].className = current[0].className.replace(" active", "");
-        this.className += " active";
-    });
-}
-// Animated Collapsible - Flyers ---------------------------------------------/
-var flyers = document.getElementById("flyers").getElementsByClassName("collapsible");
-for (var i = 0; i < flyers.length; i++) {
-    flyers[i].addEventListener("click", function () {
-        // Hide all elements with class content
-        var contents = document.getElementById("flyers").getElementsByClassName("content");
-        for (var j = 0; j < contents.length; j++) {
-            contents[j].style.maxHeight = null;
-        }
-        if (this.classList.contains("active")) {
-            this.classList.remove("active");
-        } else {
-            // Remove current active class
-            for (var k = 0; k < flyers.length; k++) {
-                flyers[k].classList.remove("active");
-            }
-            // Add active class to clicked element
-            this.classList.toggle("active");
-            // Display content for only active element            
-            var content = this.nextElementSibling;
-            content.style.maxHeight = content.scrollHeight + "px";
-        }
-    });
-}
-hide_calc_slides();
-$('#slide-1').slideDown('slow');
-// Initialization
+
 start();
+slide_up(widget_slides);
+slide_down('slide-1');
 
 function start() {
-    income1 = 0, income2 = 0, income3 = 0, income4 = 0, income5 = 0, total_monthly_income = 0, monthly_liability = 0;
-    auto_loan = 0, student_loan = 0, installment_loan = 0, revolving_account = 0, other_debt = 0;
+    income1 = 0;
+    income2 = 0;
+    income3 = 0;
+    income4 = 0;
+    income5 = 0;
+    total_monthly_income = 0;
+    monthly_liability = 0;
+    auto_loan = 0;
+    student_loan = 0;
+    installment_loan = 0;
+    revolving_account = 0;
+    other_debt = 0;
     total_monthly_liability = 0;
     document.getElementById("inc_1").value = 0;
     document.getElementById("i1_w2").value = 0;
@@ -91,14 +182,8 @@ function start() {
 }
 
 function get_input() {
-    var i;
-    var tabcontent = document.getElementById("loan-programs").getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        $(tabcontent[i]).hide();
-    }
-    // Get Loan Program
-    loan_program = document.getElementById("mySelect").value;
-    document.getElementById(loan_program).style.display = "block";
+    loan_program = get_id_value("mySelect");
+    show_tab_content(loan_program);
     // Set Min Down for Loan Program
     if (loan_program === "FHA") {
         document.getElementById("dp").min = 3.5; // Min Down for FHA
@@ -114,14 +199,14 @@ function get_input() {
         document.getElementById("DP%").innerHTML = "10.0";
     }
     // Get Loan Term
-    loan_term = document.getElementById("mySelect2").value;
+    loan_term = get_id_value("mySelect2");
     // Get Interest Rate
-    interest_rate = Number(document.getElementById("apr").value);
-    document.getElementById("APR%").innerHTML = interest_rate.toFixed(3);
+    interest_rate = Number(get_id_value("apr"));
+    toString('APR%', interest_rate, 3);
     // Get Down Payment
-    down_payment_percent = Number(document.getElementById("dp").value);
+    down_payment_percent = Number(get_id_value("dp"));
     loan_to_value = 100 - down_payment_percent;
-    document.getElementById("LTV").innerHTML = loan_to_value.toFixed(1);
+    toString('LTV', loan_to_value, 1);
     if (loan_program === "FHA" && down_payment_percent < 3.5) {
         down_payment_percent = 3.5; // Min Down for FHA
     }
@@ -131,7 +216,7 @@ function get_input() {
     if (loan_program === "Jumbo" && down_payment_percent < 10) {
         down_payment_percent = 10; // Set min down payment for Jumbo
     }
-    document.getElementById("DP%").innerHTML = down_payment_percent.toFixed(1);
+    toString('DP%', down_payment_percent, 1);
     // Get Mortgage Insurance
     if (loan_program === "VA") {
         mi_rate = 0;
@@ -148,45 +233,21 @@ function get_input() {
     } else {
         mi_rate = Number(document.getElementById("mi").value);
     }
-    document.getElementById("MI%").innerHTML = mi_rate.toLocaleString(undefined, {
-        minimumFractionDigits: 2,
-        maximumFractionDigits: 2
-    });
+    toString('MI%', mi_rate, 2);
     // Get Lender's Required Ratios
-    qualifying_front_ratio = Number(document.getElementById("efr").value);
-    qualifying_back_ratio = Number(document.getElementById("ebr").value);
-    document.getElementById("EFR").innerHTML = qualifying_front_ratio.toLocaleString(undefined, {
-        minimumFractionDigits: 0,
-        maximumFractionDigits: 0
-    });
+    qualifying_front_ratio = Number(get_id_value("efr"));
+    qualifying_back_ratio = Number(get_id_value("ebr"));
+    toString('EFR', qualifying_front_ratio, 0);
     if (qualifying_front_ratio > qualifying_back_ratio) {
         document.getElementById("ebr").value = qualifying_front_ratio;
-        qualifying_back_ratio = Number(document.getElementById("ebr").value);
+        qualifying_back_ratio = Number(get_id_value("ebr"));
     }
-    document.getElementById("EBR").innerHTML = qualifying_back_ratio.toLocaleString(undefined, {
-        minimumFractionDigits: 0,
-        maximumFractionDigits: 0
-    });
+    toString('EBR', qualifying_back_ratio, 0);
 }
 
 function start_over() {
     start();
-    show_slide('slide-1')
-}
-
-function show_slide(id) {
-    hide_calc_slides();
-    var element = "#" + id;
-    $(element).slideDown("slow");
-    document.getElementById("afford-calc-widget").scrollIntoView();
-    get_input();
-}
-
-function hide_calc_slides() {
-    var widget_slides = document.getElementById("afford-calc-widget").getElementsByClassName("widget-slide");
-    for (var i = 0; i < widget_slides.length; i++) {
-        $(widget_slides[i]).hide();
-    }
+    show_slide('slide-1');
 }
 
 function show_income_source() {
@@ -198,76 +259,72 @@ function show_income_source() {
 }
 
 function show_income_tab() {
-    hide_calc_slides();
-    $("#income_info").slideDown("slow");
-    document.getElementById("afford-calc-widget").scrollIntoView();
     get_employment_type();
+    show_slide('income_info');
 }
 
 function show_income_1() {
     income_source = "Income 1";
     document.getElementById("income-source").innerHTML = "Income 1";
-    document.getElementById("remove").style.display = "none";
+    hide("remove");
     show_income_tab();
 }
 
 function show_income_2() {
     income_source = "Income 2";
     document.getElementById("income-source").innerHTML = "Income 2";
-    document.getElementById("remove").style.display = "block";
+    show("remove");
     show_income_tab();
 }
 
 function show_income_3() {
     income_source = "Income 3";
     document.getElementById("income-source").innerHTML = "Income 3";
-    document.getElementById("remove").style.display = "block";
+    show("remove");
     show_income_tab();
 }
 
 function show_income_4() {
     income_source = "Income 4";
     document.getElementById("income-source").innerHTML = "Income 4";
-    document.getElementById("remove").style.display = "block";
+    show("remove");
     show_income_tab();
 }
 
 function show_income_5() {
     income_source = "Income 5";
     document.getElementById("income-source").innerHTML = "Income 5";
-    document.getElementById("remove").style.display = "block";
+    show("remove");
     show_income_tab();
 }
 
 function show_income_summary() {
     update_income();
-    hide_calc_slides();
-    $("#income-summary").slideDown("slow");
-    document.getElementById("afford-calc-widget").scrollIntoView();
     if (income2 === 0) {
-        document.getElementById("income-2-details").style.display = "none";
+        hide("income-2-details");
     } else {
-        document.getElementById("income-2-details").style.display = "block";
+        show("income-2-details");
     }
     if (income3 === 0) {
-        document.getElementById("income-3-details").style.display = "none";
+        hide("income-3-details");
     } else {
-        document.getElementById("income-3-details").style.display = "block";
+        show("income-3-details");
     }
     if (income4 === 0) {
-        document.getElementById("income-4-details").style.display = "none";
+        hide("income-4-details");
     } else {
-        document.getElementById("income-4-details").style.display = "block";
+        show("income-4-details");
     }
     if (income5 === 0) {
-        document.getElementById("income-5-details").style.display = "none";
+        hide("income-5-details");
     } else {
-        document.getElementById("income-5-details").style.display = "block";
+        show("income-5-details");
     }
+    show_slide('income-summary');
 }
 
 function get_employment_type() {
-    employmentType = document.getElementById("a2").value; // Get Employment Type
+    employmentType = get_id_value("a2"); // Get Employment Type
     if (employmentType === "Hourly") {
         show_hourly_pay();
     } else if (employmentType === "Weekly") {
@@ -327,8 +384,8 @@ function clear_inc_source() {
 
 function calc_inc_source() {
     if (employmentType === "Hourly") {
-        hr = Number(document.getElementById("a3a").value); // Get Hour Pay ($)
-        hpw = Number(document.getElementById("a3b").value); // Get Hours Per Week
+        hr = Number(get_id_value("a3a")); // Get Hour Pay ($)
+        hpw = Number(get_id_value("a3b")); // Get Hours Per Week
         if (hr <= 0) {
             alert("Please enter valid Hourly Rate");
             document.getElementById("a3a").value = "";
@@ -342,11 +399,11 @@ function calc_inc_source() {
             return;
         }
         w2 = ((hr * hpw) * 52) / 12; // Hourly Pay - Monthly Income
-        vp1 = Number(document.getElementById("a8a").value); // Get OT & Bonuses 1
-        vp2 = Number(document.getElementById("a8b").value); // Get OT & Bonuses 2
+        vp1 = Number(get_id_value("a8a")); // Get OT & Bonuses 1
+        vp2 = Number(get_id_value("a8b")); // Get OT & Bonuses 2
         vp = (vp1 + vp2) / 24; // Calculate Variable Pay
     } else if (employmentType === "Weekly") {
-        wp = Number(document.getElementById("a4").value); // Get Weekly Pay ($)
+        wp = Number(get_id_value("a4")); // Get Weekly Pay ($)
         if (wp <= 0) {
             alert("Please enter valid Weekly Rate");
             document.getElementById("a4").value = "";
@@ -354,11 +411,11 @@ function calc_inc_source() {
             return;
         }
         w2 = (wp * 52) / 12; // Weekly Pay - Monthly Income
-        vp1 = Number(document.getElementById("a8a").value); // Get OT & Bonuses 1
-        vp2 = Number(document.getElementById("a8b").value); // Get OT & Bonuses 2
+        vp1 = Number(get_id_value("a8a")); // Get OT & Bonuses 1
+        vp2 = Number(get_id_value("a8b")); // Get OT & Bonuses 2
         vp = (vp1 + vp2) / 24; // Calculate Variable Pay
     } else if (employmentType === "Semi-Weekly") {
-        swp = Number(document.getElementById("a5").value); // Get Semi-Weekly Pay ($)
+        swp = Number(get_id_value("a5")); // Get Semi-Weekly Pay ($)
         if (swp <= 0) {
             alert("Please enter valid Semi-Weekly Rate");
             document.getElementById("a5").value = "";
@@ -366,11 +423,11 @@ function calc_inc_source() {
             return;
         }
         w2 = (swp * 26) / 12; // Semi-Weekly Pay - Monthly Income
-        vp1 = Number(document.getElementById("a8a").value); // Get OT & Bonuses 1
-        vp2 = Number(document.getElementById("a8b").value); // Get OT & Bonuses 2
+        vp1 = Number(get_id_value("a8a")); // Get OT & Bonuses 1
+        vp2 = Number(get_id_value("a8b")); // Get OT & Bonuses 2
         vp = (vp1 + vp2) / 24; // Calculate Variable Pay
     } else if (employmentType === "Monthly") {
-        mp = Number(document.getElementById("a6").value); // Get Monthly Pay ($)
+        mp = Number(get_id_value("a6")); // Get Monthly Pay ($)
         if (mp <= 0) {
             alert("Please enter valid Monthly Salary");
             document.getElementById("a6").value = "";
@@ -378,11 +435,11 @@ function calc_inc_source() {
             return;
         }
         w2 = mp; // Monthly Pay Income
-        vp1 = Number(document.getElementById("a8a").value); // Get OT & Bonuses 1
-        vp2 = Number(document.getElementById("a8b").value); // Get OT & Bonuses 2
+        vp1 = Number(get_id_value("a8a")); // Get OT & Bonuses 1
+        vp2 = Number(get_id_value("a8b")); // Get OT & Bonuses 2
         vp = (vp1 + vp2) / 24; // Calculate Variable Pay
     } else if (employmentType === "Annually") {
-        ap = Number(document.getElementById("a7").value); // Get Annual Pay ($)
+        ap = Number(get_id_value("a7")); // Get Annual Pay ($)
         if (ap <= 0) {
             alert("Please enter valid Annual Salary");
             document.getElementById("a7").value = "";
@@ -390,13 +447,13 @@ function calc_inc_source() {
             return;
         }
         w2 = ap / 12;
-        vp1 = Number(document.getElementById("a8a").value); // Get OT & Bonuses 1
-        vp2 = Number(document.getElementById("a8b").value); // Get OT & Bonuses 2
+        vp1 = Number(get_id_value("a8a")); // Get OT & Bonuses 1
+        vp2 = Number(get_id_value("a8b")); // Get OT & Bonuses 2
         vp = (vp1 + vp2) / 24; // Calculate Variable Pay
     } else if (employmentType === "1099 Employee") {
         w2 = 0; // Not W2 Employee
-        vp1 = Number(document.getElementById("a9a").value); // Get Variable Income 1
-        vp2 = Number(document.getElementById("a9b").value); // Get Variable Income 2
+        vp1 = Number(get_id_value("a9a")); // Get Variable Income 1
+        vp2 = Number(get_id_value("a9b")); // Get Variable Income 2
         if (vp1 <= 0 || vp2 <= 0) {
             alert("Please enter required income for 2 years");
             return;
@@ -404,8 +461,8 @@ function calc_inc_source() {
         vp = (vp1 + vp2) / 24; // Calculate Variable Pay
     } else if (employmentType === "Self-Employed") {
         w2 = 0; // Not W2 Employee
-        vp1 = Number(document.getElementById("a9a").value); // Get Variable Income 1
-        vp2 = Number(document.getElementById("a9b").value); // Get Variable Income 2
+        vp1 = Number(get_id_value("a9a")); // Get Variable Income 1
+        vp2 = Number(get_id_value("a9b")); // Get Variable Income 2
         if (vp1 <= 0 || vp2 <= 0) {
             alert("Please enter required income for 2 years");
             return;
@@ -414,79 +471,34 @@ function calc_inc_source() {
     }
     inc = (w2 + vp); // income inputed
     if (income_source === "Income 1") {
-        document.getElementById("I1").style.display = "block";
-        document.getElementById("inc_1").innerHTML = inc.toLocaleString(undefined, {
-            minimumFractionDigits: 2,
-            maximumFractionDigits: 2
-        });
-        document.getElementById("i1_w2").innerHTML = w2.toLocaleString(undefined, {
-            minimumFractionDigits: 2,
-            maximumFractionDigits: 2
-        });
-        document.getElementById("i1_vp").innerHTML = vp.toLocaleString(undefined, {
-            minimumFractionDigits: 2,
-            maximumFractionDigits: 2
-        });
+        show("I1");
+        toString('inc_1', inc, 2);
+        toString('i1_w2', w2, 2);
+        toString('i1_vp', vp, 2);
         income1 = inc; // update income1
     } else if (income_source === "Income 2") {
-        document.getElementById("I2").style.display = "block";
-        document.getElementById("inc_2").innerHTML = inc.toLocaleString(undefined, {
-            minimumFractionDigits: 2,
-            maximumFractionDigits: 2
-        });
-        document.getElementById("i2_w2").innerHTML = w2.toLocaleString(undefined, {
-            minimumFractionDigits: 2,
-            maximumFractionDigits: 2
-        });
-        document.getElementById("i2_vp").innerHTML = vp.toLocaleString(undefined, {
-            minimumFractionDigits: 2,
-            maximumFractionDigits: 2
-        });
+        show("I2");
+        toString('inc_2', inc, 2);
+        toString('i2_w2', w2, 2);
+        toString('i2_vp', vp, 2);
         income2 = inc; // update income2
     } else if (income_source === "Income 3") {
-        document.getElementById("I3").style.display = "block";
-        document.getElementById("inc_3").innerHTML = inc.toLocaleString(undefined, {
-            minimumFractionDigits: 2,
-            maximumFractionDigits: 2
-        });
-        document.getElementById("i3_w2").innerHTML = w2.toLocaleString(undefined, {
-            minimumFractionDigits: 2,
-            maximumFractionDigits: 2
-        });
-        document.getElementById("i3_vp").innerHTML = vp.toLocaleString(undefined, {
-            minimumFractionDigits: 2,
-            maximumFractionDigits: 2
-        });
+        show("I3");
+        toString('inc_3', inc, 2);
+        toString('i3_w2', w2, 2);
+        toString('i3_vp', vp, 2);
         income3 = inc; // update income3
     } else if (income_source === "Income 4") {
-        document.getElementById("I4").style.display = "block";
-        document.getElementById("inc_4").innerHTML = inc.toLocaleString(undefined, {
-            minimumFractionDigits: 2,
-            maximumFractionDigits: 2
-        });
-        document.getElementById("i4_w2").innerHTML = w2.toLocaleString(undefined, {
-            minimumFractionDigits: 2,
-            maximumFractionDigits: 2
-        });
-        document.getElementById("i4_vp").innerHTML = vp.toLocaleString(undefined, {
-            minimumFractionDigits: 2,
-            maximumFractionDigits: 2
-        });
+        show("I4");
+        toString('inc_4', inc, 2);
+        toString('i4_w2', w2, 2);
+        toString('i4_vp', vp, 2);
         income4 = inc; // update income4
     } else if (income_source === "Income 5") {
-        document.getElementById("I5").style.display = "block";
-        document.getElementById("inc_5").innerHTML = inc.toLocaleString(undefined, {
-            minimumFractionDigits: 2,
-            maximumFractionDigits: 2
-        });
-        document.getElementById("i5_w2").innerHTML = w2.toLocaleString(undefined, {
-            minimumFractionDigits: 2,
-            maximumFractionDigits: 2
-        });
-        document.getElementById("i5_vp").innerHTML = vp.toLocaleString(undefined, {
-            minimumFractionDigits: 2,
-            maximumFractionDigits: 2
-        });
+        show("I5");
+        toString('inc_5', inc, 2);
+        toString('i5_w2', w2, 2);
+        toString('i5_vp', vp, 2);
         income5 = inc; // update income5
     }
     show_income_summary();
@@ -494,10 +506,7 @@ function calc_inc_source() {
 
 function update_income() {
     total_monthly_income = income1 + income2 + income3 + income4 + income5; // update total_monthly_income
-    document.getElementById("total-income").innerHTML = total_monthly_income.toLocaleString(undefined, {
-        minimumFractionDigits: 2,
-        maximumFractionDigits: 2
-    });
+    toString('total-income', total_monthly_income, 2);
 }
 
 function update_liability() {
@@ -532,10 +541,7 @@ function update_liability() {
         other_debt = 0;
     }
     total_monthly_liability = auto_loan + student_loan + installment_loan + revolving_account + other_debt;
-    document.getElementById("ML").innerHTML = total_monthly_liability.toLocaleString(undefined, {
-        minimumFractionDigits: 0,
-        maximumFractionDigits: 0
-    });
+    toString('ML', total_monthly_liability, 0);
     calc_dti();
     afford_calc();
     show_slide('calc-results');
@@ -577,57 +583,33 @@ function afford_calc() {
     if (loan_amount <= 0) {
         loan_amount = 0;
     }
-    document.getElementById("P").innerHTML = loan_amount.toLocaleString(undefined, {
-        minimumFractionDigits: 0,
-        maximumFractionDigits: 0
-    });
+    toString('P', loan_amount, 0);
     //FHA Loan Limit Warning
-    if (!(loan_program === "Jumbo") && loan_amount > 417000) {
-        document.getElementById("loanMaxNote").style.display = "block";
+    if ((loan_program !== "Jumbo") && loan_amount > 417000) {
+        show("loanMaxNote");
     } else {
-        document.getElementById("loanMaxNote").style.display = "none";
+        hide("loanMaxNote");
     }
     //Jumbo loan requirement
     if (loan_program === "Jumbo" && loan_amount < 484350) {
-        document.getElementById("jumboLoan").style.display = "block";
+        show("jumboLoan");
     } else {
-        document.getElementById("jumboLoan").style.display = "none";
+        hide("jumboLoan");
     }
     var M = loan_amount * k1; // Solve for M (Principal & Interest)
-    document.getElementById("M").innerHTML = M.toLocaleString(undefined, {
-        minimumFractionDigits: 2,
-        maximumFractionDigits: 2
-    });
+    toString('M', M, 2);
     var HV = loan_amount / ltv; // Solve for Home Value
-    document.getElementById("HV").innerHTML = HV.toLocaleString(undefined, {
-        minimumFractionDigits: 0,
-        maximumFractionDigits: 0
-    });
+    toString('HV', HV, 0);
     var DP = (HV - loan_amount); // Solve for Down Payment ($)
-    document.getElementById("DP").innerHTML = DP.toLocaleString(undefined, {
-        minimumFractionDigits: 0,
-        maximumFractionDigits: 0
-    });
+    toString('DP', DP, 0);
     var T = loan_amount * k2; // Solve for Property Tax ($)
-    document.getElementById("T").innerHTML = T.toLocaleString(undefined, {
-        minimumFractionDigits: 2,
-        maximumFractionDigits: 2
-    });
+    toString('T', T, 2);
     var I = loan_amount * (mi_rate / 1200); // Solve for Mortgage Insurance ($)
-    document.getElementById("I").innerHTML = I.toLocaleString(undefined, {
-        minimumFractionDigits: 2,
-        maximumFractionDigits: 2
-    });
+    toString('I', I, 2);
     var HOI = (loan_amount * k3); // Solve for Homeowner Insurance ($)
-    document.getElementById("HOI").innerHTML = HOI.toLocaleString(undefined, {
-        minimumFractionDigits: 2,
-        maximumFractionDigits: 2
-    });
+    toString('HOI', HOI, 2);
     var MP = M + T + I + HOI; // Solve for Monthly Housing Expenses
-    document.getElementById("MP").innerHTML = MP.toLocaleString(undefined, {
-        minimumFractionDigits: 2,
-        maximumFractionDigits: 2
-    });
+    toString('MP', MP, 2);
 }
 
 function remove_income() {
@@ -639,53 +621,50 @@ function remove_income() {
     }
     income_source = document.getElementById("a1").value; // Get Income Source
     if (income_source === "Income 1") {
-        document.getElementById("inc_1").value = 0;
-        document.getElementById("i1_w2").value = 0;
-        document.getElementById("i1_vp").value = 0;
-        document.getElementById("I1").style.display = "none";
+        set_id_value("inc_1", 0);
+        set_id_value("i1_w2", 0);
+        set_id_value("i1_vp", 0);
+        hide("I1");
         income1 = 0;
     }
     if (income_source === "Income 2") {
-        document.getElementById("inc_2").value = 0;
-        document.getElementById("i2_w2").value = 0;
-        document.getElementById("i2_vp").value = 0;
-        document.getElementById("I2").style.display = "none";
+        set_id_value("inc_2", 0);
+        set_id_value("i2_w2", 0);
+        set_id_value("i2_vp", 0);
+        hide("I2");
         income2 = 0;
     }
     if (income_source === "Income 3") {
-        document.getElementById("inc_3").value = 0;
-        document.getElementById("i3_w2").value = 0;
-        document.getElementById("i3_vp").value = 0;
-        document.getElementById("I3").style.display = "none";
+        set_id_value("inc_3", 0);
+        set_id_value("i3_w2", 0);
+        set_id_value("i3_vp", 0);
+        hide("I3");
         income3 = 0;
     }
     if (income_source === "Income 4") {
-        document.getElementById("inc_4").value = 0;
-        document.getElementById("i4_w2").value = 0;
-        document.getElementById("i4_vp").value = 0;
-        document.getElementById("I4").style.display = "none";
+        set_id_value("inc_4", 0);
+        set_id_value("i4_w2", 0);
+        set_id_value("i4_vp", 0);
+        hide("I4");
         income4 = 0;
     }
     if (income_source === "Income 5") {
-        document.getElementById("inc_5").value = 0;
-        document.getElementById("i5_w2").value = 0;
-        document.getElementById("i5_vp").value = 0;
-        document.getElementById("I5").style.display = "none";
+        set_id_value("inc_5", 0);
+        set_id_value("i5_w2", 0);
+        set_id_value("i5_vp", 0);
+        hide("I5");
         income5 = 0;
     }
     total_monthly_income = income1 + income2 + income3 + income4 + income5;
-    document.getElementById("total-income").innerHTML = total_monthly_income.toLocaleString(undefined, {
-        minimumFractionDigits: 2,
-        maximumFractionDigits: 2
-    });
+    toString('total-income', total_monthly_income, 2);
     if (total_monthly_income == 0) {
-        document.getElementById("income-summary").style.display = "none";
-        document.getElementById("HV").innerHTML = "0.00"
-        document.getElementById("calc-results").style.display = "none";
-        document.getElementById("FR").innerHTML = "NA";
-        document.getElementById("AFR").value = 100;
-        document.getElementById("BR").innerHTML = "NA";
-        document.getElementById("ABR").value = 100;
+        hide("income-summary");
+        set_id_value("HV", '0.00');
+        hide("calc-results");
+        set_id_value("FR", 'NA');
+        set_id_value("AFR", 100);
+        set_id_value("BR", 'NA');
+        set_id_value("ABR", 100);
         return;
     }
     calc_dti();
@@ -694,7 +673,7 @@ function remove_income() {
 }
 
 function get_income_source() {
-    income_source = document.getElementById("a1").value;
+    income_source = get_id_value("a1");
 }
 
 function hide_income_input() {
@@ -706,56 +685,38 @@ function hide_income_input() {
     }
 }
 
-function show_dti_message_1() {
-    $("#dti_message_1").slideDown("slow");
-    $("#dti_message_2").hide();
-    $("#dti_message_3").hide();
-}
-
-function show_dti_message_2() {
-    $("#dti_message_1").hide();
-    $("#dti_message_2").slideDown("slow");
-    $("#dti_message_3").hide();
-}
-
-function show_dti_message_3() {
-    $("#dti_message_1").hide();
-    $("#dti_message_2").hide();
-    $("#dti_message_3").slideDown("slow");
-}
-
 function show_hourly_pay() {
     hide_income_input();
-    document.getElementById("q2").style.display = "block"; // Show Type of Employment
-    document.getElementById("q3").style.display = "block"; // Show Hourly Rate
-    document.getElementById("q8").style.display = "block"; // Show OT & Bonuses
+    show("q2"); // Show Type of Employment
+    show("q3"); // Show Hourly Rate
+    show("q8"); // Show OT & Bonuses
 }
 
 function show_weekly_pay() {
     hide_income_input();
-    document.getElementById("q4").style.display = "block"; // Show Weekly Rate
-    document.getElementById("q8").style.display = "block"; // Show OT & Bonuses
+    show("q4"); // Show Weekly Rate
+    show("q8"); // Show OT & Bonuses
 }
 
 function show_semi_weekly_pay() {
     hide_income_input();
-    document.getElementById("q5").style.display = "block"; // Show Weekly Rate
-    document.getElementById("q8").style.display = "block"; // Show OT & Bonuses
+    show("q5"); // Show Weekly Rate
+    show("q8"); // Show OT & Bonuses
 }
 
 function show_monthly_pay() {
     hide_income_input();
-    document.getElementById("q6").style.display = "block"; // Show Monthly Salary
-    document.getElementById("q8").style.display = "block"; // Show OT & Bonuses
+    show("q6"); // Show Monthly Salary
+    show("q8"); // Show OT & Bonuses
 }
 
 function show_annual_pay() {
     hide_income_input();
-    document.getElementById("q7").style.display = "block"; // Show Annual Salary
-    document.getElementById("q8").style.display = "block"; // Show OT & Bonuses
+    show("q7"); // Show Annual Salary
+    show("q8"); // Show OT & Bonuses
 }
 
 function show_variable_pay() {
     hide_income_input();
-    document.getElementById("q9").style.display = "block"; // Show Variable Pay
+    show("q9"); // Show Variable Pay
 }

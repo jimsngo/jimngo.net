@@ -90,69 +90,6 @@
         <div class="statcounter"><a title="Web Analytics" href="http://statcounter.com/" target="_blank"><img
                     class="statcounter" src="//c.statcounter.com/11893871/0/b16c17b8/1/" alt="Web Analytics"></a></div>
     </noscript>
-    <!-- JSON LD -->
-    <script type="application/ld+json">
-        {
-            "@context": "http://schema.org",
-            "@type": "LocalBusiness",
-            "name": "Real Estate | Home Loan | Life Insurance | Jim Ngo - Ontario, CA",
-            "image": "https://www.jimngo.net/image/profile-100.gif",
-            "telephone": "909-510-9479",
-            "priceRange": "$$",
-            "email": "admin@jimngo.info",
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "800 N Haven Ave Ste 370",
-                "addressLocality": "Ontario",
-                "addressRegion": "CA",
-                "addressCountry": "USA",
-                "postalCode": "91761"
-            },
-            "url": "https://www.jimngo.net/"
-        }
-    </script>
-    <script type="application/ld+json">
-        {
-            "@context": "http://schema.org/",
-            "@type": "Person",
-            "name": "Jim Ngo",
-            "url": "https://www.jimngo.net/",
-            "image": "https://www.jimngo.net/image/profile-100.gif",
-            "sameAs": [
-                "https://www.facebook.com/jimngo.realtor/",
-                "https://plus.google.com/108848273800866757190",
-                "https://www.linkedin.com/in/jimsngo/",
-                "https://jimngo.info/",
-                "https://realtor.jimngo.info/",
-                "https://insurance.jimngo.info/",
-                "https://www.showingnew.com/jimngo",
-                "https://jimsngo.myrealestateplatform.com/",
-                "http://cloudcma.com/api_widget/348f96646d0a223f5fa34f124f60dfeb/show?post_url=cloudcma.com&source_url=ua",
-                "https://www.workforce-resource.com/dpr/lopmt/MWFW?branch=jim.ngo@outlook.com&phone=909-510-9479",
-                "http://www.jimngorealtor.com/"
-            ]
-        }
-    </script>
-    <script type="application/ld+json">
-        {
-            "@context": "http://schema.org/",
-            "@type": "SoftwareApplication",
-            "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "5",
-                "ratingCount": "1"
-            },
-            "name": "Loanzify Mortgage App",
-            "operatingSystem": "iPhone & Android",
-            "applicationCategory": "http://schema.org/GameApplication",
-            "offers": {
-                "@type": "Offer",
-                "price": "0.00",
-                "priceCurrency": "USD"
-            },
-            "installUrl": "https://loanzify.com/get/w0N1/"
-        }
-    </script>
 </head>
 
 <body>
@@ -280,18 +217,18 @@
     </section>
     <!-- Mortgage Pre-Qualification Calculator ------------------------------->
     <section class='calculator' id="mortgage-prequalification-widget">
-        <div class="banner dark-cerulean">
-            <h2 class="banner4">Mortgage Pre Approval</h2>
-            <h2 class="banner4">FHA, VA, Conventional</h2>
-            <h2 class="banner4">Down Payment Assistance</h2>
-            <h2 class="banner4">First Time Homebuyer</h2>
+        <div class="banner dark-cerulean" id='calc-ss'>
+            <h2 class="slide showing">Mortgage Pre Approval</h2>
+            <h2 class="slide">FHA, VA, Conventional</h2>
+            <h2 class="slide">Down Payment Assistance</h2>
+            <h2 class="slide">First Time Homebuyer</h2>
         </div>
         <div class="main flex-center">
             <!-- Column 1 -->
             <div class="col-6 col-s-6" id="users-inputs">
-                <!-- Begin Calculator -->
                 <h3 class="widget-header">Mortgage Calculator - FHA, VA, Conventional, USDA</h3>
-                <div class="widget-slide" id="slide-1">
+                <!-- Slide 1 - Begin Calculator -->
+                <div class="widget-slide medium" id="slide-1">
                     <div class="widget-body">
                         <p style="font-size: 125%;">Getting Pre-Approved Should Always Be Your First Step!</p>
                         <p>Many potential home buyers overestimate the down payment and credit scores needed to
@@ -309,7 +246,7 @@
                     </div>
                 </div>
                 <!-- Slide 2 - Loan Program & Term  -->
-                <div class="widget-slide" id="mortgage-info">
+                <div class="widget-slide medium" id="mortgage-info">
                     <div class="widget-body">
                         <!-- Loan Program -->
                         <div class="inputTitleContainer">
@@ -338,7 +275,7 @@
                     </div>
                 </div>
                 <!-- Slide 3 - Purchase Price -->
-                <div class="widget-slide" id="purchase-price">
+                <div class="widget-slide medium" id="purchase-price">
                     <div class="widget-body">
                         <div class="inputTitleContainer">
                             <div class="inputTitle">Purchase Price: </div>
@@ -356,7 +293,7 @@
                     </div>
                 </div>
                 <!-- Slide 4 - Down Payment & Loan Amount -->
-                <div class="widget-slide" id="down-payment">
+                <div class="widget-slide medium" id="down-payment">
                     <div class="widget-body">
                         <!-- Down Payment -->
                         <div class="inputTitleContainer">
@@ -411,7 +348,7 @@
                     </div>
                 </div>
                 <!-- Slide 5 - Mortgage Insurance -->
-                <div class="widget-slide" id="mortgage-insurance">
+                <div class="widget-slide medium" id="mortgage-insurance">
                     <div class="widget-body">
                         <div class="inputTitleContainer">
                             <div class="inputTitle">Mortgage Insurance:</div>
@@ -442,7 +379,7 @@
                     </div>
                 </div>
                 <!-- Slide 6 - Expected Interest Rate -->
-                <div class="widget-slide" id="expected-interest-rate">
+                <div class="widget-slide medium" id="expected-interest-rate">
                     <div class="widget-body">
                         <div class="inputTitleContainer">
                             <div class="inputTitle">Expected Interest Rate:</div>
@@ -467,7 +404,7 @@
                     </div>
                 </div>
                 <!-- Slide 7 - Property Tax -->
-                <div class="widget-slide" id="property-tax">
+                <div class="widget-slide medium" id="property-tax">
                     <div class="widget-body">
                         <div class="inputTitleContainer">
                             <div class="inputTitle">Property Tax:</div>
@@ -488,7 +425,7 @@
                     </div>
                 </div>
                 <!-- Slide 8 - Monthly Payment -->
-                <div class="widget-slide" id="monthly-payment">
+                <div class="widget-slide medium" id="monthly-payment">
                     <div class="widget-body">
                         <div class="inputTitleContainer">
                             <div class="inputTitle">Housing Expenses:</div>
@@ -508,7 +445,7 @@
                     </div>
                 </div>
                 <!-- Slide 9 - Income -->
-                <div class="widget-slide" id="income-info">
+                <div class="widget-slide slow" id="income-info">
                     <div class="widget-body">
                         <div id="income-source"></div>
                         <!-- Employment Type -->
@@ -531,19 +468,19 @@
                             Hours Per Week:
                             <input type="number" class="inputValue3" id="a3b" min="0" max="100"></div>
                         <!-- Weekly Pay -->
-                        <div class="incomeField" id="q4" style="display:none">
+                        <div class="incomeField" id="q4">
                             Weekly rate:
                             <input type="number" class="inputValue3" id="a4" min="0" max="10000"></div>
                         <!-- Semi-Weekly Pay -->
-                        <div class="incomeField" id="q5" style="display:none">
+                        <div class="incomeField" id="q5">
                             Semi-Weekly rate:
                             <input type="number" class="inputValue3" id="a5" min="0" max="20000"></div>
                         <!-- Monthly Pay -->
-                        <div class="incomeField" id="q6" style="display:none">
+                        <div class="incomeField" id="q6">
                             Monthly Salary:
                             <input type="number" class="inputValue3" id="a6" min="0" max="50000"></div>
                         <!-- Annual Pay-->
-                        <div class="incomeField" id="q7" style="display:none">
+                        <div class="incomeField" id="q7">
                             Annual Salary:
                             <input type="number" class="inputValue3" id="a7" min="0" max="500000"></div>
                         <!-- OT & Bonuses -->
@@ -556,7 +493,7 @@
                             <input type="number" class="inputValue3" id="a8b" min="0" max="500000">
                         </div>
                         <!-- 1099 & Schedule C -->
-                        <div class="incomeField" id="q9" style="display:none">
+                        <div class="incomeField" id="q9">
                             Variable incomes from Part Time, Independent Contractor, or Sole Proprietor
                             typically require a history of 2 years, likely to continue, and averaged over 24
                             months.<br />
@@ -581,7 +518,7 @@
                     </div>
                 </div>
                 <!-- Slide 10 - Income Summary -->
-                <div class="widget-slide" id="income-summary">
+                <div class="widget-slide medium" id="income-summary">
                     <div class="widget-body" id="income_summary">
                         <div id="I1">
                             <p><a onclick="show_income(1)"><span style="font-size: 125%; cursor: pointer">Income 1:
@@ -639,7 +576,7 @@
                     </div>
                 </div>
                 <!-- Slide 11 - Liabilities -->
-                <div class="widget-slide" id="liability-info">
+                <div class="widget-slide medium" id="liability-info">
                     <div class="widget-body">
                         <p style="margin: 10px;">Please enter your monthly liability payments from auto loans,
                             student loans, credit card payments, time-share payments, personal loan payments, child
@@ -682,13 +619,12 @@
                     </div>
                 </div>
                 <!-- Slide 12 - DTI Calculation Summary -->
-                <div class="widget-slide" id="calc_results">
+                <div class="widget-slide medium" id="calc_results">
                     <div class="widget-body">
                         <!-- Income and Liability Summary -->
                         <div class="inputTitleContainer">
                             <div class="inputTitle"><a onclick="show_income_summary()"><span
-                                        style="font-size: 125%;">Monthly
-                                        Income:</span></a></div>
+                                        style="font-size: 125%;">Monthly Income:</span></a></div>
                             <div class="inputValue">$<span id="total_income"></span></div>
                         </div>
                         <div class="inputTitleContainer">
@@ -704,50 +640,43 @@
                                 <div class="inputTitle">Your Housing Ratio:</div>
                                 <div class="inputValue"><span id="FR"></span> %</div>
                             </div>
-                            <div class="sliderContainer">
-                                <input class="slider1" id="FR%" max="50" min="0" step="1" type="range" value="30" />
-                            </div>
                             <div class="inputTitleContainer">
                                 <div class="inputTitle">Your DTI Ratio:</div>
                                 <div class="inputValue"><span id="BR"></span> %</div>
                             </div>
-                            <div class="sliderContainer">
-                                <input class="slider1" id="BR%" max="50" min="0" step="1" type="range" value="30" />
+                        </div>
+                        <!-- DTI Messages-->
+                        <div id="dti_messages" style="display:none;">
+                            <div class="note" id="dti1" style="display:none; background-color: #238823; color: white">
+                                <h4>Looking Good - Relative to your income, your debt is at a manageable level.</h4>
+                                <p>You most likely have money left over for saving or spending after you’ve paid your
+                                    bills. Lenders generally view a lower DTI as favorable.</p>
+                            </div>
+                            <div class="note" id="dti2" style="display:none; background-color:#FFBF00; color:black ">
+                                <h4>Opportunity to Improve.</h4>
+                                <p>You’re managing your debt adequately, but you may want to consider lowering your DTI.
+                                    This could put you in a better position to handle unforeseen expenses. If you’re
+                                    looking to borrow, keep in mind that lenders may ask for additional eligibility
+                                    criteria.</p>
+                            </div>
+                            <div class="note" id="dti3" style="display:none; background-color: #D2222D; color: white">
+                                <h4>Take Action - You may have limited funds to save or spend.</h4>
+                                <p>With more than half your income going toward debt payments, you may not have much
+                                    money left to save, spend, or handle unforeseen expenses. With this DTI ratio,
+                                    lenders may limit your borrowing options.</p>
                             </div>
                         </div>
-                    </div>
-                    <p></p>
-                    <!-- DTI Messages-->
-                    <div id="dti_messages" style="display:none;">
-                        <div class="note" id="dti1" style="display:none; background-color: #238823; color: white">
-                            <h4>Looking Good - Relative to your income, your debt is at a manageable level.</h4>
-                            <p>You most likely have money left over for saving or spending after you’ve paid your
-                                bills. Lenders generally view a lower DTI as favorable.</p>
+                        <!-- Back Start Over -->
+                        <div class="flex-center">
+                            <button class="widget-submit-btn" onclick="show_slide('liability-info')">Back</button>
+                            <button class="widget-submit-btn" onclick="start_over()">Start Over</button>
                         </div>
-                        <div class="note" id="dti2" style="display:none; background-color:#FFBF00; color:black ">
-                            <h4>Opportunity to Improve.</h4>
-                            <p>You’re managing your debt adequately, but you may want to consider lowering your DTI.
-                                This could put you in a better position to handle unforeseen expenses. If you’re
-                                looking to borrow, keep in mind that lenders may ask for additional eligibility
-                                criteria.</p>
-                        </div>
-                        <div class="note" id="dti3" style="display:none; background-color: #D2222D; color: white">
-                            <h4>Take Action - You may have limited funds to save or spend.</h4>
-                            <p>With more than half your income going toward debt payments, you may not have much
-                                money left to save, spend, or handle unforeseen expenses. With this DTI ratio,
-                                lenders may limit your borrowing options.</p>
-                        </div>
-                    </div>
-                    <!-- Back Start Over -->
-                    <div class="flex-center">
-                        <button class="widget-submit-btn" onclick="show_slide('liability-info')">Back</button>
-                        <button class="widget-submit-btn" onclick="start_over()">Start Over</button>
                     </div>
                 </div>
             </div>
             <!-- Loan Programs -->
             <div class="col-6 col-s-6">
-                <div id="FHA" class="tabcontent" style="display:block">
+                <div id="FHA" class="tabcontent slow">
                     <h2 class="widget-header">FHA Loan Advantages</h2>
                     <div class="widget-body">
                         <ul>
@@ -777,7 +706,7 @@
                                         class="fas fa-external-link-alt"></i></button></a></div>
                     </div>
                 </div>
-                <div id="VA" class="tabcontent" style="display:none">
+                <div id="VA" class="tabcontent slow">
                     <h2 class="widget-header">VA Loan Advantages</h2>
                     <div class="widget-body">
                         <ul>
@@ -814,7 +743,7 @@
                         </ul>
                     </div>
                 </div>
-                <div id="Conventional" class="tabcontent">
+                <div id="Conventional" class="tabcontent slow">
                     <h2 class="widget-header">Conventional Loan Advantages</h2>
                     <div class="widget-body">
                         <div style="width:100%; text-align: center">
@@ -845,7 +774,7 @@
                         </ul>
                     </div>
                 </div>
-                <div id="USDA" class="tabcontent" style="display:none">
+                <div id="USDA" class="tabcontent slow">
                     <h2 class="widget-header">USDA</h2>
                     <div class="widget-body">
                         <p>Purchase a rural home with no money down.</p>
@@ -867,7 +796,7 @@
                         </ul>
                     </div>
                 </div>
-                <div id="Jumbo" class="tabcontent">
+                <div id="Jumbo" class="tabcontent slow">
                     <h2 class="widget-header">Jumbo Loan</h2>
                     <div class="widget-body">
                         <ul>
@@ -1139,23 +1068,23 @@
     </section>
     <!-- Services ------------------------------------------------------------>
     <section id="services">
-        <div class="banner dark-cerulean">
-            <h2 class="banner5">Mortgage Pre-Approval</h2>
-            <h2 class="banner5">Down Payment Assistance</h2>
-            <h2 class="banner5">Mortgage Calculator</h2>
-            <h2 class="banner5">Home Valuation</h2>
-            <h2 class="banner5">Comparative Market Analysis</h2>
-            <h2 class="banner5">Reverse Mortgage</h2>
-            <h2 class="banner5">Refinance</h2>
-            <h2 class="banner5">Short Sale Foreclosure</h2>
+        <div class="banner dark-cerulean" id="service-ss">
+            <h2 class="slide showing">Mortgage Pre-Approval</h2>
+            <h2 class="slide">Down Payment Assistance</h2>
+            <h2 class="slide">Mortgage Calculator</h2>
+            <h2 class="slide">Home Valuation</h2>
+            <h2 class="slide">Comparative Market Analysis</h2>
+            <h2 class="slide">Reverse Mortgage</h2>
+            <h2 class="slide">Refinance</h2>
+            <h2 class="slide">Short Sale Foreclosure</h2>
         </div>
         <div class="main flex-center">
             <!-- Home Valuation -->
             <div class="col-4 col-s-6">
                 <a href="https://www.jimngo.net/home-valuation" target="_blank">
-                    <div class="card-header">
-                        <p class="home-value">Home Estimate <i class="fas fa-external-link-alt"></i></p>
-                        <p class="home-value">Market Comparable <i class="fas fa-external-link-alt"></i></p>
+                    <div class="card-header banner" id="home-valuation-ss">
+                        <p class="slide showing">Home Estimate <i class="fas fa-external-link-alt"></i></p>
+                        <p class="slide">Market Comparable <i class="fas fa-external-link-alt"></i></p>
                     </div>
                     <div class="card-body">
                         <ul>
@@ -1169,7 +1098,9 @@
             <!-- Mortgage Calculator -->
             <div class="col-4 col-s-6">
                 <a href="https://www.jimngo.net/mortgage-prequalification-calculator" target="_blank">
-                    <div class="card-header">Mortgage Calculator <i class="fas fa-external-link-alt"></i></div>
+                    <div class="card-header banner">
+                        <p class='slide showing'>Mortgage Calculator <i class="fas fa-external-link-alt"></i></p>
+                    </div>
                 </a>
                 <div class="card-body">
                     <p style="display:none">Mortgage Prequalification Calculator with Down Payment, PMI, and Taxes. Use
@@ -1191,9 +1122,9 @@
             <!-- Down Payment Resource -->
             <div class="col-4 col-s-6">
                 <a href="https://www.jimngo.net/down-payment-assistance" target="_blank">
-                    <div class="card-header">
-                        <p class="dpa">First Time Homebuyer <i class="fas fa-external-link-alt"></i></p>
-                        <p class="dpa">Down Payment Assistance <i class="fas fa-external-link-alt"></i></p>
+                    <div class="card-header banner" id='dpa-ss'>
+                        <p class="slide showing">First Time Homebuyer <i class="fas fa-external-link-alt"></i></p>
+                        <p class="slide">Down Payment Assistance <i class="fas fa-external-link-alt"></i></p>
                     </div>
                     <div class="card-body">
                         <ul>
@@ -1207,9 +1138,9 @@
             <!-- Refinance -->
             <div class="col-4 col-s-6">
                 <a href="https://www.jimngo.net/mortgage-refinance" target="_blank">
-                    <div class="card-header">
-                        <p class="refis">Mortgage Refinance <i class="fas fa-external-link-alt"></i></p>
-                        <p class="refis">Home Equity Loan <i class="fas fa-external-link-alt"></i></p>
+                    <div class="card-header banner" id="refinance-ss">
+                        <p class="slide showing">Mortgage Refinance <i class="fas fa-external-link-alt"></i></p>
+                        <p class="slide">Home Equity Loan <i class="fas fa-external-link-alt"></i></p>
                     </div>
                     <div class="card-body">
                         <ul>
@@ -1224,9 +1155,9 @@
             <!-- Short Sale Foreclosure -->
             <div class="col-4 col-s-6">
                 <a href="https://www.jimngo.net/short-sales-foreclosure" target="_blank">
-                    <div class="card-header">
-                        <p class="sfr">Short Sale <i class="fas fa-external-link-alt"></i></p>
-                        <p class="sfr">Pre-Foreclosure <i class="fas fa-external-link-alt"></i></p>
+                    <div class="card-header banner" id="sfr-ss">
+                        <p class="slide showing">Short Sale <i class="fas fa-external-link-alt"></i></p>
+                        <p class="slide">Pre-Foreclosure <i class="fas fa-external-link-alt"></i></p>
                     </div>
                     <div class="card-body">
                         <ul>
@@ -1239,7 +1170,9 @@
             <!-- Reverse Mortgage -->
             <div class="col-4 col-s-6">
                 <a href="https://www.jimngo.net/reverse-mortgage-calculator" target="_blank">
-                    <div class="card-header">Reverse Mortgage <i class="fas fa-external-link-alt"></i></div>
+                    <div class="card-header banner">
+                        <p class="slide showing">Reverse Mortgage <i class="fas fa-external-link-alt"></i></p>
+                    </div>
                     <div class="card-body">
                         <ul>
                             <li>You’ve worked hard to build the equity in your home.</li>
@@ -1253,23 +1186,23 @@
     </section>
     <!-- Marketing ----------------------------------------------------------->
     <section id="flyers">
-        <div class="banner dark-cerulean">
-            <h3 class="banner6">Purchase</h3>
-            <h3 class="banner6">Refinance</h3>
-            <h3 class="banner6">FHA</h3>
-            <h3 class="banner6">Down Payment Assistance</h3>
-            <h3 class="banner6">Conventional</h3>
-            <h3 class="banner6">VA</h3>
-            <h3 class="banner6">USDA</h3>
-            <h3 class="banner6">Jumbo</h3>
-            <h3 class="banner6">Reverse Mortgage</h3>
+        <div class="banner dark-cerulean" id="flyer-ss">
+            <h3 class="slide showing">Purchase</h3>
+            <h3 class="slide">Refinance</h3>
+            <h3 class="slide">FHA</h3>
+            <h3 class="slide">Down Payment Assistance</h3>
+            <h3 class="slide">Conventional</h3>
+            <h3 class="slide">VA</h3>
+            <h3 class="slide">USDA</h3>
+            <h3 class="slide">Jumbo</h3>
+            <h3 class="slide">Reverse Mortgage</h3>
         </div>
         <div class="main flex-center">
             <!-- QM Products ------------------------------------------------->
             <div class="col-4 col-s-6">
                 <h3 class="heading">Qualified Mortgages</h3>
                 <button class="collapsible">Conventional</button>
-                <div class="content">
+                <div class="content slow">
                     <p>If you’ve heard of Fannie Mae or Freddie Mac, you know the family of conventional loans. These
                         loans are written by a wide range of banks, from your hometown locally owned to the fanciest
                         mortgage broker. “Conforming” loans meet Fannie and Freddie’s high requirements, including
@@ -1285,7 +1218,7 @@
                         report are helpful.</p>
                 </div>
                 <button class="collapsible">FHA</button>
-                <div class="content">
+                <div class="content slow">
                     <p>The FHA started insuring loans after the Great Depression as a way of helping people get back
                         into owned property. It basically created the 30 year fixed interest mortgage and continues to
                         carefully oversee which homes can and cannot be purchased in its name.</p>
@@ -1302,7 +1235,7 @@
                         time consuming to write, so you may have to shop a bit to find a good bank.</p>
                 </div>
                 <button class="collapsible">VA</button>
-                <div class="content">
+                <div class="content slow">
                     <p>As part of the benefits that active military members and veterans receive from the government, VA
                         loans are built on a merit-based system. Career military and those honorably discharged early
                         are generally eligible, but short-term members or Reserves may have to meet additional
@@ -1316,7 +1249,7 @@
                         though, so that could be a con if you really wanted this most excellent loan type.</p>
                 </div>
                 <button class="collapsible">USDA</button>
-                <div class="content">
+                <div class="content slow">
                     <p>In rural areas, the US Department of Agriculture will offer mortgage lending as a way of helping
                         to keep the local economy flowing. Homes don’t have to be on an acreage, but they do need to be
                         located in communities with under 35,000 inhabitants.</p>
@@ -1334,7 +1267,7 @@
             <div class="col-4 col-s-6">
                 <h3 class="heading">Non-Qualified Mortgages</h3>
                 <button class="collapsible">Bank Statement Premier</button>
-                <div class="content">
+                <div class="content fast">
                     <p>For Highly Qualified Self-Employed Borrowers</p>
                     <P>Qualify with 12-months of bank statements and get a floor rate as low as 4.99%</P>
                     <ul>
@@ -1345,7 +1278,7 @@
                     </ul>
                 </div>
                 <button class="collapsible">Bank Statement</button>
-                <div class="content">
+                <div class="content fast">
                     <p>For Self-Employed Borrowers</p>
                     <p>Qualify with 12-months bank statements</p>
                     <ul>
@@ -1356,7 +1289,7 @@
                     </ul>
                 </div>
                 <button class="collapsible">Investor</button>
-                <div class="content">
+                <div class="content fast">
                     <p>For Professional Real Estate Investors</p>
                     <p>Qualify with subject property cash flow</p>
                     <ul>
@@ -1367,7 +1300,7 @@
                     </ul>
                 </div>
                 <button class="collapsible">Asset Qualification</button>
-                <div class="content">
+                <div class="content fast">
                     <p>For Borrowers with High Cash Liquidity</p>
                     <p>Qualify based on verified liquid assets</p>
                     <ul>
@@ -1378,7 +1311,7 @@
                     </ul>
                 </div>
                 <button class="collapsible">Agency Plus</button>
-                <div class="content">
+                <div class="content fast">
                     <p>For Conforming & Jumbo Loans, and Owners of Multiple Properties Falling Just Outside Qualified
                         Mortgage Parameters</p>
                     <p>Qualify with full documentation</p>
@@ -1393,7 +1326,7 @@
             <!-- Misc -------------------------------------------------------->
             <div class="col-4 col-s-12">
                 <button class="collapsible">Looking To Purchase A Home?</button>
-                <div class="content">
+                <div class="content medium">
                     <p>1. Make sure your credit is in good shape</p>
                     <ul>
                         <li>Excellent Credit: 750+</li>
@@ -1413,7 +1346,7 @@
                     </ul>
                 </div>
                 <button class="collapsible">The Benefits Of A 20% Down Payment</button>
-                <div class="content">
+                <div class="content slow">
                     <p>1. Your interest rate will be lower.</p>
                     <p>Putting down a 20% down payment vs. a 3-5% down payment shows your lender/bank that you are more
                         financially stable, thus a good credit risk. The more confident your bank is in your credit
@@ -1435,7 +1368,7 @@
                         conforming, conventional loans that have down payments less than 20%.”</p>
                 </div>
                 <button class="collapsible">How Much House Can You Afford?</button>
-                <div class="content">
+                <div class="content medium">
                     <p>Before you start shopping for a new home, determine how much you can afford to spend.</p>
                     <p>Here are a few things to consider:</p>
                     <ul>
@@ -1449,7 +1382,7 @@
                         best available loan program for your needs.</p>
                 </div>
                 <button class="collapsible">6 Things Not To Do When Applying For A Mortgage</button>
-                <div class="content">
+                <div class="content medium">
                     <p>When lenders review your application, they like to see consistency in your finances.</p>
                     <ol>
                         <li>Do not make major purchases like furniture, appliances, jewelry, vehicles or vacations</li>
@@ -1464,7 +1397,7 @@
                     </ol>
                 </div>
                 <button class="collapsible">Acceptable Sources of Cash to Close Funds</button>
-                <div class="content">
+                <div class="content slow">
                     <p>Providing proper asset documentation and the actual source of the funds is a critical element of
                         the loan closing process.</p>
                     <p>There’s nothing worse in a real estate purchase than making it all the way through the hoops and
@@ -1506,20 +1439,9 @@
             </div>
         </div>
     </section>
+    <script src="javascript/business-hours.min.js" async></script>
+    <script src="javascript/calc.min.js" async></script>
 </body>
-<script src="javascript/jquery-3.4.1.min.js"></script>
-<script src="javascript/w3.min.js"></script>
-<script src="javascript/business-hours.min.js"></script>
-<script src="javascript/calc-Ob.js"></script>
-<script>
-    w3.slideshow(".banner4", 1500);
-    w3.slideshow(".banner5", 1500);
-    w3.slideshow(".dpa", 2000);
-    w3.slideshow(".home-value", 2000);
-    w3.slideshow(".refis", 2000);
-    w3.slideshow(".sfr", 2000);
-    w3.slideshow(".banner6", 2000);
-</script>
 <footer>
     <div class="main flex-perfect-center center">
         <div class="col-3 col-s-3">

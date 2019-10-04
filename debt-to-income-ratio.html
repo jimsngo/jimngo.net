@@ -161,13 +161,13 @@
             </div>
         </div>
     </section>
-    <div class="banner dark-cerulean">
-        <p class="banner4">W2 Employee</p>
-        <p class="banner4">1099 Employee</p>
-        <p class="banner4">Independent Contractor</p>
-        <p class="banner4">Sole Proprietor</p>
-        <p class="banner4">Part Time Employee</p>
-        <p class="banner4">Seasonal Employee</p>
+    <div class="banner dark-cerulean" id="dti-ss">
+        <p class="slide showing">W2 Employee</p>
+        <p class="slide">1099 Employee</p>
+        <p class="slide">Independent Contractor</p>
+        <p class="slide">Sole Proprietor</p>
+        <p class="slide">Part Time Employee</p>
+        <p class="slide">Seasonal Employee</p>
     </div>
     <section class="main flex-center">
         <div class="col-6 col-s-6">
@@ -241,7 +241,7 @@
             <p></p>
             <div id="headlines">
                 <button class="collapsible">FHA Loan Debt-To-Income Guidelines</button>
-                <div class="content">
+                <div class="content slow">
                     <table>
                         <caption>Source: HUD Handbook 4000.1</caption>
                         <tr>
@@ -293,7 +293,7 @@
                     </table>
                 </div>
                 <button class="collapsible">What’s Included in a Debt to Income Ratio?</button>
-                <div class="content">
+                <div class="content slow">
                     <p>Things that are included in your debt to income ratio are secured loans like a car loan or a boat
                         loan, which are sort of guaranteed by the property that you’ve borrowed the money to purchase;
                         unsecured loans like credit cards and lines of credit; student loans and any debt you’ve
@@ -311,7 +311,7 @@
                         website, just so you can see what is actually reporting.</p>
                 </div>
                 <button class="collapsible">Adding It All Up</button>
-                <div class="content">
+                <div class="content slow">
                     <p>Figuring your debt to income ratio is pretty easy, the hardest part is figuring out what counts
                         and what doesn’t. Just add up your monthly expenses and divide by your monthly gross income,
                         before any taxes, insurance, 401k withdrawal and the like come out. There you go. That’s your
@@ -321,7 +321,7 @@
                         income ratio ceilings. Some are more complicated than others.</p>
                 </div>
                 <button class="collapsible">FHA</button>
-                <div class="content">
+                <div class="content slow">
                     <p>For FHA, there are two kinds of debt to income ratios to keep in mind. One is called the
                         front-end ratio, the other is, unoriginally, named the back-end ratio. The front-end ratio is
                         only your potential future housing debt; the back-end ratio includes all your debts. With that
@@ -335,7 +335,7 @@
                         show that you’re a stand-up kind of person.</p>
                 </div>
                 <button class="collapsible">VA</button>
-                <div class="content">
+                <div class="content slow">
                     <p>If you’re a military vet and you’ve not used your VA mortgage benefits, you may be wondering
                         about cashing in that particular chip. When it comes to the debt to income question, it’s a
                         harder one to answer. Generally speaking, the VA wants to see a debt to income ratio below 41
@@ -348,7 +348,7 @@
                         everything else is in line.</p>
                 </div>
                 <button class="collapsible">Conventional</button>
-                <div class="content">
+                <div class="content slow">
                     <p>Conventional loans are a bit easier. Fannie Mae is the principal agency that guarantees what’s
                         known as a “conventional” or “conforming” loan. Fannie has siblings like Freddie Mac and Ginnie
                         Mae, but they’re at the movies right now and we’re not going to involve them in the
@@ -369,23 +369,23 @@
     </section>
     <!-- Services ------------------------------------------------------------>
     <section id="services">
-        <div class="banner dark-cerulean">
-            <h2 class="banner5">Mortgage Pre-Approval</h2>
-            <h2 class="banner5">Down Payment Assistance</h2>
-            <h2 class="banner5">Mortgage Calculator</h2>
-            <h2 class="banner5">Home Valuation</h2>
-            <h2 class="banner5">Comparative Market Analysis</h2>
-            <h2 class="banner5">Reverse Mortgage</h2>
-            <h2 class="banner5">Refinance</h2>
-            <h2 class="banner5">Short Sale Foreclosure</h2>
+        <div class="banner dark-cerulean" id="service-ss">
+            <h2 class="slide showing">Mortgage Pre-Approval</h2>
+            <h2 class="slide">Down Payment Assistance</h2>
+            <h2 class="slide">Mortgage Calculator</h2>
+            <h2 class="slide">Home Valuation</h2>
+            <h2 class="slide">Comparative Market Analysis</h2>
+            <h2 class="slide">Reverse Mortgage</h2>
+            <h2 class="slide">Refinance</h2>
+            <h2 class="slide">Short Sale Foreclosure</h2>
         </div>
         <div class="main flex-center">
             <!-- Home Valuation -->
             <div class="col-4 col-s-6">
                 <a href="https://www.jimngo.net/home-valuation" target="_blank">
-                    <div class="card-header">
-                        <p class="home-value">Home Estimate <i class="fas fa-external-link-alt"></i></p>
-                        <p class="home-value">Market Comparable <i class="fas fa-external-link-alt"></i></p>
+                    <div class="card-header banner" id="home-valuation-ss">
+                        <p class="slide showing">Home Estimate <i class="fas fa-external-link-alt"></i></p>
+                        <p class="slide">Market Comparable <i class="fas fa-external-link-alt"></i></p>
                     </div>
                     <div class="card-body">
                         <ul>
@@ -399,7 +399,9 @@
             <!-- Mortgage Calculator -->
             <div class="col-4 col-s-6">
                 <a href="https://www.jimngo.net/mortgage-prequalification-calculator" target="_blank">
-                    <div class="card-header">Mortgage Calculator <i class="fas fa-external-link-alt"></i></div>
+                    <div class="card-header banner">
+                        <p class='slide showing'>Mortgage Calculator <i class="fas fa-external-link-alt"></i></p>
+                    </div>
                 </a>
                 <div class="card-body">
                     <p style="display:none">Mortgage Prequalification Calculator with Down Payment, PMI, and Taxes. Use
@@ -421,9 +423,9 @@
             <!-- Down Payment Resource -->
             <div class="col-4 col-s-6">
                 <a href="https://www.jimngo.net/down-payment-assistance" target="_blank">
-                    <div class="card-header">
-                        <p class="dpa">First Time Homebuyer <i class="fas fa-external-link-alt"></i></p>
-                        <p class="dpa">Down Payment Assistance <i class="fas fa-external-link-alt"></i></p>
+                    <div class="card-header banner" id='dpa-ss'>
+                        <p class="slide showing">First Time Homebuyer <i class="fas fa-external-link-alt"></i></p>
+                        <p class="slide">Down Payment Assistance <i class="fas fa-external-link-alt"></i></p>
                     </div>
                     <div class="card-body">
                         <ul>
@@ -437,9 +439,9 @@
             <!-- Refinance -->
             <div class="col-4 col-s-6">
                 <a href="https://www.jimngo.net/mortgage-refinance" target="_blank">
-                    <div class="card-header">
-                        <p class="refis">Mortgage Refinance <i class="fas fa-external-link-alt"></i></p>
-                        <p class="refis">Home Equity Loan <i class="fas fa-external-link-alt"></i></p>
+                    <div class="card-header banner" id="refinance-ss">
+                        <p class="slide showing">Mortgage Refinance <i class="fas fa-external-link-alt"></i></p>
+                        <p class="slide">Home Equity Loan <i class="fas fa-external-link-alt"></i></p>
                     </div>
                     <div class="card-body">
                         <ul>
@@ -454,9 +456,9 @@
             <!-- Short Sale Foreclosure -->
             <div class="col-4 col-s-6">
                 <a href="https://www.jimngo.net/short-sales-foreclosure" target="_blank">
-                    <div class="card-header">
-                        <p class="sfr">Short Sale <i class="fas fa-external-link-alt"></i></p>
-                        <p class="sfr">Pre-Foreclosure <i class="fas fa-external-link-alt"></i></p>
+                    <div class="card-header banner" id="sfr-ss">
+                        <p class="slide showing">Short Sale <i class="fas fa-external-link-alt"></i></p>
+                        <p class="slide">Pre-Foreclosure <i class="fas fa-external-link-alt"></i></p>
                     </div>
                     <div class="card-body">
                         <ul>
@@ -469,7 +471,9 @@
             <!-- Reverse Mortgage -->
             <div class="col-4 col-s-6">
                 <a href="https://www.jimngo.net/reverse-mortgage-calculator" target="_blank">
-                    <div class="card-header">Reverse Mortgage <i class="fas fa-external-link-alt"></i></div>
+                    <div class="card-header banner">
+                        <p class="slide showing">Reverse Mortgage <i class="fas fa-external-link-alt"></i></p>
+                    </div>
                     <div class="card-body">
                         <ul>
                             <li>You’ve worked hard to build the equity in your home.</li>
@@ -483,23 +487,23 @@
     </section>
     <!-- Marketing ----------------------------------------------------------->
     <section id="flyers">
-        <div class="banner dark-cerulean">
-            <h3 class="banner6">Purchase</h3>
-            <h3 class="banner6">Refinance</h3>
-            <h3 class="banner6">FHA</h3>
-            <h3 class="banner6">Down Payment Assistance</h3>
-            <h3 class="banner6">Conventional</h3>
-            <h3 class="banner6">VA</h3>
-            <h3 class="banner6">USDA</h3>
-            <h3 class="banner6">Jumbo</h3>
-            <h3 class="banner6">Reverse Mortgage</h3>
+        <div class="banner dark-cerulean" id="flyer-ss">
+            <h3 class="slide showing">Purchase</h3>
+            <h3 class="slide">Refinance</h3>
+            <h3 class="slide">FHA</h3>
+            <h3 class="slide">Down Payment Assistance</h3>
+            <h3 class="slide">Conventional</h3>
+            <h3 class="slide">VA</h3>
+            <h3 class="slide">USDA</h3>
+            <h3 class="slide">Jumbo</h3>
+            <h3 class="slide">Reverse Mortgage</h3>
         </div>
         <div class="main flex-center">
             <!-- QM Products ------------------------------------------------->
             <div class="col-4 col-s-6">
                 <h3 class="heading">Qualified Mortgages</h3>
                 <button class="collapsible">Conventional</button>
-                <div class="content">
+                <div class="content slow">
                     <p>If you’ve heard of Fannie Mae or Freddie Mac, you know the family of conventional loans. These
                         loans are written by a wide range of banks, from your hometown locally owned to the fanciest
                         mortgage broker. “Conforming” loans meet Fannie and Freddie’s high requirements, including
@@ -515,7 +519,7 @@
                         report are helpful.</p>
                 </div>
                 <button class="collapsible">FHA</button>
-                <div class="content">
+                <div class="content slow">
                     <p>The FHA started insuring loans after the Great Depression as a way of helping people get back
                         into owned property. It basically created the 30 year fixed interest mortgage and continues to
                         carefully oversee which homes can and cannot be purchased in its name.</p>
@@ -532,7 +536,7 @@
                         time consuming to write, so you may have to shop a bit to find a good bank.</p>
                 </div>
                 <button class="collapsible">VA</button>
-                <div class="content">
+                <div class="content slow">
                     <p>As part of the benefits that active military members and veterans receive from the government, VA
                         loans are built on a merit-based system. Career military and those honorably discharged early
                         are generally eligible, but short-term members or Reserves may have to meet additional
@@ -546,7 +550,7 @@
                         though, so that could be a con if you really wanted this most excellent loan type.</p>
                 </div>
                 <button class="collapsible">USDA</button>
-                <div class="content">
+                <div class="content slow">
                     <p>In rural areas, the US Department of Agriculture will offer mortgage lending as a way of helping
                         to keep the local economy flowing. Homes don’t have to be on an acreage, but they do need to be
                         located in communities with under 35,000 inhabitants.</p>
@@ -564,7 +568,7 @@
             <div class="col-4 col-s-6">
                 <h3 class="heading">Non-Qualified Mortgages</h3>
                 <button class="collapsible">Bank Statement Premier</button>
-                <div class="content">
+                <div class="content fast">
                     <p>For Highly Qualified Self-Employed Borrowers</p>
                     <P>Qualify with 12-months of bank statements and get a floor rate as low as 4.99%</P>
                     <ul>
@@ -575,7 +579,7 @@
                     </ul>
                 </div>
                 <button class="collapsible">Bank Statement</button>
-                <div class="content">
+                <div class="content fast">
                     <p>For Self-Employed Borrowers</p>
                     <p>Qualify with 12-months bank statements</p>
                     <ul>
@@ -586,7 +590,7 @@
                     </ul>
                 </div>
                 <button class="collapsible">Investor</button>
-                <div class="content">
+                <div class="content fast">
                     <p>For Professional Real Estate Investors</p>
                     <p>Qualify with subject property cash flow</p>
                     <ul>
@@ -597,7 +601,7 @@
                     </ul>
                 </div>
                 <button class="collapsible">Asset Qualification</button>
-                <div class="content">
+                <div class="content fast">
                     <p>For Borrowers with High Cash Liquidity</p>
                     <p>Qualify based on verified liquid assets</p>
                     <ul>
@@ -608,7 +612,7 @@
                     </ul>
                 </div>
                 <button class="collapsible">Agency Plus</button>
-                <div class="content">
+                <div class="content fast">
                     <p>For Conforming & Jumbo Loans, and Owners of Multiple Properties Falling Just Outside Qualified
                         Mortgage Parameters</p>
                     <p>Qualify with full documentation</p>
@@ -623,7 +627,7 @@
             <!-- Misc -------------------------------------------------------->
             <div class="col-4 col-s-12">
                 <button class="collapsible">Looking To Purchase A Home?</button>
-                <div class="content">
+                <div class="content medium">
                     <p>1. Make sure your credit is in good shape</p>
                     <ul>
                         <li>Excellent Credit: 750+</li>
@@ -643,7 +647,7 @@
                     </ul>
                 </div>
                 <button class="collapsible">The Benefits Of A 20% Down Payment</button>
-                <div class="content">
+                <div class="content slow">
                     <p>1. Your interest rate will be lower.</p>
                     <p>Putting down a 20% down payment vs. a 3-5% down payment shows your lender/bank that you are more
                         financially stable, thus a good credit risk. The more confident your bank is in your credit
@@ -665,7 +669,7 @@
                         conforming, conventional loans that have down payments less than 20%.”</p>
                 </div>
                 <button class="collapsible">How Much House Can You Afford?</button>
-                <div class="content">
+                <div class="content medium">
                     <p>Before you start shopping for a new home, determine how much you can afford to spend.</p>
                     <p>Here are a few things to consider:</p>
                     <ul>
@@ -679,7 +683,7 @@
                         best available loan program for your needs.</p>
                 </div>
                 <button class="collapsible">6 Things Not To Do When Applying For A Mortgage</button>
-                <div class="content">
+                <div class="content medium">
                     <p>When lenders review your application, they like to see consistency in your finances.</p>
                     <ol>
                         <li>Do not make major purchases like furniture, appliances, jewelry, vehicles or vacations</li>
@@ -694,7 +698,7 @@
                     </ol>
                 </div>
                 <button class="collapsible">Acceptable Sources of Cash to Close Funds</button>
-                <div class="content">
+                <div class="content slow">
                     <p>Providing proper asset documentation and the actual source of the funds is a critical element of
                         the loan closing process.</p>
                     <p>There’s nothing worse in a real estate purchase than making it all the way through the hoops and
@@ -736,20 +740,9 @@
             </div>
         </div>
     </section>
+    <script src="javascript/business-hours.min.js" async></script>
+    <script src="javascript/debt-to-income.min.js" async></script>
 </body>
-<script src="javascript/jquery-3.4.1.min.js"></script>
-<script src="javascript/business-hours.min.js"></script>
-<script src="javascript/debt-to-income.min.js"></script>
-<script src="javascript/w3.min.js"></script>
-<script>
-    w3.slideshow(".banner4", 1500);
-    w3.slideshow(".banner5", 1500);
-    w3.slideshow(".dpa", 2000);
-    w3.slideshow(".home-value", 2000);
-    w3.slideshow(".refis", 2000);
-    w3.slideshow(".sfr", 2000);
-    w3.slideshow(".banner6", 1500);
-</script>
 <footer>
     <div class="main flex-perfect-center center">
         <div class="col-3 col-s-3">

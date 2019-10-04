@@ -6,9 +6,9 @@ onload = slideshow;
 
 function slideshow() {
     setInterval(function () {
-        nextSlide('dti-ss');
-        nextSlide('service-ss');
+        nextSlide('cc-ss');
         nextSlide('home-valuation-ss');
+        nextSlide('service-ss');
         nextSlide('dpa-ss');
         nextSlide('refinance-ss');
         nextSlide('sfr-ss');
@@ -22,34 +22,6 @@ function nextSlide(id) {
     elems[elems.index].className = 'slide';
     elems.index = (elems.index + 1) % elems.length;
     elems[elems.index].className = 'slide showing';
-}
-
-////////////////////////////////////////////////////////////////////////////////
-// Headline Collapsibles ------------------------------------------------------/
-////////////////////////////////////////////////////////////////////////////////
-
-const collapsibles = document.getElementById("headlines").getElementsByClassName("collapsible");
-const headline_contents = document.getElementById("headlines").getElementsByClassName("content");
-for (let i = 0; i < collapsibles.length; i++) {
-    collapsibles[i].addEventListener("click", function () {
-        // Hide all elements with class 'content'
-        for (let j = 0; j < headline_contents.length; j++) {
-            headline_contents[j].style.height = '0px';
-        }
-        if (this.classList.contains("active")) {
-            this.classList.remove("active");
-        } else {
-            // Remove current active class
-            for (let k = 0; k < collapsibles.length; k++) {
-                collapsibles[k].classList.remove("active");
-            }
-            // Add active class to clicked element
-            this.classList.toggle("active");
-            // Display content for only active element            
-            var content = this.nextElementSibling;
-            content.style.height = content.scrollHeight + "px";
-        }
-    });
 }
 
 ////////////////////////////////////////////////////////////////////////////////
