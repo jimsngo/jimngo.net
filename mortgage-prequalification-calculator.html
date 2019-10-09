@@ -6,7 +6,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords"
-        content="mortgage calculator, mortgage pre-qualification, mortgage pre-approval, debt to income ratio, down payment assistance, first time home buyer, home loan, FHA VA Conventional USDA Jumbo loans">
+        content="mortgage calculator, mortgage pre-qualification, mortgage pre-approval, home loan calculator, debt to income ratio, down payment assistance, first time home buyer, home loan, FHA VA Conventional USDA Jumbo loans">
     <meta name="description"
         content="In addition to your credit score and your loan-to-value (LTV) ratio, your Debt To Income (DTI) Ratio is an important part of your overall financial health. Use my mortgage prequalification calculator to compute your monthly payment and your DTI. Find out how much home you can afford - VA, FHA, Convention, and USDA.">
     <meta name="subject" content="Mortgage Calculator, Home Loan Prequalification">
@@ -24,7 +24,6 @@
     <link rel="icon" href="image/favicon-16x16.png" type="image/gif" sizes="16x16">
     <!-- Style Sheets ---------------------------------------------------------->
     <link rel="stylesheet" href="style/style.min.css">
-    <link rel="stylesheet" href="style/fontawesome-free-5.11.1-web/css/all.min.css">
     <link rel="stylesheet" href="style/home-search.min.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-88549125-1"></script>
@@ -79,17 +78,6 @@
     </script>
     <noscript><img height="1" width="1" style="display:none" alt="FB"
             src="https://www.facebook.com/tr?id=1149243855093416&ev=PageView&noscript=1" /></noscript>
-    <!-- Default Statcounter code for Jimngo.net https://www.jimngo.net -->
-    <script type="text/javascript">
-        var sc_project = 11893871;
-        var sc_invisible = 1;
-        var sc_security = "b16c17b8";
-    </script>
-    <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
-    <noscript>
-        <div class="statcounter"><a title="Web Analytics" href="http://statcounter.com/" target="_blank"><img
-                    class="statcounter" src="//c.statcounter.com/11893871/0/b16c17b8/1/" alt="Web Analytics"></a></div>
-    </noscript>
 </head>
 
 <body>
@@ -117,7 +105,8 @@
                 <div style="text-align:center; line-height: 1.4;">
                     <a href="https://www.realtor.com/realestateagents/jim-son-ngo_ontario_ca_3146995_094379828"
                         target="_blank" title="About Me">
-                        <img src="image/profile-180.png" alt="profile" style="border-radius: 50%">
+                        <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                            data-src="image/profile-180.png" alt="profile" style="border-radius: 50%">
                         <h2>Jim Ngo - Ontario, CA</h2>
                     </a>
                     <p>United Mortgage Fund<br />
@@ -211,25 +200,33 @@
                 </ul>
             </div>
             <div class="col-4 col-s-6">
-                <img style="max-width: 100%; border-radius: 5px;" src="image/gift_fund.jpg" alt="Gift Funds">
+                <img style="max-width: 100%; border-radius: 5px;"
+                    src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="image/gift_fund.jpg"
+                    alt="Gift Funds">
             </div>
         </div>
     </section>
+    <div class="banner dark-cerulean font-large" id='calc-ss'>
+        <h2 class="slide showing">Mortgage Calculator</h2>
+        <h2 class="slide">Pre Approval</h2>
+        <h2 class="slide">FHA Loan</h2>
+        <h2 class="slide">VA Loan</h2>
+        <h2 class="slide">Conventional Loan</h2>
+        <h2 class="slide">Jumbo Loan</h2>
+        <h2 class="slide">Home Loan Calculator</h2>
+        <h2 class="slide">Pre Qualification</h2>
+        <h2 class="slide">Down Payment Assistance</h2>
+        <h2 class="slide">First Time Homebuyer</h2>
+    </div>
     <!-- Mortgage Pre-Qualification Calculator ------------------------------->
     <section class='calculator' id="mortgage-prequalification-widget">
-        <div class="banner dark-cerulean" id='calc-ss'>
-            <h2 class="slide showing">Mortgage Pre Approval</h2>
-            <h2 class="slide">FHA, VA, Conventional</h2>
-            <h2 class="slide">Down Payment Assistance</h2>
-            <h2 class="slide">First Time Homebuyer</h2>
-        </div>
         <div class="main flex-center">
             <!-- Column 1 -->
             <div class="col-6 col-s-6" id="users-inputs">
-                <h3 class="widget-header">Mortgage Calculator - FHA, VA, Conventional, USDA</h3>
+                <h3 class="card-header">Mortgage Calculator - FHA, VA, Conventional, USDA</h3>
                 <!-- Slide 1 - Begin Calculator -->
                 <div class="widget-slide medium" id="slide-1">
-                    <div class="widget-body">
+                    <div class="card-body">
                         <p style="font-size: 125%;">Getting Pre-Approved Should Always Be Your First Step!</p>
                         <p>Many potential home buyers overestimate the down payment and credit scores needed to
                             qualify for a mortgage today. If you are ready and willing to buy, you may be pleasantly
@@ -241,13 +238,13 @@
                             <li>Understand what debt to ratio means to lenders.</li>
                             <li>Show seller you can move faster and with confidence in competitive markets</li>
                         </ul>
-                        <div class="flex-center"><button class="btn-blue-brdr-180"
+                        <div class="flex-center"><button class="widget-submit-btn"
                                 onclick="show_slide('mortgage-info')">Get Started</button></div>
                     </div>
                 </div>
                 <!-- Slide 2 - Loan Program & Term  -->
                 <div class="widget-slide medium" id="mortgage-info">
-                    <div class="widget-body">
+                    <div class="card-body">
                         <!-- Loan Program -->
                         <div class="inputTitleContainer">
                             <div class="inputTitle">Loan Program:</div>
@@ -276,13 +273,13 @@
                 </div>
                 <!-- Slide 3 - Purchase Price -->
                 <div class="widget-slide medium" id="purchase-price">
-                    <div class="widget-body">
+                    <div class="card-body">
                         <div class="inputTitleContainer">
                             <div class="inputTitle">Purchase Price: </div>
                             <div class="input-value-2">$<span id="PP"></span></div>
                         </div>
                         <div class="sliderContainer">
-                            <input class="slider2" id="pp" max="1000000" min="100000" step="10000" type="range"
+                            <input class="slider" id="pp" max="1000000" min="100000" step="10000" type="range"
                                 value="300000" oninput="calc()" />
                         </div>
                         <p>Please enter the sales price.</p>
@@ -294,14 +291,14 @@
                 </div>
                 <!-- Slide 4 - Down Payment & Loan Amount -->
                 <div class="widget-slide medium" id="down-payment">
-                    <div class="widget-body">
+                    <div class="card-body">
                         <!-- Down Payment -->
                         <div class="inputTitleContainer">
                             <div class="inputTitle">Down Payment:</div>
                             <div class="input-value-2">$<span id="DP"></span> (<span id="DP%"></span>%)</div>
                         </div>
                         <div class="sliderContainer">
-                            <input class="slider2" id="dp" max="50" min="0.0" step="0.5" type="range" value="3.5"
+                            <input class="slider" id="dp" max="50" min="0.0" step="0.5" type="range" value="3.5"
                                 oninput="calc()" />
                         </div>
                         <ul>
@@ -349,13 +346,13 @@
                 </div>
                 <!-- Slide 5 - Mortgage Insurance -->
                 <div class="widget-slide medium" id="mortgage-insurance">
-                    <div class="widget-body">
+                    <div class="card-body">
                         <div class="inputTitleContainer">
                             <div class="inputTitle">Mortgage Insurance:</div>
                             <div class="input-value-2"><span id="MI%"></span>%</div>
                         </div>
                         <div class="sliderContainer">
-                            <input class="slider2" id="mi" max="1.0" min="0.5" step="0.05" type="range" value=".75"
+                            <input class="slider" id="mi" max="1.0" min="0.5" step="0.05" type="range" value=".75"
                                 oninput="calc()" />
                         </div>
                         <p>Mortgage Insurance is required for down payment less than 20% and it's typically between
@@ -380,13 +377,13 @@
                 </div>
                 <!-- Slide 6 - Expected Interest Rate -->
                 <div class="widget-slide medium" id="expected-interest-rate">
-                    <div class="widget-body">
+                    <div class="card-body">
                         <div class="inputTitleContainer">
                             <div class="inputTitle">Expected Interest Rate:</div>
                             <div class="input-value-2"><span id="APR"></span>%</div>
                         </div>
                         <div class="sliderContainer">
-                            <input class="slider2" id="apr" max="10" min="1" step="0.125" type="range" value="5"
+                            <input class="slider" id="apr" max="10" min="1" step="0.125" type="range" value="5"
                                 oninput="calc()" />
                         </div>
                         <ul>
@@ -405,13 +402,13 @@
                 </div>
                 <!-- Slide 7 - Property Tax -->
                 <div class="widget-slide medium" id="property-tax">
-                    <div class="widget-body">
+                    <div class="card-body">
                         <div class="inputTitleContainer">
                             <div class="inputTitle">Property Tax:</div>
                             <div class="input-value-2"><span id="PT%"></span>%</div>
                         </div>
                         <div class="sliderContainer">
-                            <input class="slider2" id="pt" max="1.5" min="0.5" step="0.05" type="range" value="1.20"
+                            <input class="slider" id="pt" max="1.5" min="0.5" step="0.05" type="range" value="1.20"
                                 oninput="calc()" />
                         </div>
                         <p>Property Tax is typically 1.20% of the purchased price annually. Please confirm rate with
@@ -426,7 +423,7 @@
                 </div>
                 <!-- Slide 8 - Monthly Payment -->
                 <div class="widget-slide medium" id="monthly-payment">
-                    <div class="widget-body">
+                    <div class="card-body">
                         <div class="inputTitleContainer">
                             <div class="inputTitle">Housing Expenses:</div>
                             <div class="input-value-2">$<span id="MP"></span></div>
@@ -446,7 +443,7 @@
                 </div>
                 <!-- Slide 9 - Income -->
                 <div class="widget-slide slow" id="income-info">
-                    <div class="widget-body">
+                    <div class="card-body">
                         <div id="income-source"></div>
                         <!-- Employment Type -->
                         <div id="q2">
@@ -519,7 +516,7 @@
                 </div>
                 <!-- Slide 10 - Income Summary -->
                 <div class="widget-slide medium" id="income-summary">
-                    <div class="widget-body" id="income_summary">
+                    <div class="card-body" id="income_summary">
                         <div id="I1">
                             <p><a onclick="show_income(1)"><span style="font-size: 125%; cursor: pointer">Income 1:
                                     </span></a>
@@ -577,7 +574,7 @@
                 </div>
                 <!-- Slide 11 - Liabilities -->
                 <div class="widget-slide medium" id="liability-info">
-                    <div class="widget-body">
+                    <div class="card-body">
                         <p style="margin: 10px;">Please enter your monthly liability payments from auto loans,
                             student loans, credit card payments, time-share payments, personal loan payments, child
                             support payments, alimony payments, any co-signed loan monthly payments, and any other
@@ -620,7 +617,7 @@
                 </div>
                 <!-- Slide 12 - DTI Calculation Summary -->
                 <div class="widget-slide medium" id="calc_results">
-                    <div class="widget-body">
+                    <div class="card-body">
                         <!-- Income and Liability Summary -->
                         <div class="inputTitleContainer">
                             <div class="inputTitle"><a onclick="show_income_summary()"><span
@@ -677,8 +674,8 @@
             <!-- Loan Programs -->
             <div class="col-6 col-s-6">
                 <div id="FHA" class="tabcontent slow">
-                    <h2 class="widget-header">FHA Loan Advantages</h2>
-                    <div class="widget-body">
+                    <h2 class="card-header">FHA Loan Advantages</h2>
+                    <div class="card-body">
                         <ul>
                             <li>The Federal Housing Administration (FHA) - which is part of HUD - insures the loan,
                                 so your lender can offer you a better deal.</li>
@@ -707,8 +704,8 @@
                     </div>
                 </div>
                 <div id="VA" class="tabcontent slow">
-                    <h2 class="widget-header">VA Loan Advantages</h2>
-                    <div class="widget-body">
+                    <h2 class="card-header">VA Loan Advantages</h2>
+                    <div class="card-body">
                         <ul>
                             <li>No down payment as long as the sales price doesn't exceed the appraised value.</li>
                             <li>No private mortgage insurance premium requirement.</li>
@@ -744,10 +741,11 @@
                     </div>
                 </div>
                 <div id="Conventional" class="tabcontent slow">
-                    <h2 class="widget-header">Conventional Loan Advantages</h2>
-                    <div class="widget-body">
+                    <h2 class="card-header">Conventional Loan Advantages</h2>
+                    <div class="card-body">
                         <div style="width:100%; text-align: center">
-                            <img src="image/HomeReady_Logo_Horizontal_rgb_200px.jpg" alt="HomeReady Mortgage">
+                            <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                                data-src="image/HomeReady_Logo_Horizontal_rgb_200px.jpg" alt="HomeReady Mortgage">
                         </div>
                         <h3>Discover the affordability of homeownership with HomeReady mortgage.</h3>
                         <ul>
@@ -775,8 +773,8 @@
                     </div>
                 </div>
                 <div id="USDA" class="tabcontent slow">
-                    <h2 class="widget-header">USDA</h2>
-                    <div class="widget-body">
+                    <h2 class="card-header">USDA</h2>
+                    <div class="card-body">
                         <p>Purchase a rural home with no money down.</p>
                         <ul>
                             <li>100% financing - No down payment.</li>
@@ -797,8 +795,8 @@
                     </div>
                 </div>
                 <div id="Jumbo" class="tabcontent slow">
-                    <h2 class="widget-header">Jumbo Loan</h2>
-                    <div class="widget-body">
+                    <h2 class="card-header">Jumbo Loan</h2>
+                    <div class="card-body">
                         <ul>
                             <li>For loan amounts exceeding conforming loan limit</li>
                             <li>20% down payment is typically required, however, there are programs that will
@@ -853,13 +851,27 @@
             </div>
             <!-- Mortgage News Daily -->
             <div class="col-4 col-s-5">
-                <a href="http://www.mortgagenewsdaily.com/mortgage_rates#{uname=jim9}" target="_blank">
-                    <div class="card-header">Home Mortgage Rates <i class="fas fa-external-link-alt"></i></div>
-                    <div class="card-body center">
-                        <img style="max-width: 100%; border-radius: 5px;" src="image/mortgagenewsdaily.jpg"
-                            alt="Home Mortgage Rates">
-                    </div>
-                </a>
+                <!-- MORTGAGE RATES BEGIN -->
+                <script type="text/javascript">
+                    if (typeof jQuery == "undefined") {
+                        document.write(unescape("%3Cscript src='" + (document.location.protocol == 'https:' ? 'https:' :
+                                'http:') +
+                            "//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js' type='text/javascript'%3E%3C/script%3E"
+                        ));
+                        mlcalc_jquery_noconflict = 1;
+                    };
+                </script>
+                <div style="line-height:10px;font-weight:normal;font-size:9px;font-family:Tahoma;padding:0;margin:0;border:0;text-align:right;background:transparent;color:#EEEEEE;width:300px;padding-right:10px;"
+                    class="mlcalcRatesWidgetHolder" id="mlcalcRatesWidgetHolderCA">
+                    <script type="text/javascript">
+                        document.write(unescape("%3Cscript src='//www.mlcalc.com" +
+                            "/mortgage-rates/california/widget-wide.js' type='text/javascript'%3E%3C/script%3E"
+                        ));
+                    </script>Powered by <a href="https://www.mlcalc.com/mortgage-rates/california/" target="_blank"
+                        style="font-weight:normal;font-size:9px;font-family:Tahoma;color:#EEEEEE;text-decoration:none;">CA
+                        www.mlcalc.com</a>
+                </div>
+                <!-- MORTGAGE RATES END -->
             </div>
         </div>
     </section>
@@ -1019,7 +1031,8 @@
                             </div>
                         </fieldset>
                         <p style="font-size: 12px;">Powered by&nbsp;&nbsp;<a style="color: #fff"
-                                href="https://www.showingnew.com/jimngo">www.showingnew.com/jimngo</a></p>
+                                href="https://www.showingnew.com/jimngo" target="_blank">www.showingnew.com/jimngo</a>
+                        </p>
                     </div>
                 </form>
             </div>
@@ -1027,8 +1040,10 @@
         <!-- CRMLS Home Search App ------------------------------------------->
         <div class="homespotter center border col-4">
             <a href="https://app.homespotter.com/?asr=1&sui=38166790" target="_blank">
-                <p><img src="image/HomeSpotter.png" alt="HomeSpotter Logo"></p>
-                <p><img src="image/mobile_devices.png" alt="HomeSpotter"></p>
+                <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="image/HomeSpotter.png"
+                    alt="HomeSpotter Logo">
+                <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                    data-src="image/mobile_devices.png" alt="HomeSpotter">
                 <ul style=" text-align: left">
                     <li>Mobile-First Home Search</li>
                     <li>Beautiful, Fast and Easy</li>
@@ -1049,21 +1064,21 @@
     </section>
     <!-- Services ------------------------------------------------------------>
     <section id="services">
-        <div class="banner dark-cerulean" id="service-ss">
+        <div class="banner dark-cerulean font-large" id="service-ss">
             <h2 class="slide showing">Mortgage Pre-Approval</h2>
             <h2 class="slide">Down Payment Assistance</h2>
             <h2 class="slide">Mortgage Calculator</h2>
             <h2 class="slide">Home Valuation</h2>
             <h2 class="slide">Comparative Market Analysis</h2>
             <h2 class="slide">Reverse Mortgage</h2>
-            <h2 class="slide">Refinance</h2>
+            <h2 class="slide">Mortgage Refinance</h2>
             <h2 class="slide">Short Sale Foreclosure</h2>
         </div>
         <div class="main flex-center">
             <!-- Home Valuation -->
             <div class="col-4 col-s-6">
                 <a href="https://www.jimngo.net/home-valuation" target="_blank">
-                    <div class="card-header banner" id="home-valuation-ss">
+                    <div class="banner dark-cerulean radius-top font-medium" id="home-valuation-ss">
                         <p class="slide showing">Home Estimate <i class="fas fa-external-link-alt"></i></p>
                         <p class="slide">Market Comparable <i class="fas fa-external-link-alt"></i></p>
                     </div>
@@ -1079,7 +1094,7 @@
             <!-- Mortgage Calculator -->
             <div class="col-4 col-s-6">
                 <a href="https://www.jimngo.net/mortgage-prequalification-calculator" target="_blank">
-                    <div class="card-header banner">
+                    <div class="banner dark-cerulean radius-top font-medium">
                         <p class='slide showing'>Mortgage Calculator <i class="fas fa-external-link-alt"></i></p>
                     </div>
                 </a>
@@ -1103,7 +1118,7 @@
             <!-- Down Payment Resource -->
             <div class="col-4 col-s-6">
                 <a href="https://www.jimngo.net/down-payment-assistance" target="_blank">
-                    <div class="card-header banner" id='dpa-ss'>
+                    <div class="banner dark-cerulean radius-top font-medium" id='dpa-ss'>
                         <p class="slide showing">First Time Homebuyer <i class="fas fa-external-link-alt"></i></p>
                         <p class="slide">Down Payment Assistance <i class="fas fa-external-link-alt"></i></p>
                     </div>
@@ -1119,7 +1134,7 @@
             <!-- Refinance -->
             <div class="col-4 col-s-6">
                 <a href="https://www.jimngo.net/mortgage-refinance" target="_blank">
-                    <div class="card-header banner" id="refinance-ss">
+                    <div class="banner dark-cerulean radius-top font-medium" id="refinance-ss">
                         <p class="slide showing">Mortgage Refinance <i class="fas fa-external-link-alt"></i></p>
                         <p class="slide">Home Equity Loan <i class="fas fa-external-link-alt"></i></p>
                     </div>
@@ -1136,7 +1151,7 @@
             <!-- Short Sale Foreclosure -->
             <div class="col-4 col-s-6">
                 <a href="https://www.jimngo.net/short-sales-foreclosure" target="_blank">
-                    <div class="card-header banner" id="sfr-ss">
+                    <div class="banner dark-cerulean radius-top font-medium" id="sfr-ss">
                         <p class="slide showing">Short Sale <i class="fas fa-external-link-alt"></i></p>
                         <p class="slide">Pre-Foreclosure <i class="fas fa-external-link-alt"></i></p>
                     </div>
@@ -1151,7 +1166,7 @@
             <!-- Reverse Mortgage -->
             <div class="col-4 col-s-6">
                 <a href="https://www.jimngo.net/reverse-mortgage-calculator" target="_blank">
-                    <div class="card-header banner">
+                    <div class="banner dark-cerulean radius-top font-medium">
                         <p class="slide showing">Reverse Mortgage <i class="fas fa-external-link-alt"></i></p>
                     </div>
                     <div class="card-body">
@@ -1167,7 +1182,7 @@
     </section>
     <!-- Marketing ----------------------------------------------------------->
     <section id="flyers">
-        <div class="banner dark-cerulean" id="flyer-ss">
+        <div class="banner dark-cerulean font-large" id="flyer-ss">
             <h3 class="slide showing">Purchase</h3>
             <h3 class="slide">Refinance</h3>
             <h3 class="slide">FHA</h3>
@@ -1420,12 +1435,29 @@
             </div>
         </div>
     </section>
+    <!-- Scripts ------------------------------------------------------------->
+    <link rel="stylesheet" href="style/fontawesome-free-5.11.1-web/css/all.min.css">
+    <link rel="preload" href="style/fontawesome-free-5.11.1-web/webfonts/fa-regular-400.woff2" as="style">
+    <link rel="preload" href="style/fontawesome-free-5.11.1-web/webfonts/fa-solid-900.woff2" as="style">
+    <!-- Default Statcounter code for Jimngo.net https://www.jimngo.net -->
+    <script type="text/javascript">
+        var sc_project = 11893871;
+        var sc_invisible = 1;
+        var sc_security = "b16c17b8";
+    </script>
+    <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+    <noscript>
+        <div class="statcounter"><a title="Web Analytics" href="https://statcounter.com/" target="_blank"><img
+                    class="statcounter" src="https://c.statcounter.com/11893871/0/b16c17b8/1/" alt="Web Analytics"></a>
+        </div>
+    </noscript>
+    <!-- End of Statcounter Code -->
     <script src="javascript/calc.min.js" async></script>
 </body>
 <footer>
     <div class="main flex-perfect-center center">
         <div class="col-3 col-s-3">
-            <div><img src="image/EHO.png" alt="EHO"></div>
+            <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="image/EHO.png" alt="EHO">
         </div>
         <div class="col-9 col-s-9">
             <p>UNITED MORTGAGE FUND</p>

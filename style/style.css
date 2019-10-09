@@ -1,11 +1,9 @@
 *{box-sizing:border-box;font-family:Helvetica Neue;}
-
 /* ID selector ***************************************************************/
 #disclaimer{background-color:lightgrey;}
 #mySelect,#mySelect1,#mySelect2{font-size:16px;border-radius:5px;}
 #phone{color:lightgreen;font-size:150%;}
 #services{background-color:#f2f2f2;color:#002933;}
-
 /* Generic Classes ***********************************************************/
 body{margin:0px;padding:0px;font-size:16px;}
 button{margin:2px;padding:8px;border-style:solid;border-width:thin;border-radius:5px;outline:none;text-align:center;font-size:125%;cursor:pointer;}
@@ -15,59 +13,35 @@ header{padding:8px;background-color:#004A7C;color:white;text-align:center;font-s
 header a{text-decoration:none;color:white;font-style:italic;}
 header a:hover{text-decoration:none;color:greenyellow;font-style:italic;}
 html{scroll-behavior:smooth;}
-h1{font-size: 150%;line-height:normal;font-weight: normal}
+h1{font-size:150%;line-height:normal;font-weight:normal}
 h2{font-size:130%;line-height:normal;font-weight:normal}
 h3{font-size:120%;line-height:normal;font-weight:normal}
 input{font-size:28px;}
-main .sign-up{margin:10px;padding:10px;border-radius:5px;background:dodgerblue;color:white;cursor:pointer;}
-main .sign-up:hover{color:lightgreen;}
 main a:hover{color:lightgreen;}
 table{font-family:arial,sans-serif;border-collapse:collapse;width:100%;}
 td,th{border:1px solid #dddddd;text-align:left;padding:8px;}
 tr:nth-child(even){background-color:#dddddd;}
 video{width:100%;height:auto;}
-
 /* Colors *********************************************************************/
 .dodger-blue{background-color:dodgerblue;color:white;}
 .dodger-blue:hover{background-color:#004A7C;color:lightgreen;}
 .dark-cerulean{background-color:#004A7C;color:white}
 .dark-cerulean:hover{color:lightgreen;}
-.sea-green{background-color:#32804D;}
-.selective-yellow{background-color:#FFBA08;}
-.red-pigment{background-color:#F72C25;}
-.green{background-color:#0F9D58;color:white;}
-.yellow{background-color:#F4B400;color:white;}
-.red{background-color:#DB4437;color:white;}
-.blue{background-color:#4285F4;color:white;}
-.gradient{background:linear-gradient(to right,purple,blue,lightblue);}
-.facebook-blue{background-color:white;color:#3b5998}
-
 /* Links *********************************************************************/
 a{font-style:normal;text-decoration:none;color:dodgerblue;}
 a:hover{color:lightgreen;}
-a[href^="http"]::after { font-family: 'Font Awesome 5 Free'; font-weight: 900; content: ' \f35d'; }
-a[href*="www.jimngo.net"]::after,
-a[href*="www.realtor.com"]::after,
-a[href*="www.mortgagenewsdaily.com"]::after,
-a[href*="app.homespotter.com"]::after { content: ''; }
+a[href^="http"]::after{font-family:'Font Awesome 5 Free';font-weight:900;content:' \f35d';}
+a[href*="www.jimngo.net"]::after,a[href*="www.realtor.com"]::after,a[href*="www.mortgagenewsdaily.com"]::after,a[href*="app.homespotter.com"]::after{content:'';}
 .banner a{text-decoration:none;color:white;}
 .banner a:hover{color:lightgreen;}
-/* .home-search a:hover{font-style:normal;text-decoration:none;color:white;} */
-/*****************************************************************************/
-/* Banner Slides                                                              /
-/*****************************************************************************/
-.banner{width:100%;height:80px;padding:8px;font-size: 150%;text-transform:uppercase;text-align:center;border-style:none;outline:none;}
-/* .banner1,.banner2,.banner3,.banner4,.banner5,.banner6 {position:relative;margin:auto;top:50%;transform:translateY(-50%);} */
-/* .dpa,.home-value,.refis,.sfr{width:100%;margin:0px;padding:0px;font-size:100%;border-style:none;outline:none;} */
-/* .dpa:hover,.home-value:hover,.refis:hover,.sfr:hover{color:lightgreen} */
+/* Banner Slides //*****************************************************************************/
+.banner{width:100%;height:80px;padding:8px;text-transform:uppercase;text-align:center;border-style:none;outline:none;}
 .slide{display:none;position:relative;margin:auto;top:50%;transform:translateY(-50%);}
 .slide.showing{display:block;}
 /* Cards *********************************************************************/
 .card-title{width:100%;height:62px;background-color:lightskyblue;font-size:120%;text-transform:uppercase;color:black;border:none;outline:none;cursor:pointer;}
 .card-title:hover,.card-active{background-color:dodgerblue;color:white;}
-.card-content{margin:0px;padding:16px; overflow:hidden;transition:max-height 1s ease-out; -webkit-transition:max-height 1s ease-out; -moz-transition:max-height 1s ease-out; -ms-transition:max-height 1s ease-out; -o-transition:max-height 1s ease-out;}
-/* .card-title-2{background-color:lightskyblue;font-size:100%;text-transform:uppercase;color:black;border:none;outline:none;cursor:pointer;}
-.card-title-2:hover,.card-active{background-color:dodgerblue;color:white;} */
+.card-content{margin:0px;padding:16px;overflow:hidden;transition:max-height 1s ease-out;-webkit-transition:max-height 1s ease-out;-moz-transition:max-height 1s ease-out;-ms-transition:max-height 1s ease-out;-o-transition:max-height 1s ease-out;}
 .card-header{width:100%;margin:auto;padding:12px;background-color:#004A7C;color:white;font-size:115%;text-transform:uppercase;text-align:center;border-radius:5px 5px 0px 0px;-webkit-border-radius:5px 5px 0px 0px;-moz-border-radius:5px 5px 0px 0px;-ms-border-radius:5px 5px 0px 0px;-o-border-radius:5px 5px 0px 0px;}
 .card-header:hover{color:lightgreen;}
 .card-header a{color:white;}
@@ -75,9 +49,8 @@ a[href*="app.homespotter.com"]::after { content: ''; }
 .card-body{width:100%;margin:auto;padding:12px;background-color:dodgerblue;color:white;text-align:left;font-size:100%;border-radius:0px 0px 5px 5px}
 .card-body a{color:white;}
 .card-body a:hover{color:lightgreen;}
-
 /* Widget Slides ************************************************************/
-.widget-slide{width:100%;margin:auto;padding:0px; height:0px; overflow:hidden;}
+.widget-slide{width:100%;margin:auto;padding:0px;height:0px;overflow:hidden;}
 .widget-header{width:100%;margin:auto;padding:12px;background-color:#004A7C;color:white;font-size:125%;border-radius:5px 5px 0px 0px}
 .widget-header:hover{color:lightgreen;}
 .widget-body{width:100%;margin:auto;padding:12px;background-color:dodgerblue;color:white;text-align:left;font-size:100%;border-radius:0px 0px 5px 5px}
@@ -88,7 +61,6 @@ a[href*="app.homespotter.com"]::after { content: ''; }
 .widget-submit-btn{width:40%;max-width:180px;margin:8px;padding:8px;border-style:solid;border-width:thin;border-radius:5px;background-color:white;border-color:#004A7C;text-align:center;font-size:125%;cursor:pointer;}
 .widget-submit-btn:hover{background:#004A7C;color:lightgreen;}
 .widget-submit-btn:focus{outline:0;}
-
 /* DTI messages **************************************************************/
 .btnSm-dti-1{margin:auto;padding:12px;border-style:none;outline:none;border-radius:5px;background-color:lightgreen;font-size:100%;text-decoration:none;cursor:pointer;}
 .btnSm-dti-1:hover,.btnSm-dti-1:focus{background:#238823;color:white;}
@@ -96,86 +68,27 @@ a[href*="app.homespotter.com"]::after { content: ''; }
 .btnSm-dti-2:hover,.btnSm-dti-2:focus{background:#fad052;color:black;}
 .btnSm-dti-3{margin:auto;padding:12px;border-style:none;outline:none;border-radius:5px;background-color:#e25059;font-size:100%;text-decoration:none;cursor:pointer;}
 .btnSm-dti-3:hover,.btnSm-dti-3:focus{background:#D2222D;color:white;}
-.message{width:100%; margin: 8px 0px;padding: 12px; overflow:hidden;}
-
+.message{width:100%;margin:8px 0px;padding:12px;overflow:hidden;}
 /* Button - filled with background color *************************************/
 .active{background-color:green;color:white;}
-.btn-blk:hover{background-color:#555555;color:white;}
-.btn-blk{background-color:white;color:black;border:2px solid #555555;}
-.btn-blu:hover{background-color:#008CBA;color:white;}
-.btn-blu{background-color:white;color:black;border:2px solid #008CBA;}
-.btn-grn:hover{background-color:#4CAF50;color:white;}
-.btn-grn-260:hover{background-color:green;color:white}
-.btn-grn-260{width:190px;margin:auto;padding:10px;background-color:lightgreen;color:black;cursor:pointer;border:none;border-radius:5px;text-align:center;outline:none;font-size:1.2em;}
-.btn-grn{background-color:white;color:black;border:2px solid #4CAF50;}
-.btn-gry:hover{background-color:#e7e7e7;}
-.btn-gry{background-color:white;color:black;border:2px solid #e7e7e7;}
-.btn-red:hover{background-color:#f44336;color:white;}
-.btn-red{background-color:white;color:black;border:2px solid #f44336;}
-
-
-.btn{margin:4px 2px;padding:10px;border-style:solid;border-radius:5px;background-color:#4CAF50;color:white;text-align:center;text-decoration:none;font-size:16px;-webkit-transition-duration:0.4s;transition-duration:0.4s;cursor:pointer;}
+*/
+ .btn{margin:4px 2px;padding:10px;border-style:solid;border-radius:5px;background-color:#4CAF50;color:white;text-align:center;text-decoration:none;font-size:16px;-webkit-transition-duration:0.4s;transition-duration:0.4s;cursor:pointer;}
 .collapsible{width:100%;margin:0px 4px;padding:16px 18px;background-color:lightgreen;color:black;text-align:left;}
-.collapsible:hover, .collapsible.active {background-color:green;color:white;}
-.collapsible::after{ font-family: 'Font Awesome 5 Free'; font-weight: 900; content:'\f0fe';color:white;font-weight:bold;float:right;margin-left:5px;}
-.active::after{ font-family: 'Font Awesome 5 Free'; font-weight: 900; content:"\f146";}
+.collapsible:hover,.collapsible.active{background-color:green;color:white;}
+.collapsible::after{font-family:'Font Awesome 5 Free';font-weight:900;content:'\f0fe';color:white;font-weight:bold;float:right;margin-left:5px;}
+/* .collapsible::after{font-family:'Font Awesome 5 Free';font-weight:900;content:'\f0fe';color:white;font-weight:bold;float:right;margin-left:5px;}
+*/
+.active::after{font-family:'Font Awesome 5 Free';font-weight:900;content:"\f146";}
 .heading-blu:hover,.heading-blu:active{background-color:#004A7C;color:white;}
 .heading-blu{width:100%;margin:0px 4px;padding:18px;background-color:dodgerblue;color:white;text-transform:uppercase;text-align:center;font-size:125%;border-radius:5px;border-style:none;outline:none;cursor:pointer;}
 .heading{width:100%;margin:0px 4px 4px 4px;padding:18px;background-color:dodgerblue;color:white;text-transform:uppercase;text-align:center;font-size:125%;border-radius:5px;border-style:none;outline:none;}
 .selectable{width:100%;margin:4px;padding:18px;background-color:lightgreen;color:black;text-align:center;font-size:18px;border-radius:5px;border-style:none;outline:none;}
 .selectable:hover{background-color:green;color:white;}
-
-/* Button with transparent background color **********************************/
-.btn-120:hover{background:#004A7C;color:white;}
-.btn-120:focus{outline:0;}
-.btn-120{width:120px;margin:10px;padding:10px;border-style:solid;border-radius:5px;background-color:transparent;border-color:#004A7C;font-size:100%;cursor:pointer;}
-.btn-180:hover{background:#004A7C;color:white;}
-.btn-180:focus{outline:0;}
-.btn-180{width:180px;margin:10px;padding:10px;border-style:solid;border-radius:5px;background-color:transparent;border-color:#004A7C;font-size:100%;cursor:pointer;}
-.btn-90:hover{background:#004A7C;color:white;}
-.btn-90:focus{outline:0;}
-.btn-90{width:90px;margin:10px;padding:10px;border-style:solid;border-radius:5px;background-color:transparent;border-color:#004A7C;font-size:100%;cursor:pointer;}
-.btnSm:hover{background:#004A7C;color:white;}
-.btnSm:focus{outline:0;}
-.btnSm-1:hover{background:#004A7C;color:white;}
-.btnSm-1:focus{outline:0;}
-.btnSm-1{margin:10px auto;padding:10px;border-style:solid;border-radius:5px;background-color:white;border-color:#004A7C;font-size:100%;cursor:pointer;}
-.btnSm{margin:10px auto;padding:10px;border-style:solid;border-radius:5px;background-color:transparent;border-color:#004A7C;font-size:100%;cursor:pointer;}
-.button1:focus{outline:0;}
-.button1:hover{background:#002933;color:white;}
-.button1{width:210px;margin:10px;padding:10px;border-style:solid;border-radius:5px;background-color:transparent;border-color:#002933;font-size:100%;cursor:pointer;}
-.button2:hover{background:#1a0033;color:white;}
-.button2:focus{outline:0;}
-.button2{width:210px;margin:10px;padding:10px;border-style:solid;border-radius:5px;background-color:transparent;border-color:#1a0033;font-size:100%;cursor:pointer;}
-.button3:hover{background:#330000;color:white;}
-.button3:focus{outline:0;}
-.button3{width:210px;margin:10px;padding:10px;border-style:solid;border-radius:5px;background-color:transparent;border-color:#1a0033;font-size:100%;cursor:pointer;}
-.button4:focus{outline:0;}
-.button4:hover{background:#331a00;color:#ffe6cc;}
-.button4{width:210px;margin:10px;padding:10px;border-style:solid;border-radius:5px;background-color:transparent;border-color:#331a00;font-size:100%;cursor:pointer;}
-.button5:hover{color:white;background:green;}
-.button5:focus{outline:0;}
-.button5{width:250px;margin:10px;padding:10px;border-style:solid;border-radius:5px;background:transparent;border-color:lightgreen;font-size:100%;cursor:pointer;}
-.button6:hover{background-color:#004A7C;color:#fff;}
-.button6:focus{outline:0;}
-.button6{margin:10px;padding:10px;border-style:solid;border-radius:5px;background:#4599d1;border-color:#4599d1;color:black;font-size:100%;cursor:pointer;}
-
 /* Simple border - background color fill ONLY on hover ***********************/
-.btn-blue-brdr{margin:8px;padding:12px;border-style:solid;border-width:thin;border-radius:5px;background-color:white;border-color:#004A7C;color:#004A7C;font-size:100%;}
+.btn-blue-brdr{margin:8px;padding:8px;border-style:solid;border-width:thin;border-radius:5px;background-color:white;border-color:#004A7C;color:#004A7C;font-size:125%;}
 .btn-blue-brdr:hover{background:#004A7C;color:lightgreen;}
-.btn-blue-brdr:focus{outline:0;}
-.btn-blue-brdr-120{width:120px;margin:8px;padding:8px;border-style:solid;border-width:thin;border-radius:5px;background-color:white;border-color:#004A7C;color:#004A7C;font-size:100%;}
-.btn-blue-brdr-120:hover{background:#004A7C;color:lightgreen;}
-.btn-blue-brdr-120:focus{outline:0;}
-.btn-blue-brdr-150{width:150px;margin:8px;padding:8px;border-style:solid;border-width:thin;border-radius:5px;background-color:white;border-color:#004A7C;color:#004A7C;font-size:100%;}
-.btn-blue-brdr-150:hover{background:#004A7C;color:lightgreen;}
-.btn-blue-brdr-150:focus{outline:0;}
-.btn-blue-brdr-180{width:180px;margin:10px;padding:10px;border-style:solid;border-width:thin;border-radius:5px;background-color:white;border-color:#004A7C;color:#004A7C;font-size:100%;}
-.btn-blue-brdr-180:hover{background:#004A7C;color:lightgreen;}
-.btn-blue-brdr-180:focus{outline:0;}
 .btn-grn-brdr{margin:8px;padding:8px;border-style:solid;border-width:thin;border-radius:5px;background-color:white;border-color:green;color:green;font-size:100%;}
 .btn-grn-brdr:hover{background-color:green;color:lightgreen;}
-
 /* Sections ******************************************************************/
 .section1 .sign-up{margin:10px;padding:10px;border-radius:5px;background:dodgerblue;color:white;cursor:pointer;}
 .section1 .sign-up:hover{color:lightgreen;}
@@ -186,11 +99,10 @@ a[href*="app.homespotter.com"]::after { content: ''; }
 .section5{background-color:#ffffcc;color:#333300;}
 .services{background-color:#ffe6cc;color:#331a00;}
 .disclaimer{background-color:lightgrey;}
-
 /* Blinker *******************************************************************/
 .blink{animation:blinker 1s step-start infinite;}
-@keyframes blinker{50%{opacity:0;}}
-
+@keyframes blinker{50%{opacity:0;}
+}
 /* inputContainer ************************************************************/
 .inputContainer{clear:both;background-color:#EEE;padding:4px;border:1px solid #CCC;margin:4px;-webkit-border-radius:12px;-moz-border-radius:12px;border-radius:12px;box-shadow:inset 0px 1px 0px #fff;}
 .inputTitleContainer{clear:both;height:auto;margin:10px;}
@@ -202,100 +114,45 @@ a[href*="app.homespotter.com"]::after { content: ''; }
 .input-value-2{float:right;padding:3px 3px 3px 6px;border:1px solid #ccc;border-radius:5px;background-color:white;color:black;font-size:100%;}
 .sliderContainer{content:"";clear:both;display:table;width:100%;margin:10px;}
 .no_border{border:none;background-color:white;text-align:right;font-size:100%;}
-
 /* Turn off spinners *********************************************************/
 input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0;}
-
-/* Responsive Equal Height Columns *******************************************/
-.qm-container{display:table;width:100%;}
-.qm{display:table-cell;padding:16px;}
-@media only screen and (max-width:600px){
-    .qm{display:block;width:100%;}
-}
-.column-container{display:table;width:100%;}
-.column{display:table-cell;padding:16px;}
-@media only screen and (max-width:600px){
-    .column{display:block;width:100%;}
-}
-
-/* Sliders *******************************************************************/
-.slider{-webkit-appearance:none;width:90%;height:15px;border-radius:5px;background:#d3d3d3;outline:none;-webkit-transition:.2s;transition:opacity .2s;}
-.slider:hover{opacity:1;}
-.slider::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:25px;height:25px;border-radius:50%;background:#4CAF50;cursor:pointer;}
-.slider::-moz-range-thumb{width:25px;height:25px;border-radius:50%;background:#4CAF50;cursor:pointer;}
-
-/* slider with linear-gradient background ************************************/
-.slider1{-webkit-appearance:none;width:90%;height:15px;border-radius:5px;background:linear-gradient(to right,green,yellow,red);outline:none;-webkit-transition:.2s;transition:opacity .2s;}
-.slider1::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:25px;height:25px;border-radius:50%;background:#4CAF50;cursor:pointer;}
-.slider1::-moz-range-thumb{width:25px;height:25px;border-radius:50%;background:#4CAF50;cursor:pointer;}
-
-/* slider with linear-gradient background ************************************/
-.slider2{-webkit-appearance:none;width:95%;height:15px;border-radius:5px;background:white;outline:none;-webkit-transition:.2s;transition:opacity .2s;}
-.slider2::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:25px;height:25px;border-radius:50%;background:lightgreen;cursor:pointer;}
-.slider2::-moz-range-thumb{width:25px;height:25px;border-radius:50%;background:lightgreen;cursor:pointer;}
-
-/* Tooltip *******************************************************************/
-.tooltip{position:relative;display:inline-block;border-bottom:1px dotted black;}
-.tooltip .tooltiptext{visibility:hidden;width:100%;font-weight:normal;background-color:black;color:#fff;text-align:center;border-radius:6px;padding:5px 5px;/* Position the tooltip */
- position:absolute;z-index:1;bottom:110%;left:30%;margin-left:-40px;}
-.tooltip .tooltiptext::after{content:"";position:absolute;top:100%;left:50%;margin-left:-5px;border-width:5px;border-style:solid;border-color:black transparent transparent transparent;}
-.tooltip:hover .tooltiptext{visibility:visible;width:300px;}
-
-/* Zoom **********************************************************************/
-/* .zoom{transition:transform .5s;} */
-/* .zoom:hover{-ms-transform:scale(1.5);IE 9 */
-/* -webkit-transform:scale(1.5);Safari 3-8 */
-/* transform:scale(1.5);} */
-/* .zoom2{transition:transform .5s;} */
-/* .zoom2:hover{-ms-transform:scale(1.15);IE 9 */
-/* -webkit-transform:scale(1.15);Safari 3-8 */
-/* transform:scale(1.15);} */
-
-/* Toggle Switch Slider - Added 04/26/19 - Source:https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_switch class name "slider" renamed to "slider_small" class name "switch" renamed to "switch_toggle" */
-/* .switch_toggle{position:relative;display:inline-block;width:60px;height:34px;}
-.switch_toggle input{opacity:0;width:0;height:0;}
-.slider_small{position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;background-color:#ccc;-webkit-transition:.4s;transition:.4s;border-radius:34px;}
-.slider_small:before{position:absolute;content:"";height:26px;width:26px;left:4px;bottom:4px;background-color:white;-webkit-transition:.4s;transition:.4s;border-radius:50%;}
-input:checked+.slider_small{background-color:#2196F3;}
-input:focus+.slider_small{box-shadow:0 0 1px #2196F3;}
-input:checked+.slider_small:before{-webkit-transform:translateX(26px);-ms-transform:translateX(26px);transform:translateX(26px);} */
-
+/* slider ********************************************************************/
+.slider{-webkit-appearance:none;width:95%;height:15px;border-radius:5px;background:white;outline:none;-webkit-transition:.2s;transition:opacity .2s;}
+.slider::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:25px;height:25px;border-radius:50%;background:lightgreen;cursor:pointer;}
+.slider::-moz-range-thumb{width:25px;height:25px;border-radius:50%;background:lightgreen;cursor:pointer;}
 /* Other Class Selector ******************************************************/
 .border{border-style:solid;border-width:1px;border-radius:5px;}
 .center{text-align:center;}
-/* .content-2{margin:0px;padding:0 18px;max-height:0;overflow:hidden;transition:max-height 0.5s ease-out;border-radius:0px 0px 5px 5px;background-color:dodgerblue;color:white} */
-.content{ width:100%; margin:0px 4px 4px 4px; padding:0 16px; background-color:#f1f1f1; border-radius:5px; height:0px; overflow:hidden;}
+/* .content-2{margin:0px;padding:0 18px;max-height:0;overflow:hidden;transition:max-height 0.5s ease-out;border-radius:0px 0px 5px 5px;background-color:dodgerblue;color:white}
+*/
+.content{width:100%;margin:0px 4px 4px 4px;padding:0 16px;background-color:#f1f1f1;border-radius:5px;height:0px;overflow:hidden;}
 .flex-center{display:flex;flex-wrap:wrap;justify-content:center;}
 .flex-perfect-center{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;}
 .footer{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;background-color:#4c4c4c;color:white;font-size:16px;}
 .header{padding:8px;background:linear-gradient(to right,purple,blue,lightblue);color:#f1f1f1;}
 .headingColumn.hover{width:100%;margin:auto;padding:15px;background-color:darkgreen;color:white;text-align:center;font-size:18px;border-radius:5px;border-style:none;}
 .headingColumn{width:100%;margin:auto;padding:15px;background-color:lightgreen;color:black;text-align:center;font-size:18px;border-radius:5px;border-style:none;}
-.hide{display:none;}
-.linkmenu{flex-wrap:wrap;margin:auto;text-align:center;align-items:center;color:black;}
-.loanProgramNote{margin:4px;padding:4px 8px;text-align:left;background-color:#EEE;border:1px solid #CCC;-webkit-border-radius:12px;-moz-border-radius:12px;border-radius:12px;box-shadow:inset 0px 1px 0px #fff;}
+/* .loanProgramNote{margin:4px;padding:4px 8px;text-align:left;background-color:#EEE;border:1px solid #CCC;-webkit-border-radius:12px;-moz-border-radius:12px;border-radius:12px;box-shadow:inset 0px 1px 0px #fff;}
+*/
 .loanPrograms{margin:10px 10px;padding:6px 12px;border-style:solid;border-width:1px;border-color:#4CAF50;border-radius:5px;}
 .main{width:100%;max-width:1320px;margin:auto;padding:8px;}
-.more-calc{max-width:768px;margin:auto;}
+/* .more-calc{max-width:768px;margin:auto;}
+*/
 .note{padding:6px 12px;text-align:left;border-style:solid;border-width:1px;border-color:#4CAF50;border-radius:5px;}
 .pad{margin:10px;}
-.row::after{clear:both;}
-.row{display:flex;flex-wrap:wrap;}
+/* .row::after{clear:both;}
+*/
+/* .row{display:flex;flex-wrap:wrap;}
+*/
 .show{display:block;}
 .small{margin-bottom:10px}
-.tabcontent{display:none;text-align:left; height:0px; overflow:hidden;}
-
-/* Expandable 06.08.19 */
-.expandable{display:none;background:#fff;overflow:hidden;transition:all .5s ease-in-out;line-height:0;padding:0 1em;color:transparent;}
-.expandable:target{display:block;line-height:1.5;padding-top:1em;padding-bottom:1em;color:black;}
-
+.tabcontent{display:none;text-align:left;height:0px;overflow:hidden;}
 /* Font **********************************************************************/
 .font-normal{font-size:100%;}
-.font-125{font-size:125%;}
-.font-150{font-size:150%;}
+.font-medium{font-size:125%;}
+.font-large{font-size:150%;}
 .capitalize{text-transform:capitalize}
 .uppercase{text-transform:uppercase}
-
 /* Radius ********************************************************************/
 .radius-5{border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px;-ms-border-radius:5px;-o-border-radius:5px;}
 .radius-round{border-radius:50%;-webkit-border-radius:50%;-moz-border-radius:50%;-ms-border-radius:50%;-o-border-radius:50%;}
@@ -303,7 +160,6 @@ input:checked+.slider_small:before{-webkit-transform:translateX(26px);-ms-transf
 .radius-top{border-radius:5px 5px 0px 0px;-webkit-border-radius:5px 5px 0px 0px;-moz-border-radius:5px 5px 0px 0px;-ms-border-radius:5px 5px 0px 0px;-o-border-radius:5px 5px 0px 0px;}
 .radius-right{border-radius:0px 5px 5px 0px;-webkit-border-radius:0px 5px 5px 0px;-moz-border-radius:0px 5px 5px 0px;-ms-border-radius:0px 5px 5px 0px;-o-border-radius:0px 5px 5px 0px;}
 .radius-bottom{border-radius:0px 0px 5px 5px;-webkit-border-radius:0px 0px 5px 5px;-moz-border-radius:0px 0px 5px 5px;-ms-border-radius:0px 0px 5px 5px;-o-border-radius:0px 0px 5px 5px;}
-
 /* Width *********************************************************************/
 .width-80{width:80px;}
 .width-120{width:120px;}
@@ -315,65 +171,55 @@ input:checked+.slider_small:before{-webkit-transform:translateX(26px);-ms-transf
 .third-width{width:33%;}
 .half-width{width:50%;}
 .full-width{width:100%;}
-
 /* Mobile ********************************************************************/
-@media only screen and (max-width:420px){
-    [class*="col-"]{width:100%;padding:8px;}
-    .content-ipad{display:none;}
-    .content-desktop{display:none;}
-    
+@media only screen and (max-width:420px){[class*="col-"]{width:100%;padding:8px;}
+.content-ipad{display:none;}
+.content-desktop{display:none;}
 }
-
 /* iPad Portrait *************************************************************/
-@media only screen and (min-width:768px){
-    [class*="col-"]{float:left;padding:8px;}
-    .col-s-1{width:8.33%;}
-    .col-s-2{width:16.66%;}
-    .col-s-3{width:25%;}
-    .col-s-4{width:33.33%;}
-    .col-s-5{width:41.66%;}
-    .col-s-6{width:50%;}
-    .col-s-7{width:58.33%;}
-    .col-s-8{width:66.66%;}
-    .col-s-9{width:75%;}
-    .col-s-10{width:83.33%;}
-    .col-s-11{width:91.66%;}
-    .col-s-12{width:100%;}
-    .content-mobile{display:none;}
-    .content-ipad{display:block;}
-    .content-desktop{display:block;}
-    .dpa,.home-value,.refis,.sfr{font-size:100%;}
+@media only screen and (min-width:768px){[class*="col-"]{float:left;padding:8px;}
+.col-s-1{width:8.33%;}
+.col-s-2{width:16.66%;}
+.col-s-3{width:25%;}
+.col-s-4{width:33.33%;}
+.col-s-5{width:41.66%;}
+.col-s-6{width:50%;}
+.col-s-7{width:58.33%;}
+.col-s-8{width:66.66%;}
+.col-s-9{width:75%;}
+.col-s-10{width:83.33%;}
+.col-s-11{width:91.66%;}
+.col-s-12{width:100%;}
+.content-mobile{display:none;}
+.content-ipad{display:block;}
+.content-desktop{display:block;}
+.dpa,.home-value,.refis,.sfr{font-size:100%;}
 }
-
 /* iPad Landscape & Desktop **************************************************/
-@media only screen and (min-width:1024px){
-    [class*="col-"]{float:left;padding:8px;}
-    .col-1{width:8.33%;}
-    .col-2{width:16.66%;}
-    .col-3{width:25%;}
-    .col-4{width:33.33%;}
-    .col-5{width:41.66%;}
-    .col-6{width:50%;}
-    .col-7{width:58.33%;}
-    .col-8{width:66.66%;}
-    .col-9{width:75%;}
-    .col-10{width:83.33%;}
-    .col-11{width:91.66%;}
-    .col-12{width:100%;}
-    .content-mobile{display:none;}
-    .content-ipad{display:none;}
-    .content-desktop{display:block;}
+@media only screen and (min-width:1024px){[class*="col-"]{float:left;padding:8px;}
+.col-1{width:8.33%;}
+.col-2{width:16.66%;}
+.col-3{width:25%;}
+.col-4{width:33.33%;}
+.col-5{width:41.66%;}
+.col-6{width:50%;}
+.col-7{width:58.33%;}
+.col-8{width:66.66%;}
+.col-9{width:75%;}
+.col-10{width:83.33%;}
+.col-11{width:91.66%;}
+.col-12{width:100%;}
+.content-mobile{display:none;}
+.content-ipad{display:none;}
+.content-desktop{display:block;}
 }
-
 /* Mobile Contact Bar ********************************************************/
 .mobile-contact-bar{position:fixed;width:100%;background-color:#4599d1;color:white;text-align:center;bottom:0;left:0;padding:3px 0px 3px 0px;z-index:99;}
 .mobile-contact-bar i{font-size:24px;color:white;}
 .mobile-contact-bar a{font-size:16px;color:white}
-@media only screen and (min-width:421px){
-    .mobile-contact-bar{display:none}
+@media only screen and (min-width:421px){.mobile-contact-bar{display:none}
 }
-
 /* Transition - Sliding Up Down Effect ***************************************/
-.slow {transition:all 1s ease-out; -webkit-transition:all 1s ease-out; -moz-transition:all 1s ease-out; -ms-transition:all 1s ease-out; -o-transition:all 1s ease-out;}
-.medium {transition:all 0.7s ease-out; -webkit-transition:all 0.7s ease-out; -moz-transition:all 0.7s ease-out; -ms-transition:all 0.7s ease-out; -o-transition:all 0.7s ease-out;}
-.fast {transition:all 0.5s ease-out; -webkit-transition:all 0.5s ease-out; -moz-transition:all 0.5s ease-out; -ms-transition:all 0.5s ease-out; -o-transition:all 0.5s ease-out;}
+.slow{transition:all 1s ease-out;-webkit-transition:all 1s ease-out;-moz-transition:all 1s ease-out;-ms-transition:all 1s ease-out;-o-transition:all 1s ease-out;}
+.medium{transition:all 0.7s ease-out;-webkit-transition:all 0.7s ease-out;-moz-transition:all 0.7s ease-out;-ms-transition:all 0.7s ease-out;-o-transition:all 0.7s ease-out;}
+.fast{transition:all 0.5s ease-out;-webkit-transition:all 0.5s ease-out;-moz-transition:all 0.5s ease-out;-ms-transition:all 0.5s ease-out;-o-transition:all 0.5s ease-out;}

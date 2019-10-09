@@ -86,70 +86,6 @@
         </div>
     </noscript>
     <!-- End of Statcounter Code -->
-    <!-- JSON LD -->
-    <script type="application/ld+json">
-        {
-            "@context": "http://schema.org",
-            "@type": "LocalBusiness",
-            "name": "Real Estate | Home Loan | Life Insurance | Jim Ngo - Ontario, CA",
-            "image": "https://www.jimngo.net/image/profile-100.gif",
-            "telephone": "909-510-9479",
-            "priceRange": "$$",
-            "email": "admin@jimngo.info",
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "800 N Haven Ave Ste 370",
-                "addressLocality": "Ontario",
-                "addressRegion": "CA",
-                "addressCountry": "USA",
-                "postalCode": "91761"
-            },
-            "url": "https://www.jimngo.net/"
-        }
-    </script>
-    <script type="application/ld+json">
-        {
-            "@context": "http://schema.org/",
-            "@type": "Person",
-            "name": "Jim Ngo",
-            "url": "https://www.jimngo.net/",
-            "image": "https://www.jimngo.net/image/profile-100.gif",
-            "sameAs": [
-                "https://www.facebook.com/jimngo.realtor/",
-                "https://plus.google.com/108848273800866757190",
-                "https://www.linkedin.com/in/jimsngo/",
-                "https://jimngo.info/",
-                "https://realtor.jimngo.info/",
-                "https://insurance.jimngo.info/",
-                "https://www.showingnew.com/jimngo",
-                "https://jimsngo.myrealestateplatform.com/",
-                "http://cloudcma.com/api_widget/348f96646d0a223f5fa34f124f60dfeb/show?post_url=cloudcma.com&source_url=ua",
-                "https://www.workforce-resource.com/dpr/lopmt/MWFW?branch=jim.ngo@outlook.com&phone=909-510-9479",
-                "http://www.jimngorealtor.com/"
-            ]
-        }
-    </script>
-    <script type="application/ld+json">
-        {
-            "@context": "http://schema.org/",
-            "@type": "SoftwareApplication",
-            "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "5",
-                "ratingCount": "1"
-            },
-            "name": "Loanzify Mortgage App",
-            "operatingSystem": "iPhone & Android",
-            "applicationCategory": "http://schema.org/GameApplication",
-            "offers": {
-                "@type": "Offer",
-                "price": "0.00",
-                "priceCurrency": "USD"
-            },
-            "installUrl": "https://loanzify.com/get/w0N1/"
-        }
-    </script>
-    <!-- End JSON LD -->
 </head>
 
 <body>
@@ -221,7 +157,7 @@
         <div class="flex-perfect-center">
             <!-- Mortgage News Widget -->
             <div class="col-8 col-s-7">
-                <div class="mnd-news-widget" style="font-size: 12px; margin: auto">
+                <!-- <div class="mnd-news-widget" style="font-size: 12px; margin: auto">
                     <div class="w-header"
                         style="text-align: center; padding:4px 0;background-color: #336699; color: #FFFFFF;">Mortgage
                         and <a href="http://www.mortgagenewsdaily.com" target="_blank"
@@ -248,27 +184,57 @@
                         js.src = "//widgets.mortgagenewsdaily.com/public/javascript/news.js";
                         fjs.parentNode.insertBefore(js, fjs);
                     }(document, 'script', 'mnd-news'));
-                </script>
+                </script> -->
             </div>
             <!-- Mortgage Rate Widget -->
-            <div class="col-4 col-s-5">
-                <div class="mnd-rates-widget" style="width: 250px; font-size: 12px; margin: auto">
+            <!-- <div class="col-4 col-s-5">
+                <iframe src="//www.mortgagecalculator.org/rates-widgets/mortgages/text-widget.php?latest"
+                    frameborder="0" style="border: 0; overflow: 0;" scrolling="no"></iframe>
+                <p>Powered by <a
+                        href="https://www.mortgagecalculator.org/rates-widgets/mortgages/">MortgageCalculator.org</a>
+                </p> -->
+
+
+
+
+
+            <!-- MORTGAGE RATES BEGIN -->
+            <script type="text/javascript">
+                if (typeof jQuery == "undefined") {
+                    document.write(unescape("%3Cscript src='" + (document.location.protocol == 'https:' ? 'https:' :
+                            'http:') +
+                        "//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js' type='text/javascript'%3E%3C/script%3E"
+                    ));
+                    mlcalc_jquery_noconflict = 1;
+                };
+            </script>
+            <div style="line-height:10px;font-weight:normal;font-size:9px;font-family:Tahoma;padding:0;margin:0;border:0;text-align:right;background:transparent;color:#EEEEEE;width:300px;padding-right:10px;"
+                class="mlcalcRatesWidgetHolder" id="mlcalcRatesWidgetHolderCA">
+                <script type="text/javascript">
+                    document.write(unescape("%3Cscript src='//www.mlcalc.com" +
+                        "/mortgage-rates/california/widget-wide.js' type='text/javascript'%3E%3C/script%3E"
+                    ));
+                </script>Powered by <a href="https://www.mlcalc.com/mortgage-rates/california/" target="_blank"
+                    style="font-weight:normal;font-size:9px;font-family:Tahoma;color:#EEEEEE;text-decoration:none;">CA
+                    www.mlcalc.com</a>
+            </div>
+            <!-- MORTGAGE RATES END -->
+
+
+            <!-- <div class="mnd-rates-widget" style="width: 250px; font-size: 12px; ">
                     <div class="w-header"
-                        style="text-align: center; padding:4px 0;background-color: #336699; color: #FFFFFF;">
-                        <a href="http://www.mortgagenewsdaily.com/mortgage_rates/" target="_blank"
-                            style="color: #FFFFFF;text-decoration:none;">Home
-                            Mortgage Rates</a></div>
+                        style="text-align: center; padding:4px 0;background-color: #336699; color: #FFFFFF;"> <a
+                            href="http://www.mortgagenewsdaily.com/mortgage_rates/" target="_blank"
+                            style="color: #FFFFFF;text-decoration:none;">Current Mortgage Rates</a></div>
                     <div
                         style="background-color: #FFFFFF; border: solid 1px #336699; border-width: 0 1px; padding: 8px  8px 1px;">
                         <div class="mnd-rates" data-widgettype="smallrates" data-width="250" data-showchart="true"
                             data-cobrand="jim9" data-user="151801" data-chartcolor="#336699"> </div>
                     </div>
                     <div class="w-footer"
-                        style="text-align: center; padding:4px 0;background-color: #336699; color: #FFFFFF;">
-                        View
-                        More <a href="http://www.mortgagenewsdaily.com/mortgage_rates/" target="_blank"
-                            style="color: #FFFFFF;text-decoration:none;">Interest
-                            Rates</a></div>
+                        style="text-align: center; padding:4px 0;background-color: #336699; color: #FFFFFF;">View More
+                        <a href="http://www.mortgagenewsdaily.com/mortgage_rates/" target="_blank"
+                            style="color: #FFFFFF;text-decoration:none;">Mortgage Rates</a></div>
                 </div>
                 <script>
                     (function (d, s, id) {
@@ -279,8 +245,8 @@
                         js.src = "//widgets.mortgagenewsdaily.com/public/javascript/rates.min.js";
                         fjs.parentNode.insertBefore(js, fjs);
                     }(document, 'script', 'mnd-rates'));
-                </script>
-            </div>
+                </script> -->
+        </div>
         </div>
     </section>
 </body>
@@ -288,7 +254,7 @@
 <script src="https://www.w3schools.com/lib/w3.js"></script>
 <script src="javascript/business-hours.js"></script>
 <script>
-  w3.slideshow(".banner4", 1500);
+    w3.slideshow(".banner4", 1500);
 </script>
 <footer>
     <div class="col-6 col-s-6">

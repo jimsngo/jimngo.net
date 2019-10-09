@@ -71,6 +71,22 @@ function show_phone() {
 }
 
 ///////////////////////////////////////////////////////////////////////////////
+// Delay images                                                               /
+///////////////////////////////////////////////////////////////////////////////
+
+function init() {
+    var imgDefer = document.getElementsByTagName('img');
+    for (var i = 0; i < imgDefer.length; i++) {
+        if (imgDefer[i].getAttribute('data-src')) {
+            imgDefer[i].setAttribute('src', imgDefer[i].getAttribute('data-src'));
+            var src = imgDefer[i].getAttribute('data-src');
+        }
+    }
+}
+
+init();
+
+///////////////////////////////////////////////////////////////////////////////
 // Slide Show                                                                 /
 ///////////////////////////////////////////////////////////////////////////////
 

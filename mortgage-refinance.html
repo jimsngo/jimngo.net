@@ -36,17 +36,6 @@
         gtag('js', new Date());
         gtag('config', 'UA-88549125-1');
     </script>
-    <!-- Default Statcounter code for Jimngo.net https://www.jimngo.net -->
-    <script type="text/javascript">
-        var sc_project = 11893871;
-        var sc_invisible = 1;
-        var sc_security = "b16c17b8";
-    </script>
-    <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
-    <noscript>
-        <div class="statcounter"><a title="Web Analytics" href="http://statcounter.com/" target="_blank"><img
-                    class="statcounter" src="//c.statcounter.com/11893871/0/b16c17b8/1/" alt="Web Analytics"></a></div>
-    </noscript>
     <!-- Facebook Pixel Code -->
     <script>
         ! function (f, b, e, v, n, t, s) {
@@ -93,12 +82,13 @@
     </header>
     <main class="main">
         <div class="flex-perfect-center">
-            <!-- About Me ------------------------------------------------>
+            <!-- About Me ---------------------------------------------------->
             <div class="col-3 col-s-4">
                 <div style="text-align:center; line-height: 1.4;">
                     <a href="https://www.realtor.com/realestateagents/jim-son-ngo_ontario_ca_3146995_094379828"
                         target="_blank" title="About Me">
-                        <img src="image/profile-180.png" alt="profile" style="border-radius: 50%">
+                        <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                            data-src="image/profile-180.png" alt="profile" style="border-radius: 50%">
                         <h2>Jim Ngo - Ontario, CA</h2>
                     </a>
                     <p>United Mortgage Fund<br />
@@ -114,6 +104,7 @@
                             href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.jimngo.net%2Fmortgage-refinance&amp;src=sdkpreparse"
                             class="fb-xfbml-parse-ignore">Share</a></div>
                     <!-- End Facebook Share-->
+                    <p>Tiếng Việt</p>
                 </div>
             </div>
             <!-- Page Description ---------------------------------------->
@@ -167,7 +158,7 @@
     <!-- Refinance Calculator Widget ----------------------------------------->
     <section id="refi-calc">
         <!-- Banner ---------------------------------------------------------->
-        <div class="banner dark-cerulean" id="refi-ss">
+        <div class="banner dark-cerulean font-large" id="refi-ss">
             <p class="slide showing">Streamline Refinance</p>
             <p class="slide">Lower rate</p>
             <p class="slide">Lower term</p>
@@ -178,10 +169,10 @@
         <div class="main flex-center">
             <!-- Mortgage Refinance Calculator ------------------------------->
             <div class="col-6 col-s-6">
-                <h3 class="widget-header">Mortgage Refinance Calculator - FHA, VA, Conventional</h3>
+                <h3 class="card-header">Mortgage Refinance Calculator - FHA, VA, Conventional</h3>
                 <!-- Slide 1 - Begin Calculator -->
                 <div class="widget-slide medium" id="slide-1">
-                    <div class="widget-body">
+                    <div class="card-body">
                         <h4>Streamline Refinance</h4>
                         <p>This is the most popular program for homeowners to lower their interest rate and monthly
                             payments. Both FHA and VA offer this program with no appraisal, no income documentation, and
@@ -197,14 +188,13 @@
                             equity in their homes. Lenders will also look at borrower's debt and income to make sure
                             existing debt payments will not interfere with new monthly mortgage payments.</p>
                         <h4>How Much Can You Save?</h4>
-                        <div class="flex-center"><button class="btn-blue-brdr-180"
-                                onclick="show_slide('current-loan')">Get
-                                Started</button></div>
+                        <div class="flex-center"><button class="widget-submit-btn"
+                                onclick="show_slide('current-loan')">Get Started</button></div>
                     </div>
                 </div>
                 <!-- Slide 2 - Current Loan -->
                 <div class="widget-slide medium" id="current-loan">
-                    <div class="widget-body">
+                    <div class="card-body">
                         <p style="font-size: 125%;">Current Loan Information</p>
                         <!-- Loan Program -->
                         <div class="inputTitleContainer">
@@ -229,7 +219,7 @@
                             <div class="input-value-2">$<span id="Current-Loan-Balance"></span></div>
                         </div>
                         <div class="sliderContainer">
-                            <input class="slider2" id="current-loan-balance" max="700000" min="0" step="10000"
+                            <input class="slider" id="current-loan-balance" max="700000" min="0" step="10000"
                                 type="range" value="300000" oninput="get_current_loan_balance()" />
                         </div>
                         <p></p>
@@ -239,7 +229,7 @@
                             <div class="input-value-2"><span id="Current-Interest"></span> %</div>
                         </div>
                         <div class="sliderContainer">
-                            <input class="slider2" id="current-interest" max="10" min="3" step="0.125" type="range"
+                            <input class="slider" id="current-interest" max="10" min="3" step="0.125" type="range"
                                 value="5.000" oninput="get_current_interest()" />
                         </div>
                         <p></p>
@@ -249,7 +239,7 @@
                             <div class="input-value-2">$<span id="Current-Payment"></span></div>
                         </div>
                         <div class="sliderContainer">
-                            <input class="slider2" id="current-payment" max="5000" min="0" step="5" type="range"
+                            <input class="slider" id="current-payment" max="5000" min="0" step="5" type="range"
                                 value="0" oninput="get_current_payment()" />
                         </div>
                         <p class="pad">Principal & Interest payment only - Please do not include Property Tax and
@@ -262,7 +252,7 @@
                 </div>
                 <!-- Slide 3 - New Loan -------------------------------------->
                 <div class="widget-slide medium" id="new-loan">
-                    <div class="widget-body">
+                    <div class="card-body">
                         <p style="font-size: 125%;">New Loan Information</p>
                         <!-- Refinance Option -------------------------------->
                         <div class="inputTitleContainer">
@@ -280,7 +270,7 @@
                                 <div class="input-value-2">$<span id="New-Loan-Amount"></span></div>
                             </div>
                             <div class="sliderContainer">
-                                <input class="slider2" id="new-loan-amount" max="700000" min="0" step="10000"
+                                <input class="slider" id="new-loan-amount" max="700000" min="0" step="10000"
                                     type="range" value="300000" oninput="get_new_loan_amount()" />
                             </div>
                         </div>
@@ -302,7 +292,7 @@
                             <div class="input-value-2"><span id="New-Interest"></span> %</div>
                         </div>
                         <div class="sliderContainer">
-                            <input class="slider2" id="new-interest" max="10" min="3" step="0.125" type="range"
+                            <input class="slider" id="new-interest" max="10" min="3" step="0.125" type="range"
                                 value="5.000" oninput="get_new_interest()" />
                         </div>
                         <p></p>
@@ -314,14 +304,14 @@
                 </div>
                 <!-- Slide 4 - Closing Costs -->
                 <div class="widget-slide medium" id="closing-costs-slide">
-                    <div class="widget-body">
+                    <div class="card-body">
                         <!-- Closing Costs-->
                         <div class="inputTitleContainer">
                             <div class="inputTitle">Closing Costs: </div>
                             <div class="input-value-2">$ <span id="Closing-Costs"></span></div>
                         </div>
                         <div class="sliderContainer">
-                            <input class="slider2" id="closing-costs" max="3" min="2" step="0.1" type="range" value="2"
+                            <input class="slider" id="closing-costs" max="3" min="2" step="0.1" type="range" value="2"
                                 oninput="get_closing_costs()" />
                         </div>
                         <p class="pad">Enter the estimated closing costs associated with obtaining your new mortgage.
@@ -344,7 +334,7 @@
                 <!-- Slide 5 - Calculation Results -->
                 <div class="widget-slide medium" id="results">
                     <!-- Current Loan -->
-                    <div class="widget-body">
+                    <div class="card-body">
                         <div class="inputTitleContainer">
                             <div class="inputTitle">Current Loan Balance</div>
                             <div class="input-value-2">$ <span id="Current-Loan-Balance-2"></span></div>
@@ -366,8 +356,8 @@
                     </div>
                     <p></p>
                     <!-- New Loan -->
-                    <h3 class="widget-header" id="refi-option-2"></h3>
-                    <div class="widget-body">
+                    <h3 class="card-header" id="refi-option-2"></h3>
+                    <div class="card-body">
                         <div class="inputTitleContainer">
                             <div class="inputTitle">New Loan Amount</div>
                             <div class="input-value-2">$<span id="New-Loan-Amount-2"></span></div>
@@ -402,8 +392,8 @@
             <div class="col-6 col-s-6">
                 <!-- Conventional Refinance ---------------------------------->
                 <div id="Conventional" class="tabcontent slow">
-                    <h3 class="widget-header">Conventional Refinance</h3>
-                    <div class="widget-body">
+                    <h3 class="card-header">Conventional Refinance</h3>
+                    <div class="card-body">
                         <p>Conventional Refinance requires full documentation. FHA and VA streamlines, on the other
                             hand, are much easier because they require less. But to use them, the homeowner has to fit
                             into quite narrow criteria. It's also important to know that a conventional refinance can do
@@ -421,8 +411,8 @@
                 </div>
                 <!-- FHA Refinance ------------------------------------------->
                 <div id="FHA" class="tabcontent slow">
-                    <h3 class="widget-header">FHA Refinance</h3>
-                    <div class="widget-body">
+                    <h3 class="card-header">FHA Refinance</h3>
+                    <div class="card-body">
                         <p>FHA Streamline Refinance is available to homeowners who currently have an FHA loan. Like the
                             name implies, streamline refinances don’t require full documentation, like an updated
                             appraisal or income verification, making it fast and easy. Its primary goal is to lower your
@@ -443,8 +433,8 @@
                 </div>
                 <!-- VA Refinance -------------------------------------------->
                 <div id="VA" class="tabcontent slow">
-                    <h3 class="widget-header">VA Refinance</h3>
-                    <div class="widget-body">
+                    <h3 class="card-header">VA Refinance</h3>
+                    <div class="card-body">
                         <p>A VA Streamline Refinance is also known as an Interest Rate Reduction Refinance Loan, or
                             IRRRL. It can only be made to refinance a property on which you have already used your
                             VA loan eligibility. It must be a VA to VA refinance, and it will reuse the entitlement you
@@ -498,13 +488,34 @@
             </div>
             <!-- Mortgage News Daily -->
             <div class="col-4 col-s-5">
-                <a href="http://www.mortgagenewsdaily.com/mortgage_rates#{uname=jim9}" target="_blank">
-                    <div class="card-header">Home Mortgage Rates <i class="fas fa-external-link-alt"></i></div>
-                    <div class="card-body center">
-                        <img style="max-width: 100%; border-radius: 5px;" src="image/mortgagenewsdaily.jpg"
-                            alt="Home Mortgage Rates">
-                    </div>
-                </a>
+                <!-- MORTGAGE RATES BEGIN -->
+                <script type="text/javascript">
+                    if (typeof jQuery == "undefined") {
+                        document.write(unescape("%3Cscript src='" + (document.location.protocol == 'https:' ? 'https:' :
+                                'http:') +
+                            "//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js' type='text/javascript'%3E%3C/script%3E"
+                        ));
+                        mlcalc_jquery_noconflict = 1;
+                    };
+                </script>
+                <div style="line-height:10px;font-weight:normal;font-size:9px;font-family:Tahoma;padding:0;margin:0;border:0;text-align:right;background:transparent;color:#EEEEEE;width:300px;padding-right:10px;"
+                    class="mlcalcRatesWidgetHolder" id="mlcalcRatesWidgetHolderCA">
+                    <script type="text/javascript">
+                        document.write(unescape("%3Cscript src='//www.mlcalc.com" +
+                            "/mortgage-rates/california/widget-wide.js' type='text/javascript'%3E%3C/script%3E"
+                        ));
+                    </script>Powered by <a href="https://www.mlcalc.com/mortgage-rates/california/" target="_blank"
+                        style="font-weight:normal;font-size:9px;font-family:Tahoma;color:#EEEEEE;text-decoration:none;">CA
+                        www.mlcalc.com</a>
+                </div>
+                <!-- MORTGAGE RATES END -->
+                <!-- <a href="http://www.mortgagenewsdaily.com/mortgage_rates#{uname=jim9}" target="_blank">
+                        <div class="card-header">Home Mortgage Rates <i class="fas fa-external-link-alt"></i></div>
+                        <div class="card-body center">
+                            <img style="max-width: 100%; border-radius: 5px;" src="image/mortgagenewsdaily.jpg"
+                                alt="Home Mortgage Rates">
+                        </div>
+                    </a> -->
             </div>
         </div>
     </section>
@@ -672,8 +683,10 @@
         <!-- CRMLS Home Search App ------------------------------------------->
         <div class="homespotter center border col-4">
             <a href="https://app.homespotter.com/?asr=1&sui=38166790" target="_blank">
-                <p><img src="image/HomeSpotter.png" alt="HomeSpotter Logo"></p>
-                <p><img src="image/mobile_devices.png" alt="HomeSpotter"></p>
+                <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="image/HomeSpotter.png"
+                    alt="HomeSpotter Logo">
+                <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                    data-src="image/mobile_devices.png" alt="HomeSpotter">
                 <ul style=" text-align: left">
                     <li>Mobile-First Home Search</li>
                     <li>Beautiful, Fast and Easy</li>
@@ -694,21 +707,21 @@
     </section>
     <!-- Services ------------------------------------------------------------>
     <section id="services">
-        <div class="banner dark-cerulean" id="service-ss">
+        <div class="banner dark-cerulean font-large" id="service-ss">
             <h2 class="slide showing">Mortgage Pre-Approval</h2>
             <h2 class="slide">Down Payment Assistance</h2>
             <h2 class="slide">Mortgage Calculator</h2>
             <h2 class="slide">Home Valuation</h2>
             <h2 class="slide">Comparative Market Analysis</h2>
             <h2 class="slide">Reverse Mortgage</h2>
-            <h2 class="slide">Refinance</h2>
+            <h2 class="slide">Mortgage Refinance</h2>
             <h2 class="slide">Short Sale Foreclosure</h2>
         </div>
         <div class="main flex-center">
             <!-- Home Valuation -->
             <div class="col-4 col-s-6">
                 <a href="https://www.jimngo.net/home-valuation" target="_blank">
-                    <div class="card-header banner" id="home-valuation-ss">
+                    <div class="banner dark-cerulean radius-top font-medium" id="home-valuation-ss">
                         <p class="slide showing">Home Estimate <i class="fas fa-external-link-alt"></i></p>
                         <p class="slide">Market Comparable <i class="fas fa-external-link-alt"></i></p>
                     </div>
@@ -724,7 +737,7 @@
             <!-- Mortgage Calculator -->
             <div class="col-4 col-s-6">
                 <a href="https://www.jimngo.net/mortgage-prequalification-calculator" target="_blank">
-                    <div class="card-header banner">
+                    <div class="banner dark-cerulean radius-top font-medium">
                         <p class='slide showing'>Mortgage Calculator <i class="fas fa-external-link-alt"></i></p>
                     </div>
                 </a>
@@ -748,7 +761,7 @@
             <!-- Down Payment Resource -->
             <div class="col-4 col-s-6">
                 <a href="https://www.jimngo.net/down-payment-assistance" target="_blank">
-                    <div class="card-header banner" id='dpa-ss'>
+                    <div class="banner dark-cerulean radius-top font-medium" id='dpa-ss'>
                         <p class="slide showing">First Time Homebuyer <i class="fas fa-external-link-alt"></i></p>
                         <p class="slide">Down Payment Assistance <i class="fas fa-external-link-alt"></i></p>
                     </div>
@@ -764,7 +777,7 @@
             <!-- Refinance -->
             <div class="col-4 col-s-6">
                 <a href="https://www.jimngo.net/mortgage-refinance" target="_blank">
-                    <div class="card-header banner" id="refinance-ss">
+                    <div class="banner dark-cerulean radius-top font-medium" id="refinance-ss">
                         <p class="slide showing">Mortgage Refinance <i class="fas fa-external-link-alt"></i></p>
                         <p class="slide">Home Equity Loan <i class="fas fa-external-link-alt"></i></p>
                     </div>
@@ -781,7 +794,7 @@
             <!-- Short Sale Foreclosure -->
             <div class="col-4 col-s-6">
                 <a href="https://www.jimngo.net/short-sales-foreclosure" target="_blank">
-                    <div class="card-header banner" id="sfr-ss">
+                    <div class="banner dark-cerulean radius-top font-medium" id="sfr-ss">
                         <p class="slide showing">Short Sale <i class="fas fa-external-link-alt"></i></p>
                         <p class="slide">Pre-Foreclosure <i class="fas fa-external-link-alt"></i></p>
                     </div>
@@ -796,7 +809,7 @@
             <!-- Reverse Mortgage -->
             <div class="col-4 col-s-6">
                 <a href="https://www.jimngo.net/reverse-mortgage-calculator" target="_blank">
-                    <div class="card-header banner">
+                    <div class="banner dark-cerulean radius-top font-medium">
                         <p class="slide showing">Reverse Mortgage <i class="fas fa-external-link-alt"></i></p>
                     </div>
                     <div class="card-body">
@@ -1065,19 +1078,35 @@
             </div>
         </div>
     </section>
+    <!-- Scripts ------------------------------------------------------------->
+    <link rel="stylesheet" href="style/fontawesome-free-5.11.1-web/css/all.min.css">
+    <link rel="preload" href="style/fontawesome-free-5.11.1-web/webfonts/fa-regular-400.woff2" as="style">
+    <link rel="preload" href="style/fontawesome-free-5.11.1-web/webfonts/fa-solid-900.woff2" as="style">
+    <!-- Default Statcounter code for Jimngo.net https://www.jimngo.net -->
+    <script type="text/javascript">
+        var sc_project = 11893871;
+        var sc_invisible = 1;
+        var sc_security = "b16c17b8";
+    </script>
+    <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+    <noscript>
+        <div class="statcounter"><a title="Web Analytics" href="https://statcounter.com/" target="_blank"><img
+                    class="statcounter" src="https://c.statcounter.com/11893871/0/b16c17b8/1/" alt="Web Analytics"></a>
+        </div>
+    </noscript>
+    <!-- End of Statcounter Code -->
     <script src="javascript/refinance.min.js" async></script>
 </body>
 <footer>
     <div class="main flex-perfect-center center">
         <div class="col-3 col-s-3">
-            <div><img src="image/EHO.png" alt="EHO"></div>
+            <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="image/EHO.png" alt="EHO">
         </div>
         <div class="col-9 col-s-9">
             <p>UNITED MORTGAGE FUND</p>
-            <p>
-                Licensed Real Estate Corporation by the California Bureau of Real Estate. <br /> Corporate Broker #
-                01952954<br /> NMLS # 1194303
-            </p>
+            <p>Licensed Real Estate Corporation by the California Bureau of Real Estate. <br />
+                Corporate Broker # 01952954<br />
+                NMLS # 1194303</p>
             <address>800 N. Haven Ave, Ste 370 - Ontario, CA 91764</address>
             <blockquote>“Big Banks Put High Interest Above Your Interest”</blockquote>
         </div>

@@ -71,10 +71,24 @@ function show_phone() {
 }
 
 ///////////////////////////////////////////////////////////////////////////////
-// Slide Show                                                                 /
+// Delay images                                                               /
 ///////////////////////////////////////////////////////////////////////////////
 
-onload = slideshow;
+function init() {
+    var imgDefer = document.getElementsByTagName('img');
+    for (var i = 0; i < imgDefer.length; i++) {
+        if (imgDefer[i].getAttribute('data-src')) {
+            imgDefer[i].setAttribute('src', imgDefer[i].getAttribute('data-src'));
+            var src = imgDefer[i].getAttribute('data-src');
+        }
+    }
+}
+
+init();
+
+///////////////////////////////////////////////////////////////////////////////
+// Slide Show                                                                 /
+///////////////////////////////////////////////////////////////////////////////
 
 function slideshow() {
     setInterval(function () {
@@ -95,6 +109,8 @@ function nextSlide(id) {
     elems.index = (elems.index + 1) % elems.length;
     elems[elems.index].className = 'slide showing';
 }
+
+slideshow();
 
 ///////////////////////////////////////////////////////////////////////////////
 // Calculator Widget ---------------------------------------------------------/

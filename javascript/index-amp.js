@@ -71,17 +71,26 @@ function show_phone() {
 }
 
 ///////////////////////////////////////////////////////////////////////////////
-// Header Section - Real Estate, Home Loans, and Life Agent                   /
-///////////////////////////////////////////////////////////////////////////////
-
 const card_titles = document.getElementById("cards").getElementsByClassName("card-title");
 const card_active = document.getElementById("cards").getElementsByClassName("card-active");
+const card_contents = document.getElementById('cards').getElementsByClassName('card-content');
 
-// Add active class to class name "card-title"
+///////////////////////////////////////////////////////////////////////////////
+// Event Listener - Header Section - Real Estate, Home Loans, and Life Agent  /
+///////////////////////////////////////////////////////////////////////////////
+
 for (var i = 0; i < card_titles.length; i++) {
     card_titles[i].addEventListener("click", function () {
         card_active[0].className = card_active[0].className.replace(" card-active", "");
         this.className += " card-active";
+        var idName = this.id;
+        if (idName === 'btn1') {
+            show_content('real-estate-agent');
+        } else if (idName === 'btn2') {
+            show_content('home-loan');
+        } else {
+            show_content('life-agent');
+        }
     });
 }
 
@@ -100,22 +109,6 @@ function show_content(id) {
         document.getElementById('cards').scrollIntoView();
     }
 }
-
-///////////////////////////////////////////////////////////////////////////////
-// Delay images                                                               /
-///////////////////////////////////////////////////////////////////////////////
-
-function init() {
-    var imgDefer = document.getElementsByTagName('img');
-    for (var i = 0; i < imgDefer.length; i++) {
-        if (imgDefer[i].getAttribute('data-src')) {
-            imgDefer[i].setAttribute('src', imgDefer[i].getAttribute('data-src'));
-            var src = imgDefer[i].getAttribute('data-src');
-        }
-    }
-}
-
-init();
 
 ///////////////////////////////////////////////////////////////////////////////
 // Slide Show                                                                 /

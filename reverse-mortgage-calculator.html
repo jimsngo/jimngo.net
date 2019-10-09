@@ -76,17 +76,6 @@
     </script>
     <noscript><img height="1" width="1" style="display:none" alt="FB"
             src="https://www.facebook.com/tr?id=1149243855093416&ev=PageView&noscript=1" /></noscript>
-    <!-- Default Statcounter code for Jimngo.net https://www.jimngo.net -->
-    <script type="text/javascript">
-        var sc_project = 11893871;
-        var sc_invisible = 1;
-        var sc_security = "b16c17b8";
-    </script>
-    <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
-    <noscript>
-        <div class="statcounter"><a title="Web Analytics" href="http://statcounter.com/" target="_blank"><img
-                    class="statcounter" src="//c.statcounter.com/11893871/0/b16c17b8/1/" alt="Web Analytics"></a></div>
-    </noscript>
 </head>
 
 <body>
@@ -109,12 +98,13 @@
     <!-- Page Description ---------------------------------------------------->
     <main class="main">
         <div class="flex-perfect-center">
-            <!-- About Me ------------------------------------------------>
+            <!-- About Me ---------------------------------------------------->
             <div class="col-3 col-s-4">
                 <div style="text-align:center; line-height: 1.4;">
                     <a href="https://www.realtor.com/realestateagents/jim-son-ngo_ontario_ca_3146995_094379828"
                         target="_blank" title="About Me">
-                        <img src="image/profile-180.png" alt="profile" style="border-radius: 50%">
+                        <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                            data-src="image/profile-180.png" alt="profile" style="border-radius: 50%">
                         <h2>Jim Ngo - Ontario, CA</h2>
                     </a>
                     <p>United Mortgage Fund<br />
@@ -130,6 +120,7 @@
                             href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.jimngo.net%2Freverse-mortgage-calculator&amp;src=sdkpreparse"
                             class="fb-xfbml-parse-ignore">Share</a></div>
                     <!-- End Facebook Share-->
+                    <p>Tiếng Việt</p>
                 </div>
             </div>
             <!-- Page Description ---------------------------------------->
@@ -153,36 +144,31 @@
                 <h3 style="font-size: 120%; color: dodgerblue"><i>"You’ve worked hard to build the equity in your
                         home. Now it’s time to put that equity to work for you. Use my free reverse mortgage
                         calculator to determine how much you may qualify for."</i></h3>
-                <div class="banner dodger-blue radius-5" id="hecm-ss">
-                    <p class="slide showing">Establish a rainy day fund</p>
-                    <p class="slide">Supplement your income</p>
-                    <p class="slide">Refinance an existing mortgage</p>
-                    <p class="slide">Repay a home equity loan</p>
-                    <p class="slide">Pay off high-interest rate credit cards</p>
-                    <p class="slide">Be more financially prepared</p>
-                    <p class="slide">Pay for healthcare</p>
-                    <p class="slide">Cover in-home care costs</p>
-                    <p class="slide">Make or pay off a major purchase</p>
-                    <p class="slide">Home improvements</p>
-                    <p class="slide">Home modifications</p>
-                    <p class="slide">Buy a home</p>
-                </div>
             </div>
         </div>
     </main>
     <!-- Calculator ---------------------------------------------------------->
     <section id="reverse-calculator-widget">
-        <div class="banner dark-cerulean" id="reverse-cal-ss">
-            <p class="slide showing">Reverse Mortgage Calculator</p>
-            <p class="slide">Free Qualification</p>
+        <div class="banner dark-cerulean font-large" id="hecm-ss">
+            <h2 class="slide showing">HECM</h2>
+            <h2 class="slide">Buy a home</h2>
+            <h2 class="slide">Establish a rainy day fund</h2>
+            <h2 class="slide">Supplement your income</h2>
+            <h2 class="slide">Line of Credit</h2>
+            <h2 class="slide">Repay a home equity loan</h2>
+            <h2 class="slide">Pay off credit cards</h2>
+            <h2 class="slide">Pay for healthcare</h2>
+            <h2 class="slide">Cover in-home care costs</h2>
+            <h2 class="slide">Home improvements</h2>
+            <h2 class="slide">Home modifications</h2>
         </div>
         <div class="main flex-center">
             <!-- Column 1-->
             <div class="col-4 col-s-6" id="users-inputs">
                 <!-- Slide 1 - Begin Calculator -->
                 <div class="widget-slide medium" id="slide-1">
-                    <h3 class="widget-header">How Much Money Can I Get?</h3>
-                    <div class="widget-body">
+                    <h3 class="card-header">How Much Money Can I Get?</h3>
+                    <div class="card-body">
                         <p>The specific amount depends on several factors, including:</p>
                         <ul>
                             <li>Your age</li>
@@ -195,20 +181,20 @@
                             your reverse mortgage. This is to help preserve your home equity for a longer period of
                             time.</p>
                         <div class="flex-center">
-                            <button class="btn-blue-brdr-180" onclick="show_slide('slide-2')">Get Started</button>
+                            <button class="btn-blue-brdr" onclick="show_slide('slide-2')">Get Started</button>
                         </div>
                     </div>
                 </div>
                 <!-- Slide 2 - Owner's Info -->
                 <div class="widget-slide slow" id="slide-2">
-                    <h3 class="widget-header">Home Owner's Information</h3>
-                    <div class="widget-body">
+                    <h3 class="card-header">Home Owner's Information</h3>
+                    <div class="card-body">
                         <!-- Homeowner's Age -->
                         <div class="inputTitleContainer">
                             <h3 class="inputTitle">Home Owner's Age:</h3>
                             <div class="inputValue"><span id="AGE"></span></div>
                         </div>
-                        <div class="sliderContainer"><input class="slider2" id="age" max="80" min="62" step="1"
+                        <div class="sliderContainer"><input class="slider" id="age" max="80" min="62" step="1"
                                 type="range" value="65" oninput="calc()" /></div>
                         <div class="inputTitleContainer">
                             <h3 class="inputTitle">Loan Purpose:</h3>
@@ -222,7 +208,7 @@
                                 <h3 class="inputTitle">Cash by Borrower:</h3>
                                 <div class="inputValue">$<span id="CA"></span></div>
                             </div>
-                            <div class="sliderContainer"><input class="slider2" id="ca" max="1000000" min="0"
+                            <div class="sliderContainer"><input class="slider" id="ca" max="1000000" min="0"
                                     step="10000" type="range" value="100000" oninput="calc()" /></div>
                         </div>
                         <div id="home-appraised-value">
@@ -231,7 +217,7 @@
                                 <h3 class="inputTitle">Home Appraised Value:</h3>
                                 <div class="inputValue">$<span id="HAV"></span></div>
                             </div>
-                            <div class="sliderContainer"><input class="slider2" id="hav" max="1000000" min="100000"
+                            <div class="sliderContainer"><input class="slider" id="hav" max="1000000" min="100000"
                                     step="10000" type="range" value="300000" oninput="calc()" />
                             </div>
                             <!-- Current Mortgage Balance -->
@@ -239,12 +225,12 @@
                                 <h3 class="inputTitle">Current Mortgage Balance:</h3>
                                 <div class="inputValue">$<span id="CMB"></span></div>
                             </div>
-                            <div class="sliderContainer"><input class="slider2" id="cmb" max="500000" min="0"
+                            <div class="sliderContainer"><input class="slider" id="cmb" max="500000" min="0"
                                     step="10000" type="range" value="0" oninput="calc()" /></div>
                         </div>
                         <div class="flex-center">
-                            <button class="btn-blue-brdr-120" onclick="show_slide('slide-1')">Back</button>
-                            <button class="btn-blue-brdr-120" onclick="show_slide('slide-3')">Next</button>
+                            <button class="widget-submit-btn" onclick="show_slide('slide-1')">Back</button>
+                            <button class="widget-submit-btn" onclick="show_slide('slide-3')">Next</button>
                         </div>
                         <p id="max-hecm-warning" style="text-align:center; text-transform: uppercase;"></p>
                         <p id="no-equity-warning" style="text-align:center; text-transform: uppercase;"></p>
@@ -252,8 +238,8 @@
                 </div>
                 <!-- Slide 3 - Loan Details -->
                 <div class="widget-slide slow" id="slide-3">
-                    <h3 class="widget-header">Loan Information</h3>
-                    <div class="widget-body">
+                    <h3 class="card-header">Loan Information</h3>
+                    <div class="card-body">
                         <!-- Interest Option: Fixed or Variable -->
                         <div class="inputTitleContainer">
                             <h3 class="inputTitle">Interest Rate Option:</h3>
@@ -267,7 +253,7 @@
                             <h3 class="inputTitle">Expected Interest Rate:</h3>
                             <div class="inputValue"><span id="INT"></span>%</div>
                         </div>
-                        <div class="sliderContainer"><input class="slider2" id="int" max="8.875" min="3" step="0.125"
+                        <div class="sliderContainer"><input class="slider" id="int" max="8.875" min="3" step="0.125"
                                 type="range" value="5.0" oninput="calc()" /></div>
                         <!-- Fixed Rate -->
                         <div id="fixed-rate">
@@ -307,39 +293,39 @@
                                 a stand by account so money is readily available in the case of an emergency.</p>
                         </div>
                         <div class="flex-center">
-                            <button class="btn-blue-brdr-120" onclick="show_slide('slide-2')">Back</button>
-                            <button class="btn-blue-brdr-120" onclick="show_slide('slide-4')">Next</button>
+                            <button class="widget-submit-btn" onclick="show_slide('slide-2')">Back</button>
+                            <button class="widget-submit-btn" onclick="show_slide('slide-4')">Next</button>
                         </div>
                     </div>
                 </div>
                 <!-- Slide 4 - Lender's Fees -->
                 <div class="widget-slide slow" id="slide-4">
-                    <h3 class="widget-header">Lender's Fees</h3>
-                    <div class="widget-body">
+                    <h3 class="card-header">Lender's Fees</h3>
+                    <div class="card-body">
                         <!-- Loan Origination Fee -->
                         <div class="inputTitleContainer">
                             <h3 class="inputTitle">Loan Origination Fee:</h3>
                             <div class="inputValue">$<span id="LOF"></span></div>
                         </div>
-                        <div class="sliderContainer"><input class="slider2" id="lof" max="6000" min="0" step="100"
+                        <div class="sliderContainer"><input class="slider" id="lof" max="6000" min="0" step="100"
                                 type="range" value="3500" oninput="calc()" /></div>
                         <!-- Other Closing Costs -->
                         <div class="inputTitleContainer">
                             <h3 class="inputTitle">Other Closing Costs:</h3>
                             <div class="inputValue">$<span id="CC"></span></div>
                         </div>
-                        <div class="sliderContainer"><input class="slider2" id="cc" max="10000" min="2000" step="100"
+                        <div class="sliderContainer"><input class="slider" id="cc" max="10000" min="2000" step="100"
                                 type="range" value="3029" oninput="calc()" /></div>
                         <div class="flex-center">
-                            <button class="btn-blue-brdr-120" onclick="show_slide('slide-3')">Back</button>
-                            <button class="btn-blue-brdr-120" onclick="show_slide('slide-5')">Next</button>
+                            <button class="widget-submit-btn" onclick="show_slide('slide-3')">Back</button>
+                            <button class="widget-submit-btn" onclick="show_slide('slide-5')">Next</button>
                         </div>
                     </div>
                 </div>
                 <!-- Slide 5 - Calculation Results -->
                 <div class="widget-slide slow" id="slide-5">
-                    <h3 class="widget-header">Results</h3>
-                    <div class="widget-body">
+                    <h3 class="card-header">Results</h3>
+                    <div class="card-body">
                         <!-- Results for Purchase Option -->
                         <div id="purchaseResults">
                             <div class="inputTitleContainer">
@@ -381,8 +367,8 @@
                             <li>Other Closing Costs: $<span id="CC_2"></span></li>
                         </ul>
                         <div class="flex-center">
-                            <button class="btn-blue-brdr-120" onclick="show_slide('slide-4')">Back</button>
-                            <button class="btn-blue-brdr-120" onclick="show_slide('slide-1')">Start Over</button>
+                            <button class="widget-submit-btn" onclick="show_slide('slide-4')">Back</button>
+                            <button class="widget-submit-btn" onclick="show_slide('slide-1')">Start Over</button>
                         </div>
                     </div>
                 </div>
@@ -391,8 +377,8 @@
             <div class="col-4 col-s-6" id="">
                 <!-- Purchase Option -->
                 <div class="tabcontent slow" id="purchase">
-                    <h3 class="widget-header">Purchase A Home</h3>
-                    <div class="widget-body">
+                    <h3 class="card-header">Purchase A Home</h3>
+                    <div class="card-body">
                         <p>You can purchase a home by combining a one-time investment of your own funds (down
                             payment) with loan proceeds from a Home Equity Conversion Mortgage (HECM) to
                             complete
@@ -413,8 +399,8 @@
                 </div>
                 <!-- Refinance Option -->
                 <div class="tabcontent slow" id="hecm">
-                    <h3 class="widget-header">Line of Credit</h3>
-                    <div class="widget-body">
+                    <h3 class="card-header">Line of Credit</h3>
+                    <div class="card-body">
                         <p>&#9989; Repayment Options</p>
                         <p>Pay as much or as little as you like each month toward principal and interest. As
                             with any mortgage, you must meet your loan obligations, keeping current with
@@ -434,8 +420,8 @@
             <div class="col-4 col-s-12">
                 <!-- Reverse Mortgage for Purchase -->
                 <div id="h4p-video" class="border">
-                    <h3 class="widget-header">Reverse Mortgage For Purchase</h3>
-                    <div class="widget-body">
+                    <h3 class="card-header">Reverse Mortgage For Purchase</h3>
+                    <div class="card-body">
                         <div style="max-width:560px; margin: auto">
                             <p><video controls controlsList="nodownload">
                                     <source src="Video/H4P.mp4"></video></p>
@@ -444,8 +430,8 @@
                 </div>
                 <!-- Reverse Mortgage Line of Credit -->
                 <div id="hecm-video" class="border">
-                    <h3 class="widget-header">Reverse Mortgage For Retirement</h3>
-                    <div class="widget-body">
+                    <h3 class="card-header">Reverse Mortgage For Retirement</h3>
+                    <div class="card-body">
                         <div style="max-width:560px; margin: auto">
                             <p><video controls controlsList="nodownload">
                                     <source src="Video/hecm.mp4"></video></p>
@@ -625,7 +611,7 @@
     </section>
     <!-- Services ------------------------------------------------------------>
     <section id="services">
-        <div class="banner dark-cerulean" id="service-ss">
+        <div class="banner dark-cerulean font-large" id="service-ss">
             <h2 class="slide showing">Mortgage Pre-Approval</h2>
             <h2 class="slide">Down Payment Assistance</h2>
             <h2 class="slide">Mortgage Calculator</h2>
@@ -639,7 +625,7 @@
             <!-- Home Valuation -->
             <div class="col-4 col-s-6">
                 <a href="https://www.jimngo.net/home-valuation" target="_blank">
-                    <div class="card-header banner" id="home-valuation-ss">
+                    <div class="banner dark-cerulean radius-top font-medium" id="home-valuation-ss">
                         <p class="slide showing">Home Estimate <i class="fas fa-external-link-alt"></i></p>
                         <p class="slide">Market Comparable <i class="fas fa-external-link-alt"></i></p>
                     </div>
@@ -655,7 +641,7 @@
             <!-- Mortgage Calculator -->
             <div class="col-4 col-s-6">
                 <a href="https://www.jimngo.net/mortgage-prequalification-calculator" target="_blank">
-                    <div class="card-header banner">
+                    <div class="banner dark-cerulean radius-top font-medium">
                         <p class='slide showing'>Mortgage Calculator <i class="fas fa-external-link-alt"></i></p>
                     </div>
                 </a>
@@ -679,7 +665,7 @@
             <!-- Down Payment Resource -->
             <div class="col-4 col-s-6">
                 <a href="https://www.jimngo.net/down-payment-assistance" target="_blank">
-                    <div class="card-header banner" id='dpa-ss'>
+                    <div class="banner dark-cerulean radius-top font-medium" id='dpa-ss'>
                         <p class="slide showing">First Time Homebuyer <i class="fas fa-external-link-alt"></i></p>
                         <p class="slide">Down Payment Assistance <i class="fas fa-external-link-alt"></i></p>
                     </div>
@@ -695,7 +681,7 @@
             <!-- Refinance -->
             <div class="col-4 col-s-6">
                 <a href="https://www.jimngo.net/mortgage-refinance" target="_blank">
-                    <div class="card-header banner" id="refinance-ss">
+                    <div class="banner dark-cerulean radius-top font-medium" id="refinance-ss">
                         <p class="slide showing">Mortgage Refinance <i class="fas fa-external-link-alt"></i></p>
                         <p class="slide">Home Equity Loan <i class="fas fa-external-link-alt"></i></p>
                     </div>
@@ -712,7 +698,7 @@
             <!-- Short Sale Foreclosure -->
             <div class="col-4 col-s-6">
                 <a href="https://www.jimngo.net/short-sales-foreclosure" target="_blank">
-                    <div class="card-header banner" id="sfr-ss">
+                    <div class="banner dark-cerulean radius-top font-medium" id="sfr-ss">
                         <p class="slide showing">Short Sale <i class="fas fa-external-link-alt"></i></p>
                         <p class="slide">Pre-Foreclosure <i class="fas fa-external-link-alt"></i></p>
                     </div>
@@ -727,7 +713,7 @@
             <!-- Reverse Mortgage -->
             <div class="col-4 col-s-6">
                 <a href="https://www.jimngo.net/reverse-mortgage-calculator" target="_blank">
-                    <div class="card-header banner">
+                    <div class="banner dark-cerulean radius-top font-medium">
                         <p class="slide showing">Reverse Mortgage <i class="fas fa-external-link-alt"></i></p>
                     </div>
                     <div class="card-body">
@@ -996,13 +982,26 @@
             </div>
         </div>
     </section>
+    <!-- Default Statcounter code for Jimngo.net https://www.jimngo.net -->
+    <script type="text/javascript">
+        var sc_project = 11893871;
+        var sc_invisible = 1;
+        var sc_security = "b16c17b8";
+    </script>
+    <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+    <noscript>
+        <div class="statcounter"><a title="Web Analytics" href="https://statcounter.com/" target="_blank"><img
+                    class="statcounter" src="https://c.statcounter.com/11893871/0/b16c17b8/1/" alt="Web Analytics"></a>
+        </div>
+    </noscript>
+    <!-- End of Statcounter Code -->
     <script src="javascript/plfs.min.js" async></script>
     <script src="javascript/reverse-mortgage.min.js" async></script>
 </body>
 <footer>
     <div class="main flex-perfect-center center">
         <div class="col-3 col-s-3">
-            <div><img src="image/EHO.png" alt="EHO"></div>
+            <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="image/EHO.png" alt="EHO">
         </div>
         <div class="col-9 col-s-9">
             <p>UNITED MORTGAGE FUND</p>
