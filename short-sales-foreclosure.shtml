@@ -2,26 +2,28 @@
 <html lang="en">
 
 <head>
-	<title>Mortgage Calculator With Extra Payment</title>
+	<title>Short Sales Foreclosure Resource | Jim Ngo - Ontario CA</title>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="keywords" content="Mortgage Calculator">
+	<meta name="keywords"
+		content="local short sale agent, short sale specialist, pre-foreclosure, notice of default, notice of sale">
 	<meta name="description"
-		content="Want to build your home equity quicker? Use my free calculator to see how even small extra payments will save you years of payments and thousands of dollars of additional interest cost. The earlier you begin paying extra the more money you'll save.">
-	<meta name="subject" content="Mortgage Calculator, Making Extra Payment">
+		content="If you or someone you know is facing foreclosure or unable to make mortgage payments, know that there are OPTIONS available and PEOPLE you can trust.">
+	<meta name="subject" content="Short Sales Foreclosure">
 	<meta name="language" content="English">
 	<meta name="robots" content="index,follow">
 	<meta name="author" content="Jim Ngo" />
 	<meta name="copyright" content="Jim Ngo" />
-	<meta property="og:url" content="https://www.jimngo.net/extra-payment-calculator" />
+	<meta property="og:url" content="https://www.jimngo.net/short-sales-foreclosure" />
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="FHA Mortgage Calculator | How Much Can I Afford?" />
+	<meta property="og:title" content="Short Sales Foreclosure Resource | Jim Ngo - Ontario CA" />
 	<meta property="og:description"
-		content="Use my mortgage calculator to compute how fast you'll be able to pay off your loan by paying extra every month - VA, FHA, Convention, USDA, and Jumbo Loan" />
-	<meta property="og:image" content="image\mortgage-calc (2).jpg" />
-	<link rel="canonical" href="https://www.jimngo.net/extra-payment-calculator">
+		content="If you or someone you know is facing foreclosure or unable to make mortgage payments, know that there are OPTIONS available and PEOPLE you can trust." />
+	<meta property="og:image" content="image/SFR1.jpg" />
+	<link rel="canonical" href="https://www.jimngo.net/short-sales-foreclosure">
 	<link rel="icon" href="image/favicon-16x16.png" type="image/gif" sizes="16x16">
 	<link rel="stylesheet" href="style/style.min.css">
+	<link rel="stylesheet" href="style/fontawesome-free-5.11.1-web/css/all.min.css">
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-88549125-1"></script>
 	<script>
@@ -31,12 +33,69 @@
 			dataLayer.push(arguments);
 		}
 		gtag('js', new Date());
-		gtag('config', 'UA-88549125-1'); // Google Analytics
-		gtag('config', 'AW-935673147'); // Google Ads
+		gtag('config', 'UA-88549125-1');
 	</script>
+	<!-- Global site tag (gtag.js) - Google Ads: 935673147 -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=AW-935673147"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+		gtag('config', 'AW-935673147');
+	</script>
+	<!-- Event snippet for Short Sale Foreclosure conversion page -->
+	<script>
+		gtag('event', 'conversion', {
+			'send_to': 'AW-935673147/F0GuCJDgr54BELv6lL4D'
+		});
+	</script>
+	<!-- Default Statcounter code for Jimngo.net https://www.jimngo.net -->
+	<script type="text/javascript">
+		var sc_project = 11893871;
+		var sc_invisible = 1;
+		var sc_security = "b16c17b8";
+	</script>
+	<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+	<noscript>
+		<div class="statcounter"><a title="Web Analytics" href="http://statcounter.com/" target="_blank"><img
+					class="statcounter" src="//c.statcounter.com/11893871/0/b16c17b8/1/" alt="Web Analytics"></a></div>
+	</noscript>
+	<!-- Facebook Pixel Code -->
+	<script>
+		! function (f, b, e, v, n, t, s) {
+			if (f.fbq) return;
+			n = f.fbq = function () {
+				n.callMethod ?
+					n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+			};
+			if (!f._fbq) f._fbq = n;
+			n.push = n;
+			n.loaded = !0;
+			n.version = '2.0';
+			n.queue = [];
+			t = b.createElement(e);
+			t.async = !0;
+			t.src = v;
+			s = b.getElementsByTagName(e)[0];
+			s.parentNode.insertBefore(t, s)
+		}(window, document, 'script',
+			'https://connect.facebook.net/en_US/fbevents.js');
+		fbq('init', '1149243855093416');
+		fbq('track', 'PageView');
+	</script>
+	<noscript><img height="1" width="1" style="display:none" alt="FB"
+			src="https://www.facebook.com/tr?id=1149243855093416&ev=PageView&noscript=1" /></noscript>
 </head>
 
 <body>
+	<!-- Facebook Script-->
+	<div id="fb-root"></div>
+	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2">
+	</script>
+	<!-- End Facebook Script-->
 	<header>
 		<a href="https://www.jimngo.net">
 			<h2>Your Local Realtor - Mortgage Professional - Life Agent</h2>
@@ -50,164 +109,194 @@
 	</header>
 	<!-- Page Description -->
 	<main>
-		<div class="main">
-			<div class="flex-perfect-center">
-				<!-- About Me ------------------------------------------------>
-				<div class="col-3 col-s-4">
-					<div style="text-align:center; line-height: 1.4;">
-						<a href="https://www.realtor.com/realestateagents/jim-son-ngo_ontario_ca_3146995_094379828"
-							target="_blank" title="About Me">
-							<img src="image/profile-180.png" alt="profile" style="border-radius: 50%">
-							<h2>Jim Ngo - Ontario, CA</h2>
-						</a>
-						<p>United Mortgage Fund<br />
-							<i class="fas fa-mobile-alt"></i> <a href="tel:909-510-9479">(909) 510-9479</a><br />
-							<i class="far fa-envelope"></i> <a
-								href="mailto:admin@jimngo.info">admin@jimngo.info</a><br />
-							NMLS <a href="http://www.nmlsconsumeraccess.org/Home.aspx/MainSearch" target="_blank"
-								rel="nofollow">1353214</a><br />
-							BRE <a href="http://www2.dre.ca.gov/publicasp/pplinfo.asp" target="_blank"
-								rel="nofollow">01164334</a></p>
-					</div>
+		<div class="main flex-perfect-center">
+			<!-- About Me ---------------------------------------------------->
+			<div class="col-3 col-s-4">
+				<div style="text-align:center; line-height: 1.4;">
+					<a href="https://www.realtor.com/realestateagents/jim-son-ngo_ontario_ca_3146995_094379828"
+						target="_blank" title="About Me">
+						<img src="image/profile-180.png" alt="profile" style="border-radius: 50%">
+						<h2>Jim Ngo - Ontario, CA</h2>
+					</a>
+					<p>United Mortgage Fund<br />
+						<i class="fas fa-mobile-alt"></i> <a href="tel:909-510-9479">(909) 510-9479</a><br />
+						<i class="far fa-envelope"></i> <a href="mailto:admin@jimngo.info">admin@jimngo.info</a><br />
+						NMLS <a href="http://www.nmlsconsumeraccess.org/Home.aspx/MainSearch" target="_blank"
+							rel="nofollow">1353214</a><br />
+						BRE <a href="http://www2.dre.ca.gov/publicasp/pplinfo.asp" target="_blank"
+							rel="nofollow">01164334</a></p>
+					<!-- Facebook Share Button -->
+					<div class="fb-share-button" data-href="https://www.jimngo.net/short_sales_foreclosure"
+						data-layout="button_count" data-size="large"><a target="_blank"
+							href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.jimngo.net%2F&amp;src=sdkpreparse"
+							class="fb-xfbml-parse-ignore">Share</a></div>
+					<!-- End Facebook Share-->
 				</div>
-				<!-- Page Description ---------------------------------------->
-				<div class="col-5 col-s-8">
-					<h1 style="font-size: 150%; color: dodgerblue">Extra Payment Calculator</h1>
-					<h2 style="font-size: 120%; color: dodgerblue"><em>Want to build your home equity quicker?</em></h2>
-					<h3>START PAYING MORE AND SAVE BIG!</h3>
-					<p>Use my free calculator to see how even small extra payments will save you years of payments and
-						thousands of dollars of additional interest cost. Making extra payments early in the loan saves
-						you much more money over the life of the loan as the extinguished principal is no longer
-						accruing interest for the remainder of the loan. The earlier you begin paying extra the more
-						money you'll save.</p>
+			</div>
+			<!-- Page Description -->
+			<div class="col-9 col-s-8">
+				<h1 style="font-size: 150%; color: dodgerblue">Short Sales Foreclosure Resource - SFR®</h1>
+				<ul>
+					<li>Mortgage stress and foreclosure threats can have you asking yourself, <q><i>What can I
+								do?</i></q> As a Short Sale Specialist I can help you answer all your foreclosure
+						questions and share with you the solutions that can help lead you out of the tough times and
+						into peace of mind.</li>
+					<li>Today’s real estate market is dynamic. Through short sales and foreclosure properties, sellers
+						and buyers have additional opportunities to sell or purchase homes that are a great value.</li>
+					<li>REALTORS® who have earned the SFR® certification have the necessary knowledge and tools to
+						maneuver through short sale and foreclosure processes. With their comprehensive training, an
+						SFR® has the ability to represent either the seller or buyer during the distressed property
+						transaction and see it through.</li>
+					<li>By understanding both sides of the distressed property transaction, an SFR® can anticipate the
+						unique needs of clients while reducing any possible risk.</li>
+					<li>As a specialist in short sales and foreclosures, I am well-versed in the ins-and-outs of this
+						process, and knowledgeable about the ways to move such transactions to completion. My work
+						allows my clients to realize the freedom they desire from the unwanted weight of an underwater
+						mortgage.</li>
+					<li>Depending on your situation, you may be required to make a financial contribution to receive a
+						short sale.</li>
+				</ul>
+				<p style="font-size: 120%; color: dodgerblue">If you are facing foreclosure and can no longer afford
+					your home, you may qualify for a Short Sale - even if you don’t think you can (or haven’t been able
+					to) sell your home.</p>
+			</div>
+		</div>
+		<!-- Banner --------------------------------------------------------------->
+		<div class="banner dark-cerulean" id="SFR-ss">
+			<h2 class="slide showing">Short Sale</h2>
+			<h2 class="slide">Financial Hardship</h2>
+			<h2 class="slide">Notice of Default</h2>
+			<h2 class="slide">Pre-Foreclosure</h2>
+
+		</div>
+		<div class="main flex-center">
+			<div class="col-6 col-s-6">
+				<div class="card-header">Sellers Who Think They Are Out Of Options</div>
+				<div class="card-body">
+					<p>For many home sellers, foreclosure is a dark time in life. Through my work, I provide a
+						much needed beacon of hope for my clients to lift out of such a crisis.</p>
+					<p>A REALTOR® with the SFR® certification can assist owners in understanding all their
+						options.</p>
+					<ul>
+						<li>Explain the differences between a short sale and a foreclosure</li>
+						<li>Recommend finance, tax, and legal specialists</li>
+						<li>Suggest the seller to seek foreclosure avoidance assistance</li>
+						<li>Alert homeowners of rescue scams</li>
+					</ul>
 				</div>
-				<!-- Extra Payment Calculator Widget -->
-				<div class="col-4 col-s-12" id="extra-payment-calc">
-					<div class="widget-header font-150 uppercase">Extra Payment Calculator</div>
-					<!-- Slide 1 - Current Mortgage Information -->
-					<div class="widget-slide slow" id="slide-1">
-						<div class="widget-body">
-							<p>Simply enter the following information from your current mortgage statement. For the
-								monthly P&I, Enter only your principal and interest amount, do not include payments for
-								mortgage insurance or your impount account.</p>
-							<!-- Current Loan Balance -->
-							<div class="inputTitleContainer">
-								<div class="inputTitle">Current Loan Balance</div>
-								<div class="inputValue">$<input type="number" class="no_border"
-										id="current-loan-balance" min="0" max="1000000" style="width: 80px;">
-								</div>
-							</div>
-							<!-- Current Monthly Payment -->
-							<div class="inputTitleContainer">
-								<div class="inputTitle">Monthly P&I</div>
-								<div class="inputValue">$<input type="number" class="no_border" id="current-payment"
-										min="0" max="10000" style="width:60px;">
-								</div>
-							</div>
-							<!-- Interest Rate -->
-							<div class="inputTitleContainer">
-								<div class="inputTitle">Interest Rate</div>
-								<div class="inputValue"><input type="number" class="no_border" id="apr" min="0" max="10"
-										style="width:60px;"> %</div>
-							</div>
-							<!-- Additional Payment Considered -->
-							<div class="inputTitleContainer">
-								<div class="inputTitle">Monthly Additional Payment</div>
-								<div class="inputValue">$<input type="number" class="no_border" id="additional-payment"
-										min="0" max="1000" style="width: 60px;"></div>
-							</div>
-							<div class="flex-center">
-								<button class="widget-submit-btn" onclick="show_results()">Calculate</button>
-							</div>
-						</div>
-					</div>
-					<!-- Slide 2 - Calculation Results -->
-					<div class="widget-slide slow" id="results" style="display:none">
-						<div class="widget-body">
-							<!-- Current Payment -->
-							<div class="inputTitleContainer">
-								<div class="inputTitle">Current Monthly Payment</div>
-								<div class="inputValue">$ <span id="Current-Payment"></span></div>
-							</div>
-							<ul>
-								<li>Years left to pay: <span id="years-to-pay-current-payment"></span></li>
-								<li>Total Payment: $ <span id="total-cost-current-payment"></span></li>
-							</ul>
-							<!-- With New Monthly Payment -->
-							<div class="inputTitleContainer">
-								<div class="inputTitle">New Monthly Payment</div>
-								<div class="inputValue">$ <span id="New-Payment"></span></div>
-							</div>
-							<ul>
-								<li>Years left to pay: <span id="years-to-pay-new-payment"></span></li>
-								<li>Total Payment: $ <span id="total-cost-new-payment"></span></li>
-							</ul>
-							<div class="inputTitleContainer">
-								<div class="inputTitle" style="font-size: 125%;">Amount Money Saved</div>
-								<div class="inputValue">$ <span id="amount-saved"></span></div>
-							</div>
-							<div class="flex-center">
-								<button class="widget-submit-btn" onclick="show_slide('slide-1')">Start Over</button>
-							</div>
-						</div>
-					</div>
+			</div>
+			<div class="col-6 col-s-6">
+				<div class="card-header">Buyers Who Are Open To Unique Opportunities</div>
+				<div class="card-body">
+					<p>A REALTOR® with the SFR® certification can guide a buyer through the distressed property
+						transaction.</p>
+					<p>Through the process, the SFR® will:</p>
+					<ul>
+						<li>Describe the differences between a short sale and a foreclosure</li>
+						<li>Counsel buyers and reduce risk</li>
+						<li>Guide the transaction from start to finish, including closing dates, inspection and
+							appraisal expectations</li>
+						<li>Prepare the buyer for expected time frames for lender approval</li>
+					</ul>
 				</div>
 			</div>
 		</div>
 	</main>
-	<!-- Disclaimer ---------------------------------------------------------->
-	<section class="light-gray">
-		<div class="main flex-perfect-center">
-			<div class="col-8 col-s-7">
-				<p>DISCLAIMER: The figures displayed above are based upon your input and may not reflect your actual
-					mortgage payment or total monthly costs. Calculations by this tool are believed to be accurate,
-					yet are not guaranteed.</p>
+	<!-- More Description-->
+	<section class="main flex-center" id="ss-collapsible">
+		<div class="col-4 col-s-4">
+			<button class="collapsible">A short sale is an option if:</button>
+			<div class="content medium">
 				<ul>
-					<li><a href="https://www.jimngo.net/mortgage-insurance" target="_blank">Mortgage Insurance <i
-								class="fas fa-external-link-alt"></i></a> is required for down payment less than 20% and
-						it's typically between 0.5% to 1.0% of the loan amount.</li>
-					<li>FHA requires a 3.5% down payment as well as an upfront and monthly mortgage insurance in
-						many cases.</li>
-					<li>VA Loan does not require any down payment or monthly mortgage insurance, but has an upfront
-						Funding Fee.</li>
-					<li><a href="https://www.jimngo.net/closing-costs" target="_blank">Closing Costs <i
-								class="fas fa-external-link-alt"></i></a> account for about 2%-5% of the purchase price.
-					</li>
-					<li>Property Tax is normally 1.20% of the purchased price annually. Please confirm rate with
-						your county.</li>
-					<li>Every loan program has its loan limit which varies by county. Please visit <a
-							href="https://entp.hud.gov/idapp/html/hicostlook.cfm" target="_blank">HUD</a> for limits
-						on FHA loans, <a href="https://www.benefits.va.gov/HOMELOANS/purchaseco_loan_limits.asp"
-							target="_blank">VA</a> for limits on VA loans, and <a
-							href="https://www.fhfa.gov/DataTools/Downloads/Pages/Conforming-Loan-Limits.aspx"
-							target="_blank">FHFA</a> for limits on Conventional loans. Loans exceeding conforming
-						loan limits are considered Jumbo Loans, which typically require a FICO score of 700+ and a
-						down payments of 20 percent or more.</li>
+					<li>You are ineligible to refinance or modify your mortgage</li>
+					<li>You are facing a long-term hardship</li>
+					<li>You are behind on your mortgage payments</li>
+					<li>You owe more on your home than it's worth</li>
+					<li>You have not been able to sell your home at a price that covers what you still owe on your
+						mortgage</li>
+					<li>You can no longer afford your home and are ready or need to leave</li>
 				</ul>
 			</div>
-			<!-- Mortgage News Daily -->
-			<div class="col-4 col-s-5">
-				<!-- MORTGAGE RATES BEGIN -->
-				<script type="text/javascript">
-					if (typeof jQuery == "undefined") {
-						document.write(unescape("%3Cscript src='" + (document.location.protocol == 'https:' ? 'https:' :
-								'http:') +
-							"//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js' type='text/javascript'%3E%3C/script%3E"
-						));
-						mlcalc_jquery_noconflict = 1;
-					};
-				</script>
-				<div style="line-height:10px;font-weight:normal;font-size:9px;font-family:Tahoma;padding:0;margin:0;border:0;text-align:right;background:transparent;color:#EEEEEE;width:300px;padding-right:10px;"
-					class="mlcalcRatesWidgetHolder" id="mlcalcRatesWidgetHolderCA">
-					<script type="text/javascript">
-						document.write(unescape("%3Cscript src='//www.mlcalc.com" +
-							"/mortgage-rates/california/widget-wide.js' type='text/javascript'%3E%3C/script%3E"
-						));
-					</script>Powered by <a href="https://www.mlcalc.com/mortgage-rates/california/" target="_blank"
-						style="font-weight:normal;font-size:9px;font-family:Tahoma;color:#EEEEEE;text-decoration:none;">CA
-						www.mlcalc.com</a>
-				</div>
-				<!-- MORTGAGE RATES END -->
+			<button class="collapsible">What is a short sale?</button>
+			<div class="content medium">
+				<p>A short sale is one alternative to foreclosure. In a short sale, the home owner, real estate
+					professional, and lender work together to form an agreement to sell a home at current market
+					value; this agreed upon value is typically below the existing balance on the home owner’s
+					mortgage. The property is able to transfer hands to a new owner, removing the overhead and risk
+					from the lender’s portfolio and relieving the existing home owner of the burden of an underwater
+					mortgage. The short sale process can prove challenging, stressful, and time consuming; it
+					requires persistence and dedication.</p>
+			</div>
+			<button class="collapsible">Why use an SFR®?</button>
+			<div class="content medium">
+				<p>Members of the National Association of REALTORS® who have earned the Short Sales and Foreclosure
+					Resource certification understand distressed property transactions, and everything that is
+					included.</p>
+				<p>Working with an SFR® takes the stress out of distressed property transactions. We know that
+					selling or buying a home in uncertain times can be scary, but we know how to make it happen.
+					With unexpected opportunities everywhere, now is the time to sell or buy.</p>
+			</div>
+		</div>
+		<div class="col-4 col-s-4">
+			<button class="collapsible">Price</button>
+			<div class="content medium">
+				<p>The price you offer to the seller of a short-sale property should reflect what’s termed fair
+					market value. Fair market value is the price a buyer will pay and a seller will accept for a
+					property under reasonable and ordinary conditions. We will provide with a comparative market
+					analysis (CMA) that includes listings of comparable properties that have sold in the last 6
+					months as well as pending listings so that you can make an informed decision on how much to
+					offer. However, please note that the listing price of the short-sale property may or may not
+					reflect market value.</p>
+				<p>Some short-sale properties are priced extremely aggressively with the goal of creating a bidding
+					war, which may still backfire if the offer accepted by the seller is not approved by the lender.
+				</p>
+			</div>
+			<button class="collapsible">Length of Time for Approval</button>
+			<div class="content fast">
+				<p>Each lender has its own protocol for approving short sales. We will need to allow a sufficient
+					amount of time in the contract to assure both the seller and the seller’s lender that they are
+					not wasting their time with your offer.</p>
+			</div>
+			<button class="collapsible">Earnest Money</button>
+			<div class="content fast">
+				<p>This deposit at time of contract indicates to the seller that you are acting in good faith and
+					will attempt to satisfy all contingencies within your control within the time frames agreed to
+					in the contract. It also shows the lender that your contract has a reasonable chance of closing.
+				</p>
+			</div>
+		</div>
+		<div class="col-4 col-s-4">
+			<button class="collapsible">Home Inspection</button>
+			<div class="content medium">
+				<p>Most short sales are sold “as is.” All buyers should complete a home inspection. The purpose of
+					the home inspection is to determine, based upon condition, if the property is acceptable on the
+					terms offered to the seller. You will want to complete a home inspection within a few days
+					following the signing of the contract. You should not wait to complete the home inspection until
+					after the contract is approved because you may possibly waste months in a contract that ends up
+					failing because of property condition.</p>
+				<p>If the inspection report alerts you to defects prior to the seller’s lender receiving the
+					contract, you may be able to renegotiate terms with the seller based upon the defects.</p>
+			</div>
+			<button class="collapsible">Mortgage Application</button>
+			<div class="content medium">
+				<p>Frequently, seller’s lenders give limited time to close after approval and if you have not
+					started your mortgage process, you will not be able to meet the required date for closing.
+					Often, buyer’s lenders are reluctant to order the appraisal prior to approval by the seller’s
+					lender. Although an appraisal will need to be updated if more than six months had passed, many
+					buyers have found that ordering it and possibly paying for an update have saved them money since
+					the appraisal done by their mortgage lender was a major influence on the seller’s lender when
+					the seller’s lender expected to negotiate a higher sales price than what was offered. This is
+					your decision and you need to instruct your lender on how you want to proceed.</p>
+			</div>
+			<button class="collapsible">Attorney Modification</button>
+			<div class="content medium">
+				<p>If there is an attorney modification clause in the contract being used you will want your
+					attorney to look over the contract and make modifications within the time frame allotted
+					starting from the signing of the contract by you and the seller—not from the time the lender
+					approves it. Whatever time frame is agreed to must be provided for both sides, and allowing a
+					seller to get out of the contract after it is approved by the lender puts you in jeopardy. As a
+					reminder, it is important that you choose an attorney who understands the short-sale process.
+				</p>
 			</div>
 		</div>
 	</section>
@@ -569,35 +658,23 @@
 	</section>
 	<!-- Mobile Contact Bar -->
 	<section class="mobile-contact-bar">
-		<div class="flex-perfect-center">
-			<div id="text" style="width: 33%">
-				<a href="sms:1-909-510-9479" class="btn-action"><i class="fas fa-sms dark-cerulean"></i></a>
-			</div>
-			<div id="call" style="width: 33%">
-				<a href="tel:1-909-510-9479" class="btn-action"><i class="fas fa-mobile-alt dark-cerulean"></i></a>
-			</div>
-			<div id="email" style="width: 33%">
-				<a href="mailto:admin@jimngo.info" class="btn-action"><i class="fas fa-envelope dark-cerulean"></i></a>
+		<div id="mobile-phone">
+			<a href="tel:1-909-510-9479">
+				<div class="center pad">
+					<i class="fas fa-mobile-alt">&ensp; Call Now</i>
+				</div>
+			</a>
+		</div>
+		<div id="mobile-sms-email">
+			<div class="flex-center pad">
+				<div style="width:50%"><a href="sms:1-909-510-9479"><i class="fas fa-sms"></i></a></div>
+				<div style="width:50%"><a href="mailto:admin@jimngo.info"><i class="far fa-envelope"></i></a>
+				</div>
 			</div>
 		</div>
 	</section>
-	<!-- Scripts ------------------------------------------------------------->
-	<link rel="stylesheet" href="style/fontawesome-free-5.11.1-web/css/all.min.css">
-	<!-- Default Statcounter code for Jimngo.net https://www.jimngo.net -->
-	<script type="text/javascript">
-		var sc_project = 11893871;
-		var sc_invisible = 1;
-		var sc_security = "b16c17b8";
-	</script>
-	<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
-	<noscript>
-		<div class="statcounter"><a title="Web Analytics" href="https://statcounter.com/" target="_blank"><img
-					class="statcounter" src="https://c.statcounter.com/11893871/0/b16c17b8/1/" alt="Web Analytics"></a>
-		</div>
-	</noscript>
-	<!-- End of Statcounter Code -->
-	<script src="javascript/extra-payment-calc.min.js" async></script>
 </body>
+<script src="javascript/short-sale-foreclosure.min.js" async></script>
 <footer>
 	<div class="main flex-perfect-center center">
 		<div class="col-3 col-s-3">

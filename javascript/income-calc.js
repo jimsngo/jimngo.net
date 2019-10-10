@@ -59,15 +59,15 @@ function open() {
 }
 
 function hide_phone() {
-	hide('phone');
-	hide('mobile-phone');
-	show('mobile-sms-email');
+	show('text');
+	hide('call');
+	show('email');
 }
 
 function show_phone() {
-	show('phone');
-	show('mobile-phone');
-	hide('mobile-sms-email');
+	show('text');
+	show('call');
+	show('email');
 }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -294,6 +294,7 @@ function get_sales_price() {
 	} else {
 		hide("jumboLoan");
 	}
+	updateScrollHeight('sales-price');
 }
 
 function get_down_payment_percent() {

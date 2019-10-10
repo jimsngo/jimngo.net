@@ -21,7 +21,6 @@
     <meta property="og:image" content="image/mortgage-calc (2).jpg" />
     <link rel="canonical" href="https://www.jimngo.net/mortgage-income-calculator">
     <link rel="icon" href="image/favicon-16x16.png" type="image/gif" sizes="16x16">
-    <!-- Style Sheets ---------------------------------------------------------->
     <link rel="stylesheet" href="style/style.min.css">
     <link rel="stylesheet" href="style/home-search.min.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -33,58 +32,12 @@
             dataLayer.push(arguments);
         }
         gtag('js', new Date());
-        gtag('config', 'UA-88549125-1');
+        gtag('config', 'UA-88549125-1'); // Google Analytics
+        gtag('config', 'AW-935673147'); // Google Ads
     </script>
-    <!-- Global site tag (gtag.js) - Google Ads: 935673147 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-935673147"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'AW-935673147');
-    </script>
-    <!-- Event snippet for Mortgage Income Calculator conversion page -->
-    <script>
-        gtag('event', 'conversion', {
-            'send_to': 'AW-935673147/kRyqCLXYr54BELv6lL4D'
-        });
-    </script>
-    <!-- Facebook Pixel Code -->
-    <script>
-        ! function (f, b, e, v, n, t, s) {
-            if (f.fbq) return;
-            n = f.fbq = function () {
-                n.callMethod ?
-                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-            };
-            if (!f._fbq) f._fbq = n;
-            n.push = n;
-            n.loaded = !0;
-            n.version = '2.0';
-            n.queue = [];
-            t = b.createElement(e);
-            t.async = !0;
-            t.src = v;
-            s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
-        }(window, document, 'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '1149243855093416');
-        fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none" alt="FB"
-            src="https://www.facebook.com/tr?id=1149243855093416&ev=PageView&noscript=1" /></noscript>
 </head>
 
 <body>
-    <!-- Facebook Script-->
-    <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2">
-    </script>
-    <!-- End Facebook Script-->
     <header>
         <a href="https://www.jimngo.net">
             <h2>Your Local Realtor - Mortgage Professional - Life Agent</h2>
@@ -115,13 +68,6 @@
                             rel="nofollow">1353214</a><br />
                         BRE <a href="http://www2.dre.ca.gov/publicasp/pplinfo.asp" target="_blank"
                             rel="nofollow">01164334</a></p>
-                    <!-- Facebook Share Button -->
-                    <div class="fb-share-button" data-href="https://www.jimngo.net/mortgage-income-calculator"
-                        data-layout="button_count" data-size="large"><a target="_blank"
-                            href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.jimngo.net%2Fmortgage-income-calculator&amp;src=sdkpreparse"
-                            class="fb-xfbml-parse-ignore">Share</a></div>
-                    <!-- End Facebook Share-->
-                    <p>Tiếng Việt</p>
                 </div>
             </div>
             <!-- Page Description -->
@@ -278,7 +224,7 @@
                     <div class="card-body">
                         <div class="inputTitleContainer">
                             <h3 class="inputTitle">Sales Price:</h3>
-                            <div class="input-value-2">$<span id="PP"></span></div>
+                            <div class="inputValue">$<span id="PP"></span></div>
                         </div>
                         <div class="sliderContainer"><input type="range" min="100000" max="1000000" value="300000"
                                 step="10000" class="slider" id="pp" oninput="get_sales_price()"></div>
@@ -310,7 +256,7 @@
                     <div class="card-body">
                         <div class="inputTitleContainer">
                             <h3 class="inputTitle">Down Payment:</h3>
-                            <div class="input-value-2"><span id="DP%"></span>%</div>
+                            <div class="inputValue"><span id="DP%"></span>%</div>
                         </div>
                         <div class="sliderContainer"><input type="range" min="0.0" max="50" value="3.5" step="0.5"
                                 class="slider" id="dp" oninput="get_down_payment_percent()" /></div>
@@ -324,7 +270,7 @@
                         <!-- LTV -->
                         <div class="inputTitleContainer">
                             <h3 class="inputTitle">Loan-to-value ratio (LTV):</h3>
-                            <div class="input-value-2"><span id="LTV"></span>%</div>
+                            <div class="inputValue"><span id="LTV"></span>%</div>
                         </div>
                         <p>Your loan-to-value ratio is the most limiting factor on the price of a home you can purchase.
                             Increasing your down payment will allow you to increase the price of the home you can
@@ -342,7 +288,7 @@
                     <div class="card-body">
                         <div class="inputTitleContainer">
                             <h3 class="inputTitle">Mortgage Insurance</h3>
-                            <div class="input-value-2"><span id="MI%"></span>%</div>
+                            <div class="inputValue"><span id="MI%"></span>%</div>
                         </div>
                         <div class="sliderContainer"><input type="range" min="0.5" max="1.0" value=".75" step="0.05"
                                 class="slider" id="mi" oninput="get_mi_rate()" /></div>
@@ -372,7 +318,7 @@
                     <div class="card-body">
                         <div class="inputTitleContainer">
                             <h3 class="inputTitle">Expected Interest Rate:</h3>
-                            <div class="input-value-2"><span id="APR%"></span> %</div>
+                            <div class="inputValue"><span id="APR%"></span> %</div>
                         </div>
                         <div class="sliderContainer"><input id="apr" class="slider" max="10" min="1" step="0.125"
                                 type="range" value="5" oninput="get_interest_rate()" /></div>
@@ -399,7 +345,7 @@
                     <div class="card-body">
                         <div class="inputTitleContainer">
                             <h3 class="inputTitle">Property Tax:</h3>
-                            <div class="input-value-2"><span id="PT%"></span>%</div>
+                            <div class="inputValue"><span id="PT%"></span>%</div>
                         </div>
                         <div class="sliderContainer"><input type="range" min="0.5" max="1.5" value="1.20" step="0.05"
                                 class="slider" id="pt" oninput="get_property_tax_rate()" /></div>
@@ -419,7 +365,7 @@
                         <!-- Front DTI Slider -->
                         <div class="inputTitleContainer">
                             <div class="inputTitle">Housing Ratio:</div>
-                            <div class="input-value-2">$<span id="EFR%"></span>%</div>
+                            <div class="inputValue">$<span id="EFR%"></span>%</div>
                         </div>
                         <div class="sliderContainer">
                             <input class="slider" id="efr" max="50" min="0" step="1" type="range" value="37"
@@ -428,7 +374,7 @@
                         <!-- Back DTI Slider -->
                         <div class="inputTitleContainer">
                             <div class="inputTitle">Debt To Income Ratio:</div>
-                            <div class="input-value-2">$<span id="EBR%"></span>%</div>
+                            <div class="inputValue">$<span id="EBR%"></span>%</div>
                         </div>
                         <div class="sliderContainer">
                             <input class="slider" id="ebr" max="50" min="0" step="1" type="range" value="47"
@@ -540,7 +486,7 @@
                         </ul>
                         <div class="inputTitleContainer">
                             <div class="inputTitle">Housing Expenses:</div>
-                            <div class="input-value-2">$<span id="MP"></span></div>
+                            <div class="inputValue">$<span id="MP"></span></div>
                         </div>
                         <ul>
                             <li>Principal & Interest: $<span id="PI"></span></li>
@@ -550,7 +496,7 @@
                         </ul>
                         <div class="inputTitleContainer">
                             <div class="inputTitle">Current Monthly Liability:</div>
-                            <div class="input-value-2">$<span id="ML"></span></div>
+                            <div class="inputValue">$<span id="ML"></span></div>
                         </div>
                         <!-- Next Start Over -->
                         <div class="flex-center">
@@ -1318,25 +1264,20 @@
     </section>
     <!-- Mobile Contact Bar -->
     <section class="mobile-contact-bar">
-        <div id="mobile-phone">
-            <a href="tel:1-909-510-9479">
-                <div class="center pad">
-                    <i class="fas fa-mobile-alt">&ensp; Call Now</i>
-                </div>
-            </a>
-        </div>
-        <div id="mobile-sms-email">
-            <div class="flex-center pad">
-                <div style="width:50%"><a href="sms:1-909-510-9479"><i class="fas fa-sms"></i></a></div>
-                <div style="width:50%"><a href="mailto:admin@jimngo.info"><i class="far fa-envelope"></i></a>
-                </div>
+        <div class="flex-perfect-center">
+            <div id="text" style="width: 33%">
+                <a href="sms:1-909-510-9479" class="btn-action"><i class="fas fa-sms dark-cerulean"></i></a>
+            </div>
+            <div id="call" style="width: 33%">
+                <a href="tel:1-909-510-9479" class="btn-action"><i class="fas fa-mobile-alt dark-cerulean"></i></a>
+            </div>
+            <div id="email" style="width: 33%">
+                <a href="mailto:admin@jimngo.info" class="btn-action"><i class="fas fa-envelope dark-cerulean"></i></a>
             </div>
         </div>
     </section>
     <!-- Scripts ------------------------------------------------------------->
     <link rel="stylesheet" href="style/fontawesome-free-5.11.1-web/css/all.min.css">
-    <link rel="preload" href="style/fontawesome-free-5.11.1-web/webfonts/fa-regular-400.woff2" as="style">
-    <link rel="preload" href="style/fontawesome-free-5.11.1-web/webfonts/fa-solid-900.woff2" as="style">
     <!-- Default Statcounter code for Jimngo.net https://www.jimngo.net -->
     <script type="text/javascript">
         var sc_project = 11893871;

@@ -59,16 +59,32 @@ function open() {
 }
 
 function hide_phone() {
-    hide('phone');
-    hide('mobile-phone');
-    show('mobile-sms-email');
+    show('text');
+    hide('call');
+    show('email');
 }
 
 function show_phone() {
-    show('phone');
-    show('mobile-phone');
-    hide('mobile-sms-email');
+    show('text');
+    show('call');
+    show('email');
 }
+
+///////////////////////////////////////////////////////////////////////////////
+// Delay images                                                               /
+///////////////////////////////////////////////////////////////////////////////
+
+function init() {
+    var imgDefer = document.getElementsByTagName('img');
+    for (var i = 0; i < imgDefer.length; i++) {
+        if (imgDefer[i].getAttribute('data-src')) {
+            imgDefer[i].setAttribute('src', imgDefer[i].getAttribute('data-src'));
+            var src = imgDefer[i].getAttribute('data-src');
+        }
+    }
+}
+
+init();
 
 ///////////////////////////////////////////////////////////////////////////////
 // Slide Show                                                                 /

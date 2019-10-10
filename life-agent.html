@@ -21,7 +21,6 @@
 	<meta property="og:image" content="image\life-2.jpg" />
 	<link rel="canonical" href="https://www.jimngo.net/life-agent">
 	<link rel="icon" href="image/favicon-16x16.png" type="image/gif" sizes="16x16">
-	<!-- Style Sheets ---------------------------------------------------------->
 	<link rel="stylesheet" href="style/style.min.css">
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-88549125-1"></script>
@@ -32,52 +31,12 @@
 			dataLayer.push(arguments);
 		}
 		gtag('js', new Date());
-		gtag('config', 'UA-88549125-1');
+		gtag('config', 'UA-88549125-1'); // Google Analytics
+		gtag('config', 'AW-935673147'); // Google Ads
 	</script>
-	<!-- Global site tag (gtag.js) - Google Ads: 935673147 -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=AW-935673147"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-
-		function gtag() {
-			dataLayer.push(arguments);
-		}
-		gtag('js', new Date());
-		gtag('config', 'AW-935673147');
-	</script>
-	<!-- Facebook Pixel Code -->
-	<script>
-		! function (f, b, e, v, n, t, s) {
-			if (f.fbq) return;
-			n = f.fbq = function () {
-				n.callMethod ?
-					n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-			};
-			if (!f._fbq) f._fbq = n;
-			n.push = n;
-			n.loaded = !0;
-			n.version = '2.0';
-			n.queue = [];
-			t = b.createElement(e);
-			t.async = !0;
-			t.src = v;
-			s = b.getElementsByTagName(e)[0];
-			s.parentNode.insertBefore(t, s)
-		}(window, document, 'script',
-			'https://connect.facebook.net/en_US/fbevents.js');
-		fbq('init', '1149243855093416');
-		fbq('track', 'PageView');
-	</script>
-	<noscript><img height="1" width="1" alt="FB"
-			src="https://www.facebook.com/tr?id=1149243855093416&ev=PageView&noscript=1" /></noscript>
 </head>
 
 <body>
-	<!-- Facebook Script-->
-	<div id="fb-root"></div>
-	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2">
-	</script>
-	<!-- End Facebook Script-->
 	<header>
 		<a href="https://www.jimngo.net">
 			<h2>Your Local Realtor - Mortgage Professional - Life Agent</h2>
@@ -101,12 +60,6 @@
 						Life Agent #0K65318<br />
 						<i class="fas fa-mobile-alt"></i> <a href="tel:909-510-9479">(909) 510-9479</a><br />
 						<i class="far fa-envelope"></i> <a href="mailto:admin@jimngo.info">admin@jimngo.info</a></p>
-					<!-- Facebook Share -->
-					<div class="fb-share-button" data-href="https://www.jimngo.net/life-agent"
-						data-layout="button_count" data-size="large">
-						<a target="_blank"
-							href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.jimngo.net%2Flife-agent&amp;src=sdkpreparse"
-							class="fb-xfbml-parse-ignore">Share</a></div>
 				</div>
 			</div>
 			<div class="col-4 col-s-8">
@@ -230,23 +183,23 @@
 					<!-- Final Expenses -->
 					<div class="inputTitleContainer">
 						<div class="inputTitle">Final expenses</div>
-						<div class="input-value-2">$<span id="FE"></span></div>
+						<div class="inputValue">$<span id="FE"></span></div>
 					</div>
-					<div class="sliderContainer"><input id="fe" class="slider2" max="20000" min="0" step="1000"
+					<div class="sliderContainer"><input id="fe" class="slider" max="20000" min="0" step="1000"
 							type="range" value="15000" oninput="calc()" /></div>
 					<!-- Outstanding Debt -->
 					<div class="inputTitleContainer">
 						<div class="inputTitle">Outstanding debts</div>
-						<div class="input-value-2">$<span id="OD"></span></div>
+						<div class="inputValue">$<span id="OD"></span></div>
 					</div>
-					<div class="sliderContainer"><input id="od" class="slider2" max="100000" min="0" step="1000"
+					<div class="sliderContainer"><input id="od" class="slider" max="100000" min="0" step="1000"
 							type="range" value="0" oninput="calc()" /></div>
 					<!-- Outstanding Mortgage -->
 					<div class="inputTitleContainer">
 						<div class="inputTitle">Outstanding Mortgage</div>
-						<div class="input-value-2">$<span id="OM"></span></div>
+						<div class="inputValue">$<span id="OM"></span></div>
 					</div>
-					<div class="sliderContainer"><input id="om" class="slider2" max="1000000" min="0" step="1000"
+					<div class="sliderContainer"><input id="om" class="slider" max="1000000" min="0" step="1000"
 							type="range" value="0" oninput="calc()" /></div>
 					<!-- Back/Next buttons -->
 					<div class="flex-center">
@@ -269,31 +222,31 @@
 					<!-- Your Current Income -->
 					<div class="inputTitleContainer">
 						<div class="inputTitle">Your current annual income</div>
-						<div class="input-value-2">$<span id="AI"></span></div>
+						<div class="inputValue">$<span id="AI"></span></div>
 					</div>
-					<div class="sliderContainer"><input id="ai" class="slider2" max="300000" min="0" step="1000"
+					<div class="sliderContainer"><input id="ai" class="slider" max="300000" min="0" step="1000"
 							type="range" value="50000" oninput="calc()" /></div>
 					<!-- Years to provide income -->
 					<div class="inputTitleContainer">
 						<div class="inputTitle">Years to provide income</div>
-						<div class="input-value-2"><span id="YRS"></span></div>
+						<div class="inputValue"><span id="YRS"></span></div>
 					</div>
-					<div class="sliderContainer"><input id="yrs" class="slider2" max="5" min="0" step="1" type="range"
+					<div class="sliderContainer"><input id="yrs" class="slider" max="5" min="0" step="1" type="range"
 							value="0" oninput="calc()"></div>
 					<!-- College funding per child -->
 					<div class="inputTitleContainer">
 						<div class="inputTitle tooltip">College funding (per child)<span class="tooltiptext">Current
 								cost to put a child in a CA University is around $30K per year</span></div>
-						<div class="input-value-2">$<span id="CF"></span></div>
+						<div class="inputValue">$<span id="CF"></span></div>
 					</div>
-					<div class="sliderContainer"><input id="cf" class="slider2" max="300000" min="0" step="5000"
+					<div class="sliderContainer"><input id="cf" class="slider" max="300000" min="0" step="5000"
 							type="range" value="0" oninput="calc()"></div>
 					<!-- Number of child -->
 					<div class="inputTitleContainer">
 						<div class="inputTitle">Number of child</div>
-						<div class="input-value-2"><span id="CHILD"></span></div>
+						<div class="inputValue"><span id="CHILD"></span></div>
 					</div>
-					<div class="sliderContainer"><input id="child" class="slider2" max="5" min="0" step="1" type="range"
+					<div class="sliderContainer"><input id="child" class="slider" max="5" min="0" step="1" type="range"
 							value="0" oninput="calc()" /></div>
 					<!-- Back/Next buttons -->
 					<div class="flex-center">
@@ -309,23 +262,23 @@
 					<!-- Current Savings & Investments -->
 					<div class="inputTitleContainer">
 						<div class="inputTitle">Current Savings & Investment</div>
-						<div class="input-value-2">$<span id="SI"></span></div>
+						<div class="inputValue">$<span id="SI"></span></div>
 					</div>
-					<div class="sliderContainer"><input id="si" class="slider2" max="500000" min="0" step="5000"
+					<div class="sliderContainer"><input id="si" class="slider" max="500000" min="0" step="5000"
 							type="range" value="0" oninput="calc()"></div>
 					<!-- IRA -->
 					<div class="inputTitleContainer">
 						<div class="inputTitle">IRA:</div>
-						<div class="input-value-2">$<span id="IRA"></span></div>
+						<div class="inputValue">$<span id="IRA"></span></div>
 					</div>
-					<div class="sliderContainer"><input id="ira" class="slider2" max="500000" min="0" step="5000"
+					<div class="sliderContainer"><input id="ira" class="slider" max="500000" min="0" step="5000"
 							type="range" value="0" oninput="calc()"></div>
 					<!-- Life Insurance in force -->
 					<div class="inputTitleContainer">
 						<div class="inputTitle">Life insurance in force</div>
-						<div class="input-value-2">$<span id="LI"></span></div>
+						<div class="inputValue">$<span id="LI"></span></div>
 					</div>
-					<div class="sliderContainer"><input id="li" class="slider2" max="1000000" min="0" step="5000"
+					<div class="sliderContainer"><input id="li" class="slider" max="1000000" min="0" step="5000"
 							type="range" value="0" oninput="calc()"></div>
 					<!-- Back/Next buttons -->
 					<div class="flex-center">
@@ -924,25 +877,20 @@
 	</section>
 	<!-- Mobile Contact Bar -->
 	<section class="mobile-contact-bar">
-		<div id="mobile-phone">
-			<a href="tel:1-909-510-9479">
-				<div class="center pad">
-					<i class="fas fa-mobile-alt">&ensp; Call Now</i>
-				</div>
-			</a>
-		</div>
-		<div id="mobile-sms-email">
-			<div class="flex-center pad">
-				<div style="width:50%"><a href="sms:1-909-510-9479"><i class="fas fa-sms"></i></a></div>
-				<div style="width:50%"><a href="mailto:admin@jimngo.info"><i class="far fa-envelope"></i></a>
-				</div>
+		<div class="flex-perfect-center">
+			<div id="text" style="width: 33%">
+				<a href="sms:1-909-510-9479" class="btn-action"><i class="fas fa-sms dark-cerulean"></i></a>
+			</div>
+			<div id="call" style="width: 33%">
+				<a href="tel:1-909-510-9479" class="btn-action"><i class="fas fa-mobile-alt dark-cerulean"></i></a>
+			</div>
+			<div id="email" style="width: 33%">
+				<a href="mailto:admin@jimngo.info" class="btn-action"><i class="fas fa-envelope dark-cerulean"></i></a>
 			</div>
 		</div>
 	</section>
 	<!-- Scripts ------------------------------------------------------------->
 	<link rel="stylesheet" href="style/fontawesome-free-5.11.1-web/css/all.min.css">
-	<link rel="preload" href="style/fontawesome-free-5.11.1-web/webfonts/fa-regular-400.woff2" as="style">
-	<link rel="preload" href="style/fontawesome-free-5.11.1-web/webfonts/fa-solid-900.woff2" as="style">
 	<!-- Default Statcounter code for Jimngo.net https://www.jimngo.net -->
 	<script type="text/javascript">
 		var sc_project = 11893871;

@@ -23,7 +23,6 @@
     <link rel="canonical" href="https://www.jimngo.net/mortgage-refinance">
     <link rel="icon" href="image/favicon-16x16.png" type="image/gif" sizes="16x16">
     <link rel="stylesheet" href="style/style.min.css">
-    <link rel="stylesheet" href="style/fontawesome-free-5.11.1-web/css/all.min.css">
     <link rel="stylesheet" href="style/home-search.min.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-88549125-1"></script>
@@ -34,41 +33,12 @@
             dataLayer.push(arguments);
         }
         gtag('js', new Date());
-        gtag('config', 'UA-88549125-1');
+        gtag('config', 'UA-88549125-1'); // Google Analytics
+        gtag('config', 'AW-935673147'); // Google Ads
     </script>
-    <!-- Facebook Pixel Code -->
-    <script>
-        ! function (f, b, e, v, n, t, s) {
-            if (f.fbq) return;
-            n = f.fbq = function () {
-                n.callMethod ?
-                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-            };
-            if (!f._fbq) f._fbq = n;
-            n.push = n;
-            n.loaded = !0;
-            n.version = '2.0';
-            n.queue = [];
-            t = b.createElement(e);
-            t.async = !0;
-            t.src = v;
-            s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
-        }(window, document, 'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '1149243855093416');
-        fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none" alt="FB"
-            src="https://www.facebook.com/tr?id=1149243855093416&ev=PageView&noscript=1" /></noscript>
 </head>
 
 <body>
-    <!-- Facebook Script ----------------------------------------------------->
-    <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2">
-    </script>
-    <!-- End Facebook Script ------------------------------------------------->
     <header>
         <a href="https://www.jimngo.net">
             <h2>Your Local Realtor - Mortgage Professional - Life Agent</h2>
@@ -98,13 +68,6 @@
                             rel="nofollow">1353214</a><br />
                         BRE <a href="http://www2.dre.ca.gov/publicasp/pplinfo.asp" target="_blank"
                             rel="nofollow">01164334</a></p>
-                    <!-- Facebook Share Button -->
-                    <div class="fb-share-button" data-href="https://www.jimngo.net/mortgage-refinance"
-                        data-layout="button_count" data-size="large"><a target="_blank"
-                            href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.jimngo.net%2Fmortgage-refinance&amp;src=sdkpreparse"
-                            class="fb-xfbml-parse-ignore">Share</a></div>
-                    <!-- End Facebook Share-->
-                    <p>Tiếng Việt</p>
                 </div>
             </div>
             <!-- Page Description ---------------------------------------->
@@ -159,12 +122,12 @@
     <section id="refi-calc">
         <!-- Banner ---------------------------------------------------------->
         <div class="banner dark-cerulean font-large" id="refi-ss">
-            <p class="slide showing">Streamline Refinance</p>
-            <p class="slide">Lower rate</p>
-            <p class="slide">Lower term</p>
-            <p class="slide">ARM Conversion</p>
-            <p class="slide">HELOCs</p>
-            <p class="slide">Emergency Fund</p>
+            <h2 class="slide showing">Streamline Refinance</h2>
+            <h2 class="slide">Lower rate</h2>
+            <h2 class="slide">Lower term</h2>
+            <h2 class="slide">ARM Conversion</h2>
+            <h2 class="slide">HELOCs</h2>
+            <h2 class="slide">Emergency Fund</h2>
         </div>
         <div class="main flex-center">
             <!-- Mortgage Refinance Calculator ------------------------------->
@@ -208,7 +171,7 @@
                         <!-- Current Loan Term -->
                         <div class="inputTitleContainer">
                             <div class="inputTitle">Loan Term</div>
-                            <select class="input-value-2" id="current-loan-term" onchange="get_current_loan_term()">
+                            <select class="inputValue" id="current-loan-term" onchange="get_current_loan_term()">
                                 <option value="15">15 Years</option>
                                 <option value="30" selected>30 Years</option>
                             </select>
@@ -216,7 +179,7 @@
                         <!-- Current Loan Balance-->
                         <div class="inputTitleContainer">
                             <div class="inputTitle">Loan Balance</div>
-                            <div class="input-value-2">$<span id="Current-Loan-Balance"></span></div>
+                            <div class="inputValue">$<span id="Current-Loan-Balance"></span></div>
                         </div>
                         <div class="sliderContainer">
                             <input class="slider" id="current-loan-balance" max="700000" min="0" step="10000"
@@ -226,7 +189,7 @@
                         <!-- Current Interest Rate -->
                         <div class="inputTitleContainer">
                             <div class="inputTitle">Interest Rate</div>
-                            <div class="input-value-2"><span id="Current-Interest"></span> %</div>
+                            <div class="inputValue"><span id="Current-Interest"></span> %</div>
                         </div>
                         <div class="sliderContainer">
                             <input class="slider" id="current-interest" max="10" min="3" step="0.125" type="range"
@@ -236,7 +199,7 @@
                         <!-- Current Monthly Payment -->
                         <div class="inputTitleContainer">
                             <div class="inputTitle">Monthly P&I</div>
-                            <div class="input-value-2">$<span id="Current-Payment"></span></div>
+                            <div class="inputValue">$<span id="Current-Payment"></span></div>
                         </div>
                         <div class="sliderContainer">
                             <input class="slider" id="current-payment" max="5000" min="0" step="5" type="range"
@@ -267,7 +230,7 @@
                         <div id='new-loan-amount-select'>
                             <div class="inputTitleContainer">
                                 <div class="inputTitle">New Loan Amount</div>
-                                <div class="input-value-2">$<span id="New-Loan-Amount"></span></div>
+                                <div class="inputValue">$<span id="New-Loan-Amount"></span></div>
                             </div>
                             <div class="sliderContainer">
                                 <input class="slider" id="new-loan-amount" max="700000" min="0" step="10000"
@@ -279,7 +242,7 @@
                             <!-- New Loan Term -->
                             <div class="inputTitleContainer">
                                 <div class="inputTitle">New Loan Term</div>
-                                <select class="input-value-2" id="new-loan-term" onchange="get_new_loan_term()">
+                                <select class="inputValue" id="new-loan-term" onchange="get_new_loan_term()">
                                     <option value="15">15 Years</option>
                                     <option value="30" selected>30 Years</option>
                                 </select>
@@ -289,7 +252,7 @@
                         <!-- New Interest Rate ------------------------------->
                         <div class="inputTitleContainer">
                             <div class="inputTitle">Expected Interest Rate</div>
-                            <div class="input-value-2"><span id="New-Interest"></span> %</div>
+                            <div class="inputValue"><span id="New-Interest"></span> %</div>
                         </div>
                         <div class="sliderContainer">
                             <input class="slider" id="new-interest" max="10" min="3" step="0.125" type="range"
@@ -308,7 +271,7 @@
                         <!-- Closing Costs-->
                         <div class="inputTitleContainer">
                             <div class="inputTitle">Closing Costs: </div>
-                            <div class="input-value-2">$ <span id="Closing-Costs"></span></div>
+                            <div class="inputValue">$ <span id="Closing-Costs"></span></div>
                         </div>
                         <div class="sliderContainer">
                             <input class="slider" id="closing-costs" max="3" min="2" step="0.1" type="range" value="2"
@@ -337,15 +300,15 @@
                     <div class="card-body">
                         <div class="inputTitleContainer">
                             <div class="inputTitle">Current Loan Balance</div>
-                            <div class="input-value-2">$ <span id="Current-Loan-Balance-2"></span></div>
+                            <div class="inputValue">$ <span id="Current-Loan-Balance-2"></span></div>
                         </div>
                         <div class="inputTitleContainer">
                             <div class="inputTitle">Current Interest Rate</div>
-                            <div class="input-value-2"><span id="Current-Interest-2"></span>%</div>
+                            <div class="inputValue"><span id="Current-Interest-2"></span>%</div>
                         </div>
                         <div class="inputTitleContainer">
                             <div class="inputTitle">Current Monthly Payment</div>
-                            <div class="input-value-2">$ <span id="Current-Payment-2"></span></div>
+                            <div class="inputValue">$ <span id="Current-Payment-2"></span></div>
                         </div>
                         <ul>
                             <li>Current Loan Term: <span id="Current-Loan-Term-2"></span></li>
@@ -360,19 +323,19 @@
                     <div class="card-body">
                         <div class="inputTitleContainer">
                             <div class="inputTitle">New Loan Amount</div>
-                            <div class="input-value-2">$<span id="New-Loan-Amount-2"></span></div>
+                            <div class="inputValue">$<span id="New-Loan-Amount-2"></span></div>
                         </div>
                         <div class="inputTitleContainer" id="cash-out">
                             <div class="inputTitle">Cash @ Closing</div>
-                            <div class="input-value-2">$<span id="cash-at-closing"></span></div>
+                            <div class="inputValue">$<span id="cash-at-closing"></span></div>
                         </div>
                         <div class="inputTitleContainer">
                             <div class="inputTitle">New Interest Rate</div>
-                            <div class="input-value-2"><span id="New-Interest-2"></span>%</div>
+                            <div class="inputValue"><span id="New-Interest-2"></span>%</div>
                         </div>
                         <div class="inputTitleContainer">
                             <div class="inputTitle">New Monthly Payment</div>
-                            <div class="input-value-2">$<span id="new-monthly-payment"></span></div>
+                            <div class="inputValue">$<span id="new-monthly-payment"></span></div>
                         </div>
                         <ul>
                             <li>New Loan Term: <span id="new-loan-term-2"></span></li>
@@ -489,7 +452,7 @@
             <!-- Mortgage News Daily -->
             <div class="col-4 col-s-5">
                 <!-- MORTGAGE RATES BEGIN -->
-                <script type="text/javascript">
+                <script type="text/javascript" async>
                     if (typeof jQuery == "undefined") {
                         document.write(unescape("%3Cscript src='" + (document.location.protocol == 'https:' ? 'https:' :
                                 'http:') +
@@ -500,11 +463,12 @@
                 </script>
                 <div style="line-height:10px;font-weight:normal;font-size:9px;font-family:Tahoma;padding:0;margin:0;border:0;text-align:right;background:transparent;color:#EEEEEE;width:300px;padding-right:10px;"
                     class="mlcalcRatesWidgetHolder" id="mlcalcRatesWidgetHolderCA">
-                    <script type="text/javascript">
+                    <script type="text/javascript" async>
                         document.write(unescape("%3Cscript src='//www.mlcalc.com" +
                             "/mortgage-rates/california/widget-wide.js' type='text/javascript'%3E%3C/script%3E"
                         ));
-                    </script>Powered by <a href="https://www.mlcalc.com/mortgage-rates/california/" target="_blank"
+                    </script>
+                    Powered by <a href="https://www.mlcalc.com/mortgage-rates/california/" target="_blank"
                         style="font-weight:normal;font-size:9px;font-family:Tahoma;color:#EEEEEE;text-decoration:none;">CA
                         www.mlcalc.com</a>
                 </div>
@@ -825,7 +789,7 @@
     </section>
     <!-- Marketing ----------------------------------------------------------->
     <section id="flyers">
-        <div class="banner dark-cerulean" id="flyer-ss">
+        <div class="banner dark-cerulean font-large" id="flyer-ss">
             <h3 class="slide showing">Purchase</h3>
             <h3 class="slide">Refinance</h3>
             <h3 class="slide">FHA</h3>
@@ -1063,25 +1027,20 @@
     </section>
     <!-- Mobile Contact Bar -->
     <section class="mobile-contact-bar">
-        <div id="mobile-phone">
-            <a href="tel:1-909-510-9479">
-                <div class="center pad">
-                    <i class="fas fa-mobile-alt">&ensp; Call Now</i>
-                </div>
-            </a>
-        </div>
-        <div id="mobile-sms-email">
-            <div class="flex-center pad">
-                <div style="width:50%"><a href="sms:1-909-510-9479"><i class="fas fa-sms"></i></a></div>
-                <div style="width:50%"><a href="mailto:admin@jimngo.info"><i class="far fa-envelope"></i></a>
-                </div>
+        <div class="flex-perfect-center">
+            <div id="text" style="width: 33%">
+                <a href="sms:1-909-510-9479" class="btn-action"><i class="fas fa-sms dark-cerulean"></i></a>
+            </div>
+            <div id="call" style="width: 33%">
+                <a href="tel:1-909-510-9479" class="btn-action"><i class="fas fa-mobile-alt dark-cerulean"></i></a>
+            </div>
+            <div id="email" style="width: 33%">
+                <a href="mailto:admin@jimngo.info" class="btn-action"><i class="fas fa-envelope dark-cerulean"></i></a>
             </div>
         </div>
     </section>
     <!-- Scripts ------------------------------------------------------------->
     <link rel="stylesheet" href="style/fontawesome-free-5.11.1-web/css/all.min.css">
-    <link rel="preload" href="style/fontawesome-free-5.11.1-web/webfonts/fa-regular-400.woff2" as="style">
-    <link rel="preload" href="style/fontawesome-free-5.11.1-web/webfonts/fa-solid-900.woff2" as="style">
     <!-- Default Statcounter code for Jimngo.net https://www.jimngo.net -->
     <script type="text/javascript">
         var sc_project = 11893871;
