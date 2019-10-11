@@ -74,31 +74,25 @@ function show_phone() {
 // Header Section - Real Estate, Home Loans, and Life Agent                   /
 ///////////////////////////////////////////////////////////////////////////////
 
-const card_titles = document.getElementById("cards").getElementsByClassName("card-title");
-const card_active = document.getElementById("cards").getElementsByClassName("card-active");
+const card_contents = document.getElementById("cards").getElementsByClassName("card-content");
 
-// Add active class to class name "card-title"
-for (var i = 0; i < card_titles.length; i++) {
-    card_titles[i].addEventListener("click", function () {
-        card_active[0].className = card_active[0].className.replace(" card-active", "");
-        this.className += " card-active";
-    });
+function slide_up(array) {
+    for (var i = 0; i < array.length; i++) {
+        array[i].style.display = 'none';
+        array[i].style.height = '0px';
+    }
 }
 
-function show_content(id) {
-    // Hide all elements with class name "card-content"
-    var elements = document.getElementById("cards").getElementsByClassName("card-content");
-    for (var j = 0; j < elements.length; j++) {
-        elements[j].style.display = 'none';
-        elements[j].style.height = '0px';
-    }
-    // Show content of clicked "card-content" element
-    content = document.getElementById(id);
+function slide_down(id) {
+    var content = document.getElementById(id);
     content.style.display = 'block';
     content.style.height = content.scrollHeight + 'px';
-    if (window.innerWidth < 451) {
-        document.getElementById('cards').scrollIntoView();
-    }
+}
+
+function show_select() {
+    slide_up(card_contents);
+    var serviceSelect = document.getElementById('service-select').value;
+    slide_down(serviceSelect);
 }
 
 ///////////////////////////////////////////////////////////////////////////////

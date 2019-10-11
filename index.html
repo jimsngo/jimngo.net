@@ -52,7 +52,7 @@
     <main>
         <div class="main flex-center">
             <!-- About Me ---------------------------------------------------->
-            <div class="col-3 col-s-4">
+            <div class="col-3 col-s-4 light-gray radius-5">
                 <div style="text-align:center; line-height: 1.4;">
                     <a href="https://www.realtor.com/realestateagents/jim-son-ngo_ontario_ca_3146995_094379828"
                         target="_blank" title="About Me">
@@ -67,25 +67,20 @@
                             rel="nofollow">1353214</a><br />
                         BRE <a href="http://www2.dre.ca.gov/publicasp/pplinfo.asp" target="_blank"
                             rel="nofollow">01164334</a></p>
+                    <select class="dark-cerulean radius-5 font-large" id="service-select" onchange="show_select()">
+                        <option value='real-estate-agent' selected>Real Estate Agent</option>
+                        <option value='home-loan'>Home Loan</option>
+                        <option value='life-agent'>Life Agent</option>
+                    </select>
                 </div>
             </div>
             <!-- Page Description -------------------------------------------->
             <div class="col-9 col-s-8" id="cards">
-                <div class="flex-center">
-                    <div class="col-4 col-s-4">
-                        <button class="card-title card-active" onclick="show_content('real-estate-agent')">Real
-                            Estate Agent</button></div>
-                    <div class="col-4 col-s-4">
-                        <button class="card-title" onclick="show_content('home-loan')">Home Loan</button></div>
-                    <div class="col-4 col-s-4">
-                        <button class="card-title" onclick="show_content('life-agent')">Life Agent</button>
-                    </div>
-                </div>
                 <!-- Real Estate Agent -->
                 <div class="card-content slow" id="real-estate-agent">
-                    <p>Whether you are buying or selling a home, it can be quite an adventure especially in today’s
+                    <div>Whether you are buying or selling a home, it can be quite an adventure especially in today’s
                         Real Estate market. There is so much information out there on the news and on the internet
-                        about home sales, prices, and mortgage rates.</p>
+                        about home sales, prices, and mortgage rates.</div>
                     <ul>
                         <li>How do you know what’s going on specifically in your area?</li>
                         <li>Who do you turn to in order to competitively and correctly price your home
@@ -115,8 +110,8 @@
                 </div>
                 <!-- Home Loan -->
                 <div class="card-content slow" id="home-loan" style="display: none">
-                    <p style="font-size: 150%; color: dodgerblue">“Big Banks Put High Interest Above Your Interest”
-                    </p>
+                    <div style="font-size: 150%; color: dodgerblue">“Big Banks Put High Interest Above Your Interest”
+                    </div>
                     <ul>
                         <li>My mission is to serve my clients with honesty, integrity and competence.</li>
                         <li>My goal is to provide home loans to my clients while providing them with the lowest
@@ -149,12 +144,12 @@
                 </div>
                 <!-- Insurance Agent -->
                 <div class="card-content slow" id="life-agent" style="display:none">
-                    <h3 style="font-size: 150%; color: dodgerblue"><i>Life Can Change In An Instant.</i>
-                    </h3>
+                    <div style="font-size: 150%; color: dodgerblue"><i>Life Can Change In An Instant.</i>
+                    </div>
                     <p>Loosing a loved one can mean more than an emotional burden. It can also create a
                         financial burden. Protect your loved ones today.</p>
-                    <h3 style="font-size: 120%; color: dodgerblue"><i>Life Insurance may cost a lot less
-                            than you think:</i></h3>
+                    <div style="font-size: 120%; color: dodgerblue"><i>Life Insurance may cost a lot less
+                            than you think:</i></div>
                     <ul>
                         <li>Helps your family take care of medical and funeral costs, rent or mortgage
                             payments, unpaid bills and more.</li>

@@ -18,23 +18,6 @@ body {
     font-size: 16px;
 }
 
-button {
-    margin: 8px;
-    padding: 8px 16px;
-    border-style: none;
-    border-radius: 5px;
-    outline: none;
-    text-align: center;
-    font-size: 125%;
-    cursor: pointer;
-}
-
-button h2,
-button h3 {
-    font-size: 18px;
-    font-weight: normal;
-}
-
 footer {
     margin: auto;
     padding: 10px 0px;
@@ -114,7 +97,11 @@ main a:hover {
 }
 
 select {
+    padding: 4px 16px;
+    border-style: none;
+    border-radius: 5px;
     font-size: 100%;
+    outline: none;
 }
 
 table {
@@ -157,6 +144,10 @@ video {
 
 .dark-cerulean:hover {
     color: lightgreen;
+}
+
+.disclaimer {
+    background-color: lightgrey;
 }
 
 .light-gray {
@@ -251,7 +242,7 @@ card-header a:hover {
 
 .card-content {
     margin: 0px;
-    padding: 16px;
+    /* padding: 16px; */
     overflow: hidden;
     transition: max-height 1s ease-out;
     -webkit-transition: max-height 1s ease-out;
@@ -417,54 +408,24 @@ card-header a:hover {
     overflow: hidden;
 }
 
-/* Button - contained button - high emphasis *********************************/
-.active {
-    background-color: green;
-    color: white;
-}
-
-.btn-blue-brdr {
-    background-color: white;
-}
-
-.btn-blue-brdr:hover {
-    background: #004A7C;
-    color: lightgreen;
-}
-
-.btn-grn-brdr {
+button {
     margin: 8px;
-    padding: 8px;
-    border-style: solid;
-    border-width: thin;
+    padding: 8px 16px;
+    border-style: none;
     border-radius: 5px;
-    background-color: white;
-    border-color: green;
-    color: green;
-    font-size: 100%;
+    outline: none;
+    text-align: center;
+    font-size: 125%;
+    cursor: pointer;
 }
 
-.btn-grn-brdr:hover {
-    background-color: green;
-    color: lightgreen;
+button h2,
+button h3 {
+    font-size: 18px;
+    font-weight: normal;
 }
 
-.widget-submit-btn {
-    width: 40%;
-    max-width: 180px;
-    background-color: white;
-}
-
-.widget-submit-btn:hover {
-    background: #004A7C;
-    color: lightgreen;
-}
-
-.widget-submit-btn:focus {
-    outline: 0;
-}
-
-/* Button - outlined button - medium emphasis/* Button - outlined button - low emphasis/* Button - filled with background color *************************************/
+/* Button - Filled - High Emphasis *******************************************/
 .btn {
     margin: 4px 2px;
     padding: 10px;
@@ -496,6 +457,32 @@ card-header a:hover {
     text-decoration: none
 }
 
+.btn-blue-brdr {
+    background-color: white;
+}
+
+.btn-blue-brdr:hover {
+    background: #004A7C;
+    color: lightgreen;
+}
+
+.btn-grn-brdr {
+    margin: 8px;
+    padding: 8px;
+    border-style: solid;
+    border-width: thin;
+    border-radius: 5px;
+    background-color: white;
+    border-color: green;
+    color: green;
+    font-size: 100%;
+}
+
+.btn-grn-brdr:hover {
+    background-color: green;
+    color: lightgreen;
+}
+
 .collapsible {
     width: 100%;
     margin: 0px 4px;
@@ -519,12 +506,6 @@ card-header a:hover {
     font-weight: bold;
     float: right;
     margin-left: 5px;
-}
-
-.active::after {
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    content: "\f146";
 }
 
 .heading {
@@ -559,9 +540,22 @@ card-header a:hover {
     color: white;
 }
 
-.disclaimer {
-    background-color: lightgrey;
+.widget-submit-btn {
+    width: 40%;
+    max-width: 180px;
+    background-color: white;
 }
+
+.widget-submit-btn:hover {
+    background: #004A7C;
+    color: lightgreen;
+}
+
+.widget-submit-btn:focus {
+    outline: 0;
+}
+
+/* Button - Outlined - Medium Emphasis****************************************/
 
 /* Blinker *******************************************************************/
 .blink {
@@ -659,6 +653,17 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 /* Other Class Selector ******************************************************/
+.active {
+    background-color: green;
+    color: white;
+}
+
+.active::after {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: "\f146";
+}
+
 .border {
     border-style: solid;
     border-width: 1px;
