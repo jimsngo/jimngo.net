@@ -3,15 +3,6 @@
     font-family: Helvetica Neue;
 }
 
-#disclaimer {
-    background-color: lightgrey;
-}
-
-#services {
-    background-color: #f2f2f2;
-    color: #002933;
-}
-
 body {
     margin: 0px;
     padding: 0px;
@@ -34,33 +25,14 @@ footer {
 header {
     padding: 8px;
     background-color: #004A7C;
-    color: white;
+    color: lightgreen;
     text-align: center;
     font-style: italic;
 }
 
-header h1 {
-    font-size: 160%;
-}
-
-header h2 {
-    font-size: 150%;
-}
-
-header #phone {
-    font-size: 140%;
-}
-
+header h1,
 header a {
-    text-decoration: none;
-    color: white;
-    font-style: italic;
-}
-
-header a:hover {
-    text-decoration: none;
-    color: greenyellow;
-    font-style: italic;
+    font-size: 24px;
 }
 
 html {
@@ -90,10 +62,6 @@ input {
     text-align: right;
     border-style: none;
     outline: none;
-}
-
-main a:hover {
-    color: lightgreen;
 }
 
 select {
@@ -126,28 +94,23 @@ video {
     height: auto;
 }
 
+#disclaimer {
+    background-color: lightgrey;
+}
+
+#service {
+    background-color: #f2f2f2;
+}
+
 /* Colors *********************************************************************/
+.dark-cerulean {
+    background-color: #004A7C;
+    color: lightgreen;
+}
+
 .dodger-blue {
     background-color: dodgerblue;
     color: white;
-}
-
-.dodger-blue:hover {
-    background-color: #004A7C;
-    color: lightgreen;
-}
-
-.dark-cerulean {
-    background-color: #004A7C;
-    color: white
-}
-
-.dark-cerulean:hover {
-    color: lightgreen;
-}
-
-.disclaimer {
-    background-color: lightgrey;
 }
 
 .light-gray {
@@ -158,12 +121,12 @@ video {
 /* Links *********************************************************************/
 a {
     font-style: normal;
+    color: blue;
     text-decoration: none;
-    color: dodgerblue;
 }
 
 a:hover {
-    color: lightgreen;
+    text-decoration: underline;
 }
 
 a[href^="http"]::after {
@@ -172,30 +135,30 @@ a[href^="http"]::after {
     content: ' \f35d';
 }
 
-a[href*="www.jimngo.net"]::after,
 a[href*="www.realtor.com"]::after,
 a[href*="www.mortgagenewsdaily.com"]::after,
 a[href*="app.homespotter.com"]::after {
     content: '';
 }
 
-.banner a {
-    text-decoration: none;
-    color: white;
-}
-
-.banner a:hover {
+header a {
     color: lightgreen;
+    text-decoration: none;
+    font-style: italic;
 }
 
 .card-body a,
-card-header a {
+.card-header a,
+#service a {
     color: lightgreen;
+    text-decoration: none;
 }
 
 .card-body a:hover,
-card-header a:hover {
-    color: #004A7C;
+.card-header a:hover,
+#service a:hover {
+    color: lightgreen;
+    text-decoration: underline;
 }
 
 /* Banner Slides //*****************************************************************************/
@@ -242,7 +205,7 @@ card-header a:hover {
 
 .card-content {
     margin: 0px;
-    /* padding: 16px; */
+    /* padding:16px;*/
     overflow: hidden;
     transition: max-height 1s ease-out;
     -webkit-transition: max-height 1s ease-out;
@@ -256,8 +219,8 @@ card-header a:hover {
     margin: auto;
     padding: 12px;
     background-color: #004A7C;
-    color: white;
-    font-size: 115%;
+    color: lightgreen;
+    font-size: 125%;
     text-transform: uppercase;
     text-align: center;
     border-radius: 5px 5px 0px 0px;
@@ -265,18 +228,6 @@ card-header a:hover {
     -moz-border-radius: 5px 5px 0px 0px;
     -ms-border-radius: 5px 5px 0px 0px;
     -o-border-radius: 5px 5px 0px 0px;
-}
-
-.card-header:hover {
-    color: lightgreen;
-}
-
-.card-header a {
-    color: white;
-}
-
-.card-header a:hover {
-    color: lightgreen;
 }
 
 .card-body {
@@ -408,13 +359,15 @@ card-header a:hover {
     overflow: hidden;
 }
 
+/* Button ********************************************************************/
+
 button {
     margin: 8px;
     padding: 8px 16px;
     border-style: none;
     border-radius: 5px;
     outline: none;
-    text-align: center;
+    /* text-align:center;*/
     font-size: 125%;
     cursor: pointer;
 }
@@ -425,7 +378,7 @@ button h3 {
     font-weight: normal;
 }
 
-/* Button - Filled - High Emphasis *******************************************/
+
 .btn {
     margin: 4px 2px;
     padding: 10px;
@@ -443,7 +396,6 @@ button h3 {
 
 .btn-action {
     background: #004a7c;
-    text-align: center;
     width: 48px;
     height: 48px;
     border-radius: 100%;
@@ -452,7 +404,7 @@ button h3 {
     justify-content: center;
     align-items: center;
     font-size: 24px;
-    color: white;
+    color: lightgreen;
     font-weight: bold;
     text-decoration: none
 }
@@ -554,8 +506,6 @@ button h3 {
 .widget-submit-btn:focus {
     outline: 0;
 }
-
-/* Button - Outlined - Medium Emphasis****************************************/
 
 /* Blinker *******************************************************************/
 .blink {
@@ -695,22 +645,6 @@ input[type=number]::-webkit-outer-spin-button {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-}
-
-.footer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    background-color: #4c4c4c;
-    color: white;
-    font-size: 16px;
-}
-
-.header {
-    padding: 8px;
-    background: linear-gradient(to right, purple, blue, lightblue);
-    color: #f1f1f1;
 }
 
 .main {
@@ -974,7 +908,6 @@ input[type=number]::-webkit-outer-spin-button {
     position: fixed;
     width: 100%;
     background-color: #4599d1;
-    color: white;
     text-align: center;
     bottom: 0;
     left: 0;
@@ -984,12 +917,6 @@ input[type=number]::-webkit-outer-spin-button {
 
 .mobile-contact-bar i {
     font-size: 24px;
-    color: white;
-}
-
-.mobile-contact-bar a {
-    font-size: 16px;
-    color: white
 }
 
 @media only screen and (min-width:421px) {
