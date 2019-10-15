@@ -173,10 +173,9 @@ function collapsible(idName, className, className2) {
 collapsible('flyers', 'collapsible', 'content');
 
 ///////////////////////////////////////////////////////////////////////////////
-// Others --------------------------------------------------------------------/
+// New Home Search                                                            /
 ///////////////////////////////////////////////////////////////////////////////
 
-// New Home Search
 document.getElementById("HomeSearchBtnWidget").onclick = function (event) {
     var searchText = document.getElementById("SearchTextWidget").value;
     if (searchText === "" || typeof (searchText) == "undefined") {
@@ -186,6 +185,10 @@ document.getElementById("HomeSearchBtnWidget").onclick = function (event) {
         document.querySelector("#home-search-form #SearchValidationError").style.display = 'none';
     }
 };
+
+///////////////////////////////////////////////////////////////////////////////
+// Others --------------------------------------------------------------------/
+///////////////////////////////////////////////////////////////////////////////
 
 function show(id) {
     document.getElementById(id).style.display = 'block';
