@@ -70,6 +70,49 @@ function show_phone() {
     show('email');
 }
 
+function show(id) {
+    document.getElementById(id).style.display = 'block';
+}
+
+function hide(id) {
+    document.getElementById(id).style.display = 'none';
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// Delay images                                                               /
+///////////////////////////////////////////////////////////////////////////////
+
+function init() {
+    var imgDefer = document.getElementsByTagName('img');
+    for (var i = 0; i < imgDefer.length; i++) {
+        if (imgDefer[i].getAttribute('data-src')) {
+            imgDefer[i].setAttribute('src', imgDefer[i].getAttribute('data-src'));
+            var src = imgDefer[i].getAttribute('data-src');
+        }
+    }
+}
+
+init();
+
+///////////////////////////////////////////////////////////////////////////////
+// Fixed Header                                                               /
+///////////////////////////////////////////////////////////////////////////////
+
+window.onscroll = function () {
+    myFunction();
+};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+    if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+    } else {
+        header.classList.remove("sticky");
+    }
+}
+
 ///////////////////////////////////////////////////////////////////////////////
 // Slide Show                                                                 /
 ///////////////////////////////////////////////////////////////////////////////
@@ -79,12 +122,6 @@ onload = slideshow;
 function slideshow() {
     setInterval(function () {
         nextSlide('hv-ss');
-        nextSlide('service-ss');
-        nextSlide('home-valuation-ss');
-        nextSlide('dpa-ss');
-        nextSlide('refinance-ss');
-        nextSlide('sfr-ss');
-        nextSlide('flyer-ss');
     }, 2000);
 }
 
@@ -128,30 +165,3 @@ function collapsible(idName, className, className2) {
 }
 
 collapsible('tips', 'collapsible', 'content');
-collapsible('flyers', 'collapsible', 'content');
-
-///////////////////////////////////////////////////////////////////////////////
-// New Home Search                                                            /
-///////////////////////////////////////////////////////////////////////////////
-
-document.getElementById("HomeSearchBtnWidget").onclick = function (event) {
-    var searchText = document.getElementById("SearchTextWidget").value;
-    if (searchText === "" || typeof (searchText) == "undefined") {
-        document.querySelector("#home-search-form #SearchValidationError").style.display = 'block';
-        window.event.preventDefault();
-    } else {
-        document.querySelector("#home-search-form #SearchValidationError").style.display = 'none';
-    }
-};
-
-///////////////////////////////////////////////////////////////////////////////
-// Others --------------------------------------------------------------------/
-///////////////////////////////////////////////////////////////////////////////
-
-function show(id) {
-    document.getElementById(id).style.display = 'block';
-}
-
-function hide(id) {
-    document.getElementById(id).style.display = 'none';
-}

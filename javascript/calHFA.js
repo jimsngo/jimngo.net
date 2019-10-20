@@ -70,6 +70,33 @@ function show_phone() {
     show('email');
 }
 
+function show(id) {
+    document.getElementById(id).style.display = "block";
+}
+
+function hide(id) {
+    document.getElementById(id).style.display = "none";
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// Fixed Header                                                               /
+///////////////////////////////////////////////////////////////////////////////
+
+window.onscroll = function () {
+    myFunction();
+};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+    if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+    } else {
+        header.classList.remove("sticky");
+    }
+}
+
 ///////////////////////////////////////////////////////////////////////////////
 // Slide Show                                                                 /
 ///////////////////////////////////////////////////////////////////////////////
@@ -79,12 +106,6 @@ onload = slideshow;
 function slideshow() {
     setInterval(function () {
         nextSlide('calHFA-ss');
-        nextSlide('service-ss');
-        nextSlide('home-valuation-ss');
-        nextSlide('dpa-ss');
-        nextSlide('refinance-ss');
-        nextSlide('sfr-ss');
-        nextSlide('flyer-ss');
     }, 2000);
 }
 
@@ -96,38 +117,53 @@ function nextSlide(id) {
     elems[elems.index].className = 'slide showing';
 }
 
-////////////////////////////////////////////////////////////////////////////////
-// Animated Collapsible - Event Listener --------------------------------------/
-////////////////////////////////////////////////////////////////////////////////
+const calculator = 'calHFA-Widget';
+const widget_slides = document.getElementById(calculator).getElementsByClassName("widget-slide");
+const tabcontents = document.getElementById(calculator).getElementsByClassName("tabcontent");
 
-function collapsible(idName, className, className2) {
-    const array = document.getElementById(idName).getElementsByClassName(className);
-    const contents = document.getElementById(idName).getElementsByClassName(className2);
-    for (let i = 0; i < array.length; i++) {
-        array[i].addEventListener("click", function () {
-            // Hide all elements with class content
-            for (let j = 0; j < contents.length; j++) {
-                contents[j].style.height = '0px';
-            }
-            if (this.classList.contains("active")) {
-                this.classList.remove("active");
-            } else {
-                // Remove current active class
-                for (let k = 0; k < array.length; k++) {
-                    array[k].classList.remove("active");
-                }
-                // Add active class to clicked element
-                this.classList.toggle("active");
-                // Display content for only active element            
-                var content = this.nextElementSibling;
-                content.style.height = content.scrollHeight + "px";
-            }
-        });
-    }
-
+///////////////////////////////////////////////////////////////////////////////
+// For CalHFA Loan Program Descriptions --------------------------------------/
+///////////////////////////////////////////////////////////////////////////////
+function show_tab_content(id) {
+    slide_up(tabcontents);
+    slide_down(id);
 }
 
-collapsible('flyers', 'collapsible', 'content');
+function slide_up(array) {
+    for (let i = 0; i < array.length; i++) {
+        array[i].style.display = 'none';
+        array[i].style.height = '0px';
+    }
+}
+
+function slide_down(id) {
+    var content = document.getElementById(id);
+    content.style.display = 'block';
+    content.style.height = content.scrollHeight + 'px';
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// Miscs ---------------------------------------------------------------------/
+///////////////////////////////////////////////////////////////////////////////
+
+function get_value(id) {
+    return document.getElementById(id).value;
+}
+
+function set_value(id, value) {
+    document.getElementById(id).value = value;
+}
+
+function toString(id, value, digit) {
+    document.getElementById(id).innerHTML = value.toLocaleString(undefined, {
+        minimumFractionDigits: digit,
+        maximumFractionDigits: digit
+    });
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// Calculator - CalHFA                                                        /
+///////////////////////////////////////////////////////////////////////////////
 
 const counties = [
     // Los Angeles County Orange County
@@ -278,66 +314,11 @@ const dpas = [
     },
 ];
 
-const calculator = 'calHFA-Widget';
-const widget_slides = document.getElementById(calculator).getElementsByClassName("widget-slide");
-const tabcontents = document.getElementById(calculator).getElementsByClassName("tabcontent");
-
-///////////////////////////////////////////////////////////////////////////////
-// For CalHFA Loan Program Descriptions --------------------------------------/
-///////////////////////////////////////////////////////////////////////////////
-function show_tab_content(id) {
-    slide_up(tabcontents);
-    slide_down(id);
-}
-
-function slide_up(array) {
-    for (let i = 0; i < array.length; i++) {
-        array[i].style.display = 'none';
-        array[i].style.height = '0px';
-    }
-}
-
-function slide_down(id) {
-    var content = document.getElementById(id);
-    content.style.display = 'block';
-    content.style.height = content.scrollHeight + 'px';
-}
-
-///////////////////////////////////////////////////////////////////////////////
-// Miscs ---------------------------------------------------------------------/
-///////////////////////////////////////////////////////////////////////////////
-
-function get_value(id) {
-    return document.getElementById(id).value;
-}
-
-function set_value(id, value) {
-    document.getElementById(id).value = value;
-}
-
-function toString(id, value, digit) {
-    document.getElementById(id).innerHTML = value.toLocaleString(undefined, {
-        minimumFractionDigits: digit,
-        maximumFractionDigits: digit
-    });
-}
-
-function show(id) {
-    document.getElementById(id).style.display = "block";
-}
-
-function hide(id) {
-    document.getElementById(id).style.display = "none";
-}
-
-///////////////////////////////////////////////////////////////////////////////
-// Calculator - CalHFA                                                        /
-///////////////////////////////////////////////////////////////////////////////
 
 function show_slide(id) {
     slide_up(widget_slides);
     slide_down(id);
-    document.getElementById(calculator).scrollIntoView();
+    document.getElementById('calculator').scrollIntoView();
     calc();
 }
 

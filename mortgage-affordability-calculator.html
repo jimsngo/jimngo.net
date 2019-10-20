@@ -22,9 +22,7 @@
     <meta property="og:image" content="image/Gift Fund.jpg" />
     <link rel="canonical" href="https://www.jimngo.net/mortgage-affordability-calculator">
     <link rel="icon" href="image/favicon-16x16.png" type="image/gif" sizes="16x16">
-    <!-- Style Sheets ---------------------------------------------------------->
     <link rel="stylesheet" href="style/style.min.css">
-    <link rel="stylesheet" href="style/home-search.min.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-88549125-1"></script>
     <script>
@@ -40,7 +38,7 @@
 </head>
 
 <body>
-    <header>
+    <header id="myHeader">
         <h2><a href="https://www.jimngo.net">Your Local Realtor - Mortgage Professional - Life Agent</a></h2>
         <div id="opening_monday" style="display: none">Opening at 10:00 AM Monday</div>
         <div id="opening_tomorrow" style="display: none">Opening at 10:00 AM Tomorrow</div>
@@ -88,12 +86,10 @@
                         that goes towards payments for rent, mortgage, credit cards, or other debt.</p>
                 </div>
             </div>
-            <!-- DTI Calculation -->
-            <div class="flex-center" id="main-dti-select">
+            <div class="flex-center">
                 <!-- Front DTI -->
-                <div class="col-6 col-s-6">
-                    <div class="card-header">Housing Ratio<br />
-                        (Front Ratio)</div>
+                <div class="col-4 col-s-6">
+                    <div class="card-header">Housing Ratio (Front)</div>
                     <div class="card-body">
                         <p>This ratio compares your <i>Housing Expenses</i> to your <i>Monthly Income</i>. Your
                             housing expenses include:</p>
@@ -101,18 +97,16 @@
                             <li>Principal and Interest.</li>
                             <li>Property Tax.</li>
                             <li><a href="https://www.jimngo.net/mortgage-insurance" target="_blank"><i>Mortgage
-                                        Insurance Premium</i></a></li>
+                                        Insurance Premium</i></a>.</li>
                             <li>Hazard Insurance.</li>
                             <li>HOA Fees.</li>
-                            <li>Special Assessments, and</li>
-                            <li>Payments for any acceptable secondary financing.</li>
+                            <li>Special Assessments and Payments for any acceptable secondary financing.</li>
                         </ul>
                     </div>
                 </div>
                 <!-- Back DTI -->
-                <div class="col-6 col-s-6">
-                    <div class="card-header">Debt To Income (DTI) Ratio<br />
-                        (Back Ratio)</div>
+                <div class="col-4 col-s-6">
+                    <div class="card-header">Debt To Income Ratio (Back)</div>
                     <div class="card-body">
                         <p>This ratio compares your <i>Monthly Debts</i> plus your <i>Housing Expenses</i> to
                             your <i>Monthly Income</i>. Your monthly debts include:</p>
@@ -125,35 +119,27 @@
                         </ul>
                     </div>
                 </div>
+                <div class="col-4 col-s-12">
+                    <div class="card-header">Pre-qualification Made Easy</div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Simply select the loan program, down payment, expected rate of interest, lender's
+                                required debt ratios, your income and liability information, and my calculator will
+                                compute how much home you can afford.</li>
+                            <li>Lower ratios are more favorable.</li>
+                            <li><span style="color: lightgreen">Conservative ratios are 31(front) and 43(back).</span>
+                            </li>
+                            <li><span style="color:lightgreen">Aggressive ratios are 37(front) and 47(back).</span></li>
+                            <li>Some loan program will allow DTI ratio to go up to 50% with automated underwriting, but
+                                anything above that will likely be denied.</li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
         </div>
     </main>
-    <!-- Main Description-->
-    <section style="background-color:#f2f2f2; color:#002933">
-        <div class="main">
-            <div class="flex-perfect-center">
-                <div class="col-8 col-s-6">
-                    <strong>Use my calculator to estimate how much house you may qualify for.</strong>
-                    <ul>
-                        <li>FHA, VA, Conventional, USDA, and Jumbo Loans.</li>
-                        <li>Simply enter the mortgage information, expected lender's requirements, your income, your
-                            debt obligation, and my calculator will compute your affordable housing value.</li>
-                        <li>Lower DTIs are more favorable.</li>
-                        <li><span style="color: green"><i>Conservative ratios are 31(front) and 43(back).</i></span>
-                        </li>
-                        <li><span style="color:red"><i>Aggressive ratios are 37(front) and 47(back).</i></span></li>
-                        <li>Some loan programs will allow ratios to go up to 50% with automated underwriting, but
-                            anything above that will likely be denied.</li>
-                    </ul>
-                </div>
-                <div class="col-4 col-s-6">
-                    <img style="max-width: 100%; border-radius: 5px;"
-                        src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="image/gift_fund.jpg"
-                        alt="Gift Funds">
-                </div>
-            </div>
-        </div>
-    </section>
+    <div style="height: 8px;" id="calculator"></div>
     <!-- Affordable Calculator -->
     <section id="afford-calc-widget">
         <div class="banner dark-cerulean font-large" id='calc-ss'>
@@ -170,7 +156,7 @@
         <div class="main flex-center">
             <!-- Affordable Calculator Widget -->
             <div class="col-6 col-s-6">
-                <div class="card-header">Mortgage Affordable - FHA, VA, Conventional, USDA</div>
+                <div class="card-header">Mortgage Affordable Calculator</div>
                 <!-- Slide 1 - Begin Calculator -->
                 <div class="widget-slide medium" id="slide-1">
                     <div class="card-body">
@@ -835,598 +821,42 @@
             </div>
         </div>
     </section>
-    <!-- Home Search Widgets ------------------------------------------------->
-    <section class="flex-perfect-center" id="home-search-widgets">
-        <!-- New Home Search ------------------------------------------------->
-        <div id="widget-box">
-            <form action="https://www.showingnew.com/jimngo/home/redirecttoresultspage" class="pro-search-box"
-                enctype="multipart/form-data" id="pro-search-box" method="post" name="pro-search-box" target="_blank">
-                <div id="home-search-form" class="clearfix home-search-form ">
-                    <h2 id="titleText" style="font-size: 20px; font-weight: 500; margin-bottom: 5px; margin-top: 0px;">
-                        Search New Construction Home Listings</h2>
-                    <fieldset id="home-search-location">
-                        <p><label for="SearchText" class="visuallyhidden">Location:</label>
-                            <input autocomplete="off" id="SearchTextWidget" class="" maxlength="100" name="SearchText"
-                                placeholder="Enter City, Zip Code, School District or Community Name" type="text"
-                                value="Riverside-San Bernardino, CA Area" style="font-size: 16px">
-                            <input type="submit" class="HomeSearchBtn" id="HomeSearchBtnWidget" value="Find Homes">
-                        </p>
-                    </fieldset>
-                    <p id="SearchValidationError" class="field-validation-error SearchValidationError"
-                        style="display: none;">
-                        <strong>Oops!</strong> Please enter a valid location (city, zip code or school
-                        district) or community name.</p>
-                    <fieldset id="home-search-options">
-                        <legend class="visuallyhidden">Filters</legend>
-                        <p style="margin: 15px 15px 0px 0px;"><label for="PriceLow"
-                                class="visuallyhidden">Minimum</label>
-                            <select id="PriceLow" name="PriceLow">
-                                <option value="">Min Price</option>
-                                <option value="100000">$100,000</option>
-                                <option value="125000">$125,000</option>
-                                <option value="150000">$150,000</option>
-                                <option value="175000">$175,000</option>
-                                <option value="200000">$200,000</option>
-                                <option value="225000">$225,000</option>
-                                <option value="250000">$250,000</option>
-                                <option value="275000">$275,000</option>
-                                <option value="300000">$300,000</option>
-                                <option value="325000">$325,000</option>
-                                <option value="350000">$350,000</option>
-                                <option value="375000">$375,000</option>
-                                <option value="400000">$400,000</option>
-                                <option value="425000">$425,000</option>
-                                <option value="450000">$450,000</option>
-                                <option value="475000">$475,000</option>
-                                <option value="500000">$500,000</option>
-                                <option value="550000">$550,000</option>
-                                <option value="600000">$600,000</option>
-                                <option value="650000">$650,000</option>
-                                <option value="700000">$700,000</option>
-                                <option value="750000">$750,000</option>
-                                <option value="800000">$800,000</option>
-                                <option value="850000">$850,000</option>
-                                <option value="900000">$900,000</option>
-                                <option value="950000">$950,000</option>
-                                <option value="1000000">$1,000,000</option>
-                                <option value="1100000">$1,100,000</option>
-                                <option value="1200000">$1,200,000</option>
-                                <option value="1300000">$1,300,000</option>
-                                <option value="1400000">$1,400,000</option>
-                                <option value="1500000">$1,500,000</option>
-                                <option value="1600000">$1,600,000</option>
-                                <option value="1700000">$1,700,000</option>
-                                <option value="1800000">$1,800,000</option>
-                                <option value="1900000">$1,900,000</option>
-                                <option value="2000000">$2,000,000</option>
-                            </select> to <label for="PriceHigh" class="visuallyhidden">Maximum</label>
-                            <select id="PriceHigh" name="PriceHigh">
-                                <option value="">Max Price</option>
-                                <option value="100000">$100,000</option>
-                                <option value="125000">$125,000</option>
-                                <option value="150000">$150,000</option>
-                                <option value="175000">$175,000</option>
-                                <option value="200000">$200,000</option>
-                                <option value="225000">$225,000</option>
-                                <option value="250000">$250,000</option>
-                                <option value="275000">$275,000</option>
-                                <option value="300000">$300,000</option>
-                                <option value="325000">$325,000</option>
-                                <option value="350000">$350,000</option>
-                                <option value="375000">$375,000</option>
-                                <option value="400000">$400,000</option>
-                                <option value="425000">$425,000</option>
-                                <option value="450000">$450,000</option>
-                                <option value="475000">$475,000</option>
-                                <option value="500000">$500,000</option>
-                                <option value="550000">$550,000</option>
-                                <option value="600000">$600,000</option>
-                                <option value="650000">$650,000</option>
-                                <option value="700000">$700,000</option>
-                                <option value="750000">$750,000</option>
-                                <option value="800000">$800,000</option>
-                                <option value="850000">$850,000</option>
-                                <option value="900000">$900,000</option>
-                                <option value="950000">$950,000</option>
-                                <option value="1000000">$1,000,000</option>
-                                <option value="1100000">$1,100,000</option>
-                                <option value="1200000">$1,200,000</option>
-                                <option value="1300000">$1,300,000</option>
-                                <option value="1400000">$1,400,000</option>
-                                <option value="1500000">$1,500,000</option>
-                                <option value="1600000">$1,600,000</option>
-                                <option value="1700000">$1,700,000</option>
-                                <option value="1800000">$1,800,000</option>
-                                <option value="1900000">$1,900,000</option>
-                                <option value="2000000">$2,000,000</option>
-                            </select></p>
-                        <div>
-                            <p style="margin: 15px 5px 15px 0px;"><select class="home-search-bedbath" id="BedRooms"
-                                    name="BedRooms">
-                                    <option value="-1">Beds</option>
-                                    <option value="1">studio/1</option>
-                                    <option value="2">2+</option>
-                                    <option value="3">3+</option>
-                                    <option value="4">4+</option>
-                                    <option value="5">5+</option>
-                                </select></p>
-                            <p style="margin: 15px 5px 15px 0px;"><select class="home-search-bedbath" id="Bathrooms"
-                                    name="Bathrooms">
-                                    <option value="-1">Baths</option>
-                                    <option value="1">1+</option>
-                                    <option value="2">2+</option>
-                                    <option value="3">3+</option>
-                                    <option value="4">4+</option>
-                                    <option value="5">5+</option>
-                                </select></p>
-                            <p style="margin: 15px 5px 15px 0px;"><label for="SqFtLow" class="visuallyhidden">Square
-                                    Feet</label><select id="SqFtLow" name="SqFtLow">
-                                    <option value="0">Square Feet</option>
-                                    <option value="500">500+</option>
-                                    <option value="1000">1000+</option>
-                                    <option value="1500">1500+</option>
-                                    <option value="2000">2000+</option>
-                                    <option value="2500">2500+</option>
-                                    <option value="3000">3000+</option>
-                                    <option value="3500">3500+</option>
-                                    <option value="4000">4000+</option>
-                                    <option value="4500">4500+</option>
-                                    <option value="5000">5000+</option>
-                                    <option value="5500">5500+</option>
-                                    <option value="6000">6000+</option>
-                                    <option value="6500">6500+</option>
-                                    <option value="7000">7000+</option>
-                                    <option value="7500">7500+</option>
-                                    <option value="8000">8000+</option>
-                                    <option value="8500">8500+</option>
-                                    <option value="9000">9000+</option>
-                                    <option value="9500">9500+</option>
-                                    <option value="10000">10000+</option>
-                                </select></p>
-                        </div>
-                    </fieldset>
-                    <p style="font-size: 12px;">Powered by&nbsp;&nbsp;<a style="color: #fff"
-                            href="https://www.showingnew.com/jimngo" target="_blank">www.showingnew.com/jimngo</a></p>
-                </div>
-            </form>
-        </div>
-        <!-- CRMLS Home Search App ------------------------------------------->
-        <div class="homespotter center border">
-            <a href="https://app.homespotter.com/?asr=1&sui=38166790" target="_blank">
-                <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="image/HomeSpotter.png"
-                    alt="HomeSpotter Logo">
-                <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
-                    data-src="image/mobile_devices.png" alt="HomeSpotter">
-                <ul style=" text-align: left">
-                    <li>Mobile-First Home Search</li>
-                    <li>Beautiful, Fast and Easy</li>
-                    <li>Built-in Chat</li>
-                </ul>
-                <i class="fas fa-cloud-download-alt" style="font-size: 2em"></i>
-            </a>
-        </div>
-        <!-- MLS Search ------------------------------------------------------>
-        <div class="mls-search">
-            <div class="card-header"><i class="fas fa-home"></i> Homes For Sale</div>
-            <div class="card-body center">
-                <p><a href="https://www.jimngorealtor.com/ontario" target="_blank">Ontario</a></p>
-                <p><a href="https://www.jimngorealtor.com/chino" target="_blank">Chino</a></p>
-                <p><a href="https://www.jimngorealtor.com/chino-hills" target="_blank">Chino Hills</a></p>
-            </div>
-        </div>
-    </section>
-    <!-- Services ------------------------------------------------------------>
-    <section id="service">
-        <div class="banner dark-cerulean font-large" id="service-ss">
-            <h2 class="slide showing">Mortgage Pre-Approval</h2>
-            <h2 class="slide">Down Payment Assistance</h2>
-            <h2 class="slide">Mortgage Calculator</h2>
-            <h2 class="slide">Home Valuation</h2>
-            <h2 class="slide">Comparative Market Analysis</h2>
-            <h2 class="slide">Reverse Mortgage</h2>
-            <h2 class="slide">Mortgage Refinance</h2>
-            <h2 class="slide">Short Sale Foreclosure</h2>
-        </div>
-        <div class="main flex-center">
-            <!-- Home Valuation -->
-            <div class="col-4 col-s-6">
-                <a href="home-valuation" target="_blank">
-                    <div class="banner card-header" id="home-valuation-ss">
-                        <p class="slide showing">Home Estimate <i class="fas fa-external-link-alt"></i></p>
-                        <p class="slide">Market Comparable <i class="fas fa-external-link-alt"></i></p>
-                    </div>
-                </a>
-                <div class="card-body">
-                    <ul>
-                        <li>Do you want to know what your home is worth?</li>
-                        <li>Are you curious about nearby homes that are for sale or recently sold?</li>
-                        <li>How about how much your home might be worth in the next two years?</li>
-                    </ul>
-                </div>
-            </div>
-            <!-- Mortgage Calculator -->
-            <div class="col-4 col-s-6">
-                <a href="mortgage-prequalification-calculator" target="_blank">
-                    <div class="banner card-header">
-                        <p class='slide showing'>Mortgage Calculator <i class="fas fa-external-link-alt"></i></p>
-                    </div>
-                </a>
-                <div class="card-body">
-                    <p style="display:none">Mortgage Prequalification Calculator with Down Payment, PMI, and Taxes. Use
-                        my quick and simple calculators to estimate how much you can afford, how much income you will
-                        need, or how much you will save by making extra payment.</p>
-                    <div style="padding-left: 16px;">
-                        <p><a href="https://www.jimngo.net/mortgage-affordability-calculator" target="_blank">
-                                How Much House Can I Afford?</a></p>
-                        <p><a href="https://www.jimngo.net/mortgage-income-calculator" target="_blank">
-                                How Much Income Do I Need?</a></p>
-                        <p><a href="https://www.jimngo.net/extra-payment-calculator" target="_blank">
-                                What if I Make Extra Payment?</a></p>
-                    </div>
-                </div>
-            </div>
-            <!-- Down Payment Resource -->
-            <div class="col-4 col-s-6">
-                <a href="down-payment-assistance" target="_blank">
-                    <div class="banner card-header" id='dpa-ss'>
-                        <p class="slide showing">First Time Homebuyer <i class="fas fa-external-link-alt"></i></p>
-                        <p class="slide">Down Payment Assistance <i class="fas fa-external-link-alt"></i></p>
-                    </div>
-                </a>
-                <div class="card-body">
-                    <ul>
-                        <li>Are you a first-time home-buyer needing a little help with your down payment and/or
-                            closing costs?</li>
-                        <li>Down payment money is out there, and I’ll help you find it.</li>
-                    </ul>
-                </div>
-            </div>
-            <!-- Refinance -->
-            <div class="col-4 col-s-6">
-                <a href="mortgage-refinance" target="_blank">
-                    <div class="banner card-header" id="refinance-ss">
-                        <p class="slide showing">Mortgage Refinance <i class="fas fa-external-link-alt"></i></p>
-                        <p class="slide">Home Equity Loan <i class="fas fa-external-link-alt"></i></p>
-                    </div>
-                </a>
-                <div class="card-body">
-                    <ul>
-                        <li>Do you have an Adjustable Rate Mortgage?</li>
-                        <li>Do you have an interest-only loan?</li>
-                        <li>Is your mortgage term more than a 15-year?</li>
-                        <li>Do you have a high interest rate loan?</li>
-                    </ul>
-                </div>
-            </div>
-            <!-- Short Sale Foreclosure -->
-            <div class="col-4 col-s-6">
-                <a href="short-sales-foreclosure" target="_blank">
-                    <div class="banner card-header" id="sfr-ss">
-                        <p class="slide showing">Short Sale <i class="fas fa-external-link-alt"></i></p>
-                        <p class="slide">Pre-Foreclosure <i class="fas fa-external-link-alt"></i></p>
-                    </div>
-                </a>
-                <div class="card-body">
-                    <ul>
-                        <li>Are you or someone you know facing foreclosure or unable to make mortgage payments?</li>
-                        <li>Know that there are OPTIONS available and PEOPLE you can trust.</li>
-                    </ul>
-                </div>
-            </div>
-            <!-- Reverse Mortgage -->
-            <div class="col-4 col-s-6">
-                <a href="reverse-mortgage-calculator" target="_blank">
-                    <div class="banner card-header">
-                        <p class="slide showing">Reverse Mortgage <i class="fas fa-external-link-alt"></i></p>
-                    </div>
-                </a>
-                <div class="card-body">
-                    <ul>
-                        <li>You’ve worked hard to build the equity in your home.</li>
-                        <li>Now it’s time to put that equity to work for you.</li>
-                        <li>See what Reverse Mortgage can do for you.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Marketing ----------------------------------------------------------->
-    <section id="flyers">
-        <div class="banner dark-cerulean font-large" id="flyer-ss">
-            <h3 class="slide showing">Purchase</h3>
-            <h3 class="slide">Refinance</h3>
-            <h3 class="slide">FHA</h3>
-            <h3 class="slide">Down Payment Assistance</h3>
-            <h3 class="slide">Conventional</h3>
-            <h3 class="slide">VA</h3>
-            <h3 class="slide">USDA</h3>
-            <h3 class="slide">Jumbo</h3>
-            <h3 class="slide">Reverse Mortgage</h3>
-        </div>
-        <div class="main flex-center">
-            <!-- QM Products ------------------------------------------------->
-            <div class="col-4 col-s-6">
-                <h3 class="heading">Traditional Mortgages</h3>
-                <button class="collapsible">Conventional</button>
-                <div class="content slow">
-                    <p>If you’ve heard of Fannie Mae or Freddie Mac, you know the family of conventional loans.
-                        These
-                        loans are written by a wide range of banks, from your hometown locally owned to the fanciest
-                        mortgage broker. “Conforming” loans meet Fannie and Freddie’s high requirements, including
-                        maximum sales price.</p>
-                    <p><strong>Pros:</strong> Generally, you’ll get a better deal on mortgage insurance that
-                        automatically drops off (meaning you no longer have to pay it) once your home reaches a 78
-                        percent loan to value ratio. Also, you’ll pay less in closing costs and your debt to income
-                        ratio can be somewhat flexible as long as look really good on paper.</p>
-                    <p><strong>Cons:</strong> These are generally the hardest loans to qualify for. Even though
-                        there
-                        are now three to five percent down payment options, your credit score will need to be around
-                        700
-                        (better is better) and your other ducks should be lined up nice and straight. Consistent
-                        employment, savings that can be designated as “reserve funds” and few to no scabs on your
-                        credit
-                        report are helpful.</p>
-                </div>
-                <button class="collapsible">FHA</button>
-                <div class="content slow">
-                    <p>The FHA started insuring loans after the Great Depression as a way of helping people get back
-                        into owned property. It basically created the 30 year fixed interest mortgage and continues
-                        to
-                        carefully oversee which homes can and cannot be purchased in its name.</p>
-                    <p><strong>Pros:</strong> Good option for first time buyers because of low down payment and
-                        credit
-                        requirements. FHA will accept “soft” credit lines for people who haven’t established credit
-                        yet
-                        or have very little, so keep that utility bill paid on time. The program allows up to six
-                        percent of your closing costs to be financed into your loan, as “seller paid items,” which
-                        can
-                        help reduce the actual cash you need to close.</p>
-                    <p><strong>Cons:</strong> FHA requires a lot more in closing costs because of the additional
-                        upfront
-                        mortgage insurance deposit. In addition, if you have less than a 10 percent down payment,
-                        under
-                        the current programs you’ll be forced to keep paying mortgage insurance for the life of the
-                        loan, giving you no options but to refinance or sell down the line if you want rid of it
-                        (it’s
-                        costly, you want rid of it). Not every banker wants to deal with FHA loans because they can
-                        be
-                        time consuming to write, so you may have to shop a bit to find a good bank.</p>
-                </div>
-                <button class="collapsible">VA</button>
-                <div class="content slow">
-                    <p>As part of the benefits that active military members and veterans receive from the
-                        government, VA
-                        loans are built on a merit-based system. Career military and those honorably discharged
-                        early
-                        are generally eligible, but short-term members or Reserves may have to meet additional
-                        requirements. Anyone who can get this loan will need to bring a Certificate of Eligibility
-                        in
-                        order to get the ball rolling with an approved lender.</p>
-                    <p><strong>Pros:</strong> Favorable interest rates, extremely flexible guidelines and absolutely
-                        nothing required as a downpayment (often little to nothing required at closing!) There’s no
-                        mortgage insurance, just a one time “funding fee” that varies with your service type,
-                        downpayment and times you’ve used your Eligibility.</p>
-                    <p><strong>Cons:</strong> Really, there aren’t any. You can’t get this if you’re not military,
-                        though, so that could be a con if you really wanted this most excellent loan type.</p>
-                </div>
-                <button class="collapsible">USDA</button>
-                <div class="content slow">
-                    <p>In rural areas, the US Department of Agriculture will offer mortgage lending as a way of
-                        helping
-                        to keep the local economy flowing. Homes don’t have to be on an acreage, but they do need to
-                        be
-                        located in communities with under 35,000 inhabitants.</p>
-                    <p><strong>Pros:</strong> Like VA, USDA are fairly easy to qualify for as the buyer. They can
-                        also
-                        be zero down loans, though the more you can bring to closing the better. Payment assistance
-                        and
-                        other types of help are sometimes available for very low income borrowers.</p>
-                    <p><strong>Cons:</strong> The house you’re buying will undergo significant scrutiny in order to
-                        be
-                        approved for the program. In all loan programs, your house has to qualify, but the hurdles
-                        USDA
-                        puts in front of the building are much larger than most other programs. This is good for
-                        you,
-                        because it means you’re getting a great house, but it makes the process take a lot longer
-                        and
-                        can be scary for sellers. In addition, there’s a cap on income for potential borrowers.</p>
-                </div>
-            </div>
-            <!-- Non-QM Loan ------------------------------------------------->
-            <div class="col-4 col-s-6">
-                <h3 class="heading">Non-Traditional Mortgages</h3>
-                <button class="collapsible">Bank Statement Premier</button>
-                <div class="content fast">
-                    <p>For Highly Qualified Self-Employed Borrowers</p>
-                    <P>Qualify with 12-months of bank statements and get a floor rate as low as 4.99%</P>
-                    <ul>
-                        <li>Loans up to $3M | Cash out refi to $2.5M</li>
-                        <li>Debt to income ratio up to 43% allowed with minimum FICO score of 680</li>
-                        <li>Minimum reserves of 6 months and no mortgage lates for 24 months is required</li>
-                        <li>One Borrower must be self-employed and may have multiple streams of income</li>
-                    </ul>
-                </div>
-                <button class="collapsible">Bank Statement</button>
-                <div class="content fast">
-                    <p>For Self-Employed Borrowers</p>
-                    <p>Qualify with 12-months bank statements</p>
-                    <ul>
-                        <li>Loans up to $3M | Cash out refi to $2.5M | DTI up to 55%</li>
-                        <li>Min FICO score 600 | Min reserves - 3 months</li>
-                        <li>No more than 1 mortgage late in past 12 months</li>
-                        <li>One borrower must be self-employed and may have multiple streams of income</li>
-                    </ul>
-                </div>
-                <button class="collapsible">Investor</button>
-                <div class="content fast">
-                    <p>For Professional Real Estate Investors</p>
-                    <p>Qualify with subject property cash flow</p>
-                    <ul>
-                        <li>Loans up to $2.5M | Cash out refi to $2.0M | DCR = 1.0</li>
-                        <li>Unlimited financed properties allowed</li>
-                        <li>Borrower does not need to own a primary residence or investment property</li>
-                        <li>No tax returns, no employment, no income and no pre-payment penalty</li>
-                    </ul>
-                </div>
-                <button class="collapsible">Asset Qualification</button>
-                <div class="content fast">
-                    <p>For Borrowers with High Cash Liquidity</p>
-                    <p>Qualify based on verified liquid assets</p>
-                    <ul>
-                        <li>Loan amounts up to $3M | Cash out refi up to $2.5M</li>
-                        <li>Usable Assets: 100% Checking & Savings, 90% Stocks, Bonds & Mutual Funds, 80% Retirement
-                            Funds.</li>
-                        <li>No DTI ratio calculated | Min FICO score 600 | No employment or income on 1003</li>
-                    </ul>
-                </div>
-                <button class="collapsible">Agency Plus</button>
-                <div class="content fast">
-                    <p>For Conforming & Jumbo Loans, and Owners of Multiple Properties Falling Just Outside
-                        Qualified
-                        Mortgage Parameters</p>
-                    <p>Qualify with full documentation</p>
-                    <ul>
-                        <li>Loan amounts up to $3M | Cash out refi up to $2.5M | DTI up to 55%</li>
-                        <li>Cash out up to 85% LTV (max. $1.0M)</li>
-                        <li>Min FICO score 600 | Min reserves - 3 months</li>
-                        <li>Up to 8 financed properties allowed</li>
-                    </ul>
-                </div>
-            </div>
-            <!-- Misc -------------------------------------------------------->
-            <div class="col-4 col-s-12">
-                <button class="collapsible">Looking To Purchase A Home?</button>
-                <div class="content medium">
-                    <p>1. Make sure your credit is in good shape</p>
-                    <ul>
-                        <li>Excellent Credit: 750+</li>
-                        <li>Good Credit: 700-749</li>
-                        <li>Fair Credit: 650-699</li>
-                        <li>Poor Credit: 600-649</li>
-                    </ul>
-                    <p>Try to get your credit card balances below 40% of the limit. It's best to have at least 3
-                        open
-                        and active accounts listed on your credit report</p>
-                    <p>2. If you're renting, pay by check</p>
-                    <p>Having documented proof of your last 12 months of payments is often required by the lender
-                    </p>
-                    <p>3. Obtain proof of employment for the past 2-years</p>
-                    <ul>
-                        <li>W2s and tax returns</li>
-                        <li>Paystubs covering 30 days</li>
-                        <li>Be prepared to explain any gaps in employment</li>
-                    </ul>
-                </div>
-                <button class="collapsible">The Benefits Of A 20% Down Payment</button>
-                <div class="content slow">
-                    <p>1. Your interest rate will be lower.</p>
-                    <p>Putting down a 20% down payment vs. a 3-5% down payment shows your lender/bank that you are
-                        more
-                        financially stable, thus a good credit risk. The more confident your bank is in your credit
-                        score and your ability to pay your loan, the lower the rate they will be willing to give
-                        you.
-                    </p>
-                    <p>2. You’ll end up paying less for your home.</p>
-                    <p>The bigger your down payment, the lower your loan amount will be for your mortgage. If you
-                        are
-                        able to pay 20% of the cost of your new home at the start of the transaction, you will only
-                        pay
-                        interest on the remaining 80%. If you put down a 5% down payment, the extra 15% on your loan
-                        will accrue interest and end up costing you more in the long run!</p>
-                    <p>3. Your offer will stand out in a competitive market!</p>
-                    <p>In a market where many buyers are competing for the same home, sellers like to see offers
-                        come in
-                        with 20% or larger down payments. The seller gains the same confidence that the bank did
-                        above.
-                        You are seen as a stronger buyer whose financing is more likely to be approved. Therefore,
-                        the
-                        deal will be more likely to go through!</p>
-                    <p>4. You won’t have to pay Private Mortgage Insurance (PMI)</p>
-                    <p>Simply put, PMI is “an insurance policy that protects the lender if you are unable to pay
-                        your
-                        mortgage. It’s a monthly fee, rolled into your mortgage payment, that is required for all
-                        conforming, conventional loans that have down payments less than 20%.”</p>
-                </div>
-                <button class="collapsible">How Much House Can You Afford?</button>
-                <div class="content medium">
-                    <p>Before you start shopping for a new home, determine how much you can afford to spend.</p>
-                    <p>Here are a few things to consider:</p>
-                    <ul>
-                        <li>Your monthly income</li>
-                        <li>Your available funds for down payment</li>
-                        <li>Your monthly expenses</li>
-                        <li>Your credit score</li>
-                    </ul>
-                    <p>It's important to consider getting pre-approved from a licensed mortgage professional. An
-                        Independent Mortgage Professional will be able to offer you several loan options and find
-                        the
-                        best available loan program for your needs.</p>
-                </div>
-                <button class="collapsible">6 Things Not To Do When Applying For A Mortgage</button>
-                <div class="content medium">
-                    <p>When lenders review your application, they like to see consistency in your finances.</p>
-                    <ol>
-                        <li>Do not make major purchases like furniture, appliances, jewelry, vehicles or vacations
-                        </li>
-                        <li>Don't change or quit your job</li>
-                        <li>Consult with your mortgage professional before withdrawing, depositing, or moving large
-                            amounts of money in or out of your bank account</li>
-                        <li>Do not pay off debts or collections (unless instructed to do so by a mortgage
-                            professional)
-                        </li>
-                        <li>Avoid using cash for a good-faith deposit - cash is difficult to verify and could result
-                            in
-                            a closing delay.</li>
-                        <li>Don't have your credit report pulled too many times - this can hurt your credit score
-                        </li>
-                    </ol>
-                </div>
-                <button class="collapsible">Acceptable Sources of Cash to Close Funds</button>
-                <div class="content slow">
-                    <p>Providing proper asset documentation and the actual source of the funds is a critical element
-                        of
-                        the loan closing process.</p>
-                    <p>There’s nothing worse in a real estate purchase than making it all the way through the hoops
-                        and
-                        hurdles just to have a loan denied after the final documents have been signed due to the
-                        borrower using the wrong checking account for the down payment.</p>
-                    <p>Seasoning of the down payment money is just as important as the source, which is why
-                        underwriters
-                        typically require at least two months bank / asset statements in the initial mortgage
-                        approval
-                        process.</p>
-                    <p>A Few Acceptable Sources Of Down Payment Include:</p>
-                    <ul>
-                        <li>Bank Accounts – checking / savings</li>
-                        <li>Investment Accounts – money market, mutual funds</li>
-                        <li>Retirement Funds – keep in mind that borrowing against a 401K plan will require a
-                            repayment,
-                            which will be calculated in the Debt-to-Income Ratio</li>
-                        <li>Life Insurance – Cash value and face amount</li>
-                        <li>Gifts – Family members can gift down payment funds with certain restrictions</li>
-                        <li>Inheritance / Trust Funds</li>
-                        <li>Government Grants – Many state, county and city agencies offer special down payment
-                            assistance programs.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
     <!-- Mobile Contact Bar -->
     <section class="mobile-contact-bar">
         <div class="flex-perfect-center">
-            <div id="text" style="width: 33%">
+            <div>
+                <a href="index.html" class="btn-action"><i class="fas fa-home dark-cerulean"></i></a>
+            </div>
+            <div id="text">
                 <a href="sms:1-909-510-9479" class="btn-action"><i class="fas fa-sms dark-cerulean"></i></a>
             </div>
-            <div id="call" style="width: 33%">
+            <div id="call">
                 <a href="tel:1-909-510-9479" class="btn-action"><i class="fas fa-mobile-alt dark-cerulean"></i></a>
             </div>
-            <div id="email" style="width: 33%">
+            <div id="email">
                 <a href="mailto:admin@jimngo.info" class="btn-action"><i class="fas fa-envelope dark-cerulean"></i></a>
             </div>
         </div>
     </section>
-    <!-- Scripts ------------------------------------------------------------->
+    <footer>
+        <div class="main flex-perfect-center center">
+            <div class="col-3 col-s-3">
+                <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="image/EHO.png"
+                    alt="EHO">
+            </div>
+            <div class="col-9 col-s-9">
+                <p>UNITED MORTGAGE FUND</p>
+                <p>Licensed Real Estate Corporation by the California Bureau of Real Estate. <br />
+                    Corporate Broker # 01952954<br />
+                    NMLS # 1194303</p>
+                <address>800 N. Haven Ave, Ste 370 - Ontario, CA 91764</address>
+                <blockquote>“Big Banks Put High Interest Above Your Interest”</blockquote>
+            </div>
+        </div>
+    </footer>
+    <div style="text-align:center">
+        <p>&copy; 2019 Jim Ngo - Ontario CA</p>
+    </div>
     <link rel="stylesheet" href="style/fontawesome-free-5.11.1-web/css/all.min.css">
     <!-- Default Statcounter code for Jimngo.net https://www.jimngo.net -->
     <script type="text/javascript">
@@ -1443,23 +873,5 @@
     <!-- End of Statcounter Code -->
     <script src="javascript/afford-calc-Ob.js" async></script>
 </body>
-<footer>
-    <div class="main flex-perfect-center center">
-        <div class="col-3 col-s-3">
-            <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="image/EHO.png" alt="EHO">
-        </div>
-        <div class="col-9 col-s-9">
-            <p>UNITED MORTGAGE FUND</p>
-            <p>Licensed Real Estate Corporation by the California Bureau of Real Estate. <br />
-                Corporate Broker # 01952954<br />
-                NMLS # 1194303</p>
-            <address>800 N. Haven Ave, Ste 370 - Ontario, CA 91764</address>
-            <blockquote>“Big Banks Put High Interest Above Your Interest”</blockquote>
-        </div>
-    </div>
-</footer>
-<div style="text-align:center">
-    <p>&copy; 2019 Jim Ngo - Ontario CA</p>
-</div>
 
 </html>

@@ -70,6 +70,14 @@ function show_phone() {
     show('email');
 }
 
+function show(id) {
+    document.getElementById(id).style.display = "block";
+}
+
+function hide(id) {
+    document.getElementById(id).style.display = "none";
+}
+
 ///////////////////////////////////////////////////////////////////////////////
 // Delay images                                                               /
 ///////////////////////////////////////////////////////////////////////////////
@@ -87,6 +95,25 @@ function init() {
 init();
 
 ///////////////////////////////////////////////////////////////////////////////
+// Fixed Header                                                               /
+///////////////////////////////////////////////////////////////////////////////
+
+window.onscroll = function () {
+    myFunction();
+};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+    if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+    } else {
+        header.classList.remove("sticky");
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////
 // Slide Show                                                                 /
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -95,12 +122,6 @@ onload = slideshow;
 function slideshow() {
     setInterval(function () {
         nextSlide('hecm-ss');
-        nextSlide('service-ss');
-        nextSlide('home-valuation-ss');
-        nextSlide('dpa-ss');
-        nextSlide('refinance-ss');
-        nextSlide('sfr-ss');
-        nextSlide('flyer-ss');
     }, 2000);
 }
 
@@ -144,7 +165,6 @@ function collapsible(idName, className, className2) {
 }
 
 collapsible('QA', 'collapsible', 'content');
-collapsible('flyers', 'collapsible', 'content');
 
 ///////////////////////////////////////////////////////////////////////////////
 // Sliding Container Up and Down ---------------------------------------------/
@@ -183,20 +203,12 @@ function show_slide(id) {
     calc();
     slide_up(widget_slides);
     slide_down(id);
-    document.getElementById(calculator).scrollIntoView();
+    document.getElementById('calculator').scrollIntoView();
 }
 
 ///////////////////////////////////////////////////////////////////////////////
 // Misc ----------------------------------------------------------------------/
 ///////////////////////////////////////////////////////////////////////////////
-
-function show(id) {
-    document.getElementById(id).style.display = "block";
-}
-
-function hide(id) {
-    document.getElementById(id).style.display = "none";
-}
 
 function toString(id, value, digit) {
     document.getElementById(id).innerHTML = value.toLocaleString(undefined, {

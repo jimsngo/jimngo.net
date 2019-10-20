@@ -70,6 +70,33 @@ function show_phone() {
     show('email');
 }
 
+function show(id) {
+    document.getElementById(id).style.display = "block";
+}
+
+function hide(id) {
+    document.getElementById(id).style.display = "none";
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// Fixed Header                                                               /
+///////////////////////////////////////////////////////////////////////////////
+
+window.onscroll = function () {
+    myFunction();
+};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+    if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+    } else {
+        header.classList.remove("sticky");
+    }
+}
+
 ///////////////////////////////////////////////////////////////////////////////
 // Slide Show                                                                 /
 ///////////////////////////////////////////////////////////////////////////////
@@ -254,14 +281,6 @@ function slide_down(id) {
     var content = document.getElementById(id);
     content.style.display = 'block';
     content.style.height = content.scrollHeight + 'px';
-}
-
-function show(id) {
-    document.getElementById(id).style.display = "block";
-}
-
-function hide(id) {
-    document.getElementById(id).style.display = "none";
 }
 
 function show_auto_slide(id) {
