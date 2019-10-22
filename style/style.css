@@ -91,7 +91,13 @@ tr:nth-child(even) {
 
 video {
     width: 100%;
-    height: auto;
+    max-width: 560px;
+    border-radius: 5px;
+    border: 10px outset #ddd;
+}
+
+video:focus {
+    outline: none;
 }
 
 #disclaimer {
@@ -366,7 +372,6 @@ button {
     border-style: none;
     border-radius: 5px;
     outline: none;
-    /* text-align:center;*/
     font-size: 125%;
     cursor: pointer;
 }
@@ -667,7 +672,6 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .tabcontent {
-    display: none;
     text-align: left;
     height: 0px;
     overflow: hidden;
