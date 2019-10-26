@@ -270,14 +270,6 @@ input[type=radio],
     border-radius: 5px;
 }
 
-.mls-search a {
-    color: white;
-}
-
-.mls-search a:hover {
-    color: lightgreen;
-}
-
 /* MLS Home Search on Mobile & iPad *****************************/
 @media only screen and (max-width:1024px) {
     .homespotter {
