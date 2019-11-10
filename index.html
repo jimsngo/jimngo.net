@@ -57,6 +57,16 @@
                             data-src="image/profile-180.png" alt="profile" style="border-radius: 50%">
                         <h2>Jim Ngo - Ontario, CA</h2>
                     </a>
+                    <div class="flex-perfect-center social">
+                        <div class="blogger"><a href="https://realtor.jimngo.info/" target="_blank"><i
+                                    class="fab fa-blogger"></i></a></div>
+                        <div class="fb"><a href="https://www.facebook.com/jimngo.realtor/" target="_blank"><i
+                                    class="fab fa-facebook-square"></i></a>
+                        </div>
+                        <div class="linkedin"><a href="https://www.linkedin.com/in/jimsngo/" target="_blank"><i
+                                    class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
                     <p>United Mortgage Fund<br />
                         <i class="fas fa-mobile-alt"></i> <a href="tel:909-248-4453">(909) 248-4453‬</a><br />
                         <i class="far fa-envelope"></i> <a href="mailto:admin@jimngo.info">admin@jimngo.info</a><br />
@@ -74,16 +84,19 @@
             <!-- Page Description -------------------------------------------->
             <div class="col-9 col-s-8" id="cards">
                 <!-- Real Estate Agent -->
-                <div class="card-content slow" id="real-estate-agent">
+                <div class="dark-cerulean radius-5 font-large" onclick="show_select('real-estate-agent')"></div>
+                <div class="card-content slow expanded" id="real-estate-agent">
                     <p>Whether you are buying or selling a home, it can be quite an adventure especially in today’s
                         Real Estate market. There is so much information out there on the news and on the internet
                         about home sales, prices, and mortgage rates.</p>
                     <ul>
                         <li>How do you know what’s going on specifically in your area?</li>
-                        <li><a href="https://www.jimngo.net/home-valuation" target="_blank">Who do you turn to in order
+                        <li><a href="https://www.jimngo.net/home-valuation" target="_blank">Who do you turn to in
+                                order
                                 to competitively and correctly price your home at the beginning of the selling
                                 process?</a></li>
-                        <li>How do you know what to offer on your dream home without paying too much, or offending the
+                        <li>How do you know what to offer on your dream home without paying too much, or offending
+                            the
                             seller with a lowball offer?</li>
                         <li><a href="https://www.jimngo.net/short-sales-foreclosure" target="_blank">Who can you go
                                 to if you’re facing a foreclosure or unable to make mortgage payments?</a></li>
@@ -111,7 +124,9 @@
                     </div>
                 </div>
                 <!-- Home Loan -->
-                <div class="card-content slow" id="home-loan" style="display: none">
+                <div class="dark-cerulean radius-5 font-large" onclick="show_select('home-loan')"></div>
+                <div class="card-content slow" id="home-loan">
+                    <h2 style="color: dodgerblue" class="font-large">Mortgage Pre Approval - Mortgage Refinance</h2>
                     <div style="font-size: 150%; color: dodgerblue">Big Banks Put High Interest Above Your
                         Interest</div>
                     <ul>
@@ -125,7 +140,8 @@
                         </li>
                         <li>We're Brokers! We're Better!</li>
                     </ul>
-                    <p style="font-size: 150%; color: dodgerblue">We're Licensed Mortgage Professional, and home to so
+                    <p style="font-size: 150%; color: dodgerblue">We're Licensed Mortgage Professional, and home to
+                        so
                         much more than what big banks offer.</p>
                     <div class="banner dodger-blue radius-5 font-large" id="home-loan-ss">
                         <h2 class="slide">Pre Qualification</h2>
@@ -140,8 +156,9 @@
                         <h2 class="slide">Reverse Mortgage</h2>
                     </div>
                 </div>
+                <div class="dark-cerulean radius-5 font-large" onclick="show_select('life-agent')"></div>
                 <!-- Insurance Agent -->
-                <div class="card-content slow" id="life-agent" style="display:none">
+                <div class="card-content slow" id="life-agent">
                     <div style="font-size: 150%; color: dodgerblue">Life Can Change In An Instant.</div>
                     <p>Loosing a loved one can mean more than an emotional burden. It can also create a
                         financial burden. Protect your loved ones today.</p>
@@ -156,7 +173,7 @@
                         <li>Most who apply are accepted for coverage.</li>
                     </ul>
                     <a href="life-agent" target="_blank">
-                        <p class="capitalize font-medium">Plan for your tommorrow... today. <i
+                        <p class="capitalize font-medium">Plan for your tomorrow... today. <i
                                 class="fas fa-external-link-alt"></i></p>
                         <div class="banner dodger-blue radius-5 font-large" id='life-agent-ss'>
                             <h2 class="slide showing">Term Life</h2>

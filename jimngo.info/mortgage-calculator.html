@@ -1,150 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <title>Mortgage PreQualification Calculator FHA VA Conventional</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords"
-        content="mortgage calculator, mortgage pre-qualification, mortgage pre-approval, home loan calculator, debt to income ratio, down payment assistance, first time home buyer, home loan, FHA VA Conventional USDA Jumbo loans">
-    <meta name="description"
-        content="Calculate your monthly payment with tax and insurance. Prequalify yourself for a new home loan based on your income and debt.">
-    <meta name="subject" content="Mortgage Calculator, Home Loan Prequalification">
-    <meta name="language" content="English">
-    <meta name="robots" content="index,follow">
-    <meta name="author" content="Jim Ngo" />
-    <meta name="copyright" content="Jim Ngo" />
-    <meta property="og:url" content="https://www.jimngo.net/mortgage-prequalification-calculator" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Mortgage Calculator | Fixed Interest Amortization | Home Affordability" />
-    <meta property="og:description"
-        content="Calculate your monthly payment with tax and insurance. Prequalify yourself for a new home loan based on your income and debt." />
-    <meta property="og:image" content="image/mortgage-calc (2).jpg" />
-    <link rel="canonical" href="https://www.jimngo.net/mortgage-prequalification-calculator">
-    <link rel="icon" href="image/favicon-16x16.png" type="image/gif" sizes="16x16">
-    <link rel="stylesheet" href="style/style.min.css">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-88549125-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'UA-88549125-1'); // Google Analytics
-        gtag('config', 'AW-935673147'); // Google Ads
-    </script>
-</head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="https://www.jimngo.net/jimngo.info/style.min.css">
 
 <body>
-    <header id="myHeader">
-        <h2><a href="https://www.jimngo.net">Your Local Realtor - Mortgage Professional - Life Agent</a></h2>
-        <div id="opening_monday" style="display: none">Opening at 10:00 AM Monday</div>
-        <div id="opening_tomorrow" style="display: none">Opening at 10:00 AM Tomorrow</div>
-        <div id="opening_soon" style="display: none">Opening at 10:00 AM</div>
-    </header>
     <!-- Page Description ---------------------------------------------------->
-    <main class="main">
-        <div class="flex-perfect-center">
-            <!-- About Me ---------------------------------------------------->
-            <div class="col-3 col-s-4 light-gray radius-5">
-                <div style="text-align:center; line-height: 1.4;">
-                    <a href="https://www.realtor.com/realestateagents/jim-son-ngo_ontario_ca_3146995_094379828"
-                        target="_blank" title="About Me">
-                        <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
-                            data-src="image/profile-180.png" alt="profile" style="border-radius: 50%">
-                        <h2>Jim Ngo - Ontario, CA</h2>
-                    </a>
-                    <div class="flex-perfect-center">
-                        <div class="blogger"><a href="https://realtor.jimngo.info/" target="_blank"><i
-                                    class="fab fa-blogger"></i></a></div>
-                        <div class="fb"><a href="https://www.facebook.com/jimngo.realtor/" target="_blank"><i
-                                    class="fab fa-facebook-square"></i></a>
-                        </div>
-                        <div class="linkedin"><a href="https://www.linkedin.com/in/jimsngo/" target="_blank"><i
-                                    class="fab fa-linkedin"></i></a>
-                        </div>
-                    </div>
-                    <p>United Mortgage Fund<br />
-                        <i class="fas fa-mobile-alt"></i> <a href="tel:909-248-4453">(909) 248-4453</a><br />
-                        <i class="far fa-envelope"></i> <a href="mailto:admin@jimngo.info">admin@jimngo.info</a><br />
-                        NMLS <a href="http://www.nmlsconsumeraccess.org/Home.aspx/MainSearch" target="_blank"
-                            rel="nofollow">1353214</a><br />
-                        BRE <a href="http://www2.dre.ca.gov/publicasp/pplinfo.asp" target="_blank"
-                            rel="nofollow">01164334</a></p>
-                </div>
-            </div>
-            <!-- Page Description -->
-            <div class="col-9 col-s-8 page-description">
-                <h1 style="color: dodgerblue">Mortgage Prequalification Calculator</h1>
-                <h2 style="color: dodgerblue">FHA, VA, Conventional, USDA, and JUMBO Loans</h2>
-                <h3 style="color: dodgerblue">
-                    • Calculate Your Monthly Payment with Mortgage Insurance and Tax.<br />
-                    • Know Your Debt to Income Ratio.</h3>
-                <p>In addition to your credit score and your loan-to-value (LTV) ratio, your <a
-                        href="https://www.jimngo.net/debt-to-income-ratio" target="_blank"><i>Debt To Income (DTI)
-                            Ratio</i></a> is an important part of your
-                    overall financial health. Calculating your DTI may help you determine how comfortable you are
-                    with your current debt, and also decide whether applying for credit is the right choice for you.
-                </p>
-                <p>When you apply for credit, lenders evaluate your DTI to help determine whether you can afford to
-                    take on another payment. Your DTI compares how much you owe each month to how much you earn.
-                    Specifically, it’s the percentage of your gross monthly income (before taxes) that goes towards
-                    payments for rent, mortgage, credit cards, or other debt.</p>
+    <h1 style="color: dodgerblue">Mortgage Pre Qualification Calculator</h1>
+    <h2 style="color: dodgerblue">FHA, VA, Conventional, USDA, and JUMBO Loans</h2>
+    <h3 style="color: dodgerblue">
+        • Calculate Your Monthly Payment with Mortgage Insurance and Tax.<br />
+        • Know Your Debt to Income Ratio.</h3>
+    <p>In addition to your credit score and your loan-to-value (LTV) ratio, your <a
+            href="https://www.jimngo.net/debt-to-income-ratio" target="_blank"><i>Debt To Income (DTI) Ratio</i></a> is
+        an important part of your overall financial health. Calculating your DTI may help you determine how comfortable
+        you are with your current debt, and also decide whether applying for credit is the right choice for you.</p>
+    <p>When you apply for credit, lenders evaluate your DTI to help determine whether you can afford to take on another
+        payment. Your DTI compares how much you owe each month to how much you earn. Specifically, it’s the percentage
+        of your gross monthly income (before taxes) that goes towards payments for rent, mortgage, credit cards, or
+        other debt.</p>
+    <div class="flex-center">
+        <div class="col-s-6">
+            <div class="card-header">Housing Ratio (Front)</div>
+            <div class="card-body">
+                <p>This ratio compares your <i>Housing Expenses</i> to your <i>Monthly Income</i>. Your
+                    housing expenses include:</p>
+                <ul>
+                    <li>Principal and Interest.</li>
+                    <li>Property Tax.</li>
+                    <li><a href="https://www.jimngo.net/mortgage-insurance" target="_blank"><i>Mortgage
+                                Insurance Premium</i></a>.</li>
+                    <li>Hazard Insurance.</li>
+                    <li>HOA Fees.</li>
+                    <li>Special Assessments and Payments for any acceptable secondary financing.</li>
+                </ul>
             </div>
         </div>
-        <div class="flex-center">
-            <div class="col-4 col-s-6">
-                <div class="card-header">Housing Ratio (Front)</div>
-                <div class="card-body">
-                    <p>This ratio compares your <i>Housing Expenses</i> to your <i>Monthly Income</i>. Your
-                        housing expenses include:</p>
-                    <ul>
-                        <li>Principal and Interest.</li>
-                        <li>Property Tax.</li>
-                        <li><a href="https://www.jimngo.net/mortgage-insurance" target="_blank"><i>Mortgage
-                                    Insurance Premium</i></a>.</li>
-                        <li>Hazard Insurance.</li>
-                        <li>HOA Fees.</li>
-                        <li>Special Assessments and Payments for any acceptable secondary financing.</li>
-                    </ul>
-                </div>
+        <div class="col-s-6">
+            <div class="card-header">Debt To Income Ratio (Back)</div>
+            <div class="card-body">
+                <p>This ratio compares your <i>Monthly Debts</i> plus your <i>Housing Expenses</i> to
+                    your <i>Monthly Income</i>. Your monthly debts include:</p>
+                <ul>
+                    <li>Auto Loan</li>
+                    <li>Student Loan</li>
+                    <li>Installment Loan</li>
+                    <li>Revolving Account</li>
+                    <li>Other Debt</li>
+                </ul>
             </div>
-            <div class="col-4 col-s-6">
-                <div class="card-header">Debt To Income Ratio (Back)</div>
-                <div class="card-body">
-                    <p>This ratio compares your <i>Monthly Debts</i> plus your <i>Housing Expenses</i> to
-                        your <i>Monthly Income</i>. Your monthly debts include:</p>
-                    <ul>
-                        <li>Auto Loan</li>
-                        <li>Student Loan</li>
-                        <li>Installment Loan</li>
-                        <li>Revolving Account</li>
-                        <li>Other Debt</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-4 col-s-12">
-                <div class="card-header">Pre-qualification Made Easy</div>
-                <div class="card-body">
-                    <ul>
-                        <li>Simply enter the housing and property information including sales price, down payment, and
-                            expected interest rate to calculate your monthly payment.</li>
-                        <li>Enter your Income and Liability information to calculate your front and back debt ratios.
-                        </li>
-                        <li>Lower ratios are more favorable.</li>
-                        <li><span style="color: lightgreen">Conservative ratios are 31(front) and 43(back).</span>
-                        </li>
-                        <li><span style="color:lightgreen">Aggressive ratios are 37(front) and 47(back).</span></li>
-                        <li>Some loan program will allow DTI ratio to go up to 50% with automated underwriting, but
-                            anything above that will likely be denied.</li>
-                    </ul>
-                </div>
-            </div>
-
         </div>
-    </main>
+    </div>
+    <h3 style="color: dodgerblue">Pre Qualification Made Easy</h3>
+    <ul>
+        <li>Simply enter the housing and property information including sales price, down payment, and
+            expected interest rate to calculate your monthly payment.</li>
+        <li>Enter your Income and Liability information to calculate your front and back debt ratios.</li>
+        <li>Lower ratios are more favorable.</li>
+        <li><span style="color: green">Conservative ratios are 31(front) and 43(back).</span>
+        </li>
+        <li><span style="color:red">Aggressive ratios are 37(front) and 47(back).</span></li>
+        <li>Some loan program will allow DTI ratio to go up to 50% with automated underwriting, but
+            anything above that will likely be denied.</li>
+    </ul>
     <div style="height: 8px;" id="calculator"></div>
     <!-- Mortgage Pre-Qualification Calculator ------------------------------->
     <section class='calculator' id="mortgage-prequalification-widget">
@@ -706,7 +621,7 @@
                     <div class="card-body">
                         <div style="width:100%; text-align: center">
                             <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
-                                data-src="image/HomeReady_Logo_Horizontal_rgb_200px.jpg" alt="HomeReady Mortgage"
+                                data-src="HomeReady_Logo_Horizontal_rgb_200px.jpg" alt="HomeReady Mortgage"
                                 class="radius-5">
                         </div>
                         <h3>Discover the affordability of homeownership with HomeReady mortgage.</h3>
@@ -716,8 +631,7 @@
                             <li>First-time and repeat homebuyers eligible. Co-borrowers don’t have to live in the
                                 property</li>
                             <li><a href="https://homeready-eligibility.fanniemae.com/homeready/"
-                                    target="_blank">HomeReady
-                                    Income Eligibility Lookup Tool</a>.</li>
+                                    target="_blank">HomeReady Income Eligibility Lookup Tool</a>.</li>
                             <li>Cancellable Mortgage Insurance* - Unlike government-insured loans, with HomeReady,
                                 borrowers may have the option to cancel their mortgage insurance once their home
                                 equity reaches 20%. This can result in lower monthly payments down the road.
@@ -782,114 +696,75 @@
             </div>
         </div>
     </section>
+    <!-- End Mortgage Calculator --------------------------------------------->
     <!-- Disclaimer ---------------------------------------------------------->
     <section class="light-gray">
-        <div class="main flex-perfect-center">
-            <div class="col-8 col-s-7">
-                <p>DISCLAIMER: The figures displayed above are based upon your input and may not reflect your actual
-                    mortgage payment or total monthly costs. Calculations by this tool are believed to be accurate,
-                    yet are not guaranteed.</p>
-                <ul>
-                    <li><a href="https://www.jimngo.net/mortgage-insurance" target="_blank">Mortgage Insurance</a> is
-                        required for down payment less than 20% and it's typically between 0.5% to 1.0% of the loan
-                        amount.</li>
-                    <li>FHA requires a 3.5% down payment as well as an upfront and monthly mortgage insurance in
-                        many cases.</li>
-                    <li>VA Loan does not require any down payment or monthly mortgage insurance, but has an upfront
-                        Funding Fee.</li>
-                    <li><a href="https://www.jimngo.net/closing-costs" target="_blank">Closing Costs</a> account for
-                        about 2%-5% of the purchase price.
-                    </li>
-                    <li>Property Tax is normally 1.20% of the purchased price annually. Please confirm rate with
-                        your county.</li>
-                    <li>Every loan program has its loan limit which varies by county. Please visit <a
-                            href="https://entp.hud.gov/idapp/html/hicostlook.cfm" target="_blank">HUD</a> for limits
-                        on FHA loans, <a href="https://www.benefits.va.gov/HOMELOANS/purchaseco_loan_limits.asp"
-                            target="_blank">VA</a> for limits on VA loans, and <a
-                            href="https://www.fhfa.gov/DataTools/Downloads/Pages/Conforming-Loan-Limits.aspx"
-                            target="_blank">FHFA</a> for limits on Conventional loans. Loans exceeding conforming
-                        loan limits are considered Jumbo Loans, which typically require a FICO score of 700+ and a
-                        down payments of 20 percent or more.</li>
-                </ul>
-            </div>
-            <!-- Mortgage News Daily -->
-            <div class="col-4 col-s-5">
-                <!-- MORTGAGE RATES BEGIN -->
+        <div style="margin: 8px;">DISCLAIMER: The figures displayed above are based upon your input and may not reflect
+            your actual
+            mortgage payment or total monthly costs. Calculations by this tool are believed to be accurate,
+            yet are not guaranteed.</div>
+        <ul>
+            <li><a href="https://www.jimngo.net/mortgage-insurance" target="_blank">Mortgage Insurance</a> is
+                required for down payment less than 20% and it's typically between 0.5% to 1.0% of the loan
+                amount.</li>
+            <li>FHA requires a 3.5% down payment as well as an upfront and monthly mortgage insurance in
+                many cases.</li>
+            <li>VA Loan does not require any down payment or monthly mortgage insurance, but has an upfront
+                Funding Fee.</li>
+            <li><a href="https://www.jimngo.net/closing-costs" target="_blank">Closing Costs</a> account for
+                about 2%-5% of the purchase price.
+            </li>
+            <li>Property Tax is normally 1.20% of the purchased price annually. Please confirm rate with
+                your county.</li>
+            <li>Every loan program has its loan limit which varies by county. Please visit <a
+                    href="https://entp.hud.gov/idapp/html/hicostlook.cfm" target="_blank">HUD</a> for limits
+                on FHA loans, <a href="https://www.benefits.va.gov/HOMELOANS/purchaseco_loan_limits.asp"
+                    target="_blank">VA</a> for limits on VA loans, and <a
+                    href="https://www.fhfa.gov/DataTools/Downloads/Pages/Conforming-Loan-Limits.aspx"
+                    target="_blank">FHFA</a> for limits on Conventional loans. Loans exceeding conforming
+                loan limits are considered Jumbo Loans, which typically require a FICO score of 700+ and a
+                down payments of 20 percent or more.</li>
+        </ul>
+    </section>
+    <section class="flex-perfect-center">
+        <div class="col-s-7" id="more-calc">
+            <h3><a href="https://realtor.jimngo.info/p/home-affordability-calculator.html" target="_blank">How Much
+                    Home Can I Afford?</a></h3>
+            <h3><a href="https://realtor.jimngo.info/p/how-much-income-do-i-need-in-order-to.html" target="_blank">How
+                    Much Income Do I Need?</a></h3>
+            <h3><a href="https://realtor.jimngo.info/p/how-long-will-my-mortgage-be-if-i-make.html" target="_blank">What
+                    If I Make Extra Payment?</a></h3>
+            <h3><a href="https://realtor.jimngo.info/p/home-affordability-calculator.html" target="_blank">Is It
+                    Time To Refinance?</a></h3>
+            <h3><a href="https://realtor.jimngo.info/p/hecm.html" target="_blank">Reverse Mortgage -
+                    HECM</a></h3>
+        </div>
+        <div class="col-s-5">
+            <!-- MORTGAGE RATES BEGIN -->
+            <script type="text/javascript" async>
+                if (typeof jQuery == "undefined") {
+                    document.write(unescape("%3Cscript src='" + (document.location.protocol == 'https:' ? 'https:' :
+                            'http:') +
+                        "//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js' type='text/javascript'%3E%3C/script%3E"
+                    ));
+                    mlcalc_jquery_noconflict = 1;
+                };
+            </script>
+            <div style="line-height:10px;font-weight:normal;font-size:9px;font-family:Tahoma;padding:0;margin:0;border:0;text-align:right;background:transparent;color:#EEEEEE;width:300px;padding-right:10px;"
+                class="mlcalcRatesWidgetHolder" id="mlcalcRatesWidgetHolderCA">
                 <script type="text/javascript" async>
-                    if (typeof jQuery == "undefined") {
-                        document.write(unescape("%3Cscript src='" + (document.location.protocol == 'https:' ? 'https:' :
-                                'http:') +
-                            "//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js' type='text/javascript'%3E%3C/script%3E"
-                        ));
-                        mlcalc_jquery_noconflict = 1;
-                    };
+                    document.write(unescape("%3Cscript src='//www.mlcalc.com" +
+                        "/mortgage-rates/california/widget-wide.js' type='text/javascript'%3E%3C/script%3E"
+                    ));
                 </script>
-                <div style="line-height:10px;font-weight:normal;font-size:9px;font-family:Tahoma;padding:0;margin:0;border:0;text-align:right;background:transparent;color:#EEEEEE;width:300px;padding-right:10px;"
-                    class="mlcalcRatesWidgetHolder" id="mlcalcRatesWidgetHolderCA">
-                    <script type="text/javascript" async>
-                        document.write(unescape("%3Cscript src='//www.mlcalc.com" +
-                            "/mortgage-rates/california/widget-wide.js' type='text/javascript'%3E%3C/script%3E"
-                        ));
-                    </script>
-                    Powered by <a href="https://www.mlcalc.com/mortgage-rates/california/" target="_blank"
-                        style="font-weight:normal;font-size:9px;font-family:Tahoma;color:#EEEEEE;text-decoration:none;">CA
-                        www.mlcalc.com</a>
-                </div>
-                <!-- MORTGAGE RATES END -->
+                Powered by <a href="https://www.mlcalc.com/mortgage-rates/california/" target="_blank"
+                    style="font-weight:normal;font-size:9px;font-family:Tahoma;color:#EEEEEE;text-decoration:none;">CA
+                    www.mlcalc.com</a>
             </div>
+            <!-- MORTGAGE RATES END -->
         </div>
     </section>
-    <!-- Mobile Contact Bar -->
-    <section class="mobile-contact-bar">
-        <div class="flex-perfect-center">
-            <div>
-                <a href="index.html" class="btn-action"><i class="fas fa-home dark-cerulean"></i></a>
-            </div>
-            <div id="text">
-                <a href="sms:1-909-248-4453" class="btn-action"><i class="fas fa-sms dark-cerulean"></i></a>
-            </div>
-            <div id="call">
-                <a href="tel:1-909-248-4453" class="btn-action"><i class="fas fa-mobile-alt dark-cerulean"></i></a>
-            </div>
-            <div id="email">
-                <a href="mailto:admin@jimngo.info" class="btn-action"><i class="fas fa-envelope dark-cerulean"></i></a>
-            </div>
-        </div>
-    </section>
-    <footer>
-        <div class="main flex-perfect-center center">
-            <div class="col-3 col-s-3">
-                <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="image/EHO.png"
-                    alt="EHO">
-            </div>
-            <div class="col-9 col-s-9">
-                <p>UNITED MORTGAGE FUND</p>
-                <p>Licensed Real Estate Corporation by the California Bureau of Real Estate. <br />
-                    Corporate Broker # 01952954<br />
-                    NMLS # 1194303</p>
-                <address>800 N. Haven Ave, Ste 370 - Ontario, CA 91764</address>
-                <blockquote>“Big Banks Put High Interest Above Your Interest”</blockquote>
-            </div>
-        </div>
-    </footer>
-    <div style="text-align:center">
-        <p>&copy; 2019 Jim Ngo - Ontario CA</p>
-    </div>
-    <link rel="stylesheet" href="style/fontawesome-free-5.11.1-web/css/all.min.css">
-    <!-- Default Statcounter code for Jimngo.net https://www.jimngo.net -->
-    <script type="text/javascript">
-        var sc_project = 11893871;
-        var sc_invisible = 1;
-        var sc_security = "b16c17b8";
-    </script>
-    <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
-    <noscript>
-        <div class="statcounter"><a title="Web Analytics" href="https://statcounter.com/" target="_blank"><img
-                    class="statcounter" src="https://c.statcounter.com/11893871/0/b16c17b8/1/" alt="Web Analytics"></a>
-        </div>
-    </noscript>
-    <!-- End of Statcounter Code -->
-    <script src="javascript/calc-Ob.js" async></script>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css'
+        integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
+    <script src="https://www.jimngo.net/jimngo.info/mortgage-calculator-Ob.js"></script>
 </body>
-
-</html>
