@@ -137,20 +137,27 @@ a:hover {
 
 .blogger a {
     color: #F57D00;
-    margin: 0px 8px;
-    font-size: 36px;
 }
 
 .fb a {
     color: #3b5998;
-    margin: 0px 8px;
-    font-size: 36px;
+}
+
+.fb-messenger a {
+    color: #0084FF;
+}
+
+.gmail a {
+    color: #c71610;
 }
 
 .linkedin a {
     color: #0e76a8;
-    margin: 0px 8px;
-    font-size: 36px;
+}
+
+.sms a,
+.mobile-phone a {
+    color: #004A7C;
 }
 
 a[href^="http"]::after {
@@ -162,8 +169,9 @@ a[href^="http"]::after {
 a[href*="www.realtor.com"]::after,
 a[href*="www.mortgagenewsdaily.com"]::after,
 a[href*="app.homespotter.com"]::after,
-a[href*="https://realtor.jimngo.info/"]::after,
-a[href*="https://www.facebook.com/jimngo.realtor/"]::after,
+a[href="https://realtor.jimngo.info/"]::after,
+a[href*="https://www.facebook.com/"]::after,
+a[href*="https://www.messenger.com/"]::after,
 a[href*="https://www.linkedin.com/in/jimsngo/"]::after {
     content: '';
 }
@@ -176,6 +184,7 @@ header a {
 
 .card-body a,
 .card-header a,
+.eguide a,
 #service a {
     color: lightgreen;
     text-decoration: none;
@@ -183,6 +192,7 @@ header a {
 
 .card-body a:hover,
 .card-header a:hover,
+.eguide a:hover,
 #service a:hover {
     color: lightgreen;
     text-decoration: underline;
@@ -696,6 +706,11 @@ input[type=number]::-webkit-outer-spin-button {
     margin: 10px;
 }
 
+.social-icon {
+    font-size: 36px;
+    margin: 0px 8px;
+}
+
 .tabcontent {
     text-align: left;
     height: 0px;
@@ -935,7 +950,7 @@ input[type=number]::-webkit-outer-spin-button {
 .mobile-contact-bar {
     position: fixed;
     width: 100%;
-    background-color: #4599d1;
+    background-color: #f2f2f2;
     text-align: center;
     bottom: 0;
     left: 0;
@@ -944,7 +959,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .mobile-contact-bar i {
-    font-size: 24px;
+    font-size: 36px;
 }
 
 @media only screen and (min-width:421px) {

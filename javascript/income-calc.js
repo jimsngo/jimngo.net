@@ -10,18 +10,18 @@ function current_date_time() {
 	var hour = d.getHours();
 	// If Saturday after 4 pm
 	if (day == 6 && hour >= 18) {
-		open_monday();
+		hide_phone();
 	} else {
 		// If Sunday
 		if (day == 0) {
-			open_tomorrow();
+			hide_phone();
 		} else {
 			// Check if it's outside of business hours
 			if (hour < 10) {
-				open_soon();
+				hide_phone();
 			} else {
 				if (hour >= 18) {
-					open_tomorrow();
+					hide_phone();
 				} else {
 					show_phone();
 				}
@@ -30,44 +30,12 @@ function current_date_time() {
 	}
 }
 
-function open_monday() {
-	show('opening_monday');
-	hide('opening_tomorrow');
-	hide('opening_soon');
-	hide_phone();
-}
-
-function open_tomorrow() {
-	hide('opening_monday');
-	show('opening_tomorrow');
-	hide('opening_soon');
-	hide_phone();
-}
-
-function open_soon() {
-	hide('opening_monday');
-	hide('opening_tomorrow');
-	show('opening_soon');
-	hide_phone();
-}
-
-function open() {
-	hide('opening_monday');
-	hide('opening_tomorrow');
-	hide('opening_soon');
-	show_phone();
-}
-
 function hide_phone() {
-	show('text');
 	hide('call');
-	show('email');
 }
 
 function show_phone() {
-	show('text');
 	show('call');
-	show('email');
 }
 
 ///////////////////////////////////////////////////////////////////////////////

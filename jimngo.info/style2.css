@@ -1,0 +1,55 @@
+* { box-sizing: border-box;}
+/* Responsive Equal Height Columns */
+.table-row { display: table; width: 100%; }
+.table-column { display: table-cell; width: 33%; padding: 16px; }
+ @media only screen and (max-width: 1024px) { .table-column { display: block; width: 100%; } }
+.section1 { background-color:#ccf5ff; color: #002933; }
+.section2 { background-color: #e6ccff; color: #1a0033; }
+.section3 { background-color: #ffcccc; color: #330000; }
+/* Create two equal columns that floats next to each other */
+.column { float: left; width: 50%; padding: 10px; text-align: center; }
+.column1 { float: left; width: 65%; padding: 10px; }
+.column2 { float: left; width: 35%; padding: 10px; }
+/* Clear floats after the columns */
+.row:after { content:""; display: table; clear: both; }
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) { .column { width: 100% } .column1 {width:100%} .column2 {width: 100%} }
+.linkmenu { text-align: center; align-items: center; flex-wrap: wrap; color: black; margin: auto; }
+.button2 { width: 210px; margin: 10px; padding: 10px; border-style: solid; border-radius: 5px; cursor: pointer; font-size: 100%; background-color:inherit; border-color: #1a0033; }
+.button2:hover { color: white; background: #1a0033; }
+.button5 { width: 250px; margin: 10px; padding: 10px; border-style: solid; border-radius: 5px; cursor: pointer; font-size: 100%; background: #d3f8d3; border-color: #072c07; }
+.button5:hover { color: white; background: #072c07; }
+.center { text-align: center; margin: auto; }
+/* Style the Loan Program note content */
+.tabcontent { display: none; text-align: left; border-style: solid; border-width: 1px; border-color: #4CAF50; border-radius: 5px; padding: 6px 12px; }
+.loanProgramNote { text-align: left; border-style: solid; border-width: 1px; border-color: #4CAF50; border-radius: 5px; padding: 6px 12px; }
+table { border-collapse: collapse; margin: 10px; float:inherit; }
+th, td { padding: 8px; text-align: left; border-bottom: 1px solid #ddd; }
+tr:hover { background-color: #f5f5f5; }
+/*End tab content */
+.slider { -webkit-appearance: none; width: 90%; height: 15px; border-radius: 5px; background: #d3d3d3; outline: none; -webkit-transition: .2s; transition: opacity .2s; }
+.slider:hover { opacity: 1; }
+.slider::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 25px; height: 25px; border-radius: 50%; background: #4CAF50; cursor: pointer; }
+.slider::-moz-range-thumb { width: 25px; height: 25px; border-radius: 50%; background: #4CAF50; cursor: pointer; }
+.slider1 { -webkit-appearance: none; width: 90%; height: 15px; border-radius: 5px; background: linear-gradient(to right, green, yellow, red); outline: none; -webkit-transition: .2s; transition: opacity .2s; }
+.slider1::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 25px; height: 25px; border-radius: 50%; background: #4CAF50; cursor: pointer; }
+.slider1::-moz-range-thumb { width: 25px; height: 25px; border-radius: 50%; background: #4CAF50; cursor: pointer; }
+/* Bottom Arrow */
+.tooltip { position: relative; display: inline-block; border-bottom: 1px dotted black; }
+.tooltip .tooltiptext { visibility: hidden; width: 100%; background-color: black; color: #fff; text-align: center; border-radius: 6px; padding: 5px 5px; /* Position the tooltip */ position: absolute; z-index: 1; bottom: 110%; left: 50%; margin-left: -150px; }
+.tooltip .tooltiptext::after { content: ""; position: absolute; top: 100%; left: 50%; margin-left: -5px; border-width: 5px; border-style: solid; border-color: black transparent transparent transparent; }
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext { visibility: visible; width: 300px; }
+.heading { background-color: green; color: white; padding: 15px; width: 100%; margin: auto; text-align: center; font-size: 18px; border-radius: 5px; border-style: none; }
+.note { width: 90%; margin: 10px 5px 5px 20px; border: 1px solid powderblue; padding: 10px; border-radius: 4; }
+/* Style the button that is used to open and close the collapsible content */
+.collapsible { background-color: lightgreen; color: black; cursor: pointer; padding: 18px; width: 100%; margin: auto; border: none; border-radius: 5px; text-align: center; outline: none; font-size: 100%; }
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover { background-color: green; color: white }
+/* Style the collapsible content - Animated Collapsible (Slide Down) */
+.content { padding: 0 18px; max-height: 0; overflow: hidden; transition: max-height 0.2s ease-out; }
+video { width: 100%; height: auto; }
+/* Blinker */
+.blink { animation: blinker 1s step-start infinite; }
+@keyframes blinker { 50% { opacity: 0; } }
+/* End Blinker */
