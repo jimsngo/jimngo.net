@@ -1,52 +1,4 @@
 ///////////////////////////////////////////////////////////////////////////////
-// Business Hours                                                             /
-///////////////////////////////////////////////////////////////////////////////
-
-setInterval(current_date_time, 1000);
-
-function current_date_time() {
-    var d = new Date();
-    var day = d.getDay();
-    var hour = d.getHours();
-    // If Saturday after 4 pm
-    if (day == 6 && hour >= 18) {
-        hide_phone();
-    } else {
-        // If Sunday
-        if (day == 0) {
-            hide_phone();
-        } else {
-            // Check if it's outside of business hours
-            if (hour < 10) {
-                hide_phone();
-            } else {
-                if (hour >= 18) {
-                    hide_phone();
-                } else {
-                    show_phone();
-                }
-            }
-        }
-    }
-}
-
-function hide_phone() {
-    hide('call');
-}
-
-function show_phone() {
-    show('call');
-}
-
-function show(id) {
-    document.getElementById(id).style.display = 'block';
-}
-
-function hide(id) {
-    document.getElementById(id).style.display = 'none';
-}
-
-///////////////////////////////////////////////////////////////////////////////
 // Header Section - Real Estate, Home Loans, and Life Agent                   /
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -114,8 +66,6 @@ onload = slideshow;
 
 function slideshow() {
     setInterval(function () {
-        nextSlide('real-estate-ss');
-        nextSlide('home-loan-ss');
         nextSlide('life-agent-ss');
         nextSlide('service-ss');
         nextSlide('home-valuation-ss');
@@ -180,3 +130,15 @@ document.getElementById("HomeSearchBtnWidget").onclick = function (event) {
         document.querySelector("#home-search-form #SearchValidationError").style.display = 'none';
     }
 };
+
+///////////////////////////////////////////////////////////////////////////////
+// Others --------------------------------------------------------------------/
+///////////////////////////////////////////////////////////////////////////////
+
+function show(id) {
+    document.getElementById(id).style.display = 'block';
+}
+
+function hide(id) {
+    document.getElementById(id).style.display = 'none';
+}
