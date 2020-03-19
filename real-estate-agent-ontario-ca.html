@@ -44,7 +44,7 @@
     </header>
     <!-- Page Description ---------------------------------------------------->
     <main>
-        <div class="main flex-center">
+        <div class="main flex-perfect-center">
             <!-- About Me ---------------------------------------------------->
             <div class="col-3 col-s-4 light-gray radius-5">
                 <div style="text-align:center; line-height: 1.4;">
@@ -72,10 +72,15 @@
                             rel="nofollow">1353214</a><br />
                         BRE <a href="http://www2.dre.ca.gov/publicasp/pplinfo.asp" target="_blank"
                             rel="nofollow">01164334</a></p>
+                    <p>&#9989; <a href="https://www.jimngo.net/home-loan-ontario-ca" target="_blank">Home Loan</a></p>
+                    <p>&#9989; <a href="https://www.jimngo.net/down-payment-assistance" target="_blank">Down Payment
+                            Assistance</a></p>
+                    <p>&#9989; <a href="https://www.jimngo.net/short-sales-foreclosure" target="_blank">Short Sale
+                            Foreclosure</a></p>
                 </div>
             </div>
             <!-- Page Description -------------------------------------------->
-            <div class="col-9 col-s-8" id="cards">
+            <div class="col-6 col-s-8" id="cards">
                 <!-- Real Estate Agent -->
                 <h1 style="color: dodgerblue" class="font-large">Real Estate Agent - Ontario, CA</h1>
                 <p>Whether you are buying or selling a home, it can be quite an adventure especially in today’s
@@ -101,86 +106,78 @@
                     and NEW homes. I am involved from the beginning to the end of every transaction. I take
                     pride in my customer service and in making sure each purchase or selling process will go as
                     smoothly as possible.</p>
-                <p>&#9989; <a href="https://www.jimngo.net/home-loan-ontario-ca" target="_blank">Home Loan</a></p>
-                <p>&#9989; <a href="https://www.jimngo.net/down-payment-assistance" target="_blank">Down Payment
-                        Assistance</a></p>
-                <p>&#9989; <a href="https://www.jimngo.net/short-sales-foreclosure" target="_blank">Short Sale
-                        Foreclosure</a></p>
             </div>
-        </div>
-    </main>
-
-    <!-- Home Search added 03/16/2020 ---------------------------------------->
-    <div class="main flex-center" id="home-search">
-        <div class="col-6 col-s-6">
-            <h3 class="card-header">Search Homes</h3>
-            <div class="home-search medium">
-                <div class="card-body">
-                    <div class="inputTitleContainer">
-                        <div class="inputTitle">City</div>
-                        <select class="inputValue" id="mySelect" onchange="calc()">
-                            <option value="ONT" selected>Ontario</option>
-                            <option value="CH">Chino</option>
-                            <option value="CHH">Chino Hills</option>
-                            <option value="COR">Corona</option>
-                            <option value="RVSD">Riverside</option>
-                        </select>
-                    </div>
-                    <div class="inputTitleContainer">
-                        <div class="inputTitle">Price - Minimum</div>
-                        <input type="number" class="inputValue" id="a3a" min="100000" max="1000000">
-                    </div>
-                    <div class="inputTitleContainer">
-                        <div class="inputTitle">Price - Maximum</div>
-                        <input type="number" class="inputValue" id="a3a" min="100000" max="1000000">
-                    </div>
-                    <div class="inputTitleContainer">
-                        <div class="inputTitle">Bedrooms</div>
-                        <select class="inputValue" id="mySelect" onchange="calc()">
-                            <option value=1>1</option>
-                            <option value=2>2</option>
-                            <option value=3 selected>3</option>
-                            <option value=4>4</option>
-                            <option value=5>5</option>
-                        </select>
-                    </div>
-                    <div class="inputTitleContainer">
-                        <div class="inputTitle">Bathrooms</div>
-                        <select class="inputValue" id="mySelect" onchange="calc()">
-                            <option value=1>1</option>
-                            <option value=2 selected>2</option>
-                            <option value=3>3</option>
-                            <option value=4>4</option>
-                            <option value=5>5</option>
-                        </select>
-                    </div>
-                    <div class="inputTitleContainer">
-                        <div class="inputTitle">Home Type</div>
-                        <select class="inputValue" id="mySelect" onchange="calc()">
-                            <option value="ONT" selected>House</option>
-                            <option value="CH">Condo</option>
-                            <option value="CHH">Town Home</option>
-                            <option value="COR">Mobile Home</option>
-                            <option value="RVSD">Land</option>
-                        </select>
-                    </div>
-                    <div class="inputTitleContainer">
-                        <div class="inputTitle">More</div>
-                        <select class="inputValue" id="mySelect" onchange="calc()">
-                            <option value="ONT" selected>Just Listed</option>
-                            <option value="CH">Price Change</option>
-                            <option value="CHH">Back On Market</option>
-                            <option value="COR">Foreclosure</option>
-                            <option value="RVSD">Short Sale</option>
-                        </select>
-                    </div>
-                    <div class="flex-center">
-                        <button class="widget-submit-btn" onclick="calc_inc_source()">Search</button>
+            <!-- Home Search added 03/16/2020 ---------------------------------------->
+            <div class="col-3 col-s-6">
+                <h3 class="card-header">Search MLS Homes</h3>
+                <div class="home-search medium">
+                    <div class="card-body">
+                        <div class="inputTitleContainer">
+                            <div class="inputTitle">City</div>
+                            <select class="inputValue" id="mySelect" onchange="calc()">
+                                <option value="ONT" selected>Ontario</option>
+                                <option value="CH">Chino</option>
+                                <option value="CHH">Chino Hills</option>
+                                <option value="COR">Corona</option>
+                                <option value="RVSD">Riverside</option>
+                            </select>
+                        </div>
+                        <div class="inputTitleContainer">
+                            <div class="inputTitle">Price - Minimum</div>
+                            <input type="number" class="inputValue" id="a3a" min="100000" max="1000000">
+                        </div>
+                        <div class="inputTitleContainer">
+                            <div class="inputTitle">Price - Maximum</div>
+                            <input type="number" class="inputValue" id="a3a" min="100000" max="1000000">
+                        </div>
+                        <div class="inputTitleContainer">
+                            <div class="inputTitle">Bedrooms</div>
+                            <select class="inputValue" id="mySelect" onchange="calc()">
+                                <option value=1>1</option>
+                                <option value=2>2</option>
+                                <option value=3 selected>3</option>
+                                <option value=4>4</option>
+                                <option value=5>5</option>
+                            </select>
+                        </div>
+                        <div class="inputTitleContainer">
+                            <div class="inputTitle">Bathrooms</div>
+                            <select class="inputValue" id="mySelect" onchange="calc()">
+                                <option value=1>1</option>
+                                <option value=2 selected>2</option>
+                                <option value=3>3</option>
+                                <option value=4>4</option>
+                                <option value=5>5</option>
+                            </select>
+                        </div>
+                        <div class="inputTitleContainer">
+                            <div class="inputTitle">Home Type</div>
+                            <select class="inputValue" id="mySelect" onchange="calc()">
+                                <option value="ONT" selected>House</option>
+                                <option value="CH">Condo</option>
+                                <option value="CHH">Town Home</option>
+                                <option value="COR">Mobile Home</option>
+                                <option value="RVSD">Land</option>
+                            </select>
+                        </div>
+                        <div class="inputTitleContainer">
+                            <div class="inputTitle">More</div>
+                            <select class="inputValue" id="mySelect" onchange="calc()">
+                                <option value="ONT" selected>Just Listed</option>
+                                <option value="CH">Price Change</option>
+                                <option value="CHH">Back On Market</option>
+                                <option value="COR">Foreclosure</option>
+                                <option value="RVSD">Short Sale</option>
+                            </select>
+                        </div>
+                        <div class="flex-center">
+                            <button class="widget-submit-btn" onclick="calc_inc_source()">Search</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </main>
 
     <div class="main flex-center">
         <div id='records'></div>
