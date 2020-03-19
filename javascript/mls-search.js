@@ -13,11 +13,16 @@ connect = {
     }
 };
 
-// Get Token
+// Default settings
+var select = 'PropertyType, PropertySubType, StandardStatus, ListingId, ListPrice, OriginalListPrice, PublicRemarks, DaysOnMarket, StreetNumberNumeric, StreetName, StreetSuffix, City, PostalCode, BedroomsTotal, BathroomsTotalInteger, LivingArea, Cooling, Heating, AssociationFee, YearBuilt, DaysOnMarket, MajorChangeType, PhotosCount';
+var orderby = 'ListPrice';
+var record = 12;
+var expand = 'Media($select=MediaURL)';
+
+// Get Token & and display default search results
 $.ajax(connect).done(function (response) {
     token = response.access_token;
     search(
-        status = "'A'",
         property_type = "'Resi'",
         city = "'ONT'",
         bed = 3,
@@ -27,17 +32,9 @@ $.ajax(connect).done(function (response) {
     );
 });
 
-// Default settings
-var select = 'PropertyType, PropertySubType, StandardStatus, ListingId, ListPrice, OriginalListPrice, PublicRemarks, DaysOnMarket, StreetNumberNumeric, StreetName, StreetSuffix, City, PostalCode, BedroomsTotal, BathroomsTotalInteger, LivingArea, Cooling, Heating, AssociationFee, YearBuilt, DaysOnMarket, MajorChangeType, PhotosCount';
-var orderby = 'ListPrice';
-var record = 12;
-var expand = 'Media($select=MediaURL)';
-
-// var $records = $('#records');
-
 function search() {
     var search = {
-        "url": `https://h.api.crmls.org/RESO/OData/Property?$filter=(StandardStatus eq ${status})and(PropertyType eq ${property_type})and(City eq ${city})and(BathroomsTotalInteger ge ${bath})and(BedroomsTotal ge ${bed})and(ListPrice ge ${min_price})and(ListPrice le ${max_price})&$select=${select}&$orderby=${orderby}&$top=${record}&$expand=${expand}`,
+        "url": `https://h.api.crmls.org/RESO/OData/Property?$filter=(StandardStatus eq 'A')and(PropertyType eq ${property_type})and(City eq ${city})and(BathroomsTotalInteger ge ${bath})and(BedroomsTotal ge ${bed})and(ListPrice ge ${min_price})and(ListPrice le ${max_price})&$select=${select}&$orderby=${orderby}&$top=${record}&$expand=${expand}`,
         "method": "GET",
         // "timeout": 0,
         "headers": {
@@ -60,10 +57,8 @@ function search() {
                                 <div class="inputTitle font-large">$${listing.ListPrice}</div>
                                 <div class="inputValue">${listing.MajorChangeType}</div>
                             </div>
-                            <div class="inputTitleContainer">
-                                <div class="inputTitle">${listing.StreetNumberNumeric} ${listing.StreetName} ${listing.StreetSuffix}<br/>${listing.City} CA ${listing.PostalCode}</div>
-                                <div class="inputValue">• ${listing.BedroomsTotal} Beds • ${listing.BathroomsTotalInteger} Baths<br/> • ${listing.LivingArea} sqft</div>
-                            </div>
+                            <div>&ensp;• ${listing.BedroomsTotal} Beds • ${listing.BathroomsTotalInteger} Baths • ${listing.LivingArea} sqft</div>
+                            <div>&ensp;${listing.StreetNumberNumeric} ${listing.StreetName} ${listing.StreetSuffix}, ${listing.City}, CA ${listing.PostalCode}</div>
                         </div>
                     </div>
                 `;
@@ -98,7 +93,7 @@ function updateListing() {
     }
 }
 
-// console.log(listings);
+
 
 // function sort_by_key(array, key) {
 //     return array.sort(function (a, b) {
