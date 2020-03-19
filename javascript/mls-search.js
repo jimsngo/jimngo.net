@@ -19,6 +19,24 @@ var orderby = 'ListPrice';
 var record = 12;
 var expand = 'Media($select=MediaURL)';
 
+// Get Search Filter
+
+property_type = document.getElementById('property_type').value;
+city = document.getElementById('city').value;
+min_price = document.getElementById('min_price').value;
+max_price = document.getElementById('max_price').value;
+bed = document.getElementById('bed').value;
+bath = document.getElementById('bath').value;
+
+searchArray = {
+    property_type: property_type,
+    city: city,
+    min_price: min_price,
+    max_price: max_price,
+    bed: bed,
+    bath: bath
+};
+
 // Get Token & and display default search results
 $.ajax(connect).done(function (response) {
     token = response.access_token;

@@ -113,8 +113,18 @@
                 <div class="home-search medium">
                     <div class="card-body">
                         <div class="inputTitleContainer">
+                            <div class="inputTitle">Property Type</div>
+                            <select class="inputValue" id="property_type">
+                                <option value="ONT" selected>House</option>
+                                <option value="CH">Condo</option>
+                                <option value="CHH">Town Home</option>
+                                <option value="COR">Mobile Home</option>
+                                <option value="RVSD">Land</option>
+                            </select>
+                        </div>
+                        <div class="inputTitleContainer">
                             <div class="inputTitle">City</div>
-                            <select class="inputValue" id="mySelect" onchange="calc()">
+                            <select class="inputValue" id="city">
                                 <option value="ONT" selected>Ontario</option>
                                 <option value="CH">Chino</option>
                                 <option value="CHH">Chino Hills</option>
@@ -123,16 +133,16 @@
                             </select>
                         </div>
                         <div class="inputTitleContainer">
-                            <div class="inputTitle">Price - Minimum</div>
-                            <input type="number" class="inputValue" id="a3a" min="100000" max="1000000">
+                            <div class="inputTitle">Price Minimum</div>
+                            <input type="number" class="inputValue" id="min_price" min="100000" max="1000000">
                         </div>
                         <div class="inputTitleContainer">
-                            <div class="inputTitle">Price - Maximum</div>
-                            <input type="number" class="inputValue" id="a3a" min="100000" max="1000000">
+                            <div class="inputTitle">Price Maximum</div>
+                            <input type="number" class="inputValue" id="max_price" min="100000" max="1000000">
                         </div>
                         <div class="inputTitleContainer">
                             <div class="inputTitle">Bedrooms</div>
-                            <select class="inputValue" id="mySelect" onchange="calc()">
+                            <select class="inputValue" id="bed">
                                 <option value=1>1</option>
                                 <option value=2>2</option>
                                 <option value=3 selected>3</option>
@@ -142,22 +152,12 @@
                         </div>
                         <div class="inputTitleContainer">
                             <div class="inputTitle">Bathrooms</div>
-                            <select class="inputValue" id="mySelect" onchange="calc()">
+                            <select class="inputValue" id="bath">
                                 <option value=1>1</option>
                                 <option value=2 selected>2</option>
                                 <option value=3>3</option>
                                 <option value=4>4</option>
                                 <option value=5>5</option>
-                            </select>
-                        </div>
-                        <div class="inputTitleContainer">
-                            <div class="inputTitle">Home Type</div>
-                            <select class="inputValue" id="mySelect" onchange="calc()">
-                                <option value="ONT" selected>House</option>
-                                <option value="CH">Condo</option>
-                                <option value="CHH">Town Home</option>
-                                <option value="COR">Mobile Home</option>
-                                <option value="RVSD">Land</option>
                             </select>
                         </div>
                         <div class="inputTitleContainer">
@@ -968,7 +968,7 @@
     <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
     <!-- End of Statcounter Code -->
     <script src="javascript/business-hours.min.js" async></script>
-    <script src="javascript/real-estate-agent.min.js" async></script>
+    <script src="javascript/real-estate-agent.js" async></script>
     <!-- Facebook Pixel Code -->
     <script>
         ! function (f, b, e, v, n, t, s) {

@@ -90,7 +90,7 @@ function collapsible(idName, className, className2) {
 }
 
 collapsible('flyers', 'collapsible', 'content');
-collapsible('home-search', 'collapsible', 'content');
+// collapsible('home-search', 'collapsible', 'content');
 
 ///////////////////////////////////////////////////////////////////////////////
 // New Home Search                                                            /
