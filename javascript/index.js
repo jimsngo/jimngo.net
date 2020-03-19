@@ -142,3 +142,5 @@ function show(id) {
 function hide(id) {
     document.getElementById(id).style.display = 'none';
 }
+
+// Blog
