@@ -115,11 +115,17 @@
                         <div class="inputTitleContainer">
                             <div class="inputTitle">Property Type</div>
                             <select class="inputValue" id="property_type">
-                                <option value="ONT" selected>House</option>
-                                <option value="CH">Condo</option>
-                                <option value="CHH">Town Home</option>
-                                <option value="COR">Mobile Home</option>
-                                <option value="RVSD">Land</option>
+                                <option value="Resi" selected>Residential</option>
+                                <option value="CONDO">Condo</option>
+                                <option value="TWNHS">Town Home</option>
+                            </select>
+                        </div>
+                        <div class="inputTitleContainer">
+                            <div class="inputTitle">Property Sub Type</div>
+                            <select class="inputValue" id="property_sub_type">
+                                <option value="SFR" selected>Single Family</option>
+                                <option value="CONDO">Condo</option>
+                                <option value="TWNHS">Town Home</option>
                             </select>
                         </div>
                         <div class="inputTitleContainer">
@@ -134,11 +140,13 @@
                         </div>
                         <div class="inputTitleContainer">
                             <div class="inputTitle">Price Minimum</div>
-                            <input type="number" class="inputValue" id="min_price" min="100000" max="1000000">
+                            <input type="number" class="inputValue" id="min_price" value="300000" min="100000"
+                                max="1000000">
                         </div>
                         <div class="inputTitleContainer">
                             <div class="inputTitle">Price Maximum</div>
-                            <input type="number" class="inputValue" id="max_price" min="100000" max="1000000">
+                            <input type="number" class="inputValue" id="max_price" value="500000" min="100000"
+                                max="1000000">
                         </div>
                         <div class="inputTitleContainer">
                             <div class="inputTitle">Bedrooms</div>
@@ -162,7 +170,7 @@
                         </div>
                         <div class="inputTitleContainer">
                             <div class="inputTitle">More</div>
-                            <select class="inputValue" id="mySelect" onchange="calc()">
+                            <select class="inputValue" id="mySelect" onchange="">
                                 <option value="ONT" selected>Just Listed</option>
                                 <option value="CH">Price Change</option>
                                 <option value="CHH">Back On Market</option>
@@ -171,7 +179,7 @@
                             </select>
                         </div>
                         <div class="flex-center">
-                            <button class="widget-submit-btn" onclick="calc_inc_source()">Search</button>
+                            <button class="widget-submit-btn" onclick="">Search</button>
                         </div>
                     </div>
                 </div>
