@@ -16,17 +16,10 @@ connect = {
 // Default settings
 select = 'PropertyType, PropertySubType, StandardStatus, ListingId, ListPrice, OriginalListPrice, PublicRemarks, DaysOnMarket, StreetNumberNumeric, StreetName, StreetSuffix, City, PostalCode, BedroomsTotal, BathroomsTotalInteger, LivingArea, Cooling, Heating, AssociationFee, YearBuilt, DaysOnMarket, MajorChangeType, PhotosCount';
 orderby = 'ListPrice';
-record = 12;
+record = 12; // Select on x number of records
 expand = 'Media($select=MediaURL)';
-
-// Get Search Filter
-getPropertyType();
-getPropertySubType();
-getCity();
-getMinPrice();
-getMaxPrice();
-getBed();
-getBath();
+property_type = 'Resi';
+property_sub_type = 'SFR';
 
 function getPropertyType() {
     property_type = document.getElementById("property_type").value;
@@ -63,6 +56,14 @@ $.ajax(connect).done(function (response) {
 });
 
 function search() {
+    // Get Search Filter
+    // getPropertyType();// Residential, Residential Lease, Residential Income, Land, Business Opportunity, ect.
+    // getPropertySubType(); // SFR, TWHS, CONDO, etc...
+    getCity(); // ONT, CH, CHH, etc...
+    getMinPrice();
+    getMaxPrice();
+    getBed();
+    getBath();
     var search = {
         "url": `https://h.api.crmls.org/RESO/OData/Property?$filter=(StandardStatus eq 'A')and(PropertyType eq '${property_type}')and(City eq '${city}')and(BathroomsTotalInteger ge ${bath})and(BedroomsTotal ge ${bed})and(ListPrice ge ${min_price})and(ListPrice le ${max_price})&$select=${select}&$orderby=${orderby}&$top=${record}&$expand=${expand}`,
         "method": "GET",
@@ -72,6 +73,7 @@ function search() {
             "Authorization": "Bearer " + token
         },
         success: function (response) {
+            $('#records').empty(html);
             listings = response.value;
             updateListing();
             console.log(listings);

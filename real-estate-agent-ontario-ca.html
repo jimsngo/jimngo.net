@@ -112,25 +112,25 @@
                 <h3 class="card-header">Search MLS Homes</h3>
                 <div class="home-search medium">
                     <div class="card-body">
-                        <div class="inputTitleContainer">
+                        <!-- <div class="inputTitleContainer">
                             <div class="inputTitle">Property Type</div>
                             <select class="inputValue" id="property_type">
                                 <option value="Resi" selected>Residential</option>
-                                <option value="CONDO">Condo</option>
-                                <option value="TWNHS">Town Home</option>
+                                <option value="CONDO">Residential Income</option>
+                                <option value="TWNHS">Residential Leased</option>
                             </select>
-                        </div>
-                        <div class="inputTitleContainer">
+                        </div> -->
+                        <!-- <div class="inputTitleContainer">
                             <div class="inputTitle">Property Sub Type</div>
                             <select class="inputValue" id="property_sub_type">
                                 <option value="SFR" selected>Single Family</option>
                                 <option value="CONDO">Condo</option>
                                 <option value="TWNHS">Town Home</option>
                             </select>
-                        </div>
+                        </div> -->
                         <div class="inputTitleContainer">
                             <div class="inputTitle">City</div>
-                            <select class="inputValue" id="city">
+                            <select class="inputValue" id="city" onchange="search()">
                                 <option value="ONT" selected>Ontario</option>
                                 <option value="CH">Chino</option>
                                 <option value="CHH">Chino Hills</option>
@@ -141,16 +141,16 @@
                         <div class="inputTitleContainer">
                             <div class="inputTitle">Price Minimum</div>
                             <input type="number" class="inputValue" id="min_price" value="300000" min="100000"
-                                max="1000000">
+                                max="1000000" onchange="search()">
                         </div>
                         <div class="inputTitleContainer">
                             <div class="inputTitle">Price Maximum</div>
                             <input type="number" class="inputValue" id="max_price" value="500000" min="100000"
-                                max="1000000">
+                                max="1000000" oninput="search()">
                         </div>
                         <div class="inputTitleContainer">
                             <div class="inputTitle">Bedrooms</div>
-                            <select class="inputValue" id="bed">
+                            <select class="inputValue" id="bed" onchange="getBed()">
                                 <option value=1>1</option>
                                 <option value=2>2</option>
                                 <option value=3 selected>3</option>
@@ -160,7 +160,7 @@
                         </div>
                         <div class="inputTitleContainer">
                             <div class="inputTitle">Bathrooms</div>
-                            <select class="inputValue" id="bath">
+                            <select class="inputValue" id="bath" onchange="getBath()">
                                 <option value=1>1</option>
                                 <option value=2 selected>2</option>
                                 <option value=3>3</option>
@@ -168,7 +168,7 @@
                                 <option value=5>5</option>
                             </select>
                         </div>
-                        <div class="inputTitleContainer">
+                        <!-- <div class="inputTitleContainer">
                             <div class="inputTitle">More</div>
                             <select class="inputValue" id="mySelect" onchange="">
                                 <option value="ONT" selected>Just Listed</option>
@@ -177,9 +177,9 @@
                                 <option value="COR">Foreclosure</option>
                                 <option value="RVSD">Short Sale</option>
                             </select>
-                        </div>
+                        </div> -->
                         <div class="flex-center">
-                            <button class="widget-submit-btn" onclick="">Search</button>
+                            <button class="widget-submit-btn" onclick="search()">Search</button>
                         </div>
                     </div>
                 </div>
