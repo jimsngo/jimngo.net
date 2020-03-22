@@ -107,27 +107,27 @@
                     pride in my customer service and in making sure each purchase or selling process will go as
                     smoothly as possible.</p>
             </div>
-            <!-- Home Search added 03/16/2020 ---------------------------------------->
+            <!-- Home Search Box -- Added 03/16/2020 ------------------------->
             <div class="col-3 col-s-6">
-                <h3 class="card-header">Search MLS Homes</h3>
+                <div class="card-header"><i class="fas fa-home"></i> Search MLS Homes</div>
                 <div class="home-search medium">
                     <div class="card-body">
-                        <!-- <div class="inputTitleContainer">
-                            <div class="inputTitle">Property Type</div>
+                        <div class="inputTitleContainer">
+                            <div class="inputTitle"></div>
                             <select class="inputValue" id="property_type">
                                 <option value="Resi" selected>Residential</option>
                                 <option value="CONDO">Residential Income</option>
                                 <option value="TWNHS">Residential Leased</option>
                             </select>
-                        </div> -->
-                        <!-- <div class="inputTitleContainer">
-                            <div class="inputTitle">Property Sub Type</div>
+                        </div>
+                        <div class="inputTitleContainer">
+                            <div class="inputTitle"></div>
                             <select class="inputValue" id="property_sub_type">
                                 <option value="SFR" selected>Single Family</option>
                                 <option value="CONDO">Condo</option>
                                 <option value="TWNHS">Town Home</option>
                             </select>
-                        </div> -->
+                        </div>
                         <div class="inputTitleContainer">
                             <div class="inputTitle">City</div>
                             <select class="inputValue" id="city" onchange="search()">
@@ -135,22 +135,23 @@
                                 <option value="CH">Chino</option>
                                 <option value="CHH">Chino Hills</option>
                                 <option value="COR">Corona</option>
+                                <option value="EVAL">Eastvale</option>
                                 <option value="RVSD">Riverside</option>
                             </select>
                         </div>
                         <div class="inputTitleContainer">
-                            <div class="inputTitle">Price Minimum</div>
+                            <div class="inputTitle">Price Min</div>
                             <input type="number" class="inputValue" id="min_price" value="300000" min="100000"
                                 max="1000000" onchange="search()">
                         </div>
                         <div class="inputTitleContainer">
-                            <div class="inputTitle">Price Maximum</div>
+                            <div class="inputTitle">Price Max</div>
                             <input type="number" class="inputValue" id="max_price" value="500000" min="100000"
-                                max="1000000" oninput="search()">
+                                max="1000000" onchange="search()">
                         </div>
                         <div class="inputTitleContainer">
-                            <div class="inputTitle">Bedrooms</div>
-                            <select class="inputValue" id="bed" onchange="getBed()">
+                            <div class="inputTitle">Bedrooms Min</div>
+                            <select class="inputValue" id="bed" onchange="search()">
                                 <option value=1>1</option>
                                 <option value=2>2</option>
                                 <option value=3 selected>3</option>
@@ -159,8 +160,8 @@
                             </select>
                         </div>
                         <div class="inputTitleContainer">
-                            <div class="inputTitle">Bathrooms</div>
-                            <select class="inputValue" id="bath" onchange="getBath()">
+                            <div class="inputTitle">Bathrooms Min</div>
+                            <select class="inputValue" id="bath" onchange="search()">
                                 <option value=1>1</option>
                                 <option value=2 selected>2</option>
                                 <option value=3>3</option>
@@ -186,9 +187,17 @@
             </div>
         </div>
     </main>
-
-    <div class="main flex-center">
-        <div id='records'></div>
+    <div class="main">
+        <h3 id="searchCity" style="color: dodgerblue" class="font-large"></h3>
+        <p id="listingCount"></p>
+    </div>
+    <div class="main flex-center" id='records'>
+    </div>
+    <div class="main flex-center" id="listing-indexed-pages">
+    </div>
+    <div class="main flex-center" id='photo-slide'>
+    </div>
+    <div class="main" id="singleListing">
     </div>
     <!-- End Home Search-->
 

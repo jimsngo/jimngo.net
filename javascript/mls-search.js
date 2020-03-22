@@ -1,4 +1,4 @@
-connect = {
+const connect = {
     "url": "https://op.api.crmls.org/identity/connect/token",
     "method": "POST",
     "timeout": 0,
@@ -11,23 +11,218 @@ connect = {
         "scope": "ODataApi",
         "grant_type": "client_credentials"
     }
-};
+}
+const select = 'PropertyType, PropertySubType, StandardStatus, ListingId, ListPrice, OriginalListPrice, PublicRemarks, DaysOnMarket, StreetNumberNumeric, StreetName, StreetSuffix, City, PostalCode, BedroomsTotal, BathroomsTotalInteger, LivingArea, Cooling, Heating, AssociationFee, YearBuilt, DaysOnMarket, MajorChangeType, PhotosCount';
+const orderby = 'ListPrice';
+const expand = 'Media($select=MediaURL)';
+// var token
+// var listings = [] // Array for all listings from search
+// var listing = [] // Array for a single listing
+// var subListings = [] // Array for group of 12 listings(per indexed page)
 
-// Default settings
-select = 'PropertyType, PropertySubType, StandardStatus, ListingId, ListPrice, OriginalListPrice, PublicRemarks, DaysOnMarket, StreetNumberNumeric, StreetName, StreetSuffix, City, PostalCode, BedroomsTotal, BathroomsTotalInteger, LivingArea, Cooling, Heating, AssociationFee, YearBuilt, DaysOnMarket, MajorChangeType, PhotosCount';
-orderby = 'ListPrice';
-record = 12; // Select on x number of records
-expand = 'Media($select=MediaURL)';
-property_type = 'Resi';
-property_sub_type = 'SFR';
+
+
+$.ajax(connect).done(function (response) {
+    token = response.access_token;
+    search();
+})
+
+function search() {
+    getClientInputs()
+    $.ajax({
+        "url": `https://h.api.crmls.org/RESO/OData/Property?$filter=(StandardStatus eq 'A')and(PropertyType eq '${property_type}')and(PropertySubType eq '${property_sub_type}')and(City eq '${city}')and(BathroomsTotalInteger ge ${bath})and(BedroomsTotal ge ${bed})and(ListPrice ge ${min_price})and(ListPrice le ${max_price})&$select=${select}&$orderby=${orderby}&$expand=${expand}`,
+        "method": "GET",
+        "headers": {
+            "Accept": "application/json",
+            "Authorization": "Bearer " + token
+        }
+    }).done(function (response) {
+        listings = response.value;
+        updateCities();
+        $('#searchCity').html(`${city} Real Estate & Homes For Sale`)
+        $('#listingCount').html(`${listings.length} Listings`)
+        $('#records').empty();
+        $('#listing-indexed-pages').empty();
+        renderSubListings();
+    });
+}
+
+function renderSubListings() {
+    subListings = [];
+    var i = 0,
+        j = 0,
+        chunk = 12;
+    for (i = 0; i < listings.length; i += chunk) {
+        var myChunk = listings.slice(i, i + chunk);
+        subListings.push(myChunk);
+        var pageIndex = `<button onclick="displayIndexedListingPage(${j})">${j+1}</button>`
+        $('#listing-indexed-pages').append(pageIndex);
+        j++;
+    };
+    displayListings(0);
+}
+
+function displayListings(j) {
+    $('#records').empty();
+    var results = subListings[j]; // 12 listings per page
+    for (var i = 0; i < results.length; i++) {
+        listing = results[i];
+        updateListings();
+        ListingId = listing.ListingId;
+        picturesForListing = listing.Media;
+        firstPictureForListing = picturesForListing[0];
+        var html = `
+            <div class='col-4 col-s-6'>
+                <div class='border'>
+                    <img class="photo-card" src="${firstPictureForListing.MediaURL}" id="${ListingId}" onclick="singleListing('${ListingId}')">
+                    <div class="inputTitleContainer">
+                        <div class="inputTitle font-large">$${listing.ListPrice}</div>
+                        <div class="inputValue">${listing.MajorChangeType}</div>
+                    </div>
+                    <div>&ensp;• Listing ID: ${listing.ListingId}</div>
+                    <div>&ensp;• ${listing.BedroomsTotal} Beds • ${listing.BathroomsTotalInteger} Baths • ${listing.LivingArea} sqft</div>
+                    <div>&ensp;${listing.StreetNumberNumeric} ${listing.StreetName} ${listing.StreetSuffix}, ${listing.City} CA ${listing.PostalCode}</div>
+                </div>
+            </div>
+        `;
+        $('#records').append(html);
+    }
+}
+
+function displayIndexedListingPage(j) {
+    displayListings(j);
+    document.getElementById('searchCity').scrollIntoView();
+}
+
+function singleListing(listingId) {
+    $('#records').empty();
+    $('#photo-slide').empty();
+    clearTimeout(showSlides)
+    document.getElementById('searchCity').scrollIntoView();
+    var element = listings.find(element => element.ListingId === listingId);
+    console.log(element)
+    var picturesForListing = element.Media;
+    console.log(picturesForListing)
+    for (var i = 0; i < picturesForListing.length; i++) {
+        var img = `
+        <div class='mySlides fade'>
+            <img  src="${picturesForListing[i].MediaURL}" class='photo-big'>  
+        </div>    
+        `;
+        $('#photo-slide').append(img);
+    };
+    slideIndex = 0;
+    showSlides();
+    var html = `
+    <div>Listing ID: ${listingId}<br/>
+    ${element.PublicRemarks}</div>
+    `;
+    $('#singleListing').append(html);
+}
+
+function showSlides() {
+    var slides = document.getElementsByClassName('mySlides');
+    for (var i = 0; i < slides.length; i++) {
+        slides[i].style.display = 'none';
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+        slideIndex = 1
+    }
+    slides[slideIndex - 1].style.display = 'block';
+    setTimeout(showSlides, 4000)
+}
+
+function findListing(listingId) {
+    var element = listings.find(element => element.ListingId === listingId);
+    console.log(element)
+}
+
+function updateCities() {
+    if (city === 'ONT') {
+        city = 'Ontario CA';
+    };
+    if (city === 'CH') {
+        city = 'Chino CA';
+    };
+    if (city === 'CHH') {
+        city = 'Chino Hills CA';
+    };
+    if (city === 'EVAL') {
+        city = 'Eastvale';
+    };
+    if (city === 'RSVD') {
+        city = 'Riverside';
+    };
+}
+
+function updateListings() {
+    if (listing.StandardStatus === "A") {
+        listing.StandardStatus = "Active";
+    }
+    if (listing.PropertyType === "Resi") {
+        listing.PropertyType = "Residential";
+    }
+    if (listing.PropertySubType === "SFR") {
+        listing.PropertySubType = "Single Family";
+    }
+    if (listing.PropertySubType === "TWNHS") {
+        listing.PropertySubType = "Townhouse";
+    }
+    if (listing.PropertySubType === "CONDO") {
+        listing.PropertySubType = "Condominium";
+    }
+    if (listing.City === 'ONT') {
+        listing.City = 'Ontario';
+    };
+    if (listing.City === 'CH') {
+        listing.City = 'Chino';
+    };
+    if (listing.City === 'CHH') {
+        listing.City = 'Chino Hills';
+    };
+    if (listing.City === 'EVAL') {
+        listing.City = 'Eastvale';
+    };
+    if (listing.City === 'RVSD') {
+        listing.City = 'Riverside';
+    };
+    if (listing.MajorChangeType === 'PRICECHG') {
+        listing.MajorChangeType = 'Price Change';
+    };
+    if (listing.MajorChangeType === 'NEWLIST') {
+        listing.MajorChangeType = 'New Listing';
+    };
+    if (listing.MajorChangeType === 'BOM') {
+        listing.MajorChangeType = 'Back On Market';
+    };
+}
+
+function sort_by_key(array, key) {
+    return array.sort(function (a, b) {
+        var x = a[key];
+        var y = b[key];
+        return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+    });
+}
+
+function getClientInputs() {
+    getPropertyType();
+    getPropertySubType();
+    getCity();
+    getMinPrice();
+    getMaxPrice();
+    getBed();
+    getBath();
+}
 
 function getPropertyType() {
     property_type = document.getElementById("property_type").value;
-};
+}
 
 function getPropertySubType() {
     property_sub_type = document.getElementById("property_sub_type").value;
-};
+}
 
 function getCity() {
     city = document.getElementById("city").value;
@@ -49,102 +244,46 @@ function getBath() {
     bath = document.getElementById("bath").value;
 }
 
-// Get Token & and display default search results
-$.ajax(connect).done(function (response) {
-    token = response.access_token;
-    search();
-});
-
-function search() {
-    // Get Search Filter
-    // getPropertyType();// Residential, Residential Lease, Residential Income, Land, Business Opportunity, ect.
-    // getPropertySubType(); // SFR, TWHS, CONDO, etc...
-    getCity(); // ONT, CH, CHH, etc...
-    getMinPrice();
-    getMaxPrice();
-    getBed();
-    getBath();
-    var search = {
-        "url": `https://h.api.crmls.org/RESO/OData/Property?$filter=(StandardStatus eq 'A')and(PropertyType eq '${property_type}')and(City eq '${city}')and(BathroomsTotalInteger ge ${bath})and(BedroomsTotal ge ${bed})and(ListPrice ge ${min_price})and(ListPrice le ${max_price})&$select=${select}&$orderby=${orderby}&$top=${record}&$expand=${expand}`,
-        "method": "GET",
-        // "timeout": 0,
-        "headers": {
-            "Accept": "application/json",
-            "Authorization": "Bearer " + token
-        },
-        success: function (response) {
-            $('#records').empty(html);
-            listings = response.value;
-            updateListing();
-            console.log(listings);
-
-            for (var i = 0; i < listings.length; i++) {
-                var listing = listings[i];
-                var picturesForListing = listing.Media;
-                var firstPictureForListing = picturesForListing[0];
-                var html = `
-                    <div class='col-4 col-s-6'>
-                        <div class='border'>
-                            <img class="listing-photo" src="${firstPictureForListing.MediaURL}">
-                            <div class="inputTitleContainer">
-                                <div class="inputTitle font-large">$${listing.ListPrice}</div>
-                                <div class="inputValue">${listing.MajorChangeType}</div>
-                            </div>
-                            <div>&ensp;• ${listing.BedroomsTotal} Beds • ${listing.BathroomsTotalInteger} Baths • ${listing.LivingArea} sqft</div>
-                            <div>&ensp;${listing.StreetNumberNumeric} ${listing.StreetName} ${listing.StreetSuffix}, ${listing.City}, CA ${listing.PostalCode}</div>
-                        </div>
-                    </div>
-                `;
-                $('#records').append(html);
-            }
-        }
-    };
-
-    $.ajax(search);
-};
-
-function updateListing() {
-    for (var i in listings) {
-        if (listings[i].StandardStatus === "A") {
-            listings[i].StandardStatus = "Active";
-        }
-        if (listings[i].PropertyType === "Resi") {
-            listings[i].PropertyType = "Residential";
-        }
-        if (listings[i].PropertySubType === "SFR") {
-            listings[i].PropertySubType = "Single Family";
-        }
-        if (listings[i].PropertySubType === "TWNHS") {
-            listings[i].PropertySubType = "Townhouse";
-        }
-        if (listings[i].PropertySubType === "CONDO") {
-            listings[i].PropertySubType = "Condominium";
-        }
-        if (listings[i].City === 'ONT') {
-            listings[i].City = 'Ontario';
-        };
-        if (listings[i].City === 'CH') {
-            listings[i].City = 'Chino';
-        };
-        if (listings[i].City === 'CHH') {
-            listings[i].City = 'Chino Hills';
-        };
-        if (listings[i].MajorChangeType === 'PRICECHG') {
-            listings[i].MajorChangeType = 'Price Change';
-        };
-        if (listings[i].MajorChangeType === 'NEWLIST') {
-            listings[i].MajorChangeType = 'New Listing';
-        };
-        if (listings[i].MajorChangeType === 'BOM') {
-            listings[i].MajorChangeType = 'Back On Market';
-        };
+const names = [{
+        shortName: "ONT",
+        longName: "Ontario"
+    },
+    {
+        shortName: "CH",
+        longName: "Chino"
+    },
+    {
+        shortName: "CHH",
+        longName: "Chino Hills"
+    },
+    {
+        shortName: "COR",
+        longName: "Corona"
+    },
+    {
+        shortName: "RVSD",
+        longName: "Riverside"
+    },
+    {
+        shortName: "EVAL",
+        longName: "Eastvale"
+    },
+    {
+        shortName: "Resi",
+        longName: "Residential"
     }
+]
+
+function getShortName(longName, inputArray) {
+    var element = inputArray.find(element => element.longName === longName);
+    console.log(element)
+    var shortName = element.shortName;
+    console.log(' Abbreviation is ' + shortName)
 }
 
-// function sort_by_key(array, key) {
-//     return array.sort(function (a, b) {
-//         var x = a[key];
-//         var y = b[key];
-//         return ((x < y) ? -1 : ((x > y) ? 1 : 0));
-//     });
-// };
+function getLongtName(shortName, inputArray) {
+    var element = inputArray.find(element => element.shortName === shortName);
+    console.log(element)
+    var longName = element.longName;
+    console.log(' Abbreviation is ' + longName)
+}

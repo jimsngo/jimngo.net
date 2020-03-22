@@ -1,0 +1,30 @@
+[
+    {
+        "shortName": "ONT",
+        "longName": "Ontario"
+    },
+    {
+        "shortName": "CH",
+        "longName": "Chino"
+    },
+    {
+        "shortName": "CHH",
+        "longName": "Chino Hills"
+    },
+    {
+        "shortName": "COR",
+        "longName": "Corona"
+    },
+    {
+        "shortName": "RVSD",
+        "longName": "Riverside"
+    },
+    {
+        "shortName": "EVAL",
+        "longName": "Eastvale"
+    },
+    {
+        "shortName": "Resi",
+        "longName": "Residential"
+    }
+]
