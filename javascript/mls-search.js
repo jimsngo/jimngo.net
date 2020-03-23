@@ -15,12 +15,6 @@ const connect = {
 const select = 'PropertyType, PropertySubType, StandardStatus, ListingId, ListPrice, OriginalListPrice, PublicRemarks, DaysOnMarket, StreetNumberNumeric, StreetName, StreetSuffix, City, PostalCode, BedroomsTotal, BathroomsTotalInteger, LivingArea, Cooling, Heating, AssociationFee, YearBuilt, DaysOnMarket, MajorChangeType, PhotosCount';
 const orderby = 'ListPrice';
 const expand = 'Media($select=MediaURL)';
-// var token
-// var listings = [] // Array for all listings from search
-// var listing = [] // Array for a single listing
-// var subListings = [] // Array for group of 12 listings(per indexed page)
-
-
 
 $.ajax(connect).done(function (response) {
     token = response.access_token;
@@ -95,14 +89,18 @@ function displayIndexedListingPage(j) {
 }
 
 function singleListing(listingId) {
-    $('#records').empty();
+    clearTimeout(myVar);
+    console.log(listingId)
     $('#photo-slide').empty();
-    clearTimeout(showSlides)
-    document.getElementById('searchCity').scrollIntoView();
+    $('#singleListing').empty();
+
+    document.getElementById('listing-indexed-pages').scrollIntoView();
     var element = listings.find(element => element.ListingId === listingId);
     console.log(element)
+
     var picturesForListing = element.Media;
     console.log(picturesForListing)
+    console.log('Number of Photos: ' + picturesForListing.length)
     for (var i = 0; i < picturesForListing.length; i++) {
         var img = `
         <div class='mySlides fade'>
@@ -111,6 +109,11 @@ function singleListing(listingId) {
         `;
         $('#photo-slide').append(img);
     };
+
+    var myVar = setTimeout(showSlides, 3000);
+
+    // setTimeout(showSlides, 4000);
+
     slideIndex = 0;
     showSlides();
     var html = `
@@ -130,7 +133,7 @@ function showSlides() {
         slideIndex = 1
     }
     slides[slideIndex - 1].style.display = 'block';
-    setTimeout(showSlides, 4000)
+    // setTimeout(showSlides, 4000);
 }
 
 function findListing(listingId) {
