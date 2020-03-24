@@ -24,6 +24,7 @@
     <link rel="icon" href="image/favicon-16x16.png" type="image/gif" sizes="16x16">
     <link rel="stylesheet" href="style/style.min.css">
     <link rel="stylesheet" href="style/home-search.min.css">
+    <script src="javascript/jquery-3.4.1.min.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-88549125-1"></script>
     <script>
@@ -44,7 +45,7 @@
     </header>
     <!-- Page Description ---------------------------------------------------->
     <main>
-        <div class="main flex-center">
+        <div class="main flex-perfect-center">
             <!-- About Me ---------------------------------------------------->
             <div class="col-3 col-s-4 light-gray radius-5">
                 <div style="text-align:center; line-height: 1.4;">
@@ -78,10 +79,15 @@
                         <option value='home-loan'>Home Loan</option>
                         <!-- <option value='life-agent'>Life Insurance</option> -->
                     </select>
+                    <!-- <p>&#9989; <a href="https://www.jimngo.net/home-loan-ontario-ca" target="_blank">Home Loan</a></p>
+                    <p>&#9989; <a href="https://www.jimngo.net/down-payment-assistance" target="_blank">Down Payment
+                            Assistance</a></p>
+                    <p>&#9989; <a href="https://www.jimngo.net/short-sales-foreclosure" target="_blank">Short Sale
+                            Foreclosure</a></p> -->
                 </div>
             </div>
             <!-- Page Description -------------------------------------------->
-            <div class="col-9 col-s-8" id="cards">
+            <div class="col-6 col-s-8" id="cards">
                 <!-- Real Estate Agent -->
                 <div class="card-content slow expanded" id="real-estate-agent">
                     <h2 style="color: dodgerblue" class="font-large">Real Estate Agent - Ontario, CA</h2>
@@ -108,11 +114,6 @@
                         and NEW homes. I am involved from the beginning to the end of every transaction. I take
                         pride in my customer service and in making sure each purchase or selling process will go as
                         smoothly as possible.</p>
-                    <p>&#9989; <a href="https://www.jimngo.net/home-loan-ontario-ca" target="_blank">Home Loan</a></p>
-                    <p>&#9989; <a href="https://www.jimngo.net/down-payment-assistance" target="_blank">Down Payment
-                            Assistance</a></p>
-                    <p>&#9989; <a href="https://www.jimngo.net/short-sales-foreclosure" target="_blank">Short Sale
-                            Foreclosure</a></p>
                 </div>
                 <!-- Home Loan -->
                 <div class="card-content slow" id="home-loan">
@@ -174,8 +175,106 @@
                     </a>
                 </div>
             </div>
+            <!-- Home Search Box -- Added 03/16/2020 ------------------------->
+            <div class="col-3 col-s-6">
+                <div class="card-header"><i class="fas fa-home"></i> Search MLS Homes</div>
+                <div class="home-search medium">
+                    <div class="card-body">
+                        <div class="inputTitleContainer" style="display: none;">
+                            <div class="inputTitle"></div>
+                            <select class="inputValue" id="property_type">
+                                <option value="Resi" selected>Residential</option>
+                                <option value="CONDO">Residential Income</option>
+                                <option value="TWNHS">Residential Leased</option>
+                            </select>
+                        </div>
+                        <div class="inputTitleContainer" style="display: none;">
+                            <div class="inputTitle"></div>
+                            <select class="inputValue" id="property_sub_type">
+                                <option value="SFR" selected>Single Family</option>
+                                <option value="CONDO">Condo</option>
+                                <option value="TWNHS">Town Home</option>
+                            </select>
+                        </div>
+                        <div class="inputTitleContainer">
+                            <div class="inputTitle">City</div>
+                            <select class="inputValue" id="city" onchange="search()">
+                                <option value="ONT" selected>Ontario</option>
+                                <option value="CH">Chino</option>
+                                <option value="CHH">Chino Hills</option>
+                                <option value="COR">Corona</option>
+                                <option value="EVAL">Eastvale</option>
+                                <option value="RVSD">Riverside</option>
+                            </select>
+                        </div>
+                        <div class="inputTitleContainer">
+                            <div class="inputTitle">Price Min</div>
+                            <input type="number" class="inputValue" id="min_price" value="500000" min="100000"
+                                max="1000000" onchange="search()">
+                        </div>
+                        <div class="inputTitleContainer">
+                            <div class="inputTitle">Price Max</div>
+                            <input type="number" class="inputValue" id="max_price" value="600000" min="100000"
+                                max="1000000" onchange="search()">
+                        </div>
+                        <div class="inputTitleContainer">
+                            <div class="inputTitle">Bedrooms Min</div>
+                            <select class="inputValue" id="bed" onchange="search()">
+                                <option value=1>1</option>
+                                <option value=2>2</option>
+                                <option value=3 selected>3</option>
+                                <option value=4>4</option>
+                                <option value=5>5</option>
+                            </select>
+                        </div>
+                        <div class="inputTitleContainer">
+                            <div class="inputTitle">Bathrooms Min</div>
+                            <select class="inputValue" id="bath" onchange="search()">
+                                <option value=1>1</option>
+                                <option value=2 selected>2</option>
+                                <option value=3>3</option>
+                                <option value=4>4</option>
+                                <option value=5>5</option>
+                            </select>
+                        </div>
+                        <!-- <div class="inputTitleContainer">
+                            <div class="inputTitle">More</div>
+                            <select class="inputValue" id="mySelect" onchange="">
+                                <option value="ONT" selected>Just Listed</option>
+                                <option value="CH">Price Change</option>
+                                <option value="CHH">Back On Market</option>
+                                <option value="COR">Foreclosure</option>
+                                <option value="RVSD">Short Sale</option>
+                            </select>
+                        </div> -->
+                        <div class="flex-center">
+                            <button class="widget-submit-btn" onclick="search()">Search</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
+    <!-- Search Results ------------------------------------------------------>
+    <div class="main">
+        <h3 id="searchCity" style="color: dodgerblue" class="font-large"></h3>
+        <p id="listingCount"></p>
+    </div>
+    <div class="main flex-center" id='records'>
+    </div>
+    <!-- Single Listing Details ---------------------------------------------->
+    <div class="main flex-center" id="listing-indexed-pages"></div>
+    <!-- Listing Photos-->
+    <div class="main flex-perfect-center">
+        <div class="col-7 col-s-7" id='photo-slide' style=" max-width: 750px;"></div>
+        <div class="col-5 col-s-5" id="remarks" style="padding: 8px;"></div>
+    </div>
+    <!-- Single Listing Details ---------------------------------------------->
+    <div class="main flex-center">
+        <div id="listingDetails-1" class="col-6 col-s-6"></div>
+        <div id="listingDetails-2" class="col-6 col-s-6"></div>
+    </div>
+    <!-- End Home Search-->
     <div class="banner dark-cerulean font-large" id="service-ss">
         <h2 class="slide showing">Mortgage Pre-Approval</h2>
         <h2 class="slide">Down Payment Assistance</h2>
@@ -357,7 +456,7 @@
             </a>
         </div>
         <!-- MLS Search ------------------------------------------------------>
-        <div class="mls-search">
+        <!-- <div class="mls-search">
             <div class="card-header"><i class="fas fa-home"></i> Search MLS Homes</div>
             <div class="card-body center">
                 <div class="flex-center">
@@ -373,7 +472,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </section>
     <!-- Services ------------------------------------------------------------>
     <section id="service">
@@ -718,7 +817,6 @@
             </div>
         </div>
     </section>
-    </section> -->
     <!-- Mobile Contact Bar -->
     <section class="mobile-contact-bar">
         <div class="flex-perfect-center">
@@ -758,6 +856,7 @@
     <!-- End of Statcounter Code -->
     <script src="javascript/business-hours.min.js" async></script>
     <script src="javascript/index.min.js" async></script>
+    <script src="javascript/mls-search-Ob.js" async></script>
     <script type="application/ld+json">
         {
             "@context": "http://schema.org",

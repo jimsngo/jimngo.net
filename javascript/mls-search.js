@@ -149,6 +149,9 @@ function updateCities() {
     if (city === 'CHH') {
         city = 'Chino Hills CA';
     };
+    if (city === 'COR') {
+        city = 'Corona';
+    };
     if (city === 'EVAL') {
         city = 'Eastvale';
     };
@@ -181,6 +184,9 @@ function updateListings() {
     };
     if (listing.City === 'CHH') {
         listing.City = 'Chino Hills';
+    };
+    if (listing.City === 'COR') {
+        listing.City = 'Corona';
     };
     if (listing.City === 'EVAL') {
         listing.City = 'Eastvale';
