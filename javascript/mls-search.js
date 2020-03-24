@@ -34,7 +34,7 @@ function search() {
     }).done(function (response) {
         listings = response.value;
         updateCities();
-        $('#searchCity').html(`${city} Real Estate & Homes For Sale`)
+        $('#searchCity').html(`${city} Real Estate<br/>Homes For Sale`)
         $('#listingCount').html(`${listings.length} Listings`)
         $('#records').empty();
         $('#listing-indexed-pages').empty();
@@ -155,7 +155,7 @@ function updateCities() {
     if (city === 'EVAL') {
         city = 'Eastvale';
     };
-    if (city === 'RSVD') {
+    if (city === 'RVSD') {
         city = 'Riverside';
     };
 }
