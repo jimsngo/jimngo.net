@@ -15,7 +15,12 @@ const connect = {
 const select = 'PropertyType, PropertySubType, StandardStatus, ListingId, ListPrice, OriginalListPrice, PublicRemarks, DaysOnMarket, StreetNumberNumeric, StreetName, StreetSuffix, City, PostalCode, BedroomsTotal, BathroomsTotalInteger, LivingArea, Cooling, Heating, AssociationFee, YearBuilt, DaysOnMarket, MajorChangeType, PhotosCount';
 const orderby = 'ListPrice';
 const expand = 'Media($select=MediaURL)';
-var myVar;
+var listings = [];
+var listingPages = [];
+var listing = [];
+var picturesForListing = [];
+var listingId;
+var slideShow;
 
 $.ajax(connect).done(function (response) {
     token = response.access_token;
@@ -38,18 +43,17 @@ function search() {
         $('#listingCount').html(`${listings.length} Listings`)
         $('#records').empty();
         $('#listing-indexed-pages').empty();
-        renderSubListings();
+        renderlistingPages();
     });
 }
 
-function renderSubListings() {
-    subListings = [];
+function renderlistingPages() {
     var i = 0,
         j = 0,
         chunk = 12;
     for (i = 0; i < listings.length; i += chunk) {
         var myChunk = listings.slice(i, i + chunk);
-        subListings.push(myChunk);
+        listingPages.push(myChunk);
         var pageIndex = `<button onclick="displayIndexedListingPage(${j})">${j+1}</button>`
         $('#listing-indexed-pages').append(pageIndex);
         j++;
@@ -59,17 +63,24 @@ function renderSubListings() {
 
 function displayListings(j) {
     $('#records').empty();
-    var results = subListings[j]; // 12 listings per page
+    var results = listingPages[j]; // 12 listings per page
     for (var i = 0; i < results.length; i++) {
         listing = results[i];
         updateListings();
         ListingId = listing.ListingId;
-        picturesForListing = listing.Media;
-        firstPictureForListing = picturesForListing[0];
+        listingMedias = listing.Media; // Array of listing MediaS
+        console.log(listingMedias)
+        firstListingMedia = listingMedias[0]; // First object in listing Media array
+        firstPictureForListingURL = firstListingMedia.MediaURL; // URL for first picture of the listing
+        console.log(firstPictureForListingURL)
+        // firstPictureForListingURL = firstPictureForListingURL.insert(4, "s");
+        var firstPictureForListingURL = firstPictureForListingURL.slice(0, 4) + "s" + firstPictureForListingURL.slice(4);
+        console.log(firstPictureForListingURL)
         var html = `
             <div class='col-4 col-s-6'>
                 <div class='border'>
-                    <img class="photo-card" src="${firstPictureForListing.MediaURL}" id="${ListingId}" onclick="singleListing('${ListingId}')">
+                    <img class="photo-card" src="${firstPictureForListingURL
+                    }" id="${ListingId}" onclick="singleListing('${ListingId}')">
                     <div class="inputTitleContainer">
                         <div class="inputTitle font-large">$${listing.ListPrice}</div>
                         <div class="inputValue">${listing.MajorChangeType}</div>
@@ -84,19 +95,31 @@ function displayListings(j) {
     }
 }
 
+function https() {
+    String.prototype.splice = function (idx, rem, str) {
+        return this.slice(0, idx) + str + this.slice(idx + Math.abs(rem));
+    };
+
+    var result = "foo baz".splice(4, 0, "bar ");
+
+    document.body.innerHTML = result; // "foo bar baz"
+}
+
 function displayIndexedListingPage(j) {
     displayListings(j);
     document.getElementById('searchCity').scrollIntoView();
 }
 
 function singleListing(listingId) {
-    clearTimeout(myVar);
+    clearTimeout(slideShow);
     $('#photo-slide').empty();
     $('#remarks').empty();
     document.getElementById('listing-indexed-pages').scrollIntoView();
     var element = listings.find(element => element.ListingId === listingId);
+    console.log(element)
     // Collect photos for selected listing
     var picturesForListing = element.Media;
+    console.log(picturesForListing)
     for (var i = 0; i < picturesForListing.length; i++) {
         var img = `
         <div class='mySlides fade'>
@@ -131,7 +154,7 @@ function displayPhoto() {
         slideIndex = 1
     }
     slides[slideIndex - 1].style.display = 'block';
-    myVar = setTimeout(displayPhoto, 3000);
+    slideShow = setTimeout(displayPhoto, 3000);
 }
 
 function findListing(listingId) {
