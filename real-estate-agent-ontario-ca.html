@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head id="myHeader">
     <title>Real Estate Agent - Jim Ngo - Ontario, CA</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,7 +39,7 @@
 </head>
 
 <body>
-    <header id="myHeader">
+    <header>
         <h2><a href="https://www.jimngo.net">Real Estate with Jim Ngo</a></h2>
     </header>
     <!-- Page Description ---------------------------------------------------->
@@ -187,19 +187,24 @@
             </div>
         </div>
     </main>
+    <!-- Search Results ------------------------------------------------------>
     <div class="main">
         <h3 id="searchCity" style="color: dodgerblue" class="font-large"></h3>
         <p id="listingCount"></p>
     </div>
     <div class="main flex-center" id='records'>
     </div>
-    <div class="main flex-center" id="listing-indexed-pages">
+    <!-- Single Listing Details ---------------------------------------------->
+    <div class="main flex-center" id="listing-indexed-pages"></div>
+    <!-- Listing Photos-->
+    <div class="main flex-perfect-center">
+        <div class="col-7 col-s-7" id='photo-slide' style=" max-width: 750px;"></div>
+        <div class="col-5 col-s-5" id="remarks"></div>
     </div>
-    <div class="main flex-center" style="max-width: 750px;">
-        <div id='photo-slide'>
-        </div>
-        <div id="singleListing">
-        </div>
+    <!-- Single Listing Details ---------------------------------------------->
+    <div class="main flex-center">
+        <div id="listingDetails-1" class="col-6 col-s-6"></div>
+        <div id="listingDetails-2" class="col-6 col-s-6"></div>
     </div>
     <!-- End Home Search-->
 

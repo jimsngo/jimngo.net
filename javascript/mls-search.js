@@ -15,6 +15,7 @@ const connect = {
 const select = 'PropertyType, PropertySubType, StandardStatus, ListingId, ListPrice, OriginalListPrice, PublicRemarks, DaysOnMarket, StreetNumberNumeric, StreetName, StreetSuffix, City, PostalCode, BedroomsTotal, BathroomsTotalInteger, LivingArea, Cooling, Heating, AssociationFee, YearBuilt, DaysOnMarket, MajorChangeType, PhotosCount';
 const orderby = 'ListPrice';
 const expand = 'Media($select=MediaURL)';
+var myVar;
 
 $.ajax(connect).done(function (response) {
     token = response.access_token;
@@ -90,17 +91,12 @@ function displayIndexedListingPage(j) {
 
 function singleListing(listingId) {
     clearTimeout(myVar);
-    console.log(listingId)
     $('#photo-slide').empty();
-    $('#singleListing').empty();
-
+    $('#remarks').empty();
     document.getElementById('listing-indexed-pages').scrollIntoView();
     var element = listings.find(element => element.ListingId === listingId);
-    console.log(element)
-
+    // Collect photos for selected listing
     var picturesForListing = element.Media;
-    console.log(picturesForListing)
-    console.log('Number of Photos: ' + picturesForListing.length)
     for (var i = 0; i < picturesForListing.length; i++) {
         var img = `
         <div class='mySlides fade'>
@@ -109,22 +105,24 @@ function singleListing(listingId) {
         `;
         $('#photo-slide').append(img);
     };
-
-    var myVar = setTimeout(showSlides, 3000);
-
-    // setTimeout(showSlides, 4000);
-
+    slides = document.getElementsByClassName('mySlides');
     slideIndex = 0;
-    showSlides();
+    displayPhoto();
     var html = `
-    <div>Listing ID: ${listingId}<br/>
+    <div class="inputTitleContainer">
+        <div class="inputTitle font-large">$${element.ListPrice}</div>
+        <div class="inputValue">${element.MajorChangeType}</div>
+    </div>
+    <div>&ensp;• Listing ID: ${element.ListingId}</div>
+    <div>&ensp;• ${element.BedroomsTotal} Beds • ${element.BathroomsTotalInteger} Baths • ${element.LivingArea} sqft</div>
+    <div>&ensp;${element.StreetNumberNumeric} ${element.StreetName} ${element.StreetSuffix}, ${element.City} CA ${element.PostalCode}</div><br/>
+
     ${element.PublicRemarks}</div>
     `;
-    $('#singleListing').append(html);
+    $('#remarks').append(html);
 }
 
-function showSlides() {
-    var slides = document.getElementsByClassName('mySlides');
+function displayPhoto() {
     for (var i = 0; i < slides.length; i++) {
         slides[i].style.display = 'none';
     }
@@ -133,7 +131,7 @@ function showSlides() {
         slideIndex = 1
     }
     slides[slideIndex - 1].style.display = 'block';
-    // setTimeout(showSlides, 4000);
+    myVar = setTimeout(displayPhoto, 3000);
 }
 
 function findListing(listingId) {
