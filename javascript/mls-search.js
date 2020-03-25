@@ -18,7 +18,7 @@ const expand = 'Media($select=MediaURL)';
 var listings = [];
 var listingPages = [];
 var listing = [];
-var picturesForListing = [];
+var photoURLs = [];
 var listingId;
 var slideShow;
 
@@ -99,13 +99,15 @@ function singleListing(listingId) {
     $('#remarks').empty();
     document.getElementById('listing-indexed-pages').scrollIntoView();
     var element = listings.find(element => element.ListingId === listingId);
-    var picturesForListing = element.Media;
-    for (var i = 0; i < picturesForListing.length; i++) {
-        var photoURL = picturesForListing[i].MediaURL;
-        var photoURL = photoURL.slice(0, 4) + "s" + photoURL.slice(4);
+    var listingMedia = element.Media;
+    // PhotoURLs Array
+    for (var i = 0; i < listingMedia.length; i++) {
+        var photoURLs[i] = listingMedia[i].MediaURL;
+        var photoURLs[i] = photoURLs[i].slice(0, 4) + "s" + photoURLs[i].slice(4);
+        console.log(photoURLs[i])
         var img = `
         <div class='mySlides fade'>
-            <img  src="${photoURL}" class='photo-big'>  
+            <img  src="${photoURLs[i]}" class='photo-big'>  
         </div>    
         `;
         $('#photo-slide').append(img);
