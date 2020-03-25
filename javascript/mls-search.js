@@ -63,24 +63,17 @@ function renderlistingPages() {
 
 function displayListings(j) {
     $('#records').empty();
-    var results = listingPages[j]; // 12 listings per page
+    var results = listingPages[j]; // Results of 12 listings(on selected page)
     for (var i = 0; i < results.length; i++) {
         listing = results[i];
-        updateListings();
+        updateListing();
         ListingId = listing.ListingId;
-        listingMedias = listing.Media; // Array of listing MediaS
-        console.log(listingMedias)
-        firstListingMedia = listingMedias[0]; // First object in listing Media array
-        firstPictureForListingURL = firstListingMedia.MediaURL; // URL for first picture of the listing
-        console.log(firstPictureForListingURL)
-        // firstPictureForListingURL = firstPictureForListingURL.insert(4, "s");
+        var firstPictureForListingURL = listing.Media[0].MediaURL; // URL for first picture of the listing
         var firstPictureForListingURL = firstPictureForListingURL.slice(0, 4) + "s" + firstPictureForListingURL.slice(4);
-        console.log(firstPictureForListingURL)
         var html = `
             <div class='col-4 col-s-6'>
                 <div class='border'>
-                    <img class="photo-card" src="${firstPictureForListingURL
-                    }" id="${ListingId}" onclick="singleListing('${ListingId}')">
+                    <img class="photo-card" src="${firstPictureForListingURL}" id="${ListingId}" onclick="singleListing('${ListingId}')">
                     <div class="inputTitleContainer">
                         <div class="inputTitle font-large">$${listing.ListPrice}</div>
                         <div class="inputValue">${listing.MajorChangeType}</div>
@@ -95,16 +88,6 @@ function displayListings(j) {
     }
 }
 
-function https() {
-    String.prototype.splice = function (idx, rem, str) {
-        return this.slice(0, idx) + str + this.slice(idx + Math.abs(rem));
-    };
-
-    var result = "foo baz".splice(4, 0, "bar ");
-
-    document.body.innerHTML = result; // "foo bar baz"
-}
-
 function displayIndexedListingPage(j) {
     displayListings(j);
     document.getElementById('searchCity').scrollIntoView();
@@ -116,14 +99,13 @@ function singleListing(listingId) {
     $('#remarks').empty();
     document.getElementById('listing-indexed-pages').scrollIntoView();
     var element = listings.find(element => element.ListingId === listingId);
-    console.log(element)
-    // Collect photos for selected listing
     var picturesForListing = element.Media;
-    console.log(picturesForListing)
     for (var i = 0; i < picturesForListing.length; i++) {
+        var photoURL = picturesForListing[i].MediaURL;
+        var photoURL = photoURL.slice(0, 4) + "s" + photoURL.slice(4);
         var img = `
         <div class='mySlides fade'>
-            <img  src="${picturesForListing[i].MediaURL}" class='photo-big'>  
+            <img  src="${photoURL}" class='photo-big'>  
         </div>    
         `;
         $('#photo-slide').append(img);
@@ -137,9 +119,10 @@ function singleListing(listingId) {
         <div class="inputValue">${element.MajorChangeType}</div>
     </div>
     <div>&ensp;• Listing ID: ${element.ListingId}</div>
+    <div>&ensp;• ${element.DaysOnMarket} Days On Market</div>
     <div>&ensp;• ${element.BedroomsTotal} Beds • ${element.BathroomsTotalInteger} Baths • ${element.LivingArea} sqft</div>
-    <div>&ensp;${element.StreetNumberNumeric} ${element.StreetName} ${element.StreetSuffix}, ${element.City} CA ${element.PostalCode}</div><br/>
-
+    <div>&ensp;${element.StreetNumberNumeric} ${element.StreetName} ${element.StreetSuffix}, ${element.City} CA ${element.PostalCode}</div>
+    <br/>
     ${element.PublicRemarks}</div>
     `;
     $('#remarks').append(html);
@@ -155,11 +138,6 @@ function displayPhoto() {
     }
     slides[slideIndex - 1].style.display = 'block';
     slideShow = setTimeout(displayPhoto, 3000);
-}
-
-function findListing(listingId) {
-    var element = listings.find(element => element.ListingId === listingId);
-    console.log(element)
 }
 
 function updateCities() {
@@ -183,7 +161,7 @@ function updateCities() {
     };
 }
 
-function updateListings() {
+function updateListing() {
     if (listing.StandardStatus === "A") {
         listing.StandardStatus = "Active";
     }
