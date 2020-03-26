@@ -97,14 +97,14 @@ function singleListing(listingId) {
     clearTimeout(slideShow);
     $('#photo-slide').empty();
     $('#remarks').empty();
+    photoURLs = [];
     document.getElementById('listing-indexed-pages').scrollIntoView();
     var element = listings.find(element => element.ListingId === listingId);
     var listingMedia = element.Media;
-    // PhotoURLs Array
     for (var i = 0; i < listingMedia.length; i++) {
-        var photoURLs[i] = listingMedia[i].MediaURL;
-        var photoURLs[i] = photoURLs[i].slice(0, 4) + "s" + photoURLs[i].slice(4);
-        console.log(photoURLs[i])
+        var photoURL = listingMedia[i].MediaURL;
+        var photoURL = photoURL.slice(0, 4) + "s" + photoURL.slice(4);
+        photoURLs.push(photoURL);
         var img = `
         <div class='mySlides fade'>
             <img  src="${photoURLs[i]}" class='photo-big'>  
