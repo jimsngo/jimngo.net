@@ -16,7 +16,6 @@ const select = 'PropertyType, PropertySubType, StandardStatus, ListingId, ListPr
 const orderby = 'ListPrice';
 const expand = 'Media($select=MediaURL)';
 var listings = [];
-var listingPages = [];
 var listing = [];
 var photoURLs = [];
 var listingId;
@@ -39,7 +38,7 @@ function search() {
     }).done(function (response) {
         listings = response.value;
         updateCities();
-        $('#searchCity').html(`${city} Real Estate<br/>Homes For Sale`)
+        $('#searchCity').html(`${city} Real Estate`)
         $('#listingCount').html(`${listings.length} Listings`)
         $('#records').empty();
         $('#listing-indexed-pages').empty();
@@ -48,6 +47,7 @@ function search() {
 }
 
 function renderlistingPages() {
+    listingPages = []
     var i = 0,
         j = 0,
         chunk = 12;
@@ -144,13 +144,13 @@ function displayPhoto() {
 
 function updateCities() {
     if (city === 'ONT') {
-        city = 'Ontario CA';
+        city = 'Ontario';
     };
     if (city === 'CH') {
-        city = 'Chino CA';
+        city = 'Chino';
     };
     if (city === 'CHH') {
-        city = 'Chino Hills CA';
+        city = 'Chino Hills';
     };
     if (city === 'COR') {
         city = 'Corona';

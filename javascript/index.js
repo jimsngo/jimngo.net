@@ -66,7 +66,7 @@ onload = slideshow;
 
 function slideshow() {
     setInterval(function () {
-        nextSlide('life-agent-ss');
+        nextSlide('mls-home-search');
         nextSlide('service-ss');
         nextSlide('home-valuation-ss');
         nextSlide('dpa-ss');
