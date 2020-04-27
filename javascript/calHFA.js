@@ -2,20 +2,36 @@
 // Fixed Header                                                               /
 ///////////////////////////////////////////////////////////////////////////////
 
-window.onscroll = function () {
-    myFunction();
-};
+// window.onscroll = function () {
+//     myFunction();
+// };
 
-var header = document.getElementById("myHeader");
-var sticky = header.offsetTop;
+// var header = document.getElementById("myHeader");
+// var sticky = header.offsetTop;
 
-function myFunction() {
-    if (window.pageYOffset > sticky) {
-        header.classList.add("sticky");
-    } else {
-        header.classList.remove("sticky");
+// function myFunction() {
+//     if (window.pageYOffset > sticky) {
+//         header.classList.add("sticky");
+//     } else {
+//         header.classList.remove("sticky");
+//     }
+// }
+
+///////////////////////////////////////////////////////////////////////////////
+// Delay images                                                               /
+///////////////////////////////////////////////////////////////////////////////
+
+function init() {
+    var imgDefer = document.getElementsByTagName('img');
+    for (var i = 0; i < imgDefer.length; i++) {
+        if (imgDefer[i].getAttribute('data-src')) {
+            imgDefer[i].setAttribute('src', imgDefer[i].getAttribute('data-src'));
+            var src = imgDefer[i].getAttribute('data-src');
+        }
     }
 }
+
+init();
 
 ///////////////////////////////////////////////////////////////////////////////
 // Slide Show                                                                 /

@@ -40,25 +40,6 @@ function init() {
 init();
 
 ///////////////////////////////////////////////////////////////////////////////
-// Fixed Header                                                               /
-///////////////////////////////////////////////////////////////////////////////
-
-// window.onscroll = function () {
-//     myFunction();
-// };
-
-// var header = document.getElementById("myHeader");
-// // var sticky = header.offsetTop;
-
-// function myFunction() {
-//     if (window.pageYOffset > sticky) {
-//         header.classList.add("sticky");
-//     } else {
-//         header.classList.remove("sticky");
-//     }
-// }
-
-///////////////////////////////////////////////////////////////////////////////
 // Slide Show                                                                 /
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -129,7 +110,7 @@ document.getElementById("HomeSearchBtnWidget").onclick = function (event) {
     } else {
         document.querySelector("#home-search-form #SearchValidationError").style.display = 'none';
     }
-};
+}
 
 ///////////////////////////////////////////////////////////////////////////////
 // Others --------------------------------------------------------------------/
@@ -142,5 +123,3 @@ function show(id) {
 function hide(id) {
     document.getElementById(id).style.display = 'none';
 }
-
-// Blog

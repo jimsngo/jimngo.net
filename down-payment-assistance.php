@@ -22,55 +22,19 @@
     <link rel="canonical" href="https://www.jimngo.net/down-payment-assistance">
     <link rel="icon" href="image/favicon-16x16.png" type="image/gif" sizes="16x16">
     <link rel="stylesheet" href="style/style.min.css">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-88549125-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'UA-88549125-1'); // Google Analytics
-        gtag('config', 'AW-935673147'); // Google Ads
-    </script>
+    <link rel="stylesheet" href="style/fontawesome-free-5.11.1-web/css/all.min.css">
 </head>
 
 <body>
-    <header id="myHeader">
-        <h2><a href="https://www.jimngo.net">Real Estate with Jim Ngo</a></h2>
-    </header>
+    <?php include('include/title.php'); ?>
     <!-- Page Description -->
     <section>
         <div class="main flex-center">
-            <!-- About Me -->
+            <!-- About Me ---------------------------------------------------->
             <div class="col-3 col-s-4 light-gray radius-5">
-                <div style="text-align:center; line-height: 1.4;">
-                    <a href="https://www.realtor.com/realestateagents/jim-son-ngo_ontario_ca_3146995_094379828"
-                        target="_blank" title="About Me">
-                        <img src="image/profile-180.png" alt="profile" style="border-radius: 50%">
-                    </a>
-                    <!-- Social icons -->
-                    <div class="flex-perfect-center">
-                        <div class="social-icon blogger"><a href="https://realtor.jimngo.info/" target="_blank"><i
-                                    class="fab fa-blogger"></i></a></div>
-                        <div class="social-icon fb"><a href="https://www.facebook.com/jimngo.realtor/"
-                                target="_blank"><i class="fab fa-facebook-square"></i></a></div>
-                        <div class="social-icon linkedin"><a href="https://www.linkedin.com/in/jimsngo/"
-                                target="_blank"><i class="fab fa-linkedin"></i></a></div>
-                        <div class="social-icon fb-messenger"><a href="https://www.messenger.com/t/jimngo.realtor"
-                                target="_blank"><i class="fab fa-facebook-messenger"></i></a></div>
-                        <div class="social-icon gmail"><a href="mailto:admin@jimngo.info" target="_blank"><i
-                                    class="far fa-envelope"></i></a></div>
-                    </div>
-                    <p>United Mortgage Fund<br />
-                        <i class="fas fa-mobile-alt"></i> <a href="tel:909-248-4453">(909) 248-4453</a><br />
-                        NMLS <a href="http://www.nmlsconsumeraccess.org/Home.aspx/MainSearch" target="_blank"
-                            rel="nofollow">1353214</a><br />
-                        BRE <a href="http://www2.dre.ca.gov/publicasp/pplinfo.asp" target="_blank"
-                            rel="nofollow">01164334</a></p>
-                </div>
+                <?php include('include/about.php'); ?>
             </div>
+            <!-- Page Summary ------------------------------------------------>
             <div class="col-9 col-s-8">
                 <h1 style="font-size: 150%; color: dodgerblue">Down Payment Assistance - First Time Home Buyer</h1>
                 <h2 style="font-size: 120%; color: dodgerblue">Are you a first-time home-buyer needing a little help
@@ -85,7 +49,7 @@
         </div>
     </section>
     <div style="height: 8px;" id="calculator"></div>
-    <!-- CalHFA Widget -->
+    <!-- CalHFA Widget ------------------------------------------------------->
     <Section id="calHFA-Widget">
         <div class="banner dark-cerulean font-large" id="calHFA-ss">
             <h2 class="slide showing">Down Payment Assistance</h2>
@@ -390,78 +354,8 @@
             </div>
         </div>
     </Section>
-    <!-- Disclaimer ---------------------------------------------------------->
-    <section class="light-gray">
-        <div class="main">
-            <p>DISCLAIMER: The figures displayed above are based upon your input and may not reflect your actual
-                mortgage payment or total monthly costs. Calculations by this tool are believed to be accurate,
-                yet are not guaranteed.</p>
-            <ul>
-                <li><a href="https://www.jimngo.net/mortgage-insurance" target="_blank">Mortgage Insurance</a> is
-                    required for down payment less than 20% and it's typically between 0.5% to 1.0% of the loan
-                    amount.</li>
-                <li>FHA requires a 3.5% down payment as well as an upfront and monthly mortgage insurance in
-                    many cases.</li>
-                <li>VA Loan does not require any down payment or monthly mortgage insurance, but has an upfront
-                    Funding Fee.</li>
-                <li><a href="https://www.jimngo.net/closing-costs" target="_blank">Closing Costs</a> account for
-                    about 2%-5% of the purchase price.
-                </li>
-                <li>Property Tax is normally 1.20% of the purchased price annually. Please confirm rate with
-                    your county.</li>
-                <li>Every loan program has its loan limit which varies by county. Please visit <a
-                        href="https://entp.hud.gov/idapp/html/hicostlook.cfm" target="_blank">HUD</a> for limits
-                    on FHA loans, <a href="https://www.benefits.va.gov/HOMELOANS/purchaseco_loan_limits.asp"
-                        target="_blank">VA</a> for limits on VA loans, and <a
-                        href="https://www.fhfa.gov/DataTools/Downloads/Pages/Conforming-Loan-Limits.aspx"
-                        target="_blank">FHFA</a> for limits on Conventional loans. Loans exceeding conforming
-                    loan limits are considered Jumbo Loans, which typically require a FICO score of 700+ and a
-                    down payments of 20 percent or more.</li>
-            </ul>
-        </div>
-    </section>
-    <footer>
-        <div class="main flex-perfect-center center">
-            <div class="col-3 col-s-3">
-                <div><img src="image/EHO.png" alt="EHO"></div>
-            </div>
-            <div class="col-9 col-s-9">
-                <p>UNITED MORTGAGE FUND</p>
-                <p>Licensed Real Estate Corporation by the California Bureau of Real Estate. <br />
-                    Corporate Broker # 01952954<br />
-                    NMLS # 1194303</p>
-                <address>800 N. Haven Ave, Ste 370 - Ontario, CA 91764</address>
-                <blockquote>“Big Banks Put High Interest Above Your Interest”</blockquote>
-            </div>
-        </div>
-    </footer>
-    <div style="text-align:center">
-        <p>&copy; 2019 Jim Ngo - Ontario CA</p>
-    </div>
-    <!-- Mobile Contact Bar -->
-    <section class="mobile-contact-bar">
-        <div class="flex-perfect-center">
-            <div id="text" class="sms social-icon"><a href="sms:1-909-248-4453"><i class="fas fa-sms"></i></a></div>
-            <div id="call" class="mobile-phone social-icon"><a href="tel:1-909-248-4453"><i
-                        class="fas fa-mobile-alt"></i></a></div>
-            <div id="email" class="gmail social-icon"><a href="mailto:admin@jimngo.info" target="_blank"><i
-                        class="far fa-envelope"></i></a></div>
-        </div>
-    </section>
-    <link rel="stylesheet" href="style/fontawesome-free-5.11.1-web/css/all.min.css">
-    <!-- Default Statcounter code for Jimngo.net https://www.jimngo.net -->
-    <script type="text/javascript">
-        var sc_project = 11893871;
-        var sc_invisible = 1;
-        var sc_security = "b16c17b8";
-    </script>
-    <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
-    <noscript>
-        <div class="statcounter"><a title="Web Analytics" href="https://statcounter.com/" target="_blank"><img
-                    class="statcounter" src="https://c.statcounter.com/11893871/0/b16c17b8/1/" alt="Web Analytics"></a>
-        </div>
-    </noscript>
-    <!-- End of Statcounter Code -->
+    <?php include('include/disclaimer.php'); ?>
+    <?php include('include/footer.php'); ?>
     <script src="javascript/business-hours.min.js" async></script>
     <script src="javascript/calHFA.min.js" async></script>
 </body>

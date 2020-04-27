@@ -1,0 +1,104 @@
+<section id="service">
+    <div class="main flex-center">
+        <!-- Home Valuation -->
+        <div class="col-4 col-s-6">
+            <a href="home-valuation" target="_blank">
+                <div class="banner card-header" id="home-valuation-ss">
+                    <p class="slide showing">Home Estimate <i class="fas fa-external-link-alt"></i></p>
+                    <p class="slide">Market Comparable <i class="fas fa-external-link-alt"></i></p>
+                </div>
+            </a>
+            <div class="card-body">
+                <ul>
+                    <li>Do you want to know what your home is worth?</li>
+                    <li>Are you curious about nearby homes that are for sale or recently sold?</li>
+                    <li>How about how much your home might be worth in the next two years?</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Mortgage Calculator -->
+        <div class="col-4 col-s-6">
+            <a href="mortgage-prequalification-calculator" target="_blank">
+                <div class="banner card-header">
+                    <p class='slide showing'>Mortgage Calculator <i class="fas fa-external-link-alt"></i></p>
+                </div>
+            </a>
+            <div class="card-body">
+                <p style="display:none">Mortgage Prequalification Calculator with Down Payment, PMI, and Taxes. Use
+                    my quick and simple calculators to estimate how much you can afford, how much income you will
+                    need, or how much you will save by making extra payment.</p>
+                <div style="padding-left: 16px;">
+                    <p><a href="https://www.jimngo.net/mortgage-affordability-calculator" target="_blank">
+                            How Much House Can I Afford?</a></p>
+                    <p><a href="https://www.jimngo.net/mortgage-income-calculator" target="_blank">
+                            How Much Income Do I Need?</a></p>
+                    <p><a href="https://www.jimngo.net/extra-payment-calculator" target="_blank">
+                            What if I Make Extra Payment?</a></p>
+                </div>
+            </div>
+        </div>
+        <!-- Down Payment Resource -->
+        <div class="col-4 col-s-6">
+            <a href="down-payment-assistance" target="_blank">
+                <div class="banner card-header" id='dpa-ss'>
+                    <p class="slide showing">First Time Homebuyer <i class="fas fa-external-link-alt"></i></p>
+                    <p class="slide">Down Payment Assistance <i class="fas fa-external-link-alt"></i></p>
+                </div>
+            </a>
+            <div class="card-body">
+                <ul>
+                    <li>Are you a first-time home-buyer needing a little help with your down payment and/or
+                        closing costs?</li>
+                    <li>Down payment money is out there, and I’ll help you find it.</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Refinance -->
+        <div class="col-4 col-s-6">
+            <a href="mortgage-refinance" target="_blank">
+                <div class="banner card-header" id="refinance-ss">
+                    <p class="slide showing">Mortgage Refinance <i class="fas fa-external-link-alt"></i></p>
+                    <p class="slide">Home Equity Loan <i class="fas fa-external-link-alt"></i></p>
+                </div>
+            </a>
+            <div class="card-body">
+                <ul>
+                    <li>Do you have an Adjustable Rate Mortgage?</li>
+                    <li>Do you have an interest-only loan?</li>
+                    <li>Is your mortgage term more than a 15-year?</li>
+                    <li>Do you have a high interest rate loan?</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Short Sale Foreclosure -->
+        <div class="col-4 col-s-6">
+            <a href="short-sales-foreclosure" target="_blank">
+                <div class="banner card-header" id="sfr-ss">
+                    <p class="slide showing">Short Sale <i class="fas fa-external-link-alt"></i></p>
+                    <p class="slide">Pre-Foreclosure <i class="fas fa-external-link-alt"></i></p>
+                </div>
+            </a>
+            <div class="card-body">
+                <ul>
+                    <li>Are you or someone you know facing foreclosure or unable to make mortgage payments?</li>
+                    <li>Know that there are OPTIONS available and PEOPLE you can trust.</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Reverse Mortgage -->
+        <div class="col-4 col-s-6">
+            <a href="reverse-mortgage-calculator" target="_blank">
+                <div class="banner card-header">
+                    <p class="slide showing">Reverse Mortgage <i class="fas fa-external-link-alt"></i></p>
+                </div>
+            </a>
+            <div class="card-body">
+                <ul>
+                    <li>You’ve worked hard to build the equity in your home.</li>
+                    <li>Now it’s time to put that equity to work for you.</li>
+                    <li>See what Reverse Mortgage can do for you.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

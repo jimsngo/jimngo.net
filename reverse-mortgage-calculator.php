@@ -22,49 +22,19 @@
     <link rel="canonical" href="https://www.jimngo.net/reverse-mortgage-calculator" />
     <link rel="icon" href="image/favicon-16x16.png" type="image/gif" sizes="16x16" />
     <link rel="stylesheet" href="style/style.min.css">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-88549125-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'UA-88549125-1'); // Google Analytics
-        gtag('config', 'AW-935673147'); // Google Ads
-    </script>
+    <link rel="stylesheet" href="style/fontawesome-free-5.11.1-web/css/all.min.css">
 </head>
 
 <body>
-    <header id="myHeader">
-        <h2><a href="https://www.jimngo.net">Your Local Realtor - Mortgage Professional - Life Agent</a></h2>
-        <div id="opening_monday" style="display: none">Opening at 10:00 AM Monday</div>
-        <div id="opening_tomorrow" style="display: none">Opening at 10:00 AM Tomorrow</div>
-        <div id="opening_soon" style="display: none">Opening at 10:00 AM</div>
-    </header>
+    <?php include('include/title.php'); ?>
     <!-- Page Description ---------------------------------------------------->
     <main class="main">
         <div class="flex-center">
             <!-- About Me ---------------------------------------------------->
             <div class="col-3 col-s-4 light-gray radius-5">
-                <div style="text-align:center; line-height: 1.4;">
-                    <a href="https://www.realtor.com/realestateagents/jim-son-ngo_ontario_ca_3146995_094379828"
-                        target="_blank" title="About Me">
-                        <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
-                            data-src="image/profile-180.png" alt="profile" style="border-radius: 50%">
-                        <h2>Jim Ngo - Ontario, CA</h2>
-                    </a>
-                    <p>United Mortgage Fund<br />
-                        <i class="fas fa-mobile-alt"></i> <a href="tel:909-248-4453">(909) 248-4453</a><br />
-                        <i class="far fa-envelope"></i> <a href="mailto:admin@jimngo.info">admin@jimngo.info</a><br />
-                        NMLS <a href="http://www.nmlsconsumeraccess.org/Home.aspx/MainSearch" target="_blank"
-                            rel="nofollow">1353214</a><br />
-                        BRE <a href="http://www2.dre.ca.gov/publicasp/pplinfo.asp" target="_blank"
-                            rel="nofollow">01164334</a></p>
-                </div>
+                <?php include('include/about.php'); ?>
             </div>
-            <!-- Page Description ---------------------------------------->
+            <!-- Page Description -------------------------------------------->
             <div class="col-9 col-s-8">
                 <h1 style="font-size: 150%; color: dodgerblue">Reverse Mortgage - Home Equity Conversion Mortgage
                     (HECM)</h1>
@@ -547,57 +517,7 @@
             </div>
         </div>
     </section>
-    <footer>
-        <div class="main flex-perfect-center center">
-            <div class="col-3 col-s-3">
-                <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="image/EHO.png"
-                    alt="EHO">
-            </div>
-            <div class="col-9 col-s-9">
-                <p>UNITED MORTGAGE FUND</p>
-                <p>Licensed Real Estate Corporation by the California Bureau of Real Estate. <br />
-                    Corporate Broker # 01952954<br />
-                    NMLS # 1194303</p>
-                <address>800 N. Haven Ave, Ste 370 - Ontario, CA 91764</address>
-                <blockquote>“Big Banks Put High Interest Above Your Interest”</blockquote>
-            </div>
-        </div>
-    </footer>
-    <div style="text-align:center">
-        <p>&copy; 2019 Jim Ngo - Ontario CA</p>
-    </div>
-    <!-- Mobile Contact Bar -->
-    <section class="mobile-contact-bar">
-        <div class="flex-perfect-center">
-            <div>
-                <a href="index.html" class="btn-action"><i class="fas fa-home dark-cerulean"></i></a>
-            </div>
-            <div id="text">
-                <a href="sms:1-909-248-4453" class="btn-action"><i class="fas fa-sms dark-cerulean"></i></a>
-            </div>
-            <div id="call">
-                <a href="tel:1-909-248-4453" class="btn-action"><i class="fas fa-mobile-alt dark-cerulean"></i></a>
-            </div>
-            <div id="email">
-                <a href="mailto:admin@jimngo.info" class="btn-action"><i class="fas fa-envelope dark-cerulean"></i></a>
-            </div>
-        </div>
-    </section>
-    <!-- Scripts ------------------------------------------------------------->
-    <link rel="stylesheet" href="style/fontawesome-free-5.11.1-web/css/all.min.css">
-    <!-- Default Statcounter code for Jimngo.net https://www.jimngo.net -->
-    <script type="text/javascript">
-        var sc_project = 11893871;
-        var sc_invisible = 1;
-        var sc_security = "b16c17b8";
-    </script>
-    <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
-    <noscript>
-        <div class="statcounter"><a title="Web Analytics" href="https://statcounter.com/" target="_blank"><img
-                    class="statcounter" src="https://c.statcounter.com/11893871/0/b16c17b8/1/" alt="Web Analytics"></a>
-        </div>
-    </noscript>
-    <!-- End of Statcounter Code -->
+    <?php include('include/footer.php'); ?>
     <script src="javascript/reverse-mortgage-Ob.js" async></script>
 </body>
 

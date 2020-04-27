@@ -1,6 +1,5 @@
-<!-- Marketing ----------------------------------------------------------->
 <section id="flyers">
-    <div class="banner dark-cerulean" id="flyer-ss">
+    <div class="banner dark-cerulean font-large" id="flyer-ss">
         <h3 class="slide showing">Purchase</h3>
         <h3 class="slide">Refinance</h3>
         <h3 class="slide">FHA</h3>
@@ -14,7 +13,7 @@
     <div class="main flex-center">
         <!-- QM Products ------------------------------------------------->
         <div class="col-4 col-s-6">
-            <h3 class="heading">Qualified Mortgages</h3>
+            <h3 class="heading">Traditional Mortgages</h3>
             <button class="collapsible">Conventional</button>
             <div class="content slow">
                 <p>If you’ve heard of Fannie Mae or Freddie Mac, you know the family of conventional loans. These
@@ -79,7 +78,7 @@
         </div>
         <!-- Non-QM Loan ------------------------------------------------->
         <div class="col-4 col-s-6">
-            <h3 class="heading">Non-Qualified Mortgages</h3>
+            <h3 class="heading">Non-Traditional Mortgages</h3>
             <button class="collapsible">Bank Statement Premier</button>
             <div class="content fast">
                 <p>For Highly Qualified Self-Employed Borrowers</p>
