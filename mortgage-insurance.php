@@ -78,8 +78,8 @@
                 <p>FHA calls it MIP, the Mortgage Insurance Premium. It was one of the first programs and the name
                     is an original, for sure. It requires both an upfront and monthly payment</p>
                 <p>Private Mortgage Insurance is available on conventional loans and will be provided by one of a
-                    few different companies, <a href="https://www.mgic.com/ratefinder-rates/quickQuoteDataEntry.htm"
-                        target="_blank" rel="nofollow">MGIC</a> being one of the biggest.</p>
+                    few different companies, <a href="https://www.mgic.com/" target="_blank" rel="nofollow">MGIC</a>
+                    being one of the biggest.</p>
                 <p>Many people think that VA loans don’t have mortgage insurance, but they do — it’s a one time
                     charge at closing known as the “Funding Fee.”</p>
                 <p>For most people, having mortgage insurance is just a reality of life. They can either continue to

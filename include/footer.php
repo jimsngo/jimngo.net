@@ -10,7 +10,7 @@
         </div>
     </div>
     <div class="main flex-perfect-center">
-        <div class="col-3 col-s-3"><img src="image/EHO.png"></div>
+        <div class="col-3 col-s-3"><img src="image/EHO.png" alt="Equal Housing Opportunity"></div>
         <div class="col-9 col-s-9">
             <p>UNITED MORTGAGE FUND</p>
             <p>Licensed Real Estate Corporation by the California Bureau of Real Estate. <br />

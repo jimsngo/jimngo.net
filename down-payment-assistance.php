@@ -68,8 +68,6 @@
                     <div class="card-body">
                         <ul>
                             <li>MyHome Program - up to 3.5% of sales price for down payment assistance.</li>
-                            <li>School Program - For teacher or staff member serving in California’s public schools - up
-                                to 4.0%.</li>
                             <li>ZIP Loan - 2% or 3% of loan amount for closing costs assistance at zero interest.</li>
                             <li>Loan Limit varies by county. Please confirm <a
                                     href="https://entp.hud.gov/idapp/html/hicostlook.cfm" rel="nofollow"
@@ -149,20 +147,20 @@
                             </select>
                         </div>
                         <!-- CalHFA Subordinate Loan -->
-                        <div class="inputTitleContainer">
+                        <div class="inputTitleContainer" style="display: none">
                             <div class="inputTitle">CalHFA Subordinate Loan</div>
                             <select class="inputValue" id="subordinate-loan" onchange="calc()">
                                 <option value="MyHome" selected>Myhome</option>
-                                <option value="School Program">School Program</option>
+                                <!-- <option value="School Program">School Program</option> -->
                             </select>
                         </div>
                         <ul>
                             <li><a href="http://www.calhfa.ca.gov/homeownership/programs/myhome.pdf"
                                     target="_blank">MyHome</a> is a deferred 2nd, allowing up to 3.5% of purchase price.
                             </li>
-                            <li><a href="https://www.calhfa.ca.gov/homeownership/programs/school.pdf"
+                            <!-- <li><a href="https://www.calhfa.ca.gov/homeownership/programs/school.pdf"
                                     target="_blank">School Program</a>, for School teacher and employee, is also a
-                                deferred 2nd, allowing up to 4.0% of the purchase price</li>
+                                deferred 2nd, allowing up to 4.0% of the purchase price</li> -->
                             <li>ZIP is a zero interest in 3rd position. ZIP fund can only be used for closing costs, any
                                 excess will be applied toward principal reduction</li>
                             <li>3% ZIP will have a higher rate than 2% ZIP.</li>
@@ -326,7 +324,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="tabcontent slow" id="School Program">
+                <div class="tabcontent slow" id="School Program" style="display: none">
                     <p class="card-header">School Program</p>
                     <div class="card-body">
                         <p>Are you a teacher or staff member serving in one of California’s public schools? CalHFA would
