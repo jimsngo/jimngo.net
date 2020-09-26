@@ -126,6 +126,7 @@ function singleListing(listingID) {
         <div class="inputTitle font-large">$${listing.ListPrice}</div>
         <div class="inputValue">${listing.MajorChangeType}</div>
     </div>
+    
     <p>
         <div>&ensp;• Listing ID: ${listing.ListingId}</div>
         <div>&ensp;• ${listing.SpecialListingConditions}</div>

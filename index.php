@@ -149,18 +149,12 @@
     </div>
     <!-- Single Listing Details ---------------------------------------------->
     <div class="main flex-center" id="listing-indexed-pages"></div>
-    <!-- Listing Photos-->
+    <!-- Listing Photos------------------------------------------------------->
     <div class="main flex-perfect-center">
         <div class="col-7 col-s-7" id='photo-slide' style=" max-width: 750px;"></div>
         <div class="col-5 col-s-5" id="remarks" style="padding: 8px;"></div>
     </div>
-    <!-- Single Listing Details ---------------------------------------------->
-    <div class="main flex-center">
-        <div id="listingDetails-1" class="col-6 col-s-6"></div>
-        <div id="listingDetails-2" class="col-6 col-s-6"></div>
-    </div>
-    <!-- End Home Search------------------------------------------------------>
-
+    <!-- End Home Search ----------------------------------------------------->
     <div class="banner dark-cerulean font-large" id="service-ss">
         <h2 class="slide showing">Mortgage Pre-Approval</h2>
         <h2 class="slide">Down Payment Assistance</h2>
