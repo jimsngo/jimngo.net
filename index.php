@@ -54,9 +54,6 @@
                     <p>Hiring an agent who has his or her finger on the pulse of the market will make your buying or
                         selling experience an educated one. You need someone who is going to tell you the truth, not
                         just what they think you want to hear.</p>
-                    <blockquote style="font-size: 120%; color: dodgerblue">“When getting help with money, whether
-                        it’s insurance, real estate or investments, you should always look for someone with the
-                        heart of a teacher, not the heart of a salesman.” - Dave Remsey</blockquote>
                     <div class="flex-perfect-center ">
                         <div class="dark-cerulean radius-5 font-large eguide"
                             style="text-align: center; margin: 4px 16px; padding: 8px 16px;">
