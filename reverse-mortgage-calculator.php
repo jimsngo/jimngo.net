@@ -83,15 +83,15 @@
                     <div class="card-body">
                         <p>The specific amount depends on several factors, including:</p>
                         <ul>
-                            <li>Your age</li>
-                            <li>The type of reverse mortgage you select</li>
-                            <li>Current interest rates</li>
-                            <li>Appraised value of your home</li>
-                            <li>Federal Housing Administration (FHA) lending limits</li>
+                            <li>Your age.</li>
+                            <li>Current interest rate.</li>
+                            <li>Principal Limit Factor.</li>
+                            <li>The type of reverse mortgage you select.</li>
+                            <li>Appraised value of your home.</li>
+                            <li>Federal Housing Administration (FHA) lending limits.</li>
                         </ul>
-                        <p>HUD also regulates the amount of money that can be withdrawn during the first year of
-                            your reverse mortgage. This is to help preserve your home equity for a longer period of
-                            time.</p>
+                        <p>HUD also regulates the amount of money that can be withdrawn during the first year of your
+                            reverse mortgage. This is to help preserve your home equity for a longer period of time.</p>
                         <div class="flex-center">
                             <button class="btn-blue-brdr" onclick="show_slide('slide-2')">Get Started</button>
                         </div>
@@ -293,20 +293,14 @@
                     <div class="card-body">
                         <p>You can purchase a home by combining a one-time investment of your own funds (down
                             payment) with loan proceeds from a Home Equity Conversion Mortgage (HECM) to
-                            complete
-                            the transaction. As with a traditional “forward” mortgage, the home you are
-                            purchasing
-                            secures the loan.</p>
+                            complete the transaction. As with a traditional “forward” mortgage, the home you are
+                            purchasing secures the loan.</p>
                         <p>However, unlike a traditional mortgage, there are no monthly mortgage payments, which
                             can help boost your cash flow. You own the home as long as you live in it. The loan
-                            does
-                            not have to be repaid until you sell the home or no longer live there as your
-                            primary
-                            residence. In order for the loan to remain in good standing, you must meet certain
-                            home
-                            ownership obligations - which include maintaining the property, and keeping current
-                            with
-                            property-related taxes and insurance payments.</p>
+                            does not have to be repaid until you sell the home or no longer live there as your
+                            primary residence. In order for the loan to remain in good standing, you must meet certain
+                            home ownership obligations - which include maintaining the property, and keeping current
+                            with property-related taxes and insurance payments.</p>
                     </div>
                 </div>
                 <!-- Refinance Option -->
@@ -317,8 +311,7 @@
                         <p>Pay as much or as little as you like each month toward principal and interest. As
                             with any mortgage, you must meet your loan obligations, keeping current with
                             property related taxes, insurance and maintenance, and any homeowners association
-                            fees.
-                        </p>
+                            fees.</p>
                         <p>&#9989; High Flexibility Loans</p>
                         <p>Gain access to a line of credit you can tap into as needed, or a steady stream of
                             monthly funds.</p>
@@ -352,10 +345,15 @@
     <!-- Disclaimer ---------------------------------------------------------->
     <section id="disclaimer">
         <div class="main">
-            <p class="pad">DISCLAIMER: The figures displayed above are based upon your input and may not reflect your
-                actual mortgage payment or total monthly costs. Calculations by this tool are believed to be accurate,
-                yet are not guaranteed.
-            </p>
+            <h3>DISCLAIMER:</h3>
+            <ul>
+                <li>The figures displayed above are based upon your input and may not reflect your actual mortgage
+                    payment or total monthly costs.</li>
+                <li><a href="https://www.hud.gov/program_offices/housing/sfh/hecm" rel="nofollow"
+                        target="_blank">Principal Limit Factor Table</a> for HECM on or after 10/2/2017 was used in my
+                    calculator.</li>
+                <li>Calculations by this tool are believed to be accurate, yet are not guaranteed.</li>
+            </ul>
         </div>
     </section>
     <!-- Q&A ----------------------------------------------------------------->
