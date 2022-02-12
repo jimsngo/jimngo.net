@@ -1,7 +1,3 @@
 .DS_Store
 debug.log
-/include
-/jimngo
-/jimngo.info
-/life-agent
-/templates
+.include
