@@ -1,2 +1,0 @@
-Select All: 'Ctrl' + 'A'
-Auto Format: press & hold 'Ctrl' key and first press 'K' and then press 'F'
